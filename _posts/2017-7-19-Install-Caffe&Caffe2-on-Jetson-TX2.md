@@ -1,6 +1,6 @@
-## Install Caffe on TX2
+## Install Caffe/Caffe2 on Jetson TX2
 
-### Install Caffe on TX2
+### Install Caffe on Jetson TX2
 Install packages
 ```markdown
 $ sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler -y
@@ -24,7 +24,7 @@ $ make -j6 all
 $ make -j6 runtest
 ```
 
-### Install Caffe2 on TX2
+### Install Caffe2 on Jetson TX2
 Download Caffe2 Source
 ```markdown
 $ git clone --recursive https://github.com/caffe2/caffe2.git

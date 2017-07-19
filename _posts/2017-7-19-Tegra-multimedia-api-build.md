@@ -28,6 +28,7 @@ $ sudo make install
 $ cd tegra_multimedia_api
 $ make
 ```
+
 ```
 nvidia@tegra-ubuntu:~/tegra_multimedia_api$ make
 Make in samples/00_video_decode

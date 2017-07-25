@@ -1,13 +1,13 @@
 ## Memory Mapped I/O
 2015.03.26 수업 요약
 
-![mmap1](https://github.com/engelin/engelin.github.io/blob/master/images/mmap1.jpg?raw=true)
+![mmap1](https://github.com/engelin/engelin.github.io/blob/master/images/mmap1.png?raw=true)
 
 ### Memory mapped I/O
  - I/O peripheral <-> CPU
  * 왜 주소를 불러오는데 장치가 동작할까?
 
-![mmap2](https://github.com/engelin/engelin.github.io/blob/master/images/mmap1_2.jpg?raw=true)
+![mmap2](https://github.com/engelin/engelin.github.io/blob/master/images/mmap2.png?raw=true)
 
  * Control bit: I/O들을 컨트롤 가능
  

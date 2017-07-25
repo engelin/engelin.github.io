@@ -6,20 +6,33 @@ The Jetson Multimedia API package provides low level APIs for flexible applicati
 
 ![Folder](https://github.com/engelin/engelin.github.io/blob/master/images/Tegra_Multimedia_API_1.png?raw=true)
 
-### Build argus
+### Build argus (ARGUS Camera API)
 
-Install gtk-3.0
+Install packages
 ```markdown
+$ sudo apt-get install cmake build-essential pkg-config
+$ sudo apt-get install libx11-dev
 $ sudo apt-get install libgtk-3-dev
+$ sudo apt-get install libjpeg-dev
+$ sudo apt-get install libgstreamer1.0-dev
 ```
 
 Build argus
-```markdown
+```
 $ cd tegra_multimedia_api/argus
 $ mkdir build
 $ cd build
 $ cmake ../
+# Additional options:
+# - If CMake cannot find an include path for any dependencies,
+#   it may be required to provide them explicitly. E.g:
+#   'cmake -DOPENGLES_INCLUDE_DIR=/path/to/khronos/includes ..'
+# - The DISABLE_MULTIPROCESS option may be provided to use the single-process
+#   Argus implementation (ie. does not require argus-daemon service):
+#   'cmake -DDISABLE_MULTIPROCESS=ON ..'
 $ make
+# - Alternatively, build individual executables:
+#   'make [-jN] argus_openglbox'
 $ sudo make install
 ```
 

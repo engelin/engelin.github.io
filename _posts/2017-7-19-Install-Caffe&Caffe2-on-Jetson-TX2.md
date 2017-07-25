@@ -15,10 +15,21 @@ Download Caffe Source
 $ git clone https://github.com/BVLC/caffe.git 
 ```
 
-Build
+Edit Makefile
 ```markdown
 $ cd caffe
 $ cp Makefile.config.example Makefile.config
+$ vi Makefile.config
+```
+```
+CUDA_DIR := /usr/local/cuda-8.0
+INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial
+LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/aarch64-linux-gnu/hdf5/serial/
+```
+
+Build
+```markdown
+$ cd caffe
 $ cmake -DCUDA_USE_STATIC_CUDA_RUNTIME=OFF
 $ make -j6 all
 $ make -j6 runtest

@@ -1,4 +1,4 @@
-## Jetson TX2 on board Camera - Caffe
+## Jetson TX2 on board Camera with Caffe
 
 * Jetson TX2의 on board camera를 이용하여 실시간 스트림
 * Caffe를 이용하여 카메라에서 받아온 영상의 object detection 진행

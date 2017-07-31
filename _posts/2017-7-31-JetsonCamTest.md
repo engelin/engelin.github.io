@@ -2,4 +2,4 @@
 
 
 Reference file
-[Getting Started JetPack Camera API](../images/getting-started-jetpack-camera-api.pdf)
+[Getting Started JetPack Camera API](http://on-demand.gputechconf.com/gtc/2016/webinar/getting-started-jetpack-camera-api.pdf)

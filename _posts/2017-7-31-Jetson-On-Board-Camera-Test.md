@@ -1,10 +1,23 @@
 ## Jetson TX2 on board Camera - Caffe
 
-### Step 1. Camera preview
+* Jetson TX2의 on board camera를 이용하여 실시간 스트림
+* Caffe를 이용하여 카메라에서 받아온 영상의 object detection 진행
+* Caffe + Cuda C++으로 영상을 이용한 강화학습 진행
+
+* 차후 소스코드 정리하여 업로드 예정
+
+### Step 1. Camera preview _170729_
 
 ![Preview](https://github.com/engelin/engelin.github.io/blob/master/images/%ED%94%84%EB%A6%AC%EB%B7%B0%ED%85%8C%EC%8A%A4%ED%8A%B8.jpg?raw=true)
 
-### Step 2. Connect Caffe with preview project
 
-Reference file
-[Getting Started JetPack Camera API](http://on-demand.gputechconf.com/gtc/2016/webinar/getting-started-jetpack-camera-api.pdf)
+### Step 2. CNN using Caffe on Jetson TX2
+
+
+### Step 3. Reinforcement Learning using Caffe on Jetson TX2
+
+
+References:
+
+[1] [Getting Started JetPack Camera API](http://on-demand.gputechconf.com/gtc/2016/webinar/getting-started-jetpack-camera-api.pdf)
+[2] [Caffe](http://caffe.berkeleyvision.org/)

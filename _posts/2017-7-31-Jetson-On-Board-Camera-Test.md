@@ -1,5 +1,8 @@
 ## Jetson TX2 on board Camera with Caffe
 
+NVIDIA에서 제공하는 API로 진행
+Argus라는 자체적인 드라이버 사용
+
 * Jetson TX2의 on board camera를 이용하여 실시간 스트림
 * Caffe를 이용하여 카메라에서 받아온 영상의 object detection 진행
 * Caffe + Cuda C++으로 영상을 이용한 강화학습 진행

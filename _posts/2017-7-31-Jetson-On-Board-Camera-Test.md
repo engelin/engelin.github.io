@@ -10,6 +10,8 @@
 
 ![Preview](https://github.com/engelin/engelin.github.io/blob/master/images/%ED%94%84%EB%A6%AC%EB%B7%B0%ED%85%8C%EC%8A%A4%ED%8A%B8.jpg?raw=true)
 
+Problem:
+- /dev/video0 가 열리긴 하나 그 전에 먼저 /dev/camera/video1 을 open 시도
 
 ### Step 2. CNN using Caffe on Jetson TX2
 
@@ -20,4 +22,5 @@
 References:
 
 [1] [Getting Started JetPack Camera API](http://on-demand.gputechconf.com/gtc/2016/webinar/getting-started-jetpack-camera-api.pdf)
+
 [2] [Caffe](http://caffe.berkeleyvision.org/)

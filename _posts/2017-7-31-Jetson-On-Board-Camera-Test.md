@@ -3,7 +3,6 @@
 * Jetson TX2의 on board camera를 이용하여 실시간 스트림
 * Caffe를 이용하여 카메라에서 받아온 영상의 object detection 진행
 * Caffe + Cuda C++으로 영상을 이용한 강화학습 진행
-
 * 차후 소스코드 정리하여 업로드 예정
 
 ### Step 1. Camera preview _170729_

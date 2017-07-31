@@ -17,7 +17,7 @@
 
 ### Step 2. CNN with Caffe
 
-- Problem
+- Problem:
 Caffe library가 local에 제대로 추가되지 않음
 PC에선 문제없이 진행됨
 

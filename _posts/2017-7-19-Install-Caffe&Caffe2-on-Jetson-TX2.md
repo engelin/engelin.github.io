@@ -22,6 +22,7 @@ $ cp Makefile.config.example Makefile.config
 $ vi Makefile.config
 ```
 ```
+USE_CUDNN := 1
 CUDA_DIR := /usr/local/cuda-8.0
 INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial
 LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/aarch64-linux-gnu/hdf5/serial/
@@ -33,6 +34,23 @@ $ cd caffe
 $ make -j6 all
 $ make -j6 runtest
 ```
+
+#### warning
+```
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+```
+Change Makefile.config
+```
+CUDA_ARCH := -gencode arch=compute_30,code=sm_30 \
+                -gencode arch=compute_35,code=sm_35 \
+                -gencode arch=compute_50,code=sm_50 \
+                -gencode arch=compute_52,code=sm_52 \
+                -gencode arch=compute_60,code=sm_60 \
+                -gencode arch=compute_61,code=sm_61 \
+                -gencode arch=compute_61,code=compute_61
+```
+
+
 
 ### Install Caffe2 on Jetson TX2
 Download Caffe2 Source

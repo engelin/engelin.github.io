@@ -28,9 +28,8 @@ LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/aarch64-linux-gnu
 ```
 
 Build
-```markdown
+```
 $ cd caffe
-$ cmake -DCUDA_USE_STATIC_CUDA_RUNTIME=OFF
 $ make -j6 all
 $ make -j6 runtest
 ```

@@ -32,6 +32,7 @@ Build
 ```
 $ cd caffe
 $ make -j6 all
+$ make -j6 test
 $ make -j6 runtest
 ```
 

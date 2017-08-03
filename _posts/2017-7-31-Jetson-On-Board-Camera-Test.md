@@ -14,6 +14,7 @@ Argus라는 자체적인 드라이버 사용
 
 Problem
 - /dev/video0 가 열리긴 하나 그 전에 먼저 /dev/camera/video1 을 open 시도
+=> Webcam을 꽂아놓으면 이런 현상 
 
 ### Step 2. CNN using Caffe on Jetson TX2
 

@@ -6,10 +6,25 @@ The Jetson Multimedia API package provides low level APIs for flexible applicati
 
 ![Folder](https://github.com/engelin/engelin.github.io/blob/master/images/Tegra_Multimedia_API_1.png?raw=true)
 
+### Settings
+
+To export environment variables
+```
+$ export TEGRA_ARMABI=aarch64-linux-gnu
+$ export DISPLAY=:0
+```
+To create the needed symbolic links
+```
+$ cd /usr/lib/${TEGRA_ARMABI}
+$ sudo ln -sf tegra-egl/libEGL.so.1 libEGL.so
+$ sudo ln -sf tegra-egl/libGLESv2.so.2 libGLESv2.so
+$ sudo ln -sf libv4l2.so.0 libv4l2.so
+```
+
 ### Build argus (ARGUS Camera API)
 
 Install packages
-```markdown
+```
 $ sudo apt-get install cmake build-essential pkg-config
 $ sudo apt-get install libx11-dev
 $ sudo apt-get install libgtk-3-dev

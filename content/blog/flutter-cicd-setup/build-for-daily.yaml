@@ -1,0 +1,160 @@
+name: Daily Build
+on:
+  schedule:
+    - cron: '30 4 * * *'
+env:
+  FLUTTER_CHANNEL: 'stable'
+  PROPERTIES_PATH: './android/app/key.properties'
+  KEY_JKS_PATH: './key.jks'
+
+  APP_NAME: 'carnet'
+  BUILD_PATH: 'build/'
+  ANDROID_APK_PATH: 'app/outputs/flutter-apk/app-release'
+  ANDROID_APK_EXT: '.apk'
+  IOS_APP_PATH: 'ios/Release-iphoneos/Runner'
+  IOS_APP_EXT: '.app'
+
+jobs:
+  check-commit:
+    runs-on: ubuntu-latest
+    name: Check latest commit
+    outputs:
+      should_run: ${{ steps.should_run.outputs.should_run }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: print latest_commit
+        run: echo ${{ github.sha }}
+
+      - id: should_run
+        continue-on-error: true
+        name: check latest commit is less than a day
+        if: ${{ github.event_name == 'schedule' }}
+        run: |
+          test -z $(git rev-list  --after="24 hours"  ${{ github.sha }}) &&
+          echo "::set-output name=should_run::false"
+
+  test:
+    needs: check-commit
+    if: ${{ needs.check-commit.outputs.should_run != 'false' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run step if any of the listed files above change
+        run: |
+          echo "🎯 One or more files listed above has changed."
+          echo "🎉 The job was automatically triggered by a Daily Build event."
+          echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+          echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: ${{ env.FLUTTER_CHANNEL }}
+      - run: flutter --version
+
+      - name: Install Dependencies
+        run: |
+          flutter pub get
+
+      - name: Analyze & Test
+        run: |
+          flutter analyze lib test
+          flutter test --coverage
+
+  apk-build:
+    needs: [ check-commit ]
+    if: ${{ needs.check-commit.outputs.should_run != 'false' }}
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: ${{ env.FLUTTER_CHANNEL }}
+      - run: flutter --version
+
+      - name: Install Dependencies
+        run: |
+          flutter pub get
+
+      - name: Build Android application
+        run: |
+          echo "[INFO] Decode Android key.jks..."
+          echo keyPassword=\${{ secrets.CARNET_KEY_STORE }} >> ${{env.PROPERTIES_PATH}}
+          echo storePassword=\${{ secrets.CARNET_KEY_PASSWORD }} >> ${{env.PROPERTIES_PATH}}
+          echo keyAlias=\${{ secrets.CARNET_KEY_ALIAS }} >> ${{env.PROPERTIES_PATH}}
+          echo storeFile=\${{ env.KEY_JKS_PATH }} >> ${{env.PROPERTIES_PATH}}
+          
+          echo "${{ secrets.CARNET_KEY_BASE64 }}" | base64 --decode > android/app/key.jks
+          ls -al android/app/key.jks
+          cat ${{ env.PROPERTIES_PATH }}
+
+          echo "[INFO] Build Android application..."
+          flutter build appbundle --release -t lib/main.dart --release
+
+      - name: Copy output with timestamp
+        run: | # $DAILY_TIME_STAMP or ${{ env.DAILY_TIME_STAMP }}
+          echo "DAILY_TIME_STAMP=$(date +'%Y-%m-%d')" >> ${GITHUB_ENV}
+          echo "Copy $BUILD_PATH$ANDROID_BUNDLE_FULL_PATH$ANDROID_BUNDLE_EXT to $DAILY_TIME_STAMP$ANDROID_BUNDLE_EXT"
+          cp -a $BUILD_PATH$ANDROID_BUNDLE_FULL_PATH$ANDROID_BUNDLE_EXT $DAILY_TIME_STAMP$ANDROID_BUNDLE_EXT
+
+      - name: GCS authentication
+        uses: google-github-actions/auth@v0
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+      - name: Set up Cloud SDK
+        uses: 'google-github-actions/setup-gcloud@v0'
+
+      - name: Upload appbundle to GCS
+        uses: google-github-actions/upload-cloud-storage@v0
+        with:
+          path: 'daily-build'
+          destination: 'cicd-test-images'
+
+  ios-build:
+    needs: [ check-commit ]
+    if: ${{ needs.check-commit.outputs.should_run != 'false' }}
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: ${{ env.FLUTTER_CHANNEL }}
+      - run: flutter --version
+
+      - name: Install Dependencies
+        run: |
+          flutter pub get
+
+      - name: Build iOS application
+        # TODO: Need to codesign if you want to test on real devices.
+        # TODO: flutter build ios --release -t lib/main_prod.dart
+        run: |
+          echo "[INFO] Build iOS application without codesign..."
+          flutter build ios --debug --no-codesign -t lib/main.dart --obfuscate --split-debug-info=/pyon/carnet_mappings/
+
+      - name: Copy output with timestamp
+        run: | # $DAILY_TIME_STAMP or ${{ env.DAILY_TIME_STAMP }}
+          echo "DAILY_TIME_STAMP=$(date +'%Y-%m-%d')" >> ${GITHUB_ENV}
+          echo "Copy $BUILD_PATH$IOS_BUNDLE_FULL_PATH$IOS_BUNDLE_EXT to $DAILY_TIME_STAMP$IOS_BUNDLE_EXT"
+          cp -a $BUILD_PATH$IOS_BUNDLE_FULL_PATH$IOS_BUNDLE_EXT $DAILY_TIME_STAMP$IOS_BUNDLE_EXT
+
+      - name: GCS authentication
+        uses: google-github-actions/auth@v0
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+      - name: Set up Cloud SDK
+        uses: 'google-github-actions/setup-gcloud@v0'
+
+      - name: Upload appbundle to GCS
+        uses: google-github-actions/upload-cloud-storage@v0
+        with:
+          path: 'daily-build'
+          destination: 'cicd-test-images'

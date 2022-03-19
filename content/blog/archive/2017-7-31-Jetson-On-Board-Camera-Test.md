@@ -1,3 +1,10 @@
+---
+title: '[2017-07-31] Jetson On Board Camera Test'
+date: 2017-07-31 21:25:13
+category: 'archive'
+draft: false
+---
+
 ## Jetson TX2 on board Camera with Caffe
 
 NVIDIA에서 제공하는 API로 진행

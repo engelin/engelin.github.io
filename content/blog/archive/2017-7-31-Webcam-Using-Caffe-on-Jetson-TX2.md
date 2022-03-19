@@ -1,3 +1,10 @@
+---
+title: '[2017-07-31] Webcam Using Caffe on Jetson TX2'
+date: 2017-07-31 22:25:13
+category: 'archive'
+draft: false
+---
+
 ## Webcam with Caffe on TX2
 
 웹캠을 사용한 프로젝트일 경우 Caffe의 사용이 조금 더 용이할 것으로 판단됨

@@ -1,3 +1,10 @@
+---
+title: '[2017-07-19] Kobuki getting started on Jetson TX2'
+date: 2017-07-19 22:25:13
+category: 'archive'
+draft: false
+---
+
 ## Kobuki getting started on Jetson TX2
 
 The [Kobuki](http://yujinrobot.github.io/kobuki/enMainPage.html) driver is a simple c++ library that allows interfacing to the kobuki mobile research base.

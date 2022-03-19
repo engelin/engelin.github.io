@@ -1,3 +1,10 @@
+---
+title: '[2017-07-19] CUDA programming tutorial (1)'
+date: 2017-07-19 19:25:13
+category: 'archive'
+draft: false
+---
+
 ## CUDA Programming Tutorial
 CUDA Programming Tutorial - 1
 

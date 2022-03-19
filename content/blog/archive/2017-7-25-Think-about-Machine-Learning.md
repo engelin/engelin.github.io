@@ -1,3 +1,10 @@
+---
+title: '[2017-07-25] Think about Machine Learning'
+date: 2017-07-25 21:25:13
+category: 'archive'
+draft: false
+---
+
 ## Machine Learning & Reinforcement Learning 간단히 정리
 
 내 생각 정리한 것..

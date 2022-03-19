@@ -1,0 +1,39 @@
+name: Build for Push
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+env:
+  FLUTTER_CHANNEL: 'stable'
+
+jobs:
+  build:
+    runs-on: macos-latest
+    if: ${{ !contains(github.event.head_commit.message, '#bump') }}
+    steps:
+      - run: |
+          echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+          echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+          echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: ${{ env.FLUTTER_CHANNEL }}
+      - run: flutter --version
+      - name: Install Dependencies
+        run: |
+          flutter pub get
+      - name: Analyze & Test
+        run: |
+          flutter analyze lib test
+          flutter test --coverage
+      - name: Build Android application
+        if: ${{ !contains(github.event.head_commit.message, '#target-ios') }}
+        run: |
+          flutter build apk --debug -t lib/main.dart
+      - name: Build iOS application
+        if: ${{ !contains(github.event.head_commit.message, '#target-aos') }}
+        run: |
+          flutter build ios --debug --no-codesign -t lib/main.dart

@@ -1,3 +1,10 @@
+---
+title: '[2017-07-17] Install Tensorflow'
+date: 2017-07-17 20:25:13
+category: 'archive'
+draft: false
+---
+
 ## Ubuntu16.04+GTX1080+CUDA8.0+cuDNN5.1+Tensorflow
 
 Setup for deep learning!

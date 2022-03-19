@@ -1,3 +1,10 @@
+---
+title: '[2015-03-26] Embedded System (1) mmap'
+date: 2015-03-26 19:25:13
+category: 'archive'
+draft: false
+---
+
 ## Memory Mapped I/O
 2015.03.26 수업 요약
 

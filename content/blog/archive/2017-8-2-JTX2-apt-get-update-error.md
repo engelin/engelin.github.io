@@ -1,3 +1,10 @@
+---
+title: '[2017-08-02] JTX2 apt-get update error'
+date: 2017-08-02 19:25:13
+category: 'archive'
+draft: false
+---
+
 ## sudo apt-get update && upgrade error
 
 ### lock error

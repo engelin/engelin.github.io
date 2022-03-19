@@ -1,3 +1,10 @@
+---
+title: '[2017-07-19] Compare of IIoT protocols'
+date: 2017-07-19 19:25:13
+category: 'archive'
+draft: false
+---
+
 ## Compare of IIoT(Industrial Internet of Thing)
 _그냥 궁금해서 정리해 봄.._
 

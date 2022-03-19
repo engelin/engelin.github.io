@@ -1,94 +1,87 @@
-import { graphql } from 'gatsby'
-import _ from 'lodash'
-import React, { useMemo } from 'react'
-import { Bio } from '../components/bio'
-import { Category } from '../components/category'
-import { Contents } from '../components/contents'
-import { Head } from '../components/head'
-import { HOME_TITLE } from '../constants'
-import { useCategory } from '../hooks/useCategory'
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
-import { useRenderedCount } from '../hooks/useRenderedCount'
-import { useScrollEvent } from '../hooks/useScrollEvent'
-import { Layout } from '../layout'
-import * as Dom from '../utils/dom'
-import * as EventManager from '../utils/event-manager'
+import * as React from "react"
+import { Link, graphql } from "gatsby"
 
-const BASE_LINE = 80
+import Bio from "../components/bio"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
-function getDistance(currentPos) {
-  return Dom.getDocumentHeight() - currentPos
-}
+const BlogIndex = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const posts = data.allMarkdownRemark.nodes
 
-export default ({ data, location }) => {
-  const { siteMetadata } = data.site
-  const { countOfInitialPost } = siteMetadata.configs
-  const posts = data.allMarkdownRemark.edges
-  const categories = useMemo(
-    () => _.uniq(posts.map(({ node }) => node.frontmatter.category)),
-    []
-  )
-  const [count, countRef, increaseCount] = useRenderedCount()
-  const [category, selectCategory] = useCategory()
-
-  useIntersectionObserver()
-  useScrollEvent(() => {
-    const currentPos = window.scrollY + window.innerHeight
-    const isTriggerPos = () => getDistance(currentPos) < BASE_LINE
-    const doesNeedMore = () =>
-      posts.length > countRef.current * countOfInitialPost
-
-    return EventManager.toFit(increaseCount, {
-      dismissCondition: () => !isTriggerPos(),
-      triggerCondition: () => isTriggerPos() && doesNeedMore(),
-    })()
-  })
+  if (posts.length === 0) {
+    return (
+      <Layout location={location} title={siteTitle}>
+        <Seo title="All posts" />
+        <Bio />
+        <p>
+          No blog posts found. Add markdown posts to "content/blog" (or the
+          directory you specified for the "gatsby-source-filesystem" plugin in
+          gatsby-config.js).
+        </p>
+      </Layout>
+    )
+  }
 
   return (
-    <Layout location={location} title={siteMetadata.title}>
-      <Head title={HOME_TITLE} keywords={siteMetadata.keywords} />
+    <Layout location={location} title={siteTitle}>
+      <Seo title="All posts" />
       <Bio />
-      <Category
-        categories={categories}
-        category={category}
-        selectCategory={selectCategory}
-      />
-      <Contents
-        posts={posts}
-        countOfInitialPost={countOfInitialPost}
-        count={count}
-        category={category}
-      />
+      <ol style={{ listStyle: `none` }}>
+        {posts.map(post => {
+          const title = post.frontmatter.title || post.fields.slug
+
+          return (
+            <li key={post.fields.slug}>
+              <article
+                className="post-list-item"
+                itemScope
+                itemType="http://schema.org/Article"
+              >
+                <header>
+                  <h2>
+                    <Link to={post.fields.slug} itemProp="url">
+                      <span itemProp="headline">{title}</span>
+                    </Link>
+                  </h2>
+                  <small>{post.frontmatter.date}</small>
+                </header>
+                <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: post.frontmatter.description || post.excerpt,
+                    }}
+                    itemProp="description"
+                  />
+                </section>
+              </article>
+            </li>
+          )
+        })}
+      </ol>
     </Layout>
   )
 }
+
+export default BlogIndex
 
 export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
         title
-        configs {
-          countOfInitialPost
-        }
       }
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { ne: null }, draft: { eq: false } } }
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 200, truncate: true)
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            category
-            draft
-          }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
         }
       }
     }

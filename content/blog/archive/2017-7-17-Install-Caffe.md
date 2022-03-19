@@ -1,3 +1,10 @@
+---
+title: '[2017-07-17] Install Caffe'
+date: 2017-07-17 19:25:13
+category: 'archive'
+draft: false
+---
+
 ## Install Caffe on Ubuntu 16.04 + GTX1080 + CUDA8.0 + cuDNN5.1
 
 [Setup GPU environment](https://engelin.github.io/Install-Tensorflow/)

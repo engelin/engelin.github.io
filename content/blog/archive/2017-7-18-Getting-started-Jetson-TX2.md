@@ -1,3 +1,10 @@
+---
+title: '[2017-07-17] Getting started Jetson TX2'
+date: 2017-07-18 19:25:13
+category: 'archive'
+draft: false
+---
+
 ## Getting started Jetson TX2!
 
 [Jetson TX2](http://elinux.org/Jetson_TX2) is the fastest, most power-efficient embedded AI computing device.

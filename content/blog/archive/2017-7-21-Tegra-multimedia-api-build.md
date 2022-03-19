@@ -1,3 +1,10 @@
+---
+title: '[2017-07-21] Tegra multimedia api build'
+date: 2017-07-21 21:25:13
+category: 'archive'
+draft: false
+---
+
 ## Building Tegra Multimedia API
 
 Included in Jetpack 3.0.

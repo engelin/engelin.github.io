@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-post-js",
+    "path": "/archive/2018-5-31-Design-Pattern-05-Singleton-Pattern/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Yerin Blog"}},"markdownRemark":{"id":"7e94cabe-fcb0-5baf-9ad1-6758aa61940c","excerpt":"05. Singleton Pattern","html":"<h3>05. Singleton Pattern</h3>","frontmatter":{"title":"[2018-05-31] Design Pattern 05 Singleton pattern","date":"May 31, 2018","description":null}},"previous":{"fields":{"slug":"/archive/2017-8-2-JTX2-apt-get-update-error/"},"frontmatter":{"title":"[2017-08-02] JTX2 apt-get update error"}},"next":{"fields":{"slug":"/flutter-cicd-setup/"},"frontmatter":{"title":"Flutter CI/CD Setup (Github actions + GCP)"}}},"pageContext":{"id":"7e94cabe-fcb0-5baf-9ad1-6758aa61940c","previousPostId":"a75a9867-f295-5cd1-824d-415c54a0f3f5","nextPostId":"7393d599-0ad4-534a-b6ec-14a9bdc0e534"}},
+    "staticQueryHashes": ["2841359383","3257411868"]}

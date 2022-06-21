@@ -1,4 +1,104 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 19 Mar 2022 14:38:12 GMT</lastBuildDate><item><title><![CDATA[React Google Login Using Identity Platform (Firebase/GCP)]]></title><description><![CDATA[Implement Google SSO Setup GCP GCP - Identity Platform is basically a Firebase service. But it’s still had a same usage via Firebase…]]></description><link>https://engelin.github.io/react-google-login-using-identity-platform/</link><guid isPermaLink="false">https://engelin.github.io/react-google-login-using-identity-platform/</guid><pubDate>Fri, 04 Mar 2022 14:45:37 GMT</pubDate><content:encoded>&lt;h1&gt;Implement Google SSO&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 21 Jun 2022 21:26:48 GMT</lastBuildDate><item><title><![CDATA[[TIL] Solidity 02. Syntax]]></title><description><![CDATA[01. Syntax of Solidity  Replacing memory with calldata when stack is enough Relation between identifier and parameters and MethodID Fallback…]]></description><link>https://engelin.github.io/til/2022-06-21-solidity/</link><guid isPermaLink="false">https://engelin.github.io/til/2022-06-21-solidity/</guid><pubDate>Tue, 21 Jun 2022 22:10:13 GMT</pubDate><content:encoded>&lt;h3&gt;01. Syntax of Solidity&lt;/h3&gt;
+&lt;h4&gt;&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;code&quot;&gt;&lt;pre class=&quot;language-code&quot;&gt;&lt;code class=&quot;language-code&quot;&gt;interface HelloWorldInterface {
+    // private function is not visible so that cannot be used in the interface
+    function helloWorld() external view returns (string memory);
+    function setText(string memory newText) external;
+}
+
+// overriding the interface
+contract HelloWorld is HelloWorldInterface {
+    string private text;
+
+    constructor() {
+        text = &amp;quot;Hello World&amp;quot;;
+    }
+
+    function helloWorld() public view override returns (string memory)  {
+        return text;
+    }
+
+    // can use calldata instead of memory
+    // cuz newText doesn&amp;#39;t need to save into memory for setter
+    function setText(string calldata newText) public override {
+        text = newText;
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Replacing memory with calldata when stack is enough
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;data location : kinda low level thing... related w/ the cost
+  - memory
+  - storage
+  - calldate: non-modifier, non-persistant &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;Relation between identifier and parameters and MethodID&lt;/li&gt;
+&lt;li&gt;Fallback and receive functions
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;contract HelloWorld is HelloWorldInterface {
+  ...
+  // it hits the fallback function because the attached function does not exist
+  // when an error is occurred, just fallback
+  fallback() external {
+      text = &quot;error&quot;;
+  }
+  ...
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;Definitions
+&lt;ul&gt;
+&lt;li&gt;Visibility
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;access point
+ - public: inside + outside
+ - private: inside
+ - internal: inside
+ - external: outside&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;State mutability
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pure
+view
+payable&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;Modifiers&lt;/li&gt;
+&lt;li&gt;Virtual&lt;/li&gt;
+&lt;li&gt;Override&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Error&lt;/h4&gt;
+&lt;p&gt;Panic via assert and Error via require
+Properly functioning code should never create a Panic, not even on invalid external input. If this happens, then there is a bug in your contract which you should fix.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.soliditylang.org/en/latest/control-structures.html?highlight=require#error-handling-assert-require-revert-and-exceptions&quot;&gt;https://docs.soliditylang.org/en/latest/control-structures.html?highlight=require#error-handling-assert-require-revert-and-exceptions&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;contract HelloWorld is HelloWorldInterface {
+    string private text;
+    address public owner;
+
+    constructor() {
+        text = &quot;Hello World&quot;;
+        owner = msg.sender;
+    }
+
+    function helloWorld() public view override returns (string memory) {
+        return text;
+    }
+
+    // function setText(string calldata newText) public override {
+    //     require(msg.sender == owner, &quot;Error&quot;);
+    //     text = newText;
+    // }
+
+    function setText(string calldata newText) public override onlyOwner {
+        text = newText;
+    }
+
+    function transferOwnership(address newOwner) public onlyOwner {
+        owner = newOwner;
+    }
+
+    modifier onlyOwner()
+    {
+        require (msg.sender == owner, &quot;Caller is not the owner&quot;);
+        _; // next function
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React Google Login Using Identity Platform (Firebase/GCP)]]></title><description><![CDATA[Implement Google SSO Setup GCP GCP - Identity Platform is basically a Firebase service. But it’s still had a same usage via Firebase…]]></description><link>https://engelin.github.io/react-google-login-using-identity-platform/</link><guid isPermaLink="false">https://engelin.github.io/react-google-login-using-identity-platform/</guid><pubDate>Fri, 04 Mar 2022 14:45:37 GMT</pubDate><content:encoded>&lt;h1&gt;Implement Google SSO&lt;/h1&gt;
 &lt;h2&gt;Setup GCP&lt;/h2&gt;
 &lt;p&gt;GCP - Identity Platform is basically a Firebase service. But it’s still had a same usage via Firebase.&lt;/p&gt;
 &lt;p&gt;&lt;span

@@ -3,7 +3,7 @@ module.exports = {
     title: `Yerin Blog`,
     author: {
       name: `Yerin Hong`,
-      summary: `who lives in Brighton and works in the UK.`,
+      summary: `who lives in London and works in the UK.`,
     },
     description: `A personal blog with Gatsby.`,
     siteUrl: `https://engelin.github.io/`,
@@ -81,7 +81,7 @@ module.exports = {
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
+                  custom_elements: [{ 'content:encoded': node.html }],
                 })
               })
             },
@@ -104,8 +104,8 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
-            title: "Yerin-pyon Blog RSS Feed",
+            output: '/rss.xml',
+            title: 'Yerin-pyon Blog RSS Feed',
           },
         ],
       },

@@ -1,4 +1,189 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 21 Jun 2022 22:01:48 GMT</lastBuildDate><item><title><![CDATA[[TIL] Solidity 02. Syntax]]></title><description><![CDATA[01. Syntax of Solidity  Replacing memory with calldata when stack is enough Relation between identifier and parameters and MethodID Fallback…]]></description><link>https://engelin.github.io/til/2022-06-21-solidity/</link><guid isPermaLink="false">https://engelin.github.io/til/2022-06-21-solidity/</guid><pubDate>Tue, 21 Jun 2022 22:10:13 GMT</pubDate><content:encoded>&lt;h3&gt;01. Syntax of Solidity&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 19 Jul 2022 18:28:37 GMT</lastBuildDate><item><title><![CDATA[Flutter App Name Localization]]></title><description><![CDATA[Flutter Localization packages flutter_localizations intl easy_localization There are packages for flutter app localization a lot. Just pick…]]></description><link>https://engelin.github.io/flutter-appname-localization/</link><guid isPermaLink="false">https://engelin.github.io/flutter-appname-localization/</guid><pubDate>Tue, 19 Jul 2022 18:59:37 GMT</pubDate><content:encoded>&lt;h1&gt;Flutter Localization packages&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.flutter.dev/development/accessibility-and-localization/internationalization&quot;&gt;flutter_localizations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pub.dev/packages/intl&quot;&gt;intl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pub.dev/packages/easy_localization&quot;&gt;easy_localization&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are packages for flutter app localization a lot. Just pick one!
+But if you want to change app name with system preferences, you should change the native code.&lt;/p&gt;
+&lt;h1&gt;Android&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Change android:label in AndroidManifest.xml
+${FlutterProj}/android/app/src/main/AndroidManifest.xml&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;manifest&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;xmlns:&lt;/span&gt;android&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;http://schemas.android.com/apk/res/android&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;com.yerin.xxxx&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+   &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;application&lt;/span&gt;
+&lt;span class=&quot;token attr-name&quot;&gt;-&lt;/span&gt;        &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;label&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;xxxx&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token attr-name&quot;&gt;+&lt;/span&gt;        &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;label&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;@string/app_name&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;${applicationName}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;icon&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;@mipmap/ic_launcher&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &amp;lt;activity
+        ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Create strings files
+${FlutterProj}/android/app/src/main/res/values-en/strings.xml&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;or
+${FlutterProj}/android/app/src/main/res/values-de/strings.xml&lt;/p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;Write your app name down!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;resources&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;string&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;app_name&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;APP NAME&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;resources&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;iOS&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open Xcode!
+In ios folder, there is Xcode file which has &lt;code class=&quot;language-text&quot;&gt;xcodeproj&lt;/code&gt; extension.
+&lt;strong&gt;Remember! If you don’t create strings with Xcode, that files couldn’t add properly into the project.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add languages what you want to support.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/72426a2c338421fe14fb1b758570e4e0/8bd7d/FlutterAppNameI18N_1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 52.53164556962025%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB/ElEQVQoz2WSiW7TQBRF/f/fQilSoSAViiiILiJdspQ2ZHfsccb2OE68xOPlIDs0TemVrkYjvXd037wx5I2NvBE4LYv5tcl4OKU/8RnO11jWguHYQpgWlmnjOh6+q5DCxZyYmNM5Ym4R+j5hsMJ1XIzum6+Yn66YHV9gn7WJo5Qkq1hvKp60KSDNNFpnpJuUNE3ZV11ZVRVFnmLcn3SY/vjTJFS3M9R4TCoFlZIkcUwQBKyjFK1zMp03p9aaoigoy7JxDdsajMFJG/dqhur6qJ7D6PcjgT1HLwN0tiEMV6RpQlnkJLqirHiZbgfb2nj4/oBz6+B1PFRfsck0Tz3rKEIptWvkX1Mcx4Rh2Iz+Cjg67WF/7uCePeJ3xXMzNOPu3qsqG2At13WZTiZkWdbU7o9umKc9Jh+vEV96BPeL5yRAXpTESYIuClZpzjpOmntRQ/aW8SKhXX+XloXdsgn6iqrcwihL1sLCHg5IfI+VlKylJPZcUuWTKY88jikqKMqqcVkDVdejtt+WO2Cj+ou4NpWO66xAsVtEFi/RoQd5xP8yvLbE60i8u9fA8+sZBxceBz8lh5c+71shR62Qw3PBu29jji8lR3cJH24j3v6KGEmN4Xdcau8Dq+1mmFtL+gPBaCiYzTwcJ0SIELlY4S5WCLXBXhaIZY6lcqJNyV8G70NwthPhmgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;FlutterAppNameI18N_1&quot;
+        title=&quot;FlutterAppNameI18N_1&quot;
+        src=&quot;/static/72426a2c338421fe14fb1b758570e4e0/f058b/FlutterAppNameI18N_1.png&quot;
+        srcset=&quot;/static/72426a2c338421fe14fb1b758570e4e0/c26ae/FlutterAppNameI18N_1.png 158w,
+/static/72426a2c338421fe14fb1b758570e4e0/6bdcf/FlutterAppNameI18N_1.png 315w,
+/static/72426a2c338421fe14fb1b758570e4e0/f058b/FlutterAppNameI18N_1.png 630w,
+/static/72426a2c338421fe14fb1b758570e4e0/40601/FlutterAppNameI18N_1.png 945w,
+/static/72426a2c338421fe14fb1b758570e4e0/78612/FlutterAppNameI18N_1.png 1260w,
+/static/72426a2c338421fe14fb1b758570e4e0/8bd7d/FlutterAppNameI18N_1.png 2358w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create InfoPlist.strings in Runner.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b4375c05cc43000b0e994f174f9f7273/9ab1f/FlutterAppNameI18N_2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 37.34177215189873%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABI0lEQVQoz32P6WrCUBCF8/4PUgp9gdpWWugPi9Slli4uNW6J2b25idk09ytxARFx4Mx6Zjij9RsGVsvA+bCwWyaznoFlu4xmAt2U2LaH43iIQCBWIZGMicKIVSBY+atdjKUkWaeIIEAbNRYMXkdYnSVOe0mgC7KiIIzWpGnGZlOgVMk1Kyq+jIgigVYp+33osWiMcToW0TQkyQtknLBOC5KsIMu3bLbqIrYlxPEa27ZxXRfN7Jj8vfzgdy28noeYhOSbw4FSURyXS3b1OaqDaZYThiFSSjSrOeb7qcviTcd9nyOGzv4PpSp38th5ri70QTPumwxuaszv6sxvH/Hbwz2tVCh1Cs5yLvQVmv/pMa1/ode6LJ/7yIk4CNwTrtlxfsr9B0PYGMLgsBjWAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;FlutterAppNameI18N_2&quot;
+        title=&quot;FlutterAppNameI18N_2&quot;
+        src=&quot;/static/b4375c05cc43000b0e994f174f9f7273/f058b/FlutterAppNameI18N_2.png&quot;
+        srcset=&quot;/static/b4375c05cc43000b0e994f174f9f7273/c26ae/FlutterAppNameI18N_2.png 158w,
+/static/b4375c05cc43000b0e994f174f9f7273/6bdcf/FlutterAppNameI18N_2.png 315w,
+/static/b4375c05cc43000b0e994f174f9f7273/f058b/FlutterAppNameI18N_2.png 630w,
+/static/b4375c05cc43000b0e994f174f9f7273/40601/FlutterAppNameI18N_2.png 945w,
+/static/b4375c05cc43000b0e994f174f9f7273/78612/FlutterAppNameI18N_2.png 1260w,
+/static/b4375c05cc43000b0e994f174f9f7273/9ab1f/FlutterAppNameI18N_2.png 2343w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create other strings file via clicking &lt;code class=&quot;language-text&quot;&gt;localize&lt;/code&gt; button.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/abe8b7d49da19dbbf5d04c9869db2365/86177/FlutterAppNameI18N_3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 32.911392405063296%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABb0lEQVQoz32Q226bUBBF+f8f6B/0Ayr1pVKjvsVWFfXiNA0OtQFzOcC5gA+Yiw+sqqSplJeOtDUvW2u0xqu+Ccovgvx7RlUpdD2gTYsoFEYZal3Tnrs1Wpo1Z9MwDSOXtqeWhkoYVFmjC40Xbo6IuwzpK7ph4Gxb+r7HXSf+N7ZtsbZBiopjEJGeMoyq8aJPj1RfC5rAcBmv2G5gmBz2MmLrBqUbbv0cq2tsYxndwjjNVJVESomuDGmcUoqCRjd4ySZE7yQm0LhlxrmZeYGuH1C5II4Eb298ilNOlRdcnWNeltViGHqUrJGVwdoL56bD828eSG9Dih/5s8uyrGuaRookI9oHlMEj5eFpBbrZvVI3aYY6htRxwjnJ8A7vtiTv71D3+V/eM3CcJuJDSLDb8eHziTcfJQ+/BCxuvfnSU1FM+tNHhtEK9ZJtRLqJqZ/0K+A8z+RZTrDfc+8f2e5ChCj/dV7Sdj1dP+LmP791/AYQAhGrXoNMNAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;FlutterAppNameI18N_3&quot;
+        title=&quot;FlutterAppNameI18N_3&quot;
+        src=&quot;/static/abe8b7d49da19dbbf5d04c9869db2365/f058b/FlutterAppNameI18N_3.png&quot;
+        srcset=&quot;/static/abe8b7d49da19dbbf5d04c9869db2365/c26ae/FlutterAppNameI18N_3.png 158w,
+/static/abe8b7d49da19dbbf5d04c9869db2365/6bdcf/FlutterAppNameI18N_3.png 315w,
+/static/abe8b7d49da19dbbf5d04c9869db2365/f058b/FlutterAppNameI18N_3.png 630w,
+/static/abe8b7d49da19dbbf5d04c9869db2365/40601/FlutterAppNameI18N_3.png 945w,
+/static/abe8b7d49da19dbbf5d04c9869db2365/78612/FlutterAppNameI18N_3.png 1260w,
+/static/abe8b7d49da19dbbf5d04c9869db2365/86177/FlutterAppNameI18N_3.png 2869w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Write your app name down!
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e4348f3e59b7a209afa4f5f658b7150e/b8765/FlutterAppNameI18N_4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 34.177215189873415%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABR0lEQVQoz23Py27bMBCFYb3/C7WbAl1000XtFGnhBI1tyK5IXXixRFnUheRfyG5QIM0Ag5nN+TCTqe8l9UOJfCj4nQt0o6lkw/ZJsttLKlFilEU3BlmUSFFhGoVrHVYZVGWopMHWFlMZsv2XX8hvBepng+lGdNfT9Z72OtP6wLgEQoIARCABc4h0zuFcS3ESvDwfECdBVV7I9p9+0Gwl9kkzD56x75mHgcUPsMwwz6QYSSmR4srBNE3UdY01FlXq21fr3rxeqB8V+tkStIb8BU5HUpGTxIl0PsLob9CKrhVjvKHee1SpaG3H1Q10piM7ft5Rf83RjyUx3APpvV4vfJ1/4WmJnM8lF23voHVk+cctxYcNenMmxjt3D/Ef8Hb6KXA4CKzSjH7CXRyZ2ErERqJ3mhjiv8DbfgdclkDbXRn9yDwv9N2VP6wBGD5jOoMsAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;FlutterAppNameI18N_4&quot;
+        title=&quot;FlutterAppNameI18N_4&quot;
+        src=&quot;/static/e4348f3e59b7a209afa4f5f658b7150e/f058b/FlutterAppNameI18N_4.png&quot;
+        srcset=&quot;/static/e4348f3e59b7a209afa4f5f658b7150e/c26ae/FlutterAppNameI18N_4.png 158w,
+/static/e4348f3e59b7a209afa4f5f658b7150e/6bdcf/FlutterAppNameI18N_4.png 315w,
+/static/e4348f3e59b7a209afa4f5f658b7150e/f058b/FlutterAppNameI18N_4.png 630w,
+/static/e4348f3e59b7a209afa4f5f658b7150e/40601/FlutterAppNameI18N_4.png 945w,
+/static/e4348f3e59b7a209afa4f5f658b7150e/78612/FlutterAppNameI18N_4.png 1260w,
+/static/e4348f3e59b7a209afa4f5f658b7150e/b8765/FlutterAppNameI18N_4.png 2868w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[[TIL] Solidity 02. Syntax]]></title><description><![CDATA[01. Syntax of Solidity  Replacing memory with calldata when stack is enough Relation between identifier and parameters and MethodID Fallback…]]></description><link>https://engelin.github.io/til/2022-06-21-solidity/</link><guid isPermaLink="false">https://engelin.github.io/til/2022-06-21-solidity/</guid><pubDate>Tue, 21 Jun 2022 22:10:13 GMT</pubDate><content:encoded>&lt;h3&gt;01. Syntax of Solidity&lt;/h3&gt;
 &lt;h4&gt;&lt;/h4&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;code&quot;&gt;&lt;pre class=&quot;language-code&quot;&gt;&lt;code class=&quot;language-code&quot;&gt;interface HelloWorldInterface {
     // private function is not visible so that cannot be used in the interface

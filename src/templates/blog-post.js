@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
+import Comments from "../components/comments"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -29,6 +30,8 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+        <hr />
+        <Comments/>
         <hr />
         <footer>
           <Bio />

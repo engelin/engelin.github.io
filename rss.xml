@@ -1,4 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 20 Jul 2022 09:59:45 GMT</lastBuildDate><item><title><![CDATA[Flutter App Name Localization]]></title><description><![CDATA[Flutter Localization packages flutter_localizations intl easy_localization There are packages for flutter app localization a lot. Just pick…]]></description><link>https://engelin.github.io/flutter-appname-localization/</link><guid isPermaLink="false">https://engelin.github.io/flutter-appname-localization/</guid><pubDate>Tue, 19 Jul 2022 18:59:37 GMT</pubDate><content:encoded>&lt;h1&gt;Flutter Localization packages&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 05 Aug 2022 15:07:21 GMT</lastBuildDate><item><title><![CDATA[Flutter Install on macOS (Apple silicon)]]></title><description><![CDATA[Flutter Install on macOS (Apple silicon) 🔎 Getting Started 1. Install flutter Sidekick Download FVM install 1) Download Flutter SDK. 2) Add…]]></description><link>https://engelin.github.io/flutter-install-on-macos/</link><guid isPermaLink="false">https://engelin.github.io/flutter-install-on-macos/</guid><pubDate>Wed, 03 Aug 2022 18:09:37 GMT</pubDate><content:encoded>&lt;h1&gt;Flutter Install on macOS (Apple silicon)&lt;/h1&gt;
+&lt;h2&gt;🔎 Getting Started&lt;/h2&gt;
+&lt;h3&gt;1. Install flutter&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;:blue_circle: FVM and Sidekick are useful to manage Flutter versioning.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/fluttertools/sidekick/releases&quot;&gt;Sidekick Download&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://fvm.app/docs/getting_started/installation&quot;&gt;FVM install&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;1) Download &lt;a href=&quot;https://docs.flutter.dev/get-started/install/macos#get-sdk&quot;&gt;Flutter SDK&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2) Add the flutter tool to your path.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;From macOS catalina, macOS shell is changed from bash to zsh. So you can find this path environment in &lt;code class=&quot;language-text&quot;&gt;~/.zprofile&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;~/.zshrc&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token environment constant&quot;&gt;$PATH&lt;/span&gt;:&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;pwd&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;/flutter/bin&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;iOS&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1) Setup Xcode.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To build iOS using &lt;code class=&quot;language-text&quot;&gt;xcode-cli&lt;/code&gt;, firstly you should run the Xcode once to agree license, or just run the below command.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; xcodebuild -runFirstLaunch
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; xcodebuild -license&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And if you’ve already got the latest one, you don’t need to download again. But if you need to download, you should switch what you use.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; xcode-select --switch /Applications/Xcode.app/Contents/Developer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;2) Install CocoaPods again.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Probably you will meet a problem, &lt;code class=&quot;language-text&quot;&gt;CocoaPods not installed.&lt;/code&gt; or&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Error: To set up CocoaPods for ARM macOS, run:
+  arch -x86_64 sudo gem install ffi
+
+Error running pod install
+Error launching application on iPhone 13 mini.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;, when you try to use some packages on Android Studio. Or you can simply check running &lt;code class=&quot;language-text&quot;&gt;flutter doctor --verbose&lt;/code&gt;.
+Then, to fix this, reinstall CocoaPods using &lt;code class=&quot;language-text&quot;&gt;homebrew&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;gem uninstall cocoapods
+brew &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; cocoapods&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Android&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1) Setup Android tool chain.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;2. Setup IDE&lt;/h3&gt;
+&lt;h4&gt;JetBrain&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.android.com/studio&quot;&gt;Android Studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.jetbrains.com/idea/download/#section=mac&quot;&gt;IntelliJ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can simply install Flutter and Dart plugins and restart your IDE.&lt;/p&gt;
+&lt;h4&gt;Visual Studio Code&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://code.visualstudio.com/download&quot;&gt;Visual Studio Code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can simply install Flutter and Dart extensions. And add the configurations for flutter flavors in &lt;code class=&quot;language-text&quot;&gt;.vscode/launch.json&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;xxx (dev)&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;program&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;lib/main_dev.dart&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;request&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;launch&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;dart&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;xxx (prod)&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;program&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;lib/main_prod.dart&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;request&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;launch&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;dart&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Refs.&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.flutter.dev/get-started/install/macos&quot;&gt;macOS install&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Useful flutter sites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://pub.dev/&quot;&gt;Flutter packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://fluttergems.dev/&quot;&gt;Flutter UI components&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Flutter App Name Localization]]></title><description><![CDATA[Flutter Localization packages flutter_localizations intl easy_localization There are packages for flutter app localization a lot. Just pick…]]></description><link>https://engelin.github.io/flutter-appname-localization/</link><guid isPermaLink="false">https://engelin.github.io/flutter-appname-localization/</guid><pubDate>Tue, 19 Jul 2022 18:59:37 GMT</pubDate><content:encoded>&lt;h1&gt;Flutter Localization packages&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://docs.flutter.dev/development/accessibility-and-localization/internationalization&quot;&gt;flutter_localizations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://pub.dev/packages/intl&quot;&gt;intl&lt;/a&gt;&lt;/li&gt;
@@ -1173,7 +1237,7 @@ In Kernel.php line 226:
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAACA0lEQVQoz52STWsUQRCG90d78OAf8OhRJIIHJclBEVFcgkQCISjIRmM0RDO7yWRnp6fnqz+nq7uqW9ZMNp59T9Vd/VDv29QkpRRjTCkppXZ3ds9+nqW/Ih+68xX09ua4kPHdFfpA6R9N1u9ofTWdTre3t7e2tpy0thRm1fHZXMwrW8uQ84M8PJuZt48+l1m/mTfZVHVdz74cn3z7nlISWdX9WOq8kXMuLipgfWP8PNevHh5envI1QrdwSgkD6c7xQvTceBcIcCgFGYdy8J0lSixvmkrwVd9xGTGOtilGpOgDWUB+XiguPUaMsTGhUp4rTylp6fp26IreOTQmgF/PpZgmg6feBuVCL13+9aplSiqQGprWNgoa5ZVDaXyZVSyrlPUtUy3XDVN2CJPN14mLsj65HLhUv5j6zdR56Vt907JFx45+tac5cOmY0IsatRszex+U0m4A3SujDThIFAkpUgTvB2Wr2XwQul2UxXFmKoHCIeIIP3n89P69B8WySCkBgHNu9NKLo8NPi2xhtLHWQljnZ6x68Xzn4/7BCL9++Wb6fo9Xdc2bYlmC86Nba7OLuRDSWEtEUsi2bllZfdjbv86vN7a91rrliq/6quiqZYc4bpJSGgCMGlouWy5Z0XnwPvgQwt2ShIAwBKvAA3qHdAuHgDFGoogBEQmRCAkA7jL/t/4A+pXfen7MaVoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAACA0lEQVQoz52STWsUQRCG908LHvwFnryKxIOHkPUUJEgiQRJBDSJJSCQLibuTZTK7M93z0d/d1d3VLZtMIl596UNVd7/UU0VNcs4ppZyzlHK6M53NZvle0Yfheg1MP6S3Aj8uIwTc/M+jJjlnxM3Vwf7BdGe6tbVluTY10+uBnhW8IJoKX9Lj0r87M3uvftQL9lRv8hS1bXv68/zy4lfOmS/IMKtU2YmC8jlxDWuVL0q5+/Lb8or+Y95Ahih7S9eCUQM2IERbc9QuSguDjpiasu0Ib2s2UIFxBJ8gpoDJezQQ2+tathJiiil3JhDlqfKYsxKO9YZVDDwa48FHzBlTmliPzARhAxfu7qIciBQKhIKut52ETnoJUWhfLygpqDS+b2RPVddIa8PkcXKZz+v2cmmpkL8bOSfypva9engyq745uRmuSqDC1Vwt26jc2LP3QUrlLCgmtdLgIGPCiCkmB2ClaU4Ly1Rf1NX5XDc8ChdjHM1vXr99/uzFqlrlnAGcc25kYfz715Pbxa1WWhvjvMecGkK2t98fHX0ZzR929z7tH1LStrRbVTU4P9Jqs5gXnHNtDCJKIfqubxry+fC4LO+esL1SqieSrhmpBlINcTPOfL92CgC0tB0VPeXNqgfwYaNH7IQYfAAbjHTeRe8iPppDCCkhYoohxoj3JzoHf3v+b/0B1ZDfaj39auEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2450,7 +2514,8 @@ Unified memory Fast GPU, Fast Memory…]]></description><link>https://engelin.gi
 &lt;img src=&quot;https://github.com/engelin/engelin.github.io/blob/master/images/Unified_Memory_10.png?raw=true&quot; alt=&quot;Unified memory&quot;&gt;&lt;/p&gt;
 &lt;p&gt;This post refers to:
 &lt;a href=&quot;https://devblogs.nvidia.com/parallelforall/unified-memory-cuda-beginners/&quot;&gt;Unified memory cuda beginners&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[2017-07-19] CUDA programming tutorial (1)]]></title><description><![CDATA[CUDA Programming Tutorial CUDA Programming Tutorial - 1 CUDA Programming Tutorial Unified Memory
-CUDA Programming Tutorial Architecture…]]></description><link>https://engelin.github.io/archive/2017-7-19-CUDA-programming-tutorial-(1)/</link><guid isPermaLink="false">https://engelin.github.io/archive/2017-7-19-CUDA-programming-tutorial-(1)/</guid><pubDate>Wed, 19 Jul 2017 19:25:13 GMT</pubDate><content:encoded>&lt;h2&gt;CUDA Programming Tutorial&lt;/h2&gt;
+CUDA Programming Tutorial Architecture
+CUDA…]]></description><link>https://engelin.github.io/archive/2017-7-19-CUDA-programming-tutorial-(1)/</link><guid isPermaLink="false">https://engelin.github.io/archive/2017-7-19-CUDA-programming-tutorial-(1)/</guid><pubDate>Wed, 19 Jul 2017 19:25:13 GMT</pubDate><content:encoded>&lt;h2&gt;CUDA Programming Tutorial&lt;/h2&gt;
 &lt;p&gt;CUDA Programming Tutorial - 1&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://github.com/engelin/engelin.github.io/blob/master/images/CUDA_Tutorial_1.png?raw=true&quot; alt=&quot;CUDA Programming Tutorial&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Unified Memory

@@ -5,6 +5,21 @@ date: "2023-01-26T08:37:37.121Z"
 
 # Flutter 3.7.0 Update
 
+## [What's new in Flutter 3.7](https://medium.com/flutter/whats-new-in-flutter-3-7-38cbea71133c)
+
+- Enhanced Material 3 support
+- Menu bars and cascading menus
+- iOS release validation
+- DevTools updates
+- Custom context menus
+- CupertinoListSection and CupertinoListTile widgets
+- Scrolling improvements
+- Internationalization tools and docs
+- Global selection improvements
+- etc....
+
+[Release notes](https://docs.flutter.dev/development/tools/sdk/release-notes/release-notes-3.7.0)
+
 ## Errors
 Flutter doctor
 ```sh

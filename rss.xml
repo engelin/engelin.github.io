@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 26 Jan 2023 08:49:57 GMT</lastBuildDate><item><title><![CDATA[Flutter update to 3.7.0 (flutter_intl generate failure)]]></title><description><![CDATA[Flutter 3.7.0 Update Errors Flutter doctor Flutter intl error Workarounds]]></description><link>https://engelin.github.io/flutter-3-7-0/</link><guid isPermaLink="false">https://engelin.github.io/flutter-3-7-0/</guid><pubDate>Thu, 26 Jan 2023 08:37:37 GMT</pubDate><content:encoded>&lt;h1&gt;Flutter 3.7.0 Update&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 26 Jan 2023 08:57:40 GMT</lastBuildDate><item><title><![CDATA[Flutter update to 3.7.0 (flutter_intl generate failure)]]></title><description><![CDATA[Flutter 3.7.0 Update What’s new in Flutter 3.7 Enhanced Material 3 support Menu bars and cascading menus iOS release validation DevTools…]]></description><link>https://engelin.github.io/flutter-3-7-0/</link><guid isPermaLink="false">https://engelin.github.io/flutter-3-7-0/</guid><pubDate>Thu, 26 Jan 2023 08:37:37 GMT</pubDate><content:encoded>&lt;h1&gt;Flutter 3.7.0 Update&lt;/h1&gt;
+&lt;h2&gt;&lt;a href=&quot;https://medium.com/flutter/whats-new-in-flutter-3-7-38cbea71133c&quot;&gt;What’s new in Flutter 3.7&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Enhanced Material 3 support&lt;/li&gt;
+&lt;li&gt;Menu bars and cascading menus&lt;/li&gt;
+&lt;li&gt;iOS release validation&lt;/li&gt;
+&lt;li&gt;DevTools updates&lt;/li&gt;
+&lt;li&gt;Custom context menus&lt;/li&gt;
+&lt;li&gt;CupertinoListSection and CupertinoListTile widgets&lt;/li&gt;
+&lt;li&gt;Scrolling improvements&lt;/li&gt;
+&lt;li&gt;Internationalization tools and docs&lt;/li&gt;
+&lt;li&gt;Global selection improvements&lt;/li&gt;
+&lt;li&gt;etc…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.flutter.dev/development/tools/sdk/release-notes/release-notes-3.7.0&quot;&gt;Release notes&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Errors&lt;/h2&gt;
 &lt;p&gt;Flutter doctor&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;/Users/xxx/fvm/default/bin/flutter doctor --verbose

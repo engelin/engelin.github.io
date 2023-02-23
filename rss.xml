@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 23 Feb 2023 09:14:59 GMT</lastBuildDate><item><title><![CDATA[Deploy Android & iOS applications]]></title><description><![CDATA[Ready to deploy 1. Android To generate key on mac silicon device, you need to download java first. 2. iOS Upload the app bundle Once the app…]]></description><link>https://engelin.github.io/app-deploy/</link><guid isPermaLink="false">https://engelin.github.io/app-deploy/</guid><pubDate>Mon, 20 Feb 2023 15:37:37 GMT</pubDate><content:encoded>&lt;h1&gt;Ready to deploy&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 23 Feb 2023 09:28:54 GMT</lastBuildDate><item><title><![CDATA[Deploy Android & iOS applications]]></title><description><![CDATA[Ready to deploy 1. Android To generate key on mac silicon device, you need to download java first. Missing Symbol files 
+Compress the…]]></description><link>https://engelin.github.io/app-deploy/</link><guid isPermaLink="false">https://engelin.github.io/app-deploy/</guid><pubDate>Mon, 20 Feb 2023 15:37:37 GMT</pubDate><content:encoded>&lt;h1&gt;Ready to deploy&lt;/h1&gt;
 &lt;h2&gt;1. Android&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;android {
     ...
@@ -19,6 +20,74 @@
 sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 echo &amp;#39;export PATH=&amp;quot;/opt/homebrew/opt/openjdk/bin:$PATH&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
 export CPPFLAGS=&amp;quot;-I/opt/homebrew/opt/openjdk/include&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Missing Symbol files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1b31a9b96d9f2958d6022a1f2b5bbaaa/00b70/compress_native_lib.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 43.0379746835443%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAACAklEQVQozzWSyXKbUBRE+ZNYgyVrAE1IAiFAT4jJMghNINuR4zhJ2XHiRVap/EP++aR4KS960/fdvl3dTxmagjA5kC4FmyAkmM8ZNpr065f0anVmWo9gbuPPLDzTRL9qydngskH/soGj69jDoXxbQtG0EW5yYucJ9usbYseVC++CRlfFM2csDZPFZCoFS17O63UpZvUHaNWahKLVm1jZmWs/wtJ6UkCtVFGrNdSLinS4Fkt5qHRZui95rVKVAmIyxdXHdD9cSF7xbZujJyiKjzwGgjvP5TjpsbVNhCtIopj74sTt8chtnhP7Pr4QBELgLxbsNxm7JMUrDzouShJHfPJdjuev/Hp64PMh47yyyd0ZQRiSxjG7NGWXbshubliHIXPDIFitSNOUoijI85z1ek2WJCiGG7A73vMtS7nzlyw7V9i1CramsYlitlHENo7xZjOc8Rhb19HbHQlD1YjdBaHjMG53GLfaKKNwz2Z/IvN9woXAnZpMtT7DqxaBZbEyTUy1i1GiWy61ZDFarS6zLvMri+m8Zzh0QnwvJLIsIttBTCYY3S7GYMQ222PoBn21z6g/YqAO0No9Os0uWr0hmy4bLov7/21qKMM45+HpmS9Fzvlw5LE4cUgTXpfX/D3/5k/2xqv/ws/glR/+C9+9Z96WT6yaTdqVCitzhmeY0mHZ/D+1GjPuyCrgggAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Compress&quot;
+        title=&quot;Compress&quot;
+        src=&quot;/static/1b31a9b96d9f2958d6022a1f2b5bbaaa/f058b/compress_native_lib.png&quot;
+        srcset=&quot;/static/1b31a9b96d9f2958d6022a1f2b5bbaaa/c26ae/compress_native_lib.png 158w,
+/static/1b31a9b96d9f2958d6022a1f2b5bbaaa/6bdcf/compress_native_lib.png 315w,
+/static/1b31a9b96d9f2958d6022a1f2b5bbaaa/f058b/compress_native_lib.png 630w,
+/static/1b31a9b96d9f2958d6022a1f2b5bbaaa/00b70/compress_native_lib.png 733w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+Compress the folders under “build/app/intermediates/merged_native_libs/productionRelease/out/lib”.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2b5e4687a43793e6cf30c977cac59f25/84d4d/symbol_files_android.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.06329113924051%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABP0lEQVQoz31Si27DIAzM//9kO2naIyEpb0x4XGUSsnXNetIpYIh9+DwY57BIBe89ci6w1mGaF0ilYb2HDwQXwg99QC4FHSklEBF8CLDWYuBNCOG4YIxpzDmjlPJERq312PO6kzEYa4+EHFRKQYgZWmvklI54J8fjuj7FO1tCtV/iipxQSolcKhyV9mW1XQGfp4dCeFTIvYsxIqXtp0AEozXWAkymglJtSvvzOs7UbQrNppBVMMZxwuV6hRAT1kit4f3sb7/OMGilcLvdEIlaQGvTknTVaTfnTNWpKfrjHfr7EyRGoJRmPyd79axOHpN1N6i73sam/por6xykUm3WXiVjEEWsu0FHQq7CrvWu8J6dZCO40H9keykEJFZYN+OYh8u9qhu/IN4uiItANQpFS9QzGgWaJyS5tHWWC7LVuAPUT1+A66YaFgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Symbol files are missing&quot;
+        title=&quot;Symbol files are missing&quot;
+        src=&quot;/static/2b5e4687a43793e6cf30c977cac59f25/f058b/symbol_files_android.png&quot;
+        srcset=&quot;/static/2b5e4687a43793e6cf30c977cac59f25/c26ae/symbol_files_android.png 158w,
+/static/2b5e4687a43793e6cf30c977cac59f25/6bdcf/symbol_files_android.png 315w,
+/static/2b5e4687a43793e6cf30c977cac59f25/f058b/symbol_files_android.png 630w,
+/static/2b5e4687a43793e6cf30c977cac59f25/40601/symbol_files_android.png 945w,
+/static/2b5e4687a43793e6cf30c977cac59f25/78612/symbol_files_android.png 1260w,
+/static/2b5e4687a43793e6cf30c977cac59f25/84d4d/symbol_files_android.png 2996w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;2. iOS&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;flutter build ipa --release lib/main_production.dart --flavor production --obfuscate --split-debug-info --export-method ad-hoc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;&lt;a href=&quot;https://docs.flutter.dev/deployment/ios#upload-the-app-bundle-to-app-store-connect&quot;&gt;&lt;strong&gt;Upload the app bundle&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
@@ -31,6 +100,171 @@ export CPPFLAGS=&amp;quot;-I/opt/homebrew/opt/openjdk/include&amp;quot;&lt;/code
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://apps.apple.com/us/app/transporter/id1450874784&quot;&gt;Transport macOS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7b57f54a71549810eac7a4126be41143/e216b/transport_issues.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.48101265822784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAACbklEQVQ4y6WT7WrTUBzGg1Rc2zXZ2jXvyUma1zXLS9ema7vhWkTtnCAbCht4Gd6CHxXxDtUvgpew5TyS08imHfvgDvw4hyfw4/lzTjiO26w9OxqezOf77/MkvRinyeVt8jS9HGUryvNNnrBsmKYX+SC7PMxH7zyLbHJPak0l8qyf/ZDANU14ZB23Yj0nq9wiCHs2xPb2kGs166Yuit8Dy4aja1dElgpLke9GlgqyznW5m5KIbb415TYbDYPI0g/X0OEYetHTNWrrGrVUhfY0ldoMZbWrCrUU+S+ILDEsRUab5ydcs75hlsIkihAFfuEQgsC2sEtMOIoMV1XgaeoNusbwdY19S3yfho4DIktos4b1OhMGTg+hbRd9YmKWJjjOR5jEezjYi5B5LmPge4ysxHOxH/gYhEHZHlVDNjITGmIXjqoUsUVwPM6xmE6xmE7wdJxjtj/AQRIjrcRZJc2jPlLfo3p3Z11YVnY0tUgIwSSOMRtkjGmWIvkjqVrFPRuBriHzfWRhQMsya0KzEkYWweligbevT3H+6gRnyyXOli/x5sVznCwWWM6PcTQa4iAKMQl7SFybGpJ4t9DVNCaMPRdp4DPKc+J7iF0HgaFjFPUxz4cYZBNE0zMEbp+a4j8jm9XItiIX5Q06qrKGq6nsVge7IQ6zBMHuEL3xOWwroES6Q1gGhiQWWneH3ofc3qbS9hZV2wLVthrU6HYoWb3JlbDVaBimLH0rA0uRryxFvr4Pu0RVri2GuspXfxdlD7vVZA1/VcIH0eb5Gfe4VuM7gvChIwhfOwL/qSPwn/+DLztbwsfGxobO3VqPHghbvwHTBmtlfBvTVwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Transport issues&quot;
+        title=&quot;Transport issues&quot;
+        src=&quot;/static/7b57f54a71549810eac7a4126be41143/f058b/transport_issues.png&quot;
+        srcset=&quot;/static/7b57f54a71549810eac7a4126be41143/c26ae/transport_issues.png 158w,
+/static/7b57f54a71549810eac7a4126be41143/6bdcf/transport_issues.png 315w,
+/static/7b57f54a71549810eac7a4126be41143/f058b/transport_issues.png 630w,
+/static/7b57f54a71549810eac7a4126be41143/40601/transport_issues.png 945w,
+/static/7b57f54a71549810eac7a4126be41143/78612/transport_issues.png 1260w,
+/static/7b57f54a71549810eac7a4126be41143/e216b/transport_issues.png 1904w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/11126519a1e5efdf40cd06a782ddf6dc/e2310/after_removing_alpha.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 105.0632911392405%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsTAAALEwEAmpwYAAAELklEQVQ4y5WU23LaVhSG5Rg7B+smN00AISHACCEOsjgYagO2YwkbgQ3EHjuZOKADpzAc3E5n+g59h/SifZ+Eq07fIcNtO4nI35FM0jjTi+bimzV7a+nba68tbYIgCCJIU3U+6ptSXs8ryu0ZBhhmyNL0kHK7hz6PZ0gv8X2BPfZT1NDv8w0ZihozXm/Ltepas333s5L4R2E3jUxKQkaSkM9mkM+kkZW2kJUkZFNfIEmf53LpFHKZNHKZlD3+6+76uscWklfPL9/0DB09U3vfN3WrZ2hWz7TRl2hfcWvuQ7+jw2i/fLfx4AHjCF9cXrzt6m2YWsvqaK2PZvsrtCXt/2TR0VrQrl7MNzY26GWFz972TQNdw6kIg27nM/2Oib6pOww6BvpLBl3zU87iVa8Lo92a379370Z43mzMzht1NKqq1axVUdrOYictYTeTwl4+h0OlgsOyiuK+jNKBgtK+jEJuG4VMCoVsemHnNWrqnGFZhnCtEqR6fDxrnDZx2axb6uETxAJ+cD4von4aiVAQUiKJjLgFMSpAFGJI8DGEKS/ClMdmEfI8wpPi7jwajzPE+tqN8OzpBYyXL6yTsoJdScSOJGJ/OwOJ55DLbuNwJ4+ClMROOoO0uI1E0I9UNAIxvLmIBVjIe8U5FxUYYt1FkNVKZdZsnKP9/JlVU2QkIxz4AAvOzyDM0NiK8hCWVUdoysGW8IzPZmHPy6XiPCLEGIJYIcgTVZ2dVFTUyopVkWWEwxwYlkUgGISfZSEmEogHWfA05UgitA8xe+yn/xXuFed8LM4Qq3dWyJpamZ2fPcVls2FV5UPEuTCEzRAiARabtA9JPgKOocF63U7fOMp9s8AtYWnO2z10ra6Qtao6azabuGjUreODPYibQSRDAQgs41QVDfhRiHKobsWwI4pI8AnwDOUcGu9nFhztg7K/FBJ37pCnteqsrlZQrxxb+9/nsel1I+h+tOwRhVgoiFZuCz8V09gXeEQ5ARGfB5teD3jvd4vI44coH+zN+XiCIYi1dbJeVWcXpydoVlXL/u6yccE5Zbv5Ya/bkfIsgyDldRbivI8hsH7sJAUIYmERko6cLceTiZtf76xRnz2tVnCsyFYxn8NuNgNlr4SsmEAmEXNIxwVkk3EnCqEgUjEB5dIu8iV1kX5ygVO1Mg+FgjdCrd2adbsmTF2zDF2DrrVg6G30uiZ63c4tuh0DutaGnWcYGrr61WJgXKHf7cxJkrwRdkz97fV0jOl4ZE0no4/Xk/FHO07Ht5ks4+3n48V0OsFw0J+T5PJy6BjGm+vxGJPR6P1kNLK+kQ/T8RjDweDdZ2GvY/754/UU15MxfphOvo3JGPa7o+Grvz9t+e7hwcHPR2Xl97Isvy4r8q/fyOsjRfmtrMi/rK25HhIX52e2dIUgCBdBEGtfxP/Lp3zbQfwDkmSAZE2dsQkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alpha channel removed&quot;
+        title=&quot;Alpha channel removed&quot;
+        src=&quot;/static/11126519a1e5efdf40cd06a782ddf6dc/f058b/after_removing_alpha.png&quot;
+        srcset=&quot;/static/11126519a1e5efdf40cd06a782ddf6dc/c26ae/after_removing_alpha.png 158w,
+/static/11126519a1e5efdf40cd06a782ddf6dc/6bdcf/after_removing_alpha.png 315w,
+/static/11126519a1e5efdf40cd06a782ddf6dc/f058b/after_removing_alpha.png 630w,
+/static/11126519a1e5efdf40cd06a782ddf6dc/40601/after_removing_alpha.png 945w,
+/static/11126519a1e5efdf40cd06a782ddf6dc/e2310/after_removing_alpha.png 968w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4084d423a3a6f06a1249a87af9df799e/60b6a/ipad_multitasking_error_workaround.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.92405063291139%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAADAElEQVQ4y22QS2/bVhSE+QvaxnFh60WRvJekSIov8U1RMkVJfkmyg6SW4wJGYrRAUHTRTQgUCrToor85AC3cKSi1QYtmMZs5ON+ZM9yrM9+7nXqb5cj7uDoLyutJVk7GeTlJo3I6GpbzLCmnSVAWcVBejNPy9mJWLibDskj8cuQ5ZaCR0lWEj6FOP4UG9bnLm7d/rJ9+w+LhVyzvPyCPAkRRhjQeIjF7SK0e4r6CyFCQWhqGtrb3/J6EUJOQeybmaYB8YCAw1D+5Ii9+f3z/M1a368/nF8sq9d2qL5xWtixULuUrl7Yrh7QrlYiVTEily1Llq93KFpuVTdpV5urVZT78PA4HCCzzEzcKvc3jD7f48O7H3d3ynK0CGwtLgS81YYlN2FILNmmDEgmCSKDKBL7aPfiUx5lvszz2d5nvwOvrW+4sCTdPD/f45aen3d3NgqU6QUQ7GNAOXMrvF31VQGAocFQCT6PweyJsqQlXEXA5itlV5u9msYvQMrbcLM83j2/v8fr6YreYTZinERhCA67MIzIoBjKPQCOIDBmeXB/pwKGdPbDusYgG7Goc785TH+nA3XLFaLhZzAos58UeWC9/eVVqwaVthIaMIgngaxKMbuMwEw/A1OqxzDV2qalgoApbbjJMNst5gdX59KtAh7QR6xT3sxFuYgd5nyLQFVhCA75GkNoai3RpFxu0rmDLFdnXgfVbdXee0kWgCFi4OpaOilzp7Guojw0UAbGpssSgu7gv/w/4vJwXNZBZYpO5tMNCjbCgJ7KB0mUjz2S+QZkt88yVeeZILWZTnoWGzJI+ff5PwsVsUnf4fEgoMVtsHBb+lkPa7DIL2dDu7ee+KuznjtxlUV9maV9+Tv5JOB0NN2+WV3izumavF5cITQ2WLMKU2jDFJkyxBUtsIXMNBDqFI/P7OkyhCZN09l6kExbqBLbc3XKm1pPHafIwTpO7cRqvu7ywPj0+Wjdefrc+Pfr2i05efLM+rfUvr3n8Ys2fHK87Jy/vOifHD63vj5S/AJNwchEogahRAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Request full screen&quot;
+        title=&quot;Request full screen&quot;
+        src=&quot;/static/4084d423a3a6f06a1249a87af9df799e/f058b/ipad_multitasking_error_workaround.png&quot;
+        srcset=&quot;/static/4084d423a3a6f06a1249a87af9df799e/c26ae/ipad_multitasking_error_workaround.png 158w,
+/static/4084d423a3a6f06a1249a87af9df799e/6bdcf/ipad_multitasking_error_workaround.png 315w,
+/static/4084d423a3a6f06a1249a87af9df799e/f058b/ipad_multitasking_error_workaround.png 630w,
+/static/4084d423a3a6f06a1249a87af9df799e/40601/ipad_multitasking_error_workaround.png 945w,
+/static/4084d423a3a6f06a1249a87af9df799e/78612/ipad_multitasking_error_workaround.png 1260w,
+/static/4084d423a3a6f06a1249a87af9df799e/60b6a/ipad_multitasking_error_workaround.png 1559w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/49eebf0ca738986e2a2cf45ccfafbbe5/7e4a6/verifying_ok.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.48101265822784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACI0lEQVQ4y8WSTWsTQRjHh2JjY0PNbhM3ZN6ym2TnZbMteWk2iaYKBVsQPIgHcUSPevLooSdPPSriybviJyn4PZqL4DdoMo9s3MaIFWw9OPDjmV1mfvt/ZgchVLny4M7g3v7+8Ok4GTweJ30zThKzmyRmtLNjlFJGCGGklCYUwgy6XTPu900cRSbS2milzHYcPznY23skg6CA1q651d1t/XXQiaCrI+hpDV2t57WjFOh6HdQS6bteFEGr2YSo0QDdaEAchjBqt4F6Xg8V1q7yehWf3O71oR2Gp5KQqWZsqhib14jzBelziPGcdJ2kbCoZn8+b1SqUi8UR2lhfZyHGk1udNgy2tmaqVrM6CBZEfs22fH+OrnErKf1JZdNKz7GSYCsohRvF4hCtIMQU55Mvx8fw+dPHWZ1TiKUEEQQgfR8kYyAIWSApBUkIhKwG8uERRM8+WNUaWkUJlK47Q5TP5ZigZPL68BBevng+CymGOAig5fvQ8mugOYf06zJDZEJBGYjOXRD9+1YGoZWUQLnoDFGxUGBNjCfMdYGXSrM0RYjxb6mW051JZWUTpOdagatWkKzl9AxTYZpEMTaTS2kWqc5kvySkP1JSNj/PdE15WZhtnC1v/htE9oP+KLyI7P8IBSH2opwnPMmEp5LS6WVYFvImxt8u2uo5rafX5ibKra5ueI7zynOc957jvPEc5+0leFdx3aNCPk9ROgAgLSv/QuZA3wE783m/9bSYUgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Verify ok&quot;
+        title=&quot;Verify ok&quot;
+        src=&quot;/static/49eebf0ca738986e2a2cf45ccfafbbe5/f058b/verifying_ok.png&quot;
+        srcset=&quot;/static/49eebf0ca738986e2a2cf45ccfafbbe5/c26ae/verifying_ok.png 158w,
+/static/49eebf0ca738986e2a2cf45ccfafbbe5/6bdcf/verifying_ok.png 315w,
+/static/49eebf0ca738986e2a2cf45ccfafbbe5/f058b/verifying_ok.png 630w,
+/static/49eebf0ca738986e2a2cf45ccfafbbe5/40601/verifying_ok.png 945w,
+/static/49eebf0ca738986e2a2cf45ccfafbbe5/7e4a6/verifying_ok.png 952w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AppStore Connect : Missing compliance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/12a66b4383ad82fb5aaafc2b66ff048d/e3189/missing_compliance_app_store_connect.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 52.53164556962025%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEUlEQVQoz22RW2+bQBCF+R8xicEx970Ay8UmEAK247rBim1VbZWHPCSqVKlSf39Rtadi61hulYejnYeZb8+Z0cosw1xEyONQzkSMlPPf3LF+5XcPfVquemqZPXOmvWte9o6h966h99541PuG3hNT74kx+kfaftshCwkE9ZGwQAoWok1TVJygIh42gY21b6O1THw41g0jSD0XgWWD2A6o456k7bdrtGUB7ruS+w4iFsvXTSd/7g/y+8dO/li08uWmlE+xkN+qG/lSlvK5quWhamWcL6WYrSRPGhmmreRpK7VPh0d8Oeywbmss6gqRa6FOQmwXd5hRD76hwzd1eOMRYs8GmVzhNgmxu2+xnCcomAdqjEDGF0pat1zh+ekrPu8fsd2sQa1rtLnApi4RWSbIeARqXiplvo1wamDOfFSCI/EsCGcKfj0GOfZom0WDXddhWdcoshTB1ESbJ1hXBebUV4A3YOrb4FMDBQ9wK0KkngU2uQIx9FOPtttuURdzCEqQhAzUmiiHD02FJouVy+Dq4h0gVxrWEpyl0BaDsySEYAEEIwrYZH+B9zczrIoMZUTV0FvknLgKdO7sBIxpgJOOwLs0wkNzi/typg4U2xM1fL7DPHDfBw4xRcgQMYI4pMfICbq2VoepYg7hXKtdDcBhBcM7fHIe9QQUnEDwwV2AmBOw4/DgZFBkTxTkbeDc1VD/rz/KcVkxODGJHAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Missing compliance&quot;
+        title=&quot;Missing compliance&quot;
+        src=&quot;/static/12a66b4383ad82fb5aaafc2b66ff048d/f058b/missing_compliance_app_store_connect.png&quot;
+        srcset=&quot;/static/12a66b4383ad82fb5aaafc2b66ff048d/c26ae/missing_compliance_app_store_connect.png 158w,
+/static/12a66b4383ad82fb5aaafc2b66ff048d/6bdcf/missing_compliance_app_store_connect.png 315w,
+/static/12a66b4383ad82fb5aaafc2b66ff048d/f058b/missing_compliance_app_store_connect.png 630w,
+/static/12a66b4383ad82fb5aaafc2b66ff048d/40601/missing_compliance_app_store_connect.png 945w,
+/static/12a66b4383ad82fb5aaafc2b66ff048d/e3189/missing_compliance_app_store_connect.png 1035w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h3&gt;&lt;a href=&quot;https://testflight.apple.com/&quot;&gt;&lt;strong&gt;Test flight&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Tester can redeem with a code sended by the registered email and download on any devices.&lt;/p&gt;
 &lt;h2&gt;Refs.&lt;/h2&gt;

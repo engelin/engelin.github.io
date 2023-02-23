@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 23 Feb 2023 09:29:58 GMT</lastBuildDate><item><title><![CDATA[Deploy Android & iOS applications]]></title><description><![CDATA[Ready to deploy 1. Android To generate key on mac silicon device, you need to download java first. Missing Symbol files 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 23 Feb 2023 09:49:41 GMT</lastBuildDate><item><title><![CDATA[Deploy Android & iOS applications]]></title><description><![CDATA[Ready to deploy 1. Android To generate key on mac silicon device, you need to download java first. Missing Symbol files 
 Compress the…]]></description><link>https://engelin.github.io/app-deploy/</link><guid isPermaLink="false">https://engelin.github.io/app-deploy/</guid><pubDate>Mon, 20 Feb 2023 15:37:37 GMT</pubDate><content:encoded>&lt;h1&gt;Ready to deploy&lt;/h1&gt;
 &lt;h2&gt;1. Android&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;android {
@@ -12,14 +12,14 @@ Compress the…]]></description><link>https://engelin.github.io/app-deploy/</lin
         }
     }
 }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;flutter build appbundle --release lib/main_production.dart --flavor production&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;flutter build appbundle &lt;span class=&quot;token parameter variable&quot;&gt;--release&lt;/span&gt; lib/main_production.dart &lt;span class=&quot;token parameter variable&quot;&gt;--flavor&lt;/span&gt; production&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;To generate key on mac silicon device, you need to download java first.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;brew install java
-sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
-echo &amp;#39;export PATH=&amp;quot;/opt/homebrew/opt/openjdk/bin:$PATH&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
-export CPPFLAGS=&amp;quot;-I/opt/homebrew/opt/openjdk/include&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;brew &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;java&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-sfn&lt;/span&gt; /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;export PATH=&quot;/opt/homebrew/opt/openjdk/bin:$PATH&quot;&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; ~/.zshrc
+&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;CPPFLAGS&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;-I/opt/homebrew/opt/openjdk/include&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;Missing Symbol files&lt;/li&gt;
 &lt;/ul&gt;
@@ -89,7 +89,7 @@ Compress the folders under “build/app/intermediates/merged_native_libs/product
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;2. iOS&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;flutter build ipa --release lib/main_production.dart --flavor production --obfuscate --split-debug-info --export-method ad-hoc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;flutter build ipa &lt;span class=&quot;token parameter variable&quot;&gt;--release&lt;/span&gt; lib/main_production.dart &lt;span class=&quot;token parameter variable&quot;&gt;--flavor&lt;/span&gt; production &lt;span class=&quot;token parameter variable&quot;&gt;--obfuscate&lt;/span&gt; --split-debug-info --export-method ad-hoc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;&lt;a href=&quot;https://docs.flutter.dev/deployment/ios#upload-the-app-bundle-to-app-store-connect&quot;&gt;&lt;strong&gt;Upload the app bundle&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Once the app bundle is created, upload it to App Store Connect by either:&lt;/p&gt;
 &lt;ol&gt;
@@ -309,17 +309,17 @@ Compress the folders under “build/app/intermediates/merged_native_libs/product
 &lt;p&gt;&lt;a href=&quot;https://docs.flutter.dev/development/tools/sdk/release-notes/release-notes-3.7.0&quot;&gt;Release notes&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Errors&lt;/h2&gt;
 &lt;p&gt;Flutter doctor&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;/Users/xxx/fvm/default/bin/flutter doctor --verbose
-[!] Flutter (Channel stable, 3.7.0, on macOS 13.1 22C65 darwin-arm64, locale en-GB)
-    • Flutter version 3.7.0 on channel stable at /Users/arum/fvm/versions/stable
-    ! Warning: `dart` on your path resolves to /opt/homebrew/Cellar/dart/2.18.1/libexec/bin/dart, which is not inside your current Flutter SDK checkout at /Users/arum/fvm/versions/stable. Consider adding /Users/arum/fvm/versions/stable/bin to the front of your path.
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;/Users/xxx/fvm/default/bin/flutter doctor &lt;span class=&quot;token parameter variable&quot;&gt;--verbose&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Flutter &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Channel stable, &lt;span class=&quot;token number&quot;&gt;3.7&lt;/span&gt;.0, on macOS &lt;span class=&quot;token number&quot;&gt;13.1&lt;/span&gt; 22C65 darwin-arm64, locale en-GB&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    • Flutter version &lt;span class=&quot;token number&quot;&gt;3.7&lt;/span&gt;.0 on channel stable at /Users/arum/fvm/versions/stable
+    &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt; Warning: &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;dart&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt; on your path resolves to /opt/homebrew/Cellar/dart/2.18.1/libexec/bin/dart, &lt;span class=&quot;token function&quot;&gt;which&lt;/span&gt; is not inside your current Flutter SDK checkout at /Users/arum/fvm/versions/stable. Consider adding /Users/arum/fvm/versions/stable/bin to the front of your path.
     • Upstream repository https://github.com/flutter/flutter.git
-    • Framework revision b06b8b2710 (2 days ago), 2023-01-23 16:55:55 -0800
+    • Framework revision b06b8b2710 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; days ago&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, &lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt;-01-23 &lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt;:55:55 &lt;span class=&quot;token parameter variable&quot;&gt;-0800&lt;/span&gt;
     • Engine revision b24591ed32
-    • Dart version 2.19.0
-    • DevTools version 2.20.1
-    • If those were intentional, you can disregard the above warnings; however it is recommended to use &amp;quot;git&amp;quot; directly to perform update checks and upgrades.
-...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    • Dart version &lt;span class=&quot;token number&quot;&gt;2.19&lt;/span&gt;.0
+    • DevTools version &lt;span class=&quot;token number&quot;&gt;2.20&lt;/span&gt;.1
+    • If those were intentional, you can disregard the above warnings&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; however it is recommended to use &lt;span class=&quot;token string&quot;&gt;&quot;git&quot;&lt;/span&gt; directly to perform update checks and upgrades.
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Flutter intl error&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;...
 Could not find a file named &quot;pubspec.yaml&quot; in &quot;/Users/arum/.pub-cache/hosted/pub.dev/intl_utils-2.6.1&quot;.
@@ -328,47 +328,47 @@ Error: The method &apos;File.create&apos; has fewer named arguments than those o
 ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Workarounds&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ flutter pub cache repair 
-Reinstalled 1227 packages.
-Reactivating intl_utils 2.6.1...
-Building package executables...
+Reinstalled &lt;span class=&quot;token number&quot;&gt;1227&lt;/span&gt; packages.
+Reactivating intl_utils &lt;span class=&quot;token number&quot;&gt;2.6&lt;/span&gt;.1&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Building package executables&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
 Built intl_utils:generate.
 Built intl_utils:localizely_download.
 Built intl_utils:localizely_upload_main.
-Reactivating very_good_cli 0.9.0...
-Building package executables...
+Reactivating very_good_cli &lt;span class=&quot;token number&quot;&gt;0.9&lt;/span&gt;.0&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Building package executables&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
 Built very_good_cli:very_good.
 Installed executable very_good.
-Reactivating dcdg 4.0.1...
-Building package executables...
+Reactivating dcdg &lt;span class=&quot;token number&quot;&gt;4.0&lt;/span&gt;.1&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Building package executables&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
 Built dcdg:dcdg.
 Installed executable dcdg.
-Reactivating flutterfire_cli 0.2.4...
-Building package executables...
+Reactivating flutterfire_cli &lt;span class=&quot;token number&quot;&gt;0.2&lt;/span&gt;.4&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Building package executables&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
 Built flutterfire_cli:flutterfire.
 Installed executable flutterfire.
-Reactivating fvm 2.4.1...
-Building package executables...
+Reactivating fvm &lt;span class=&quot;token number&quot;&gt;2.4&lt;/span&gt;.1&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Building package executables&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
 Built fvm:main.
 Installed executable fvm.
-Reactivated 5 packages.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+Reactivated &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt; packages.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ flutter pub cache clean
 This will remove everything inside /Users/arum/.pub-cache.
-You will have to run `flutter pub get` again in each project.
-Are you sure? (y/N)? y
+You will have to run &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;flutter pub get&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt; again &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; each project.
+Are you sure? &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;y/N&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;? y
 Removing pub cache directory /Users/arum/.pub-cache.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ flutter pub get
-Resolving dependencies...
-  build_runner 2.3.3 (2.4.0 available)
-  intl 0.17.0 (0.18.0 available)
-  js 0.6.5 (0.6.6 available)
-  matcher 0.12.13 (0.12.14 available)
-  path 1.8.2 (1.8.3 available)
-  scrollable_positioned_list 0.2.3 (0.3.5 available)
-  test_api 0.4.16 (0.4.18 available)
-  win32 3.1.3 (4.1.0 available)
+Resolving dependencies&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+  build_runner &lt;span class=&quot;token number&quot;&gt;2.3&lt;/span&gt;.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2.4&lt;/span&gt;.0 available&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  intl &lt;span class=&quot;token number&quot;&gt;0.17&lt;/span&gt;.0 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.18&lt;/span&gt;.0 available&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  js &lt;span class=&quot;token number&quot;&gt;0.6&lt;/span&gt;.5 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.6&lt;/span&gt;.6 available&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  matcher &lt;span class=&quot;token number&quot;&gt;0.12&lt;/span&gt;.13 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.12&lt;/span&gt;.14 available&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  path &lt;span class=&quot;token number&quot;&gt;1.8&lt;/span&gt;.2 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1.8&lt;/span&gt;.3 available&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  scrollable_positioned_list &lt;span class=&quot;token number&quot;&gt;0.2&lt;/span&gt;.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.3&lt;/span&gt;.5 available&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  test_api &lt;span class=&quot;token number&quot;&gt;0.4&lt;/span&gt;.16 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.4&lt;/span&gt;.18 available&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  win32 &lt;span class=&quot;token number&quot;&gt;3.1&lt;/span&gt;.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4.1&lt;/span&gt;.0 available&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 These packages are no longer being depended on:
-- intl_utils 2.8.1
-Changed 1 dependency!&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[A new OS, Fuchsia, getting started]]></title><description><![CDATA[Getting started Fuchsia Fuchsia is a modern open source operating system that’s simple, secure, updatable, and performant. It provides core…]]></description><link>https://engelin.github.io/fuchsia-getting-started/</link><guid isPermaLink="false">https://engelin.github.io/fuchsia-getting-started/</guid><pubDate>Fri, 19 Aug 2022 10:30:37 GMT</pubDate><content:encoded>&lt;h1&gt;Getting started Fuchsia&lt;/h1&gt;
+- intl_utils &lt;span class=&quot;token number&quot;&gt;2.8&lt;/span&gt;.1
+Changed &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; dependency&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[A new OS, Fuchsia, getting started]]></title><description><![CDATA[Getting started Fuchsia Fuchsia is a modern open source operating system that’s simple, secure, updatable, and performant. It provides core…]]></description><link>https://engelin.github.io/fuchsia-getting-started/</link><guid isPermaLink="false">https://engelin.github.io/fuchsia-getting-started/</guid><pubDate>Fri, 19 Aug 2022 10:30:37 GMT</pubDate><content:encoded>&lt;h1&gt;Getting started Fuchsia&lt;/h1&gt;
 &lt;p&gt;Fuchsia is a modern open source operating system that’s simple, secure, updatable, and performant. It provides core operating system functions like system resource management, a driver framework, and software abstractions. Fuchsia is a general purpose operating system designed to power a diverse ecosystem of hardware and software.&lt;/p&gt;
 &lt;p&gt;But currently(19th of Aug, 2022), it doesn’t support Apple silicon officially.&lt;/p&gt;
 &lt;h2&gt;1. Setup build environment&lt;/h2&gt;
@@ -389,7 +389,7 @@ Changed 1 dependency!&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></it
 go &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; ./cmd/jiri&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h4&gt;&lt;a href=&quot;https://fuchsia.googlesource.com/jiri#bootstrapping&quot;&gt;Bootstrapping&lt;/a&gt;&lt;/h4&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;MY_ROOT&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$JIRI_REPO&lt;/span&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; -s https://fuchsia.googlesource.com/jiri/+/HEAD/scripts/bootstrap_jiri&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;?format&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;TEXT &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; base64 --decode &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt; -s &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$MY_ROOT&lt;/span&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-s&lt;/span&gt; https://fuchsia.googlesource.com/jiri/+/HEAD/scripts/bootstrap_jiri&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;?format&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;TEXT &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; base64 &lt;span class=&quot;token parameter variable&quot;&gt;--decode&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$MY_ROOT&lt;/span&gt;&quot;&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# cipd bootstrapped to path:&quot;$JIRI_REPO/.jiri_root/bin/cipd&quot;&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# Please add $JIRI_REPO/.jiri_root/bin to your PATH&lt;/span&gt;
 &lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$JIRI_REPO&lt;/span&gt;/.jiri_root/bin&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -402,9 +402,9 @@ go &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; ./cmd/jiri&
 &lt;span class=&quot;token comment&quot;&gt;# Visit the following URL to get the authorization code and copy-paste it below.&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# ...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Download&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; -s &lt;span class=&quot;token string&quot;&gt;&quot;https://fuchsia.googlesource.com/fuchsia/+/HEAD/scripts/bootstrap?format=TEXT&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; base64 --decode &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;https://fuchsia.googlesource.com/fuchsia/+/HEAD/scripts/bootstrap?format=TEXT&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; base64 &lt;span class=&quot;token parameter variable&quot;&gt;--decode&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;If you want to get a specific &lt;a href=&quot;https://fuchsia.googlesource.com/docs/+/ea2fce2874556205204d3ef70c60e25074dc7ffd/development/source_code/layers.md&quot;&gt;layer&lt;/a&gt;, you can run this command.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; -s &lt;span class=&quot;token string&quot;&gt;&quot;https://fuchsia.googlesource.com/scripts/+/master/bootstrap?format=TEXT&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; base64 --decode &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt; -s &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;layer&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;https://fuchsia.googlesource.com/scripts/+/master/bootstrap?format=TEXT&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; base64 &lt;span class=&quot;token parameter variable&quot;&gt;--decode&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;layer&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;hr&gt;
 &lt;h2&gt;Refs.&lt;/h2&gt;
 &lt;ol&gt;
@@ -425,10 +425,10 @@ go &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; ./cmd/jiri&
 &lt;h4&gt;iOS&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;1) Setup Xcode.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;To build iOS using &lt;code class=&quot;language-text&quot;&gt;xcode-cli&lt;/code&gt;, firstly you should run the Xcode once to agree license, or just run the below command.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; xcodebuild -runFirstLaunch
-&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; xcodebuild -license&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; xcodebuild &lt;span class=&quot;token parameter variable&quot;&gt;-runFirstLaunch&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; xcodebuild &lt;span class=&quot;token parameter variable&quot;&gt;-license&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;And if you’ve already got the latest one, you don’t need to download again. But if you need to download, you should switch what you use.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; xcode-select --switch /Applications/Xcode.app/Contents/Developer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; xcode-select &lt;span class=&quot;token parameter variable&quot;&gt;--switch&lt;/span&gt; /Applications/Xcode.app/Contents/Developer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;2) Install CocoaPods again.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Probably you will meet a problem, &lt;code class=&quot;language-text&quot;&gt;CocoaPods not installed.&lt;/code&gt; or&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Error: To set up CocoaPods for ARM macOS, run:
@@ -1061,7 +1061,7 @@ webpack compiled with &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt; 
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; UserAvatar&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Airbnb linter and tester for React & Symfony webapp]]></title><description><![CDATA[Overriding default Encore configuration
-Webpack Encore fills in webpack.config.js file with initial instructions to configure the asset…]]></description><link>https://engelin.github.io/react-lint-n-tdd/</link><guid isPermaLink="false">https://engelin.github.io/react-lint-n-tdd/</guid><pubDate>Mon, 14 Feb 2022 14:49:37 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; jest enzyme enzyme-adapter-react-16 --dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+Webpack Encore fills in webpack.config.js file with initial instructions to configure the asset…]]></description><link>https://engelin.github.io/react-lint-n-tdd/</link><guid isPermaLink="false">https://engelin.github.io/react-lint-n-tdd/</guid><pubDate>Mon, 14 Feb 2022 14:49:37 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; jest enzyme enzyme-adapter-react-16 &lt;span class=&quot;token parameter variable&quot;&gt;--dev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Overriding default Encore configuration
 Webpack Encore fills in webpack.config.js file with initial instructions to configure the asset system. We need to modify the file slightly, cause Jest &amp;#x26; Enzyme require instructions from babel.config.js to load js modules. To do so, remove or just comment the lines below:&lt;/p&gt;
 &lt;p&gt;Webpack Encore amendment inside webpack.config.js&lt;/p&gt;
@@ -1445,14 +1445,14 @@ Let’s implement these 5 tab pages inside the red box.&lt;/p&gt;
 &lt;h4&gt;1. Install Symfony CLI&lt;/h4&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;brew &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; symfony-cli/tap/symfony-cli&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h4&gt;2. Create a new symfony project&lt;/h4&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;symfony new --webapp PROJECT_NAME&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;symfony new &lt;span class=&quot;token parameter variable&quot;&gt;--webapp&lt;/span&gt; PROJECT_NAME&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h4&gt;3. Install Composer&lt;/h4&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;php -r &lt;span class=&quot;token string&quot;&gt;&quot;copy(&apos;https://getcomposer.org/installer&apos;, &apos;composer-setup.php&apos;);&quot;&lt;/span&gt;
-php -r &lt;span class=&quot;token string&quot;&gt;&quot;if (hash_file(&apos;sha384&apos;, &apos;composer-setup.php&apos;) === &apos;906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8&apos;) { echo &apos;Installer verified&apos;; } else { echo &apos;Installer corrupt&apos;; unlink(&apos;composer-setup.php&apos;); } echo PHP_EOL;&quot;&lt;/span&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;php &lt;span class=&quot;token parameter variable&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;copy(&apos;https://getcomposer.org/installer&apos;, &apos;composer-setup.php&apos;);&quot;&lt;/span&gt;
+php &lt;span class=&quot;token parameter variable&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;if (hash_file(&apos;sha384&apos;, &apos;composer-setup.php&apos;) === &apos;906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8&apos;) { echo &apos;Installer verified&apos;; } else { echo &apos;Installer corrupt&apos;; unlink(&apos;composer-setup.php&apos;); } echo PHP_EOL;&quot;&lt;/span&gt;
 php composer-setup.php
 &lt;span class=&quot;token comment&quot;&gt;# Or If you want to put in the project bin, use the below command.&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# php composer-setup.php --install-dir=bin --filename=composer # related dir: PROJECT/bin/composer&lt;/span&gt;
-php -r &lt;span class=&quot;token string&quot;&gt;&quot;unlink(&apos;composer-setup.php&apos;);&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+php &lt;span class=&quot;token parameter variable&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;unlink(&apos;composer-setup.php&apos;);&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;If you want to set as global, please run the below command. (&lt;a href=&quot;https://getcomposer.org/doc/00-intro.md#globally&quot;&gt;composer intro&lt;/a&gt;)&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mv&lt;/span&gt; composer.phar /usr/local/bin/composer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1&gt;Webpack Encore&lt;/h1&gt;
@@ -1464,7 +1464,7 @@ php -r &lt;span class=&quot;token string&quot;&gt;&quot;unlink(&apos;composer-se
 &lt;h1&gt;Create the first page using React&lt;/h1&gt;
 &lt;h4&gt;1. Install React&lt;/h4&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; react react-dom prop-types
-&lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; @babel/preset-react@^7.0.0 --dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; @babel/preset-react@^7.0.0 &lt;span class=&quot;token parameter variable&quot;&gt;--dev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h4&gt;2. Create js and css directories.&lt;/h4&gt;
 &lt;p&gt;After installing encore webpack, assets directory is created into the project root. We are going to use react framework, so some are deleted.&lt;/p&gt;
 &lt;h5&gt;Before&lt;/h5&gt;
@@ -1671,25 +1671,25 @@ In Kernel.php line 226:
 &lt;h2&gt;Installation&lt;/h2&gt;
 &lt;h3&gt;Install node js&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;## install brew&lt;/span&gt;
-% /usr/bin/ruby -e &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;
+% /usr/bin/ruby &lt;span class=&quot;token parameter variable&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/Homebrew/install/master/install&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;## check version&lt;/span&gt;
-% brew -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+% brew &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;## install node&lt;/span&gt;
 % brew &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;node&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;## check version&lt;/span&gt;
-% &lt;span class=&quot;token function&quot;&gt;node&lt;/span&gt; -v
-% &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+% &lt;span class=&quot;token function&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;
+% &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The OS X changed the shell system from &lt;em&gt;bash&lt;/em&gt; to &lt;em&gt;zsh&lt;/em&gt; since High Sierra. If you met the linked error during installation, you can use the below command.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;% &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;chown&lt;/span&gt; -R &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;whoami&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;brew --prefix&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;/*
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;% &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;chown&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-R&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;whoami&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;brew &lt;span class=&quot;token parameter variable&quot;&gt;--prefix&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;/*
 % brew &lt;span class=&quot;token function&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;node&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Install Gatsby&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;## install gatsby&lt;/span&gt;
-% &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g gatsby-cli
+% &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-g&lt;/span&gt; gatsby-cli
 
 &lt;span class=&quot;token comment&quot;&gt;## check version&lt;/span&gt;
-% gatsby --version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+% gatsby &lt;span class=&quot;token parameter variable&quot;&gt;--version&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Dev Run&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;% &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# or yarn install&lt;/span&gt;
 % gatsby develop&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1786,10 +1786,10 @@ View GraphiQL, an in-browser IDE, to explore your site&apos;s data and schema
 &lt;h3&gt;Publish&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;% &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; init
 % &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt; 
-% &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -m &lt;span class=&quot;token string&quot;&gt;&quot;first commit&quot;&lt;/span&gt;
-% &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; branch -M main
+% &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit &lt;span class=&quot;token parameter variable&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;first commit&quot;&lt;/span&gt;
+% &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; branch &lt;span class=&quot;token parameter variable&quot;&gt;-M&lt;/span&gt; main
 % &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; remote &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; origin https://github.com/&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;userid&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;/&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;userid&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;.github.io.git
-% &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push -u origin main&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+% &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push &lt;span class=&quot;token parameter variable&quot;&gt;-u&lt;/span&gt; origin main&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Change main branch to gh-pages&lt;/h3&gt;
 &lt;p&gt;Finally, after changing the source branch to &lt;em&gt;gh-pages&lt;/em&gt;, the personal blog is ready to deploy!&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -1836,7 +1836,7 @@ View GraphiQL, an in-browser IDE, to explore your site&apos;s data and schema
 &lt;ol&gt;
 &lt;li&gt;Create keystore&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;keytool -genkey -v -keystore ~/keystore.jks -keyalg RSA -keysize &lt;span class=&quot;token number&quot;&gt;2048&lt;/span&gt; -validity &lt;span class=&quot;token number&quot;&gt;10000&lt;/span&gt; -alias &lt;span class=&quot;token variable&quot;&gt;${KEY_ALIAS}&lt;/span&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;keytool &lt;span class=&quot;token parameter variable&quot;&gt;-genkey&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-keystore&lt;/span&gt; ~/keystore.jks &lt;span class=&quot;token parameter variable&quot;&gt;-keyalg&lt;/span&gt; RSA &lt;span class=&quot;token parameter variable&quot;&gt;-keysize&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2048&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-validity&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10000&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-alias&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;${KEY_ALIAS}&lt;/span&gt;
 Enter keystore password: &lt;span class=&quot;token variable&quot;&gt;${KEY_STORE}&lt;/span&gt; 
 Re-enter new password: &lt;span class=&quot;token variable&quot;&gt;${KEY_STORE}&lt;/span&gt; 
 What is your first and last name?

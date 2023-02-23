@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 26 Jan 2023 08:57:40 GMT</lastBuildDate><item><title><![CDATA[Flutter update to 3.7.0 (flutter_intl generate failure)]]></title><description><![CDATA[Flutter 3.7.0 Update What’s new in Flutter 3.7 Enhanced Material 3 support Menu bars and cascading menus iOS release validation DevTools…]]></description><link>https://engelin.github.io/flutter-3-7-0/</link><guid isPermaLink="false">https://engelin.github.io/flutter-3-7-0/</guid><pubDate>Thu, 26 Jan 2023 08:37:37 GMT</pubDate><content:encoded>&lt;h1&gt;Flutter 3.7.0 Update&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 23 Feb 2023 09:14:59 GMT</lastBuildDate><item><title><![CDATA[Deploy Android & iOS applications]]></title><description><![CDATA[Ready to deploy 1. Android To generate key on mac silicon device, you need to download java first. 2. iOS Upload the app bundle Once the app…]]></description><link>https://engelin.github.io/app-deploy/</link><guid isPermaLink="false">https://engelin.github.io/app-deploy/</guid><pubDate>Mon, 20 Feb 2023 15:37:37 GMT</pubDate><content:encoded>&lt;h1&gt;Ready to deploy&lt;/h1&gt;
+&lt;h2&gt;1. Android&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;android {
+    ...
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;),
+                &apos;proguard-rules.pro&apos;
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;flutter build appbundle --release lib/main_production.dart --flavor production&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;To generate key on mac silicon device, you need to download java first.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;brew install java
+sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+echo &amp;#39;export PATH=&amp;quot;/opt/homebrew/opt/openjdk/bin:$PATH&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
+export CPPFLAGS=&amp;quot;-I/opt/homebrew/opt/openjdk/include&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;2. iOS&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;flutter build ipa --release lib/main_production.dart --flavor production --obfuscate --split-debug-info --export-method ad-hoc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;&lt;a href=&quot;https://docs.flutter.dev/deployment/ios#upload-the-app-bundle-to-app-store-connect&quot;&gt;&lt;strong&gt;Upload the app bundle&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Once the app bundle is created, upload it to App Store Connect by either:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install and open the &lt;a href=&quot;https://apps.apple.com/us/app/transporter/id1450874784&quot;&gt;Apple Transport macOS app&lt;/a&gt;. Drag and drop the build/ios/ipa/*.ipa app bundle into the app.&lt;/li&gt;
+&lt;li&gt;Or upload the app bundle from the command line by running:&lt;/li&gt;
+&lt;li&gt;Or open build/ios/archive/MyApp.xcarchive in Xcode.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://apps.apple.com/us/app/transporter/id1450874784&quot;&gt;Transport macOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;a href=&quot;https://testflight.apple.com/&quot;&gt;&lt;strong&gt;Test flight&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Tester can redeem with a code sended by the registered email and download on any devices.&lt;/p&gt;
+&lt;h2&gt;Refs.&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Android/iOS obfuscation
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/62568757/playstore-error-app-bundle-contains-native-code-and-youve-not-uploaded-debug&quot;&gt;https://stackoverflow.com/questions/62568757/playstore-error-app-bundle-contains-native-code-and-youve-not-uploaded-debug&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://support.google.com/googleplay/android-developer/answer/9848633?hl=en#zippy=%2Cupload-files-using-play-console&quot;&gt;https://support.google.com/googleplay/android-developer/answer/9848633?hl=en#zippy=%2Cupload-files-using-play-console&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://yagom.net/forums/topic/%EC%95%B1-%EC%82%AC%EC%9D%B4%EC%A6%88-%EC%A4%84%EC%9D%B4%EA%B8%B0/&quot;&gt;https://yagom.net/forums/topic/%EC%95%B1-%EC%82%AC%EC%9D%B4%EC%A6%88-%EC%A4%84%EC%9D%B4%EA%B8%B0/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;iPad multitasking issue - Transporter
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.apple.com/forums/thread/19215&quot;&gt;https://developer.apple.com/forums/thread/19215&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/32559724/ipad-multitasking-support-requires-these-orientations/32728607#32728607&quot;&gt;https://stackoverflow.com/questions/32559724/ipad-multitasking-support-requires-these-orientations/32728607#32728607&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Alpha channel remove
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/46585809/error-itms-90717-invalid-app-store-icon&quot;&gt;https://stackoverflow.com/questions/46585809/error-itms-90717-invalid-app-store-icon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Missing compliance
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@iamCoder/how-to-solve-missing-compliance-status-in-testflight-and-invites-not-coming-to-testers-4cbbe3c4ed12&quot;&gt;https://medium.com/@iamCoder/how-to-solve-missing-compliance-status-in-testflight-and-invites-not-coming-to-testers-4cbbe3c4ed12&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Flutter update to 3.7.0 (flutter_intl generate failure)]]></title><description><![CDATA[Flutter 3.7.0 Update What’s new in Flutter 3.7 Enhanced Material 3 support Menu bars and cascading menus iOS release validation DevTools…]]></description><link>https://engelin.github.io/flutter-3-7-0/</link><guid isPermaLink="false">https://engelin.github.io/flutter-3-7-0/</guid><pubDate>Thu, 26 Jan 2023 08:37:37 GMT</pubDate><content:encoded>&lt;h1&gt;Flutter 3.7.0 Update&lt;/h1&gt;
 &lt;h2&gt;&lt;a href=&quot;https://medium.com/flutter/whats-new-in-flutter-3-7-38cbea71133c&quot;&gt;What’s new in Flutter 3.7&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Enhanced Material 3 support&lt;/li&gt;

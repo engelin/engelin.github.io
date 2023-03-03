@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 23 Feb 2023 09:49:41 GMT</lastBuildDate><item><title><![CDATA[Deploy Android & iOS applications]]></title><description><![CDATA[Ready to deploy 1. Android To generate key on mac silicon device, you need to download java first. Missing Symbol files 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 03 Mar 2023 10:06:39 GMT</lastBuildDate><item><title><![CDATA[Design Resources]]></title><description><![CDATA[Refs: https://developer.apple.com/design/resources/ https://design.facebook.com/toolsandresources/devices/]]></description><link>https://engelin.github.io/design-resouces/</link><guid isPermaLink="false">https://engelin.github.io/design-resouces/</guid><pubDate>Fri, 03 Mar 2023 10:00:01 GMT</pubDate><content:encoded>&lt;p&gt;Refs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.apple.com/design/resources/&quot;&gt;https://developer.apple.com/design/resources/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://design.facebook.com/toolsandresources/devices/&quot;&gt;https://design.facebook.com/toolsandresources/devices/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Deploy Android & iOS applications]]></title><description><![CDATA[Ready to deploy 1. Android To generate key on mac silicon device, you need to download java first. Missing Symbol files 
 Compress the…]]></description><link>https://engelin.github.io/app-deploy/</link><guid isPermaLink="false">https://engelin.github.io/app-deploy/</guid><pubDate>Mon, 20 Feb 2023 15:37:37 GMT</pubDate><content:encoded>&lt;h1&gt;Ready to deploy&lt;/h1&gt;
 &lt;h2&gt;1. Android&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;android {
@@ -368,7 +372,257 @@ Resolving dependencies&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/spa
   win32 &lt;span class=&quot;token number&quot;&gt;3.1&lt;/span&gt;.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4.1&lt;/span&gt;.0 available&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 These packages are no longer being depended on:
 - intl_utils &lt;span class=&quot;token number&quot;&gt;2.8&lt;/span&gt;.1
-Changed &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; dependency&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[A new OS, Fuchsia, getting started]]></title><description><![CDATA[Getting started Fuchsia Fuchsia is a modern open source operating system that’s simple, secure, updatable, and performant. It provides core…]]></description><link>https://engelin.github.io/fuchsia-getting-started/</link><guid isPermaLink="false">https://engelin.github.io/fuchsia-getting-started/</guid><pubDate>Fri, 19 Aug 2022 10:30:37 GMT</pubDate><content:encoded>&lt;h1&gt;Getting started Fuchsia&lt;/h1&gt;
+Changed &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; dependency&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Flutter localisation intl]]></title><link>https://engelin.github.io/flutter-localization-intl/</link><guid isPermaLink="false">https://engelin.github.io/flutter-localization-intl/</guid><pubDate>Wed, 09 Nov 2022 14:21:41 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a8d694605df97b2b8f4aab80a5b9999a/92bb4/flutter_intl_plugin.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 81.64556962025317%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC4UlEQVQ4y6WT3Y7cNBTHs1AqFbEtReys1IsOEszstp2ZxIkTx45jx8lMMkk2+1VQm6KqEk/TJ+k7AOKq7E0v+gzt3IDEE6ySyUFOp4uWBYkPS3/95ePjn87xhzG85V47VE5OY/8pJkFNAl7TUPTiUtVZUdaLNK3zsqyTLK+9UNaUi5pp13lcPKahfEaCkH7z5KlhbF+/defouPp1UeUg4gWEKgYaSvBDCUxIiLMClkcPYVFUsCwriFUCPIqBctHn0T4vAo8GP/1yDoZx/aMPh+nJo7fZwTEk2bKR87SlLGgjGbUsFK1DWOvyuHUpb23K272vn7WRStpkkbU0CFvs+ec+4zAz0Q+GYWwZn97+bKiUWmXLHLiM1oLzjlenXfLtd93J6cNuWR11WVl15eFxR6KkG6UnHSF+R2jwXo2NPZjMzB8NPbZu3ByO2GI1FgXcseX6Lo4A5afAjx/DsjiAZFmCSvPefRaCZbmASAgIE0AOBsvGjWVjmMysd8AbN28PUZisyLwEHOdrS6aAXArIQmDa/QZAjgsWcgATBmJRQJRWEEYJiEiBSuYN4wLuT2bvgLu7u0PG+Uovikittbs+vQC9l4kcIJRBWR5AUZRQlBWUB4eQZnmjz/Ci5Z3BYEiCcBVIpW9rrd0lV4F6jj0CQSgvxPVrYLxxXPJHyzuD3X8MdD0fRJyCJ5fgR1oZ0EBsKvyPQKkSIGIOQs0hUgn4LGh05Q+m5r8H2q4PDo16kUAAZhIQEQ0iHCbT2d8CO5fQzrJxhxz3ktuYdDRUHZdJh3UO9jvk+g1yfZhcqpDxNxtgE0jVYkJby8ZX5LikpQFvPeK3JnI2cedcv8fJ1Py+B34+GHzBRPRbuPmj2j0a9G3qH/Bnob+I2ZjA1LRe9sBPtrd3Zsh5MbXsVxMT/Ty17LP9+5Oz0Xj/bLR3WeO9e1dio739l+P9e6+//Gr83NiMDwzD2DYMY6BP4H/o4wdTc+t3Emi3tOxQ4gkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;flutter_intl_plugin&quot;
+        title=&quot;flutter_intl_plugin&quot;
+        src=&quot;/static/a8d694605df97b2b8f4aab80a5b9999a/f058b/flutter_intl_plugin.png&quot;
+        srcset=&quot;/static/a8d694605df97b2b8f4aab80a5b9999a/c26ae/flutter_intl_plugin.png 158w,
+/static/a8d694605df97b2b8f4aab80a5b9999a/6bdcf/flutter_intl_plugin.png 315w,
+/static/a8d694605df97b2b8f4aab80a5b9999a/f058b/flutter_intl_plugin.png 630w,
+/static/a8d694605df97b2b8f4aab80a5b9999a/40601/flutter_intl_plugin.png 945w,
+/static/a8d694605df97b2b8f4aab80a5b9999a/78612/flutter_intl_plugin.png 1260w,
+/static/a8d694605df97b2b8f4aab80a5b9999a/92bb4/flutter_intl_plugin.png 1824w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2ccf6183e714dee10f1be6e873c61345/1078c/flutter_intl_init.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.10126582278481%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACgElEQVQozz2S3UtTARjGz10RlKkz+4KInG7OuePcdr6286H7MDadpl1kUWBpzQ8iMLrooiKbOBDd3OY520RXjYS67P/7xQ7hxY/nuXh54Hl5hHv373H39h36envx9PfT39fHrZs38fR5GPDcYHBgkJ6rPYghEcMwCAQCjI+Pu3R992bAM8i1q9e5fOkKgmIaKIqKJCsuqhYnJitohoxhRLEyJtp0grfvCrRO6jhOhU7nlN+/O1Qqe2iJCdR4iLgeJm5OILxYTPL08RSL+TRz2RT52RRzuWmmMnEyqRiZjEpEHmNjcwXbLlOulHCcMu12g4ODIlo8iKIFULUxV4XleYPlpSiP5yWW8ioLWYOFrE5EkpgQRZRomMDIEG/WVrFtm2r1iEbDod0+Y7dYZNjrxftgiOEhL77hEYT8Qo7crEk6nSCdMkglTZJJk6gkExJFRDHEmN/Lq7U1KkdVDg8PqNZqHNdr7JQOyRX2yBb2mFnfJ7G0gZB7tIiVmkHSTBTdumAyJhMVA2iKjDgeZGN9E9t2qNfrnJyc0Go1cRotas3v2KcdOn/+8mmnhGClH5Kcy6JaBqpuuWi6yaSkMhGJoKkSoaCf9a0tGo3u3w5otVpuaPXoiMLrVV6vvmRro8Cz5ScI1pRFan4GPW2SMEx000S3LCKSQiQiklCiKJLI++1Nju1jDstlarUazWaT3d1d/H4/IyM+fD6f64XZhRzJlEU32Joy/2MRUxTCMZGEbmAm03z4+JEfnZ84ToP2WZvzX+fs7++7ewwGgxfbFJLZPJnsnFtV0c2L2pOSTFgOI8kRwuEwz1de8vXbN758/kJxp0ipVGJ7e9sd9+joqKtd/gG4ZocE0ngEmgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;flutter_intl_init&quot;
+        title=&quot;flutter_intl_init&quot;
+        src=&quot;/static/2ccf6183e714dee10f1be6e873c61345/f058b/flutter_intl_init.png&quot;
+        srcset=&quot;/static/2ccf6183e714dee10f1be6e873c61345/c26ae/flutter_intl_init.png 158w,
+/static/2ccf6183e714dee10f1be6e873c61345/6bdcf/flutter_intl_init.png 315w,
+/static/2ccf6183e714dee10f1be6e873c61345/f058b/flutter_intl_init.png 630w,
+/static/2ccf6183e714dee10f1be6e873c61345/40601/flutter_intl_init.png 945w,
+/static/2ccf6183e714dee10f1be6e873c61345/78612/flutter_intl_init.png 1260w,
+/static/2ccf6183e714dee10f1be6e873c61345/1078c/flutter_intl_init.png 2180w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/854db71685e5c045c41c5afa2d60b7f1/a628a/flutter_intl_add_locale.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 47.46835443037975%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAACCUlEQVQoz2WSS08TcRTF51sQ7BMihaYUZiopM53O49950WLCQ9tq+ABuXLh2oQsRSKl02g4V2kJJ0ESJfsafYVghi7O4yc0v59xzpaXFLNml56RTGebn50kkkiSTKdKpNKlUmkw6E8/ZTJaDgwOazRbNVpv2m7e02m2KxSKJxDOSySRzc3NITrBFYzugUffwPBfHdfB8D1ETqIaBpqtslDU0vcpwOGQ8mXDz4ye///zl190dzddN5JLCZqVCWVORXD9gf2+brS0HWwismsCuCQzLQi69YHW1QH5lBVmWOe106Pf7DKOI0eg70+kU1/NYWFhkeSVPLreMZLk+9Z19hBegGhYVU8RSqw/AQqFAPp9nXZY5Oj4m7PU4Pz9nPB5zcXHBq70dNjcUTH0TU1eRbNfDdHycnTqVmh3DdEug/QeUFYXDr8d0u90YOBqNiKKIj90b3h/d8u7wlg8nt0iO51GvOziNGsKzsYWNcASmZT4GygpnvT6DwSB2NpvNmF5d0Rle8fnblE9nM76EMyTDFjR2dwmCAMuysWw7vqVhPnaoKDK9s1N6vTB2eK/JZELr9T5auYRdVbGNCpJSsZANn+rLXRRHsG4JVjVBUTWfAPuDkCh6iHt9fR279Dz/cSkl3UIxfcr1BoprowjBmi5Y08wnpZx0uoRhGMe+vLyMi7lPlsvl4n+83/0HCSlcs+0TAucAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;flutter_intl_add_locale&quot;
+        title=&quot;flutter_intl_add_locale&quot;
+        src=&quot;/static/854db71685e5c045c41c5afa2d60b7f1/f058b/flutter_intl_add_locale.png&quot;
+        srcset=&quot;/static/854db71685e5c045c41c5afa2d60b7f1/c26ae/flutter_intl_add_locale.png 158w,
+/static/854db71685e5c045c41c5afa2d60b7f1/6bdcf/flutter_intl_add_locale.png 315w,
+/static/854db71685e5c045c41c5afa2d60b7f1/f058b/flutter_intl_add_locale.png 630w,
+/static/854db71685e5c045c41c5afa2d60b7f1/40601/flutter_intl_add_locale.png 945w,
+/static/854db71685e5c045c41c5afa2d60b7f1/78612/flutter_intl_add_locale.png 1260w,
+/static/854db71685e5c045c41c5afa2d60b7f1/a628a/flutter_intl_add_locale.png 2170w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Branching strategy]]></title><link>https://engelin.github.io/branching-n-versioning/</link><guid isPermaLink="false">https://engelin.github.io/branching-n-versioning/</guid><pubDate>Fri, 21 Oct 2022 09:13:01 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ddf20c4d276b69c0d19b21c490fdfd16/000b4/branching_strategy.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.78481012658227%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACtklEQVQ4y21Tu44cRRQtITwxAZ9AgogdwMcgIWtNADmshMQ38ANIRCBZnkWyCIyICVnxkIzwru1hx9Mz3fXo7ul63VtVB1XPLN61HBzdR52+fe+puqJ7/vhSvvj5vH32+O9J/fENED4Gd5+i9CfIR7A8KdSdFLq2r/vd/ULdvRLW7wrAIfM+setKdltk+xIcNcJ+M/vJvkRhA6Qe4P5gj8ikD34egMqJzYciuhbeyuDGhtm1kV0b7L4Nfr8L7NtAbhf81AUOOmQyIUUdgpWBgg7RqTDZ1vduG0s0tlBzV6SokalH4eF/3IrTgMrRagPdS+ytQQy14wF23ELrDfp+h0I9QNuPBMr0EGX6Dnn4AayXb0TSS7lbLVcvni6jl0skM+fYt9U+RBnOwOpBiZv3xO8/ffL+k18+++C37+++gzQKAG/Ek0spfj2/ErG8yo2Wb/PSXgir/kzD7ny0+p+/gOkBWP0I1mevo1CFOkPuz5BunOW+dvwIJL+Ff/a2QN6DQl9mjUyDFA0K97eQ59sd4KYOSjego4beSki1QfS63vIUx4uFCHYHDoqCl0nbDZNTnKJmDorJV98cY83OdaymzezXXHCyxkRBIZNaI/97R9Q/ZTIM7guON1pt7YyDmuNEBk6vQfsdkMf5vNp84OY5Zt0Ud7EQhwdquHBfapHrgjV/c+z6qNmrgwRk5rGDn+W5UfByIeoW1PYzmTITvTwWG24Uq5qNoKDnrSHXYugbhFA5JleNC+kG8flC1ALkla86pmgo2ob8uCJyHbGXFO2WwriiMLVEdktxvyKyV5SjpBwN1c2ZlyOqK5T1neuRD50c9MQ01B3eIPkd6n472yGMa2S/nfPX3FtgHbO9WIhC3deF5BeF5JeF5ClYnqL0p0j6FXKFOQXX2Mycyj2ifvdVofZzuKdv/QcDukVSTJ+PAQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;branching&quot;
+        title=&quot;branching&quot;
+        src=&quot;/static/ddf20c4d276b69c0d19b21c490fdfd16/f058b/branching_strategy.png&quot;
+        srcset=&quot;/static/ddf20c4d276b69c0d19b21c490fdfd16/c26ae/branching_strategy.png 158w,
+/static/ddf20c4d276b69c0d19b21c490fdfd16/6bdcf/branching_strategy.png 315w,
+/static/ddf20c4d276b69c0d19b21c490fdfd16/f058b/branching_strategy.png 630w,
+/static/ddf20c4d276b69c0d19b21c490fdfd16/40601/branching_strategy.png 945w,
+/static/ddf20c4d276b69c0d19b21c490fdfd16/78612/branching_strategy.png 1260w,
+/static/ddf20c4d276b69c0d19b21c490fdfd16/000b4/branching_strategy.png 2912w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[JIRA webhook & Github API]]></title><description><![CDATA[=========================================
+JIRA webhook to Github setup.. ?? how to auth via username and personal token using header…]]></description><link>https://engelin.github.io/create-git-issue-with-jira-automation/</link><guid isPermaLink="false">https://engelin.github.io/create-git-issue-with-jira-automation/</guid><pubDate>Thu, 13 Oct 2022 10:00:01 GMT</pubDate><content:encoded>&lt;p&gt;=========================================
+JIRA webhook to Github setup..&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${USER_NAME}&lt;/span&gt;:&lt;span class=&quot;token variable&quot;&gt;${PERSONAL_TOKEN}&lt;/span&gt;&quot;&lt;/span&gt; https://api.github.com/repos/&lt;span class=&quot;token variable&quot;&gt;${OWNER|ORGANIZATION}&lt;/span&gt;/&lt;span class=&quot;token variable&quot;&gt;${REPO}&lt;/span&gt;/issues &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;${JSON_STRING}&lt;/span&gt;
+OR
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Accept: application/vnd.github+json&quot;&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Authorization: token &amp;lt;TOKEN&gt;&quot;&lt;/span&gt; https://api.github.com/issues &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;${JSON_STRING}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;?? how to auth via username and personal token using header?
+==&gt; curl -H “Accept: application/vnd.github+json” -H “Authorization: Basic &amp;#x3C;base64(${USER_NAME:${PERSONAL_TOKEN}})&gt;” &lt;a href=&quot;https://api.github.com/issues&quot;&gt;https://api.github.com/issues&lt;/a&gt; -d ${JSON_STRING}&lt;/p&gt;
+&lt;p&gt;You can use online base64 encoder.&lt;/p&gt;
+&lt;p&gt;==&gt; user_name:personal_token ==Base64 Encoding==&gt; Authorization: Basic Encoding_data&lt;/p&gt;
+&lt;p&gt;========================================&lt;/p&gt;
+&lt;p&gt;custom json data:&lt;/p&gt;
+&lt;p&gt;{
+“title”: ”{{ issue.key }} {{ issue.fields.summary }}”,
+“body”: ”{{ issue.fields.issuetype.name }}\n---\n {{ issue.fields.description.jsonEncode }} \n---\n …created by {{ issue.fields.reporter.displayName }}”,
+“labels”: [“from jira”]
+}&lt;/p&gt;
+&lt;p&gt;** JIRA 디스크립션은 유니코드라 jsonEncoding 해야됨**&lt;/p&gt;
+&lt;p&gt;[refs]
+&lt;a href=&quot;https://docs.github.com/en/rest/issues/issues#create-an-issue&quot;&gt;https://docs.github.com/en/rest/issues/issues#create-an-issue&lt;/a&gt;
+&lt;a href=&quot;https://docs.github.com/en/rest/issues/issues#list-issues-assigned-to-the-authenticated-user&quot;&gt;https://docs.github.com/en/rest/issues/issues#list-issues-assigned-to-the-authenticated-user&lt;/a&gt;
+&lt;a href=&quot;https://community.atlassian.com/t5/Jira-articles/Automation-for-Jira-Send-web-request-using-Jira-REST-API/ba-p/1443828&quot;&gt;https://community.atlassian.com/t5/Jira-articles/Automation-for-Jira-Send-web-request-using-Jira-REST-API/ba-p/1443828&lt;/a&gt;
+&lt;a href=&quot;https://support.atlassian.com/cloud-automation/docs/find-the-smart-value-for-a-field/#finding-your-smart-value&quot;&gt;https://support.atlassian.com/cloud-automation/docs/find-the-smart-value-for-a-field/#finding-your-smart-value&lt;/a&gt;
+&lt;a href=&quot;https://support.atlassian.com/cloud-automation/docs/jira-smart-values-text-fields/&quot;&gt;https://support.atlassian.com/cloud-automation/docs/jira-smart-values-text-fields/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JIRA data API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;https://${SPACE_NAME}.atlassian.net/rest/api/2/issue/${JIRA-TICKET-NUM}&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Github comment to Gatsby blog]]></title><link>https://engelin.github.io/blog-add-git-comment/</link><guid isPermaLink="false">https://engelin.github.io/blog-add-git-comment/</guid><pubDate>Thu, 13 Oct 2022 10:00:01 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 608px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e95c8f6b3f82c6840470e23a9968dbba/18872/creategitoath.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 127.21518987341773%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAABJ0AAASdAHeZh94AAAC7UlEQVQ4y41V2XLTQBDUf0AS27q1ula7On3IwTmqqAKSKiAQ+Ah+Aqh8dVMzaxlbiV15aO9KXo2me3pGlpAtRN4gyhuEWQVPKF4JiZrv/vNjjVi2iLKar4OkxMxPMfWSA1hZucLy6gO69XtUiyukeoFqecN73W34vp5foV7eoL/+iGpxzfdUs4Yd5ByEAg+w6MeNCriR5ANOKGF7MSaOwMSNd6AH968J+4F2AdNyiba/heo2yKseqn2HIJIvHh5jTJcpT/0UcTFHUnS80sE3Ex9ns3CE6ARCTLbULTvMEWY1grRk4b1YwxUFF4ekoJUOjumOMWhpUbWo0lFe8yqyCr5Q8GK1DVzADjLMRuIfk8CKi5arWc1NVeOsxsSODt78GnBQ1tBLt35rkagF78lKpCfp+/ZFPZ9j4m4pk02CtDIaJpphrivW00uMpqeynexlaXEHFB13BBWHdKQs6QVOJHdazvxXakg0qQuK5pKpqvYS5XzDAS/2zH3Md2MdLabCb8hAenL69LBv9mQrOnzuiL2gx7O0hgOmtQyGNrtw4u0qDmidpEw6kUZ+YorC3hs8mGiEecO6UpGGYCcpUzGKZg1Z98jKpenn5hKyXiPOqlcZ+iDDMK04EI2tWM0ZebliTwaxejZ1DMTx1iPNyMQ0NGnykGVSvYSQHWtLpj23Bc6eIcL5HnYBSS82dFoaI8eKLUOaRZKmdQVfruCpW3jFBr66ga9v4Wedmex5zedo5YBhqlDURjeimlcGNBCGKhuK/zElHCmMFSQaed1D1hRowcjKOaJMwxM5TxvKeh/kjGP2sYhqJGv4cg6vWMOThB6B3iDQ1wjkakeLx1vR8Zw8mqHt5bDtDFNHYepWmDoaU7fEzKthiwZOpOCEufnuCAOej9vuGsMK1gX0zwXUtw7yoYb+3kE/dojvFWyRwg41ZmHxfPYdaz1xp3H/9ICvf3/g7vcDPv95xJenR7S/esyyAkH1CW7eY+rFJz9OA+V/1Lr0ANGnrksAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;create_git_oath&quot;
+        title=&quot;create_git_oath&quot;
+        src=&quot;/static/e95c8f6b3f82c6840470e23a9968dbba/18872/creategitoath.png&quot;
+        srcset=&quot;/static/e95c8f6b3f82c6840470e23a9968dbba/c26ae/creategitoath.png 158w,
+/static/e95c8f6b3f82c6840470e23a9968dbba/6bdcf/creategitoath.png 315w,
+/static/e95c8f6b3f82c6840470e23a9968dbba/18872/creategitoath.png 608w&quot;
+        sizes=&quot;(max-width: 608px) 100vw, 608px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/07ade3017ea398bb67a34f5cbff131f5/7131f/codenotused.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 102.53164556962024%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAABJ0AAASdAHeZh94AAADcUlEQVQ4y42U6W7jRhCEhUUWWVuyeHM4MxxyeImkKMmXbGexVwIEef83+gKOLK8NZ4H8KBC8aqq7q3ohwhXe+oIkuORqecGHjxes158I1p8QwZLl8oLffl+RqhS/UHilxNcaP1IsfvvEh4+Xb7BIZUFTdTS2o6wtqigpmxHbjvSVpSoq8qIltxNFfUAUFbJokEVLLEtWXsLKT1+w8GKNFsYhK+ePCmTRoesRYWpUmiOlJS56osyy9AVXQcY6POEqEG+wWEcKIzS9NGxETq8KGqmppaQ1ksooVKKoUo3JJGOVY/O5ZMnSSx3JWZ0j9GeFRtF3W4Zmy21t2LUFWs0/ZXihYB2keGHm4IfCPTsR/VT2kzBSZEaSdDvSaks/TjTDnjizWC3JVYHOd1Tlnjwvn9W8J3qjME4lV37CpZe4/sylrAPB2o+58mL38dJPWHoxSy85YR2/kLzpYZDmJFLTtw/01S1998B++orWFVnREKiWMDGkokaIhiQtCJKcSFq8SDhih+dpL+aXwihs1VOXPXW/Z9PfUpZ7yu4ROxxR5YAp94zXP2iGI9X0QHvzBdPtyOyIavak+XywZOFOzyV5tWEz3TMe7tk0Rw7bP9ltvjB219jrb5SH77RP/5BvDpTjEbt9RNsNUVYSyoogNXhRduqhIyxbbDMP5EBlD2yaR9rqSNPsKIY7UrMhHx4wmxuE3SLsRGI2pEVPoiuCWLqyF4m0ZIXGtlu2+wemmweG/onr6S8O4w+m4Y7m5rNT1d58pz58ozv+zXj/FZFXRLJyiQlTjR8rFlFqUDan6nYU/ZFue8Pu8MQwPWK7e9fDbvvEMH5mGP6gG29ptneM+zsSofEixVxlkGg3rEUoCpIsc/VfBhIvVu7lOspYhTMkfqgJohw/VM7U3rPhZz++zrGbcpjmREJRmIlcGvwgcT50HnvG2YdnU7+O2jsfziWnRrGpe6Z2g7TmhXDlJy9GPt+vzvevru+yLIx06yi1NVlniXWLyFvivMNUA7ab0EVDqFrS+tpNVlYTutkjyh5hmlcKReFso8p5ZbUUQ4uyPamq0HZwzx3mA3WDtCN5PZIVHcJ0btXNCBPl4uoUZvOKKkv8NMcX6qWcObuX6xNeZ/gUtZ+RO7fkRWGmFUF8Wgor77+b/X/hpnwVindT+9UUf4Wzwn8B4FwfyMrGwJYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;codenotused&quot;
+        title=&quot;codenotused&quot;
+        src=&quot;/static/07ade3017ea398bb67a34f5cbff131f5/f058b/codenotused.png&quot;
+        srcset=&quot;/static/07ade3017ea398bb67a34f5cbff131f5/c26ae/codenotused.png 158w,
+/static/07ade3017ea398bb67a34f5cbff131f5/6bdcf/codenotused.png 315w,
+/static/07ade3017ea398bb67a34f5cbff131f5/f058b/codenotused.png 630w,
+/static/07ade3017ea398bb67a34f5cbff131f5/7131f/codenotused.png 710w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/eefc3db084c015b646534f28e40c3390/0c1c2/gatsbyerror_withasterisk.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50.632911392405056%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABJ0AAASdAHeZh94AAABi0lEQVQoz42Sy0okMRSG8zh2b9wO4t6nsB2YjSCu5km0QQdEfJCBcRAXbpxB0Z2Xtl103ZNUJalr8stJT/XYoGLg45xTdfKfP5Vi219+YHf9GDtrR55vqwfYXNnHaDjGaDDG1nAO5aPB/huMsTnYw9fhIb5vnIBdnt7hz+kD/v4mHj3/6wdc/rr3XJ1NcH32hKs3meDm/BkXP2/BWleBqDuDqtMoG4UWFRpbwtQFamvw2VVoCSZFjjwvwLlAlnJEUQKezXPBJYwpAQc462CtW8SlvHNeMAoTMCEkoijyCCGQ5znomZQ5jDHQWqMoCiil3oXel2WJYBaCkUCSJJ4sy8A591AupVzaSOKvRfpBpKGNxmwWgCml/ca6rr3LMAwRBAGm06mvaVDvtBclN23bommaBc45RGFMgsoflQTJWRzHC2f0/XzUZskVDaD+nqqq0HUdwiACo4KaaAJNJlGllW9yznrsv0g9BNXWdl6kh1YSp2Bpmi1dBMFT4W/6I+gPkGIOnVAVCk+TKV4AghLZhUK5fxgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;gatsby_error&quot;
+        title=&quot;gatsby_error&quot;
+        src=&quot;/static/eefc3db084c015b646534f28e40c3390/f058b/gatsbyerror_withasterisk.png&quot;
+        srcset=&quot;/static/eefc3db084c015b646534f28e40c3390/c26ae/gatsbyerror_withasterisk.png 158w,
+/static/eefc3db084c015b646534f28e40c3390/6bdcf/gatsbyerror_withasterisk.png 315w,
+/static/eefc3db084c015b646534f28e40c3390/f058b/gatsbyerror_withasterisk.png 630w,
+/static/eefc3db084c015b646534f28e40c3390/40601/gatsbyerror_withasterisk.png 945w,
+/static/eefc3db084c015b646534f28e40c3390/78612/gatsbyerror_withasterisk.png 1260w,
+/static/eefc3db084c015b646534f28e40c3390/0c1c2/gatsbyerror_withasterisk.png 1542w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[A new OS, Fuchsia, getting started]]></title><description><![CDATA[Getting started Fuchsia Fuchsia is a modern open source operating system that’s simple, secure, updatable, and performant. It provides core…]]></description><link>https://engelin.github.io/fuchsia-getting-started/</link><guid isPermaLink="false">https://engelin.github.io/fuchsia-getting-started/</guid><pubDate>Fri, 19 Aug 2022 10:30:37 GMT</pubDate><content:encoded>&lt;h1&gt;Getting started Fuchsia&lt;/h1&gt;
 &lt;p&gt;Fuchsia is a modern open source operating system that’s simple, secure, updatable, and performant. It provides core operating system functions like system resource management, a driver framework, and software abstractions. Fuchsia is a general purpose operating system designed to power a diverse ecosystem of hardware and software.&lt;/p&gt;
 &lt;p&gt;But currently(19th of Aug, 2022), it doesn’t support Apple silicon officially.&lt;/p&gt;
 &lt;h2&gt;1. Setup build environment&lt;/h2&gt;

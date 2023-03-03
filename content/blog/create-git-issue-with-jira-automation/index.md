@@ -1,9 +1,16 @@
+---
+title: JIRA webhook & Github API
+date: "2022-10-13T10:00:01.121Z"
+---
+
 =========================================
 JIRA webhook to Github setup..
 
+```sh
 curl -u "${USER_NAME}:${PERSONAL_TOKEN}" https://api.github.com/repos/${OWNER|ORGANIZATION}/${REPO}/issues -d ${JSON_STRING}
 OR
 curl -H "Accept: application/vnd.github+json" -H "Authorization: token <TOKEN>" https://api.github.com/issues -d ${JSON_STRING}
+```
 
 ?? how to auth via username and personal token using header?
 ==> curl -H "Accept: application/vnd.github+json" -H "Authorization: Basic <base64(${USER_NAME:${PERSONAL_TOKEN}})>" https://api.github.com/issues -d ${JSON_STRING}

@@ -1,4 +1,296 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 03 Mar 2023 10:09:57 GMT</lastBuildDate><item><title><![CDATA[Design Resources]]></title><description><![CDATA[Refs: https://developer.apple.com/design/resources/ https://design.facebook.com/toolsandresources/devices/]]></description><link>https://engelin.github.io/design-resouces/</link><guid isPermaLink="false">https://engelin.github.io/design-resouces/</guid><pubDate>Fri, 03 Mar 2023 10:00:01 GMT</pubDate><content:encoded>&lt;p&gt;Refs:&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 08 Mar 2023 10:36:45 GMT</lastBuildDate><item><title><![CDATA[Magento Vulnerability logs..]]></title><description><![CDATA[Unauthenticated Remote Code Execution  The vulnerability is triggered by improper input validation during the checkout process. An attacker…]]></description><link>https://engelin.github.io/magento-vulnerability/</link><guid isPermaLink="false">https://engelin.github.io/magento-vulnerability/</guid><pubDate>Wed, 08 Mar 2023 09:45:41 GMT</pubDate><content:encoded>&lt;ol&gt;
+&lt;li&gt;Unauthenticated Remote Code Execution&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8a507b003aa9ed9f4d5ff82bba638015/63b67/order_script.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 25.316455696202528%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVQY06WQTU/CUBBF+/+XRtCilLQGY9SliQvXouWrQIEgpVWjSK1ShILAey8cQ0lcmzjJydx7djPaYjFnvV4jpUgR4u9IKVFSIqRk1a0iejU0/jGbDUipdiV8guEA7eb6CuNwn1Mzj5nLUsjuYeoZrFz2l2Je3zk9w8nW6RmKRo4zq4B1rGMeHWCZBpcX52hvw1fcZoNe26VbtnHuSjTtezq1Kv1WA7/Txq2UqZducSs2XaeO13AI3BZB4ON7fbyHHsHA4+X5EW17/3SWME8SkjAkHoV8vUfMPj75nkwQyZxpFBGPRulOxmOWcYyczhBKpf9frlZpVkrxA+iIaI6itYkrAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;order_script&quot;
+        title=&quot;order_script&quot;
+        src=&quot;/static/8a507b003aa9ed9f4d5ff82bba638015/f058b/order_script.png&quot;
+        srcset=&quot;/static/8a507b003aa9ed9f4d5ff82bba638015/c26ae/order_script.png 158w,
+/static/8a507b003aa9ed9f4d5ff82bba638015/6bdcf/order_script.png 315w,
+/static/8a507b003aa9ed9f4d5ff82bba638015/f058b/order_script.png 630w,
+/static/8a507b003aa9ed9f4d5ff82bba638015/40601/order_script.png 945w,
+/static/8a507b003aa9ed9f4d5ff82bba638015/78612/order_script.png 1260w,
+/static/8a507b003aa9ed9f4d5ff82bba638015/63b67/order_script.png 2447w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The vulnerability is triggered by improper input validation during the checkout process.&lt;/p&gt;
+&lt;p&gt;An attacker is able to exploit this vulnerability without being authenticated on the web application (contrary to what has previously been reported).&lt;/p&gt;
+&lt;p&gt;Fortunately, there was no additional order between these two attacks, and no one changed the status, so that script didn’t run.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 331px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3d229e00c23205957924b6a4e1f573fe/62452/phishing_site.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 22.78481012658228%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAABCElEQVQY033N22rCQBRA0XxColg1VxURbRIzouY2XoJKY7VUbKT9/y/ZZab42ocFeziHM8a5vpKuSzayIksll/dPTsczYTgnEUvmyYLtrqKUW+Rmp+W5JI4F8VwgxJIoSvT+axhjNM0PZbHncKj10ebrh7r+IIoEaS7Jiw2Px7d2vzfcbneOpzfyQiLlTn+0TnPWacFqlWH0en1s28V1PGzb0e15Pr4XoGb9vk2n86J1uz3+9h1c18NxFFf3k1GWJVW1ZzKZoDrLMsIwZLEQXK8XpJQkImE6ndJut7EsE8uyME1TU+9nK8ZwOGQ2m+H7PuPxmMFgQBAEjEYj1Ey14rquPthqtf71C48TlPd9ilGUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;phishing_site&quot;
+        title=&quot;phishing_site&quot;
+        src=&quot;/static/3d229e00c23205957924b6a4e1f573fe/62452/phishing_site.png&quot;
+        srcset=&quot;/static/3d229e00c23205957924b6a4e1f573fe/c26ae/phishing_site.png 158w,
+/static/3d229e00c23205957924b6a4e1f573fe/6bdcf/phishing_site.png 315w,
+/static/3d229e00c23205957924b6a4e1f573fe/62452/phishing_site.png 331w&quot;
+        sizes=&quot;(max-width: 331px) 100vw, 331px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This script lets shell run to curl from this web, which is a Phishing site as well. I can guess the hacker is trying to inject the code they want with this.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Refs:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://nvd.nist.gov/vuln/detail/CVE-2022-24086&quot;&gt;https://nvd.nist.gov/vuln/detail/CVE-2022-24086&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://helpx.adobe.com/security/products/magento/apsb22-12.html&quot;&gt;https://helpx.adobe.com/security/products/magento/apsb22-12.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.covertswarm.com/post/unauthenticated-remote-code-execution-in-magento-2-and-adobe-commerce-systems-cve-2022-24086&quot;&gt;https://www.covertswarm.com/post/unauthenticated-remote-code-execution-in-magento-2-and-adobe-commerce-systems-cve-2022-24086&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/36374420/what-is-the-meaning-of-eval-post1&quot;&gt;https://stackoverflow.com/questions/36374420/what-is-the-meaning-of-eval-post1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Card skimmer&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0b10068f98110b1276db7b7409ff5585/0ffd9/injected_html.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 47.46835443037975%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLUlEQVQoz3WSi2qDUAyGffmx9TZHtz2X2lYR5g1XCmrVUqoer/9IypHWroGQRM/58seofL4vQFaVJdq2ZW+aZsy7rmOX9dQ7iv2A5vCD8uBCWS3mkDYMA0chBIqiYFDf99zgmckzfK/poKjLOYSoUdc1A+klRelUEzyOYyRJgizLkKbp6NTsChxQCwFFXV1Hll0kaJo7jgNN02AYBjabDUfbtsd7ZCSKFZZFwYX8Vv/BwzCEaZrslmVht9vBdd1H4Nda5aSqKo4SPAV6ngdd1xm03W5ZJQFvz9D4yvf6A8nxiP3+F1EU4XK53MHkYbpMQAmjnJ7dLpOEKMvZG6s7n88caQE09lRhEASsTo5MYN/3H4Gz1xeUZYU8z3A6nZDn+fibPFNIYFoQLWoK/APdfqkTkbafoAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;injected&quot;
+        title=&quot;injected&quot;
+        src=&quot;/static/0b10068f98110b1276db7b7409ff5585/f058b/injected_html.png&quot;
+        srcset=&quot;/static/0b10068f98110b1276db7b7409ff5585/c26ae/injected_html.png 158w,
+/static/0b10068f98110b1276db7b7409ff5585/6bdcf/injected_html.png 315w,
+/static/0b10068f98110b1276db7b7409ff5585/f058b/injected_html.png 630w,
+/static/0b10068f98110b1276db7b7409ff5585/40601/injected_html.png 945w,
+/static/0b10068f98110b1276db7b7409ff5585/78612/injected_html.png 1260w,
+/static/0b10068f98110b1276db7b7409ff5585/0ffd9/injected_html.png 2558w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/dcbfa94893787b934b437edf94a04a14/e5085/injected_html_1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 4.430379746835443%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAQElEQVQI12OISc79H5uS9z8uNf9/fHrB/8jErP/xaQVgPkg8NjXvf1RSNlgMhEF8EAbLp+b9T8woAusDqQWZBQDWAyu5vEKwngAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;injected_1&quot;
+        title=&quot;injected_1&quot;
+        src=&quot;/static/dcbfa94893787b934b437edf94a04a14/f058b/injected_html_1.png&quot;
+        srcset=&quot;/static/dcbfa94893787b934b437edf94a04a14/c26ae/injected_html_1.png 158w,
+/static/dcbfa94893787b934b437edf94a04a14/6bdcf/injected_html_1.png 315w,
+/static/dcbfa94893787b934b437edf94a04a14/f058b/injected_html_1.png 630w,
+/static/dcbfa94893787b934b437edf94a04a14/40601/injected_html_1.png 945w,
+/static/dcbfa94893787b934b437edf94a04a14/78612/injected_html_1.png 1260w,
+/static/dcbfa94893787b934b437edf94a04a14/e5085/injected_html_1.png 2325w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f32e1b861308ee576d18b874aa3ce034/e5085/injected_html_2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 6.329113924050632%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASklEQVQI12MIjU37Hx6fAcaRCVn/Q2JS/8PEwmLT/wdHp/wPiEj8HxKd+j84KuV/YETS/4DwRLBYUFQymPYIiPzv5hf+38bF9z8AgUoo5tccl5AAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;injected_2&quot;
+        title=&quot;injected_2&quot;
+        src=&quot;/static/f32e1b861308ee576d18b874aa3ce034/f058b/injected_html_2.png&quot;
+        srcset=&quot;/static/f32e1b861308ee576d18b874aa3ce034/c26ae/injected_html_2.png 158w,
+/static/f32e1b861308ee576d18b874aa3ce034/6bdcf/injected_html_2.png 315w,
+/static/f32e1b861308ee576d18b874aa3ce034/f058b/injected_html_2.png 630w,
+/static/f32e1b861308ee576d18b874aa3ce034/40601/injected_html_2.png 945w,
+/static/f32e1b861308ee576d18b874aa3ce034/78612/injected_html_2.png 1260w,
+/static/f32e1b861308ee576d18b874aa3ce034/e5085/injected_html_2.png 2325w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I decoded this script tag and was able to get the below code:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d1feb23fb1b65e8b14cfdb65d7242f6a/05fe8/mal_script_decode.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.9620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACKklEQVQozz1SS27bMBD1VVLHlkVSsS1+5kMFKGIHsQ3kKD1DLtE2mwK9QdFVP1oW6BVaeN1Fr9DEkqYg5XbxMPOeho8zHE28qx+897+tcz+sXR9Xy+VRK300xmRorY+mqkYkTZujNiMSV0oftTY/jTG/jDGvJ8aYd0ppISIhQrHOZYQAYq0VH4JY58+6F+ec+OAlQBDvR321WstsPpOiWHyaVFX1ViklMcYnZu4BsSfmnoj6ANAnLcaYORL1hNhjqkn8HAHguaoqmc/nHyZK68dkyMwnJJSAIMQsiCiAkCOdAYiSatI0WWfKOUfualuL1vrjpCzLx7Isk8mJYxwLEpgEACRAMhoPQjZhQSJx3onP8GKt66qrKynL8p+hEojXJyAWhCAQgmAYowcST1EcsriUA4r16SL4/851XXfr1Upml5fJUD0uikIi0Skyjt1loEQmiamj4Mex06ip09Q1gKQGxmVy552Vy2yoRkMiOiHxwBwHJBqcdwMRDsScOSAOiDgw0ZDqKEfKHBC7ZV3LdDrNI78pikKY4x+g2NkAXQDoAKAjoozMEXOeFpC+Be86ROxi5KQ/We/HLVdXy/dKlXLdNNLERkLwwojSRJamiel3EoBx5PQETTxrqY4on1uv11IsFnJxcfF10pjdqzi7+b6tDp+31b7dqNt2aw5tyrdm327Mvr1Rd+2N3rUbs2u31aHdpFzv2rv6vt3Z+/Z2efjy0tx9Cy+uH/4CwWRT00RCQ1YAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;mal_script_decode&quot;
+        title=&quot;mal_script_decode&quot;
+        src=&quot;/static/d1feb23fb1b65e8b14cfdb65d7242f6a/f058b/mal_script_decode.png&quot;
+        srcset=&quot;/static/d1feb23fb1b65e8b14cfdb65d7242f6a/c26ae/mal_script_decode.png 158w,
+/static/d1feb23fb1b65e8b14cfdb65d7242f6a/6bdcf/mal_script_decode.png 315w,
+/static/d1feb23fb1b65e8b14cfdb65d7242f6a/f058b/mal_script_decode.png 630w,
+/static/d1feb23fb1b65e8b14cfdb65d7242f6a/40601/mal_script_decode.png 945w,
+/static/d1feb23fb1b65e8b14cfdb65d7242f6a/78612/mal_script_decode.png 1260w,
+/static/d1feb23fb1b65e8b14cfdb65d7242f6a/05fe8/mal_script_decode.png 5344w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;m@lcOd£.zip Password: malCode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is a card skimmer script which encrypts and posts the card information to the Magento server API that hackers injected. This script was injected on the checkout page and replaced the “Place order” button.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/43aefc8893f5547d690bcdcc563b861e/11b93/mal_script_post.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 10.126582278481013%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbUlEQVQI1yWOWw6EMAwDuUmThqSUPmAf97/arOh+jTWyJW/398PsA/MgqSKaURFEBDVDVFFJyy+XDbV9UURXfpifTUpsvVe8npQ+yUfDa6P4TrhTxo1HISwTtbF7EG1wzBel/U/U6706pxtumR/NyTlQx97azgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;mal_script_post&quot;
+        title=&quot;mal_script_post&quot;
+        src=&quot;/static/43aefc8893f5547d690bcdcc563b861e/f058b/mal_script_post.png&quot;
+        srcset=&quot;/static/43aefc8893f5547d690bcdcc563b861e/c26ae/mal_script_post.png 158w,
+/static/43aefc8893f5547d690bcdcc563b861e/6bdcf/mal_script_post.png 315w,
+/static/43aefc8893f5547d690bcdcc563b861e/f058b/mal_script_post.png 630w,
+/static/43aefc8893f5547d690bcdcc563b861e/40601/mal_script_post.png 945w,
+/static/43aefc8893f5547d690bcdcc563b861e/11b93/mal_script_post.png 1124w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1f13da2d09d4a53d7dcb94b682c95002/669eb/mal_script_enc.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 14.556962025316455%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAf0lEQVQI13XOQQ7CMAwFUQ7SJHacEidpQELc/2qDSivEAhZP36uRL6Xf8T4ZrdJ7ZW5OrStRBNWMihCW5W05hRCIMX7226W2Ru9OmzfG48nYJttwWqtYMSxntBT0uuJ+MM0/Y0fQO6qKqJBUSaKYKZb3OyEipJ1lzDLFzq//BF++HlO89xjPcgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;mal_script_enc&quot;
+        title=&quot;mal_script_enc&quot;
+        src=&quot;/static/1f13da2d09d4a53d7dcb94b682c95002/f058b/mal_script_enc.png&quot;
+        srcset=&quot;/static/1f13da2d09d4a53d7dcb94b682c95002/c26ae/mal_script_enc.png 158w,
+/static/1f13da2d09d4a53d7dcb94b682c95002/6bdcf/mal_script_enc.png 315w,
+/static/1f13da2d09d4a53d7dcb94b682c95002/f058b/mal_script_enc.png 630w,
+/static/1f13da2d09d4a53d7dcb94b682c95002/40601/mal_script_enc.png 945w,
+/static/1f13da2d09d4a53d7dcb94b682c95002/669eb/mal_script_enc.png 1244w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;It parses the card payment information and tries to post the encrypted card data to the server again. From this, I could guess that the hacker injected the malicious code or process inside the server.&lt;/p&gt;
+&lt;p&gt;I’ve checked the generated code and all processes for any suspicious stuff, but the injected code was removed before I joined, according to the checking history. Fortunately, none of the user info was taken.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Refs:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.foregenix.com/blog/threat-alert-intercept&quot;&gt;https://www.foregenix.com/blog/threat-alert-intercept&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Design Resources]]></title><description><![CDATA[Refs: https://developer.apple.com/design/resources/ https://design.facebook.com/toolsandresources/devices/]]></description><link>https://engelin.github.io/design-resouces/</link><guid isPermaLink="false">https://engelin.github.io/design-resouces/</guid><pubDate>Fri, 03 Mar 2023 10:00:01 GMT</pubDate><content:encoded>&lt;p&gt;Refs:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/design/resources/&quot;&gt;https://developer.apple.com/design/resources/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://design.facebook.com/toolsandresources/devices/&quot;&gt;https://design.facebook.com/toolsandresources/devices/&lt;/a&gt;&lt;/li&gt;

@@ -1,4 +1,147 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 08 Mar 2023 10:36:45 GMT</lastBuildDate><item><title><![CDATA[Magento Vulnerability logs..]]></title><description><![CDATA[Unauthenticated Remote Code Execution  The vulnerability is triggered by improper input validation during the checkout process. An attacker…]]></description><link>https://engelin.github.io/magento-vulnerability/</link><guid isPermaLink="false">https://engelin.github.io/magento-vulnerability/</guid><pubDate>Wed, 08 Mar 2023 09:45:41 GMT</pubDate><content:encoded>&lt;ol&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 22 Mar 2023 16:44:29 GMT</lastBuildDate><item><title><![CDATA[Laravel on macOS + Apple Silicon]]></title><description><![CDATA[Getting Started Composer install Laravel license Storage link Database migrate and seed Run serve DB Docker Install MariaDB image via shell]]></description><link>https://engelin.github.io/laravel-getting-started/</link><guid isPermaLink="false">https://engelin.github.io/laravel-getting-started/</guid><pubDate>Thu, 16 Mar 2023 13:48:48 GMT</pubDate><content:encoded>&lt;h2&gt;Getting Started&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Composer install&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;php composer.phar &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Laravel license&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;php artisan key:generate&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;Storage link&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;php artisan storage:link&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;Database migrate and seed&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;php artisan migrate &lt;span class=&quot;token parameter variable&quot;&gt;--seed&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;Run serve&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;php artisan serve&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;DB Docker&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Install MariaDB image via shell&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token function&quot;&gt;docker&lt;/span&gt; pull mariadb
+&lt;span class=&quot;token function&quot;&gt;docker&lt;/span&gt; images
+REPOSITORY                   TAG                                        IMAGE ID       CREATED         SIZE
+mariadb                      latest                                     1ce04e4274d5   &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; weeks ago     384MB
+&lt;span class=&quot;token function&quot;&gt;docker&lt;/span&gt; run IMAGEID&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Metasfresh (React + Spring) getting started]]></title><description><![CDATA[1. Install Docker on Mac Sillicon 1.1 Install rosetta 1.2 Install Docker Desktop Once you install Docker Desktop, you could skip installing…]]></description><link>https://engelin.github.io/metasfresh-docker-test/</link><guid isPermaLink="false">https://engelin.github.io/metasfresh-docker-test/</guid><pubDate>Wed, 15 Mar 2023 13:20:41 GMT</pubDate><content:encoded>&lt;h1&gt;1. Install Docker on Mac Sillicon&lt;/h1&gt;
+&lt;h2&gt;1.1 Install rosetta&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;➜  metasfresh-docker git:&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; ✗ softwareupdate --install-rosetta
+I have &lt;span class=&quot;token builtin class-name&quot;&gt;read&lt;/span&gt; and agree to the terms of the software license agreement. A list of Apple SLAs may be found here: http://www.apple.com/legal/sla/
+Type A and press &lt;span class=&quot;token builtin class-name&quot;&gt;return&lt;/span&gt; to agree: A
+&lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt;-03-15 &lt;span class=&quot;token number&quot;&gt;13&lt;/span&gt;:05:43.814 softwareupdate&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4302&lt;/span&gt;:22718724&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Package Authoring Error: 032-48321: Package reference com.apple.pkg.RosettaUpdateAuto is missing installKBytes attribute
+Install of Rosetta &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; finished successfully&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;1.2 &lt;a href=&quot;https://docs.docker.com/desktop/install/mac-install/#install-interactively&quot;&gt;Install Docker Desktop&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Once you install Docker Desktop, you could skip installing docker engine, compose, etc.&lt;/p&gt;
+&lt;h1&gt;2. Install metasfresh&lt;/h1&gt;
+&lt;h2&gt;2.1 Clone repository&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone https://github.com/metasfresh/metasfresh-docker.git
+&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; metasfresh-docker/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;2.2 Change Webapi url to localhost&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 557px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/869b8c46c930cd27abd7cc81fd37a401/30d00/change_to_localhost.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 19.62025316455696%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABBUlEQVQY0x3My1KCYABAYR5C8VKALRoTkJv4YyI3KUdTM8NpkaSLbGpqVdse/jSxO/MtjmQYBhedDm1FxTw/o7Qtto7Dpt9n5/sUnkfWahHXZWJZJmk0iOt1olqNRJarrlyWSZtNJNM0q2FLUei32+w7Gm+uzfsk5Hs+43Q94jUIOLoOR8/lWdf5sR1+RcCXYVBaFqcg4DPL2KoqkqZpKIpC90rHtS+5yYekaUg6y8jv5kyzgHisE40NotCo+nZisEgs8nGvsig0SWOLUHSR/meqquAPBAPRIy+GZAvB4WnKbptQbEKKdcBmKVgtfFb3HvujoDwEPL8IlkuPx/WIj3LN7iHhDx9Hg+oued2eAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;change_to_localhost&quot;
+        title=&quot;change_to_localhost&quot;
+        src=&quot;/static/869b8c46c930cd27abd7cc81fd37a401/30d00/change_to_localhost.png&quot;
+        srcset=&quot;/static/869b8c46c930cd27abd7cc81fd37a401/c26ae/change_to_localhost.png 158w,
+/static/869b8c46c930cd27abd7cc81fd37a401/6bdcf/change_to_localhost.png 315w,
+/static/869b8c46c930cd27abd7cc81fd37a401/30d00/change_to_localhost.png 557w&quot;
+        sizes=&quot;(max-width: 557px) 100vw, 557px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;2.3 Create the Docker containers.&lt;/h2&gt;
+&lt;p&gt;Docker compose version 1 is no longer considered, but this &lt;code class=&quot;language-text&quot;&gt;docker-compose.yml&lt;/code&gt; file is based on the version 1. So if you try to use the default version (version 2), you may meet the below error:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;➜  metasfresh-docker git:&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; ✗ &lt;span class=&quot;token function&quot;&gt;docker-compose&lt;/span&gt; build
+&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;root&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; Additional property db is not allowed&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then there are two options to workaround this.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Using compose v1 explicitly on terminal.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;➜  metasfresh-docker git:&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; ✗ docker-compose-v1 build
+Building db
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Building &lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt;.7s &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt;/7&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; FINISHED
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Building rabbitmq
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Building &lt;span class=&quot;token number&quot;&gt;14&lt;/span&gt;.9s &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;/5&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; FINISHED
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Building search
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Building &lt;span class=&quot;token number&quot;&gt;47&lt;/span&gt;.2s &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;/8&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; FINISHED
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Building app
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Building &lt;span class=&quot;token number&quot;&gt;81&lt;/span&gt;.8s &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;/9&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; FINISHED
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Building webapi
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Building &lt;span class=&quot;token number&quot;&gt;19&lt;/span&gt;.6s &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;/9&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; FINISHED
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Building webui
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Building &lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;.5s &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;14&lt;/span&gt;/14&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; FINISHED&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Or change docker-compose.yml like the below&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 452px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/08224dfc73a8371ffd33886046fdacc0/fcb94/docker-compose-v2-yml.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 45.56962025316456%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEklEQVQoz5XQ3U6DQBAF4H0NL2BW6C7M/gCFtpSiWIsmRhvTxDZpfP/3OKaoNV6VXnyZvZicmVlBoUTqY9wmN1C+hi5bqGIFnneI4wmCkBCSHE1QGGLCjImxsOUU2dMevNhAugXIXk9opZC6DBE7+FkJ2+9hu3dEfglyDcg3kFcQidYwWYGI7Xfg5gO2PyJtt1DlPaRbntEIQyD7HFFq4ecVXL8H959wDzuovDk3nqb/1gsbnk72iIcNK5j1Drw5gts36MUz4qL9CxtBJImGzX9OnlfgbjsEpusD3OMBquz+/SNdILRWsFmBODVw1RR894pktQU3L0imDcjMBnIkkec56roGEcEYgyAIhjeFBJLyal+9Fg9oP3/wlgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;docker-compose-v2&quot;
+        title=&quot;docker-compose-v2&quot;
+        src=&quot;/static/08224dfc73a8371ffd33886046fdacc0/fcb94/docker-compose-v2-yml.png&quot;
+        srcset=&quot;/static/08224dfc73a8371ffd33886046fdacc0/c26ae/docker-compose-v2-yml.png 158w,
+/static/08224dfc73a8371ffd33886046fdacc0/6bdcf/docker-compose-v2-yml.png 315w,
+/static/08224dfc73a8371ffd33886046fdacc0/fcb94/docker-compose-v2-yml.png 452w&quot;
+        sizes=&quot;(max-width: 452px) 100vw, 452px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;➜  metasfresh-docker git:&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; ✗ &lt;span class=&quot;token function&quot;&gt;docker-compose&lt;/span&gt; build    
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Building &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;.0s &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;/0&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Building &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;.0s &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;/0&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Building &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;.1s &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;/1&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Building &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;.2s &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;14&lt;/span&gt;/14&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; FINISHED&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;2.4&lt;/h2&gt;
+&lt;p&gt;TBC…&lt;/p&gt;
+&lt;p&gt;Refs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.metasfresh.org/installation_collection/EN/How_do_I_setup_the_metasfresh_stack_using_Docker&quot;&gt;How to set up the metasfresh stack using Docker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Magento Vulnerability logs..]]></title><description><![CDATA[Unauthenticated Remote Code Execution  The vulnerability is triggered by improper input validation during the checkout process. An attacker…]]></description><link>https://engelin.github.io/magento-vulnerability/</link><guid isPermaLink="false">https://engelin.github.io/magento-vulnerability/</guid><pubDate>Wed, 08 Mar 2023 09:45:41 GMT</pubDate><content:encoded>&lt;ol&gt;
 &lt;li&gt;Unauthenticated Remote Code Execution&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;span

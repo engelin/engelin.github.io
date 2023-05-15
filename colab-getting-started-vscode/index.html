@@ -1,0 +1,352 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.25.4"/><meta data-react-helmet="true" name="description" content="colab + vscode Environment macOS 13 Python 3.11.0 pip 21.2.4 Installation Colab with python lib import Concept  Colab Installations Create a new file : Run the…"/><meta data-react-helmet="true" property="og:title" content="Getting started with colab + vscode"/><meta data-react-helmet="true" property="og:image" content="undefined/static/web-dev-bg-0c847302f702822fba15390de892ff3f.png"/><meta data-react-helmet="true" property="og:description" content="colab + vscode Environment macOS 13 Python 3.11.0 pip 21.2.4 Installation Colab with python lib import Concept  Colab Installations Create a new file : Run the…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content=""/><meta data-react-helmet="true" name="twitter:title" content="Getting started with colab + vscode"/><meta data-react-helmet="true" name="twitter:description" content="colab + vscode Environment macOS 13 Python 3.11.0 pip 21.2.4 Installation Colab with python lib import Concept  Colab Installations Create a new file : Run the…"/><style data-href="/styles.56976e762885b98c44de.css" data-identity="gatsby-global-css">@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-8d7d79679b70dbe27172b6460e7a7910.woff2) format("woff2"),url(/static/montserrat-latin-100-ec38980a9e0119a379e2a9b3dbb1901a.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e279051046ba1286706adc886cf1c96b.woff2) format("woff2"),url(/static/montserrat-latin-100italic-3b325a3173c8207435cd1b76e19bf501.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-9d266fbbfa6cab7009bd56003b1eeb67.woff2) format("woff2"),url(/static/montserrat-latin-200-2d8ba08717110d27122e54c34b8a5798.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-6e5b3756583bb2263eb062eae992735e.woff2) format("woff2"),url(/static/montserrat-latin-200italic-a0d6f343e4b536c582926255367a57da.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-00b3e893aab5a8fd632d6342eb72551a.woff2) format("woff2"),url(/static/montserrat-latin-300-ea303695ceab35f17e7d062f30e0173b.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-56f34ea368f6aedf89583d444bbcb227.woff2) format("woff2"),url(/static/montserrat-latin-300italic-54b0bf2c8c4c12ffafd803be2466a790.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-b71748ae4f80ec8c014def4c5fa8688b.woff2) format("woff2"),url(/static/montserrat-latin-400-0659a9f4e90db5cf51b50d005bff1e41.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-6eed6b4cbb809c6efc7aa7ddad6dbe3e.woff2) format("woff2"),url(/static/montserrat-latin-400italic-7583622cfde30ae49086d18447ab28e7.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-091b209546e16313fd4f4fc36090c757.woff2) format("woff2"),url(/static/montserrat-latin-500-edd311588712a96bbf435fad264fff62.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-c90ced68b46050061d1a41842d6dfb43.woff2) format("woff2"),url(/static/montserrat-latin-500italic-5146cbfe02b1deea5dffea27a5f2f998.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-0480d2f8a71f38db8633b84d8722e0c2.woff2) format("woff2"),url(/static/montserrat-latin-600-b77863a375260a05dd13f86a1cee598f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-cf46ffb11f3a60d7df0567f8851a1d00.woff2) format("woff2"),url(/static/montserrat-latin-600italic-c4fcfeeb057724724097167e57bd7801.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-7dbcc8a5ea2289d83f657c25b4be6193.woff2) format("woff2"),url(/static/montserrat-latin-700-99271a835e1cae8c76ef8bba99a8cc4e.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-c41ad6bdb4bd504a843d546d0a47958d.woff2) format("woff2"),url(/static/montserrat-latin-700italic-6779372f04095051c62ed36bc1dcc142.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-db9a3e0ba7eaea32e5f55328ace6cf23.woff2) format("woff2"),url(/static/montserrat-latin-800-4e3c615967a2360f5db87d2f0fd2456f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-bf45bfa14805969eda318973947bc42b.woff2) format("woff2"),url(/static/montserrat-latin-800italic-fe82abb0bcede51bf724254878e0c374.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-e66c7edc609e24bacbb705175669d814.woff2) format("woff2"),url(/static/montserrat-latin-900-8211f418baeb8ec880b80ba3c682f957.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-4454c775e48152c1a72510ceed3603e2.woff2) format("woff2"),url(/static/montserrat-latin-900italic-efcaa0f6a82ee0640b83a0916e6e8d68.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-fc117160c69a8ea0851b26dd14748ee4.woff2) format("woff2"),url(/static/merriweather-latin-300-58b18067ebbd21fda77b67e73c241d3b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-fe29961474f8dbf77c0aa7b9a629e4bc.woff2) format("woff2"),url(/static/merriweather-latin-300italic-23c3f1f88683618a4fb8d265d33d383a.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-d9479e8023bef9cbd9bf8d6eabd6bf36.woff2) format("woff2"),url(/static/merriweather-latin-400-040426f99ff6e00b86506452e0d1f10b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-2de7bfeaf08fb03d4315d49947f062f7.woff2) format("woff2"),url(/static/merriweather-latin-400italic-79db67aca65f5285964ab332bd65f451.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-4b08e01d805fa35d7bf777f1b24314ae.woff2) format("woff2"),url(/static/merriweather-latin-700-22fb8afba4ab1f093b6ef9e28a9b6e92.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-cd92541b177652fffb6e3b952f1c33f1.woff2) format("woff2"),url(/static/merriweather-latin-700italic-f87f3d87cea0dd0979bfc8ac9ea90243.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-f813fc6a4bee46eda5224ac7ebf1b7be.woff2) format("woff2"),url(/static/merriweather-latin-900-5d4e42cb44410674acd99153d57df032.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-b7901d85486871c1779c0e93ddd85656.woff2) format("woff2"),url(/static/merriweather-latin-900italic-9647f9fdab98756989a8a5550eb205c3.woff) format("woff")}
+
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{-webkit-text-size-adjust:100%;line-height:1.15}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden]{display:none}:root{--maxWidth-none:"none";--maxWidth-xs:20rem;--maxWidth-sm:24rem;--maxWidth-md:28rem;--maxWidth-lg:32rem;--maxWidth-xl:36rem;--maxWidth-2xl:42rem;--maxWidth-3xl:48rem;--maxWidth-4xl:56rem;--maxWidth-full:"100%";--maxWidth-wrapper:var(--maxWidth-2xl);--spacing-px:"1px";--spacing-0:0;--spacing-1:0.25rem;--spacing-2:0.5rem;--spacing-3:0.75rem;--spacing-4:1rem;--spacing-5:1.25rem;--spacing-6:1.5rem;--spacing-8:2rem;--spacing-10:2.5rem;--spacing-12:3rem;--spacing-16:4rem;--spacing-20:5rem;--spacing-24:6rem;--spacing-32:8rem;--fontFamily-sans:Montserrat,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--fontFamily-serif:"Merriweather","Georgia",Cambria,"Times New Roman",Times,serif;--font-body:var(--fontFamily-serif);--font-heading:var(--fontFamily-sans);--fontWeight-normal:400;--fontWeight-medium:500;--fontWeight-semibold:600;--fontWeight-bold:700;--fontWeight-extrabold:800;--fontWeight-black:900;--fontSize-root:16px;--lineHeight-none:1;--lineHeight-tight:1.1;--lineHeight-normal:1.5;--lineHeight-relaxed:1.625;--fontSize-0:0.833rem;--fontSize-1:1rem;--fontSize-2:1.2rem;--fontSize-3:1.44rem;--fontSize-4:1.728rem;--fontSize-5:2.074rem;--fontSize-6:2.488rem;--fontSize-7:2.986rem;--color-primary:#7a2db9;--color-text:#3a2e3f;--color-text-light:#5f4f69;--color-heading:#1a202c;--color-heading-black:#000;--color-accent:#d1dce5}*,:after,:before{box-sizing:border-box}html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:var(--fontSize-root);line-height:var(--lineHeight-normal)}body{color:var(--color-text);font-family:var(--font-body);font-size:var(--fontSize-1)}footer{padding:var(--spacing-6) var(--spacing-0)}hr{background:var(--color-accent);border:0;height:1px}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);letter-spacing:-.025em;line-height:var(--lineHeight-tight);margin-bottom:var(--spacing-6);margin-top:var(--spacing-12)}h2,h3,h4,h5,h6{color:var(--color-heading);font-weight:var(--fontWeight-bold)}h1{color:var(--color-heading-black);font-size:var(--fontSize-6);font-weight:var(--fontWeight-black)}h2{font-size:var(--fontSize-5)}h3{font-size:var(--fontSize-4)}h4{font-size:var(--fontSize-3)}h5{font-size:var(--fontSize-2)}h6{font-size:var(--fontSize-1)}h1>a,h2>a,h3>a,h4>a,h5>a,h6>a{color:inherit;text-decoration:none}p{--baseline-multiplier:0.179;--x-height-multiplier:0.35;line-height:var(--lineHeight-relaxed);margin:var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0)}ol,p,ul{padding:var(--spacing-0)}ol,ul{list-style-image:none;list-style-position:outside;margin-bottom:var(--spacing-8);margin-left:var(--spacing-0);margin-right:var(--spacing-0)}ol li,ul li{padding-left:var(--spacing-0)}li>p,ol li,ul li{margin-bottom:calc(var(--spacing-8)/2)}li :last-child{margin-bottom:var(--spacing-0)}li>ul{margin-left:var(--spacing-8);margin-top:calc(var(--spacing-8)/2)}blockquote{border-left:var(--spacing-1) solid var(--color-primary);color:var(--color-text-light);font-size:var(--fontSize-2);font-style:italic;margin-bottom:var(--spacing-8);margin-left:calc(var(--spacing-6)*-1);margin-right:var(--spacing-8);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6)}blockquote>:last-child{margin-bottom:var(--spacing-0)}blockquote>ol,blockquote>ul{list-style-position:inside}table{border-collapse:collapse;border-spacing:.25rem;margin-bottom:var(--spacing-8);width:100%}table thead tr th{border-bottom:1px solid var(--color-accent)}a{color:var(--color-primary)}a:focus,a:hover{text-decoration:none}.global-wrapper{margin:var(--spacing-0) auto;max-width:var(--maxWidth-wrapper);padding:var(--spacing-10) var(--spacing-5)}.global-wrapper[data-is-root-path=true] .bio{margin-bottom:var(--spacing-20)}.global-header{margin-bottom:var(--spacing-12)}.main-heading{font-size:var(--fontSize-7);margin:0}.post-list-item{margin-bottom:var(--spacing-8);margin-top:var(--spacing-8)}.post-list-item p{margin-bottom:var(--spacing-0)}.post-list-item h2{color:var(--color-primary);font-size:var(--fontSize-4);margin-bottom:var(--spacing-2);margin-top:var(--spacing-0)}.post-list-item header{margin-bottom:var(--spacing-4)}.header-link-home{font-family:var(--font-heading);font-size:var(--fontSize-2);font-weight:var(--fontWeight-bold);text-decoration:none}.bio{display:flex;margin-bottom:var(--spacing-16)}.bio p,.bio-avatar{margin-bottom:var(--spacing-0)}.bio-avatar{border-radius:100%;margin-right:var(--spacing-4);min-width:50px}.blog-post header h1{margin:var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0)}.blog-post header p{font-family:var(--font-heading);font-size:var(--fontSize-2)}.blog-post-nav ul{margin:var(--spacing-0)}.gatsby-highlight{margin-bottom:var(--spacing-8)}@media (max-width:42rem){blockquote{margin-left:var(--spacing-0);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4)}ol,ul{list-style-position:inside}}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="alternate" type="application/rss+xml" title="Yerin-pyon Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=ba38d7bb38e516bce53392e444e143bb" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=ba38d7bb38e516bce53392e444e143bb"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=ba38d7bb38e516bce53392e444e143bb"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=ba38d7bb38e516bce53392e444e143bb"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=ba38d7bb38e516bce53392e444e143bb"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=ba38d7bb38e516bce53392e444e143bb"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=ba38d7bb38e516bce53392e444e143bb"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=ba38d7bb38e516bce53392e444e143bb"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=ba38d7bb38e516bce53392e444e143bb"/><title data-react-helmet="true">Getting started with colab + vscode | Yerin Blog</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Yerin Blog</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">Getting started with colab + vscode</h1><p>May 10, 2023</p></header><section itemProp="articleBody"><h1>colab + vscode</h1>
+<h2>Environment</h2>
+<ul>
+<li>macOS 13</li>
+<li>Python 3.11.0</li>
+<li>pip 21.2.4</li>
+</ul>
+<h2>Installation Colab with python lib import</h2>
+<h3>Concept</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 113px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/85d8b58614a108cc1498799e8af24cf8/2519b/colab_concept.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 17.699115044247787%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABHUlEQVQY0z2Pv0vCURxFj6FCuhWVDd/P00KlH1rTe4ZFENHkEPQHWLYJERJShmG0CIpBhattQUMN5eJkQzTV5tDWIEEEDUJDTYYmXjjc5XLh8HPFdOsGb3rNRicDgMczg5IIYmmUaFS3TYcxEe0f98x2t8RS0G47SFRh8zLoLjw3+b2j9F10FnIRZxhIABmfN7otls4qMbtKTEaJSfc4F0vfBvyrAhwCcZKVOYqNGnvV+vBZo8RX3nHxmXSf5lbsIWDLBkc+bzQhlj4WS18rMU9K9IYSU1RiyiK6MjmxPA/sdw9j2TAH9RonLw9D5WaJjx3X1FtqUKUi9r7y6EjgX1nMkohZF8sQskxPfYF+FuPQaju4b0P6MejKv77/ARcTTBKktyeWAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="colab_concept.png"
+        title="colab_concept.png"
+        src="/static/85d8b58614a108cc1498799e8af24cf8/2519b/colab_concept.png"
+        srcset="/static/85d8b58614a108cc1498799e8af24cf8/2519b/colab_concept.png 113w"
+        sizes="(max-width: 113px) 100vw, 113px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<h3>Colab Installations</h3>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ pip3 <span class="token function">install</span> colabcode</code></pre></div>
+<p>Create a new file <code class="language-text">colab_getting_started.py</code>:</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> colabcode <span class="token keyword">import</span> ColabCode
+
+ColabCode<span class="token punctuation">(</span>port<span class="token operator">=</span><span class="token number">10000</span><span class="token punctuation">,</span> password<span class="token operator">=</span><span class="token string">"12345"</span><span class="token punctuation">,</span> mount_drive<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span></code></pre></div>
+<p>Run the file:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ python3 colab_getting_started.py
+
+--2023-05-10 <span class="token number">17</span>:58:32--  https://code-server.dev/install.sh
+Resolving code-server.dev <span class="token punctuation">(</span>code-server.dev<span class="token punctuation">)</span><span class="token punctuation">..</span>. <span class="token number">104.21</span>.16.171, <span class="token number">172.67</span>.214.225
+Connecting to code-server.dev <span class="token punctuation">(</span>code-server.dev<span class="token punctuation">)</span><span class="token operator">|</span><span class="token number">104.21</span>.16.171<span class="token operator">|</span>:443<span class="token punctuation">..</span>. connected.
+HTTP request sent, awaiting response<span class="token punctuation">..</span>. <span class="token number">302</span> Found
+Location: https://raw.githubusercontent.com/cdr/code-server/main/install.sh <span class="token punctuation">[</span>following<span class="token punctuation">]</span>
+--2023-05-10 <span class="token number">17</span>:58:33--  https://raw.githubusercontent.com/cdr/code-server/main/install.sh
+Resolving raw.githubusercontent.com <span class="token punctuation">(</span>raw.githubusercontent.com<span class="token punctuation">)</span><span class="token punctuation">..</span>. <span class="token number">185.199</span>.108.133, <span class="token number">185.199</span>.109.133, <span class="token number">185.199</span>.110.133, <span class="token punctuation">..</span>.
+Connecting to raw.githubusercontent.com <span class="token punctuation">(</span>raw.githubusercontent.com<span class="token punctuation">)</span><span class="token operator">|</span><span class="token number">185.199</span>.108.133<span class="token operator">|</span>:443<span class="token punctuation">..</span>. connected.
+HTTP request sent, awaiting response<span class="token punctuation">..</span>. <span class="token number">200</span> OK
+Length: <span class="token number">15858</span> <span class="token punctuation">(</span>15K<span class="token punctuation">)</span> <span class="token punctuation">[</span>text/plain<span class="token punctuation">]</span>
+Saving to: ‘install.sh’
+
+install.sh                                           <span class="token number">100</span>%<span class="token punctuation">[</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">]</span>  <span class="token number">15</span>.49K  --.-KB/s    <span class="token keyword">in</span> <span class="token number">0</span>.001s  
+
+<span class="token number">2023</span>-05-10 <span class="token number">17</span>:58:33 <span class="token punctuation">(</span><span class="token number">11.7</span> MB/s<span class="token punctuation">)</span> - ‘install.sh’ saved <span class="token punctuation">[</span><span class="token number">15858</span>/15858<span class="token punctuation">]</span>
+
+<span class="token punctuation">[</span><span class="token number">2023</span>-05-10T16:58:52.675Z<span class="token punctuation">]</span> info  Wrote default config <span class="token function">file</span> to ~/.config/code-server/config.yaml
+Installing extensions<span class="token punctuation">..</span>.
+Installing extension <span class="token string">'ms-python.python'</span><span class="token punctuation">..</span>.
+Extension <span class="token string">'ms-python.python'</span> v2023.6.1 was successfully installed.
+Installing extensions<span class="token punctuation">..</span>.
+Extension <span class="token string">'ms-toolsai.jupyter'</span> v2023.3.100 is already installed. Use <span class="token string">'--force'</span> option to update to latest version or provide <span class="token string">'@&lt;version>'</span> to <span class="token function">install</span> a specific version, <span class="token keyword">for</span> example: <span class="token string">'ms-toolsai.jupyter@1.2.3'</span><span class="token builtin class-name">.</span>
+Installing extensions<span class="token punctuation">..</span>.
+Installing extension <span class="token string">'mechatroner.rainbow-csv'</span><span class="token punctuation">..</span>.
+Extension <span class="token string">'mechatroner.rainbow-csv'</span> v3.3.0 was successfully installed.
+Installing extensions<span class="token punctuation">..</span>.
+Installing extension <span class="token string">'vscode-icons-team.vscode-icons'</span><span class="token punctuation">..</span>.
+Extension <span class="token string">'vscode-icons-team.vscode-icons'</span> v12.4.0 was successfully installed.
+<span class="token assign-left variable">t</span><span class="token operator">=</span><span class="token number">2023</span>-05-10T17:59:15+0100 <span class="token assign-left variable">lvl</span><span class="token operator">=</span>warn <span class="token assign-left variable">msg</span><span class="token operator">=</span><span class="token string">"ngrok config file found at legacy location, move to XDG location"</span> <span class="token assign-left variable">xdg_path</span><span class="token operator">=</span><span class="token string">"/Users/xxx/Library/Application Support/ngrok/ngrok.yml"</span> <span class="token assign-left variable">legacy_path</span><span class="token operator">=</span>/Users/xxx/.ngrok2/ngrok.yml
+Code Server can be accessed on: NgrokTunnel: <span class="token string">"https://69ca-194-75-100-74.ngrok.io"</span> -<span class="token operator">></span> <span class="token string">"http://localhost:10000"</span>
+Unknown option: n
+Unknown option: k
+fuser: <span class="token punctuation">[</span>-cfu<span class="token punctuation">]</span> <span class="token function">file</span> <span class="token punctuation">..</span>.
+        <span class="token parameter variable">-c</span>      <span class="token function">file</span> is treated as <span class="token function">mount</span> point
+        <span class="token parameter variable">-f</span>      the report is only <span class="token keyword">for</span> the named files
+        <span class="token parameter variable">-u</span>      print username of pid <span class="token keyword">in</span> parenthesis
+<span class="token punctuation">[</span><span class="token number">2023</span>-05-10T16:59:16.781Z<span class="token punctuation">]</span> info  code-server <span class="token number">4.12</span>.0 1da7cda39e54faa087cf129f0f85d4d4e63e81b8
+<span class="token punctuation">[</span><span class="token number">2023</span>-05-10T16:59:16.782Z<span class="token punctuation">]</span> info  Using user-data-dir ~/.local/share/code-server
+<span class="token punctuation">[</span><span class="token number">2023</span>-05-10T16:59:16.789Z<span class="token punctuation">]</span> info  Using config <span class="token function">file</span> ~/.config/code-server/config.yaml
+<span class="token punctuation">[</span><span class="token number">2023</span>-05-10T16:59:16.789Z<span class="token punctuation">]</span> info  HTTP server listening on http://127.0.0.1:10000/
+<span class="token punctuation">[</span><span class="token number">2023</span>-05-10T16:59:16.789Z<span class="token punctuation">]</span> info    - Authentication is enabled
+<span class="token punctuation">[</span><span class="token number">2023</span>-05-10T16:59:16.789Z<span class="token punctuation">]</span> info      - Using password from <span class="token variable">$PASSWORD</span>
+<span class="token punctuation">[</span><span class="token number">2023</span>-05-10T16:59:16.789Z<span class="token punctuation">]</span> info    - Not serving HTTPS</code></pre></div>
+<p>Open the URL in your browser:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/045d87410e055a5f1a070d4914c5b8a8/f3d76/colab_local_pw.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4UlEQVQ4y52RS08TURTHZyVaqWAgQkyMRk3cufJzoH4Bu2IBY0zcUdKS6EaaiM+WIAE2fgQ/gfEFQqmQGGOiblyQ0s50HnfunfuY+Zs7M2CJMTSd5Jdz7plzfvfeGePc0Jnr4+MjC5evXpu/eOnK/MjoWOVULl85MZCrDJw8ntzpfGX47Oijwfzwk8H80A2jPPdgslp7hcWlFVQXl/H0WQ2PF170zPOXS1hde41qbRmluYf3jW/ff91B+oQARJ/oWfz4+XvK+LReL9gOhUdE5Po8dn2OlBCOl+JqDuv/EHtEqI7L8HlrxzQ2NhsFj4QImIoIlXHAJAiVoGEExuMEnev6wTtNV65nlB9w1Bu7WridCWVEqIgJFUlz23aw12yhuW8lOQslQqEgVAwuI6R9QsfehK5PYXVcdFwfjkeSNQ0FKAcojxNhesIehJRJdIjAnk1hEwXLl2h7Eg4VePOW40NDQCoBP/ivkB0Ks2vACzj0RknM0EO2y+F4/OC6XcLwr1D/0YAppT9wNwHryrNI2dF61ic9wlHf3p02Nrd2CoQqhAKKccR9IgMWofHlq2m8e79RaLYctG0fLas/2paP/ZaLj+t105iavnu+OFu+NVMsTcwUSzf7ZKI4W75tmvcu/AE/+1XCg7M2KgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="colab_local_pw.png"
+        title="colab_local_pw.png"
+        src="/static/045d87410e055a5f1a070d4914c5b8a8/f058b/colab_local_pw.png"
+        srcset="/static/045d87410e055a5f1a070d4914c5b8a8/c26ae/colab_local_pw.png 158w,
+/static/045d87410e055a5f1a070d4914c5b8a8/6bdcf/colab_local_pw.png 315w,
+/static/045d87410e055a5f1a070d4914c5b8a8/f058b/colab_local_pw.png 630w,
+/static/045d87410e055a5f1a070d4914c5b8a8/40601/colab_local_pw.png 945w,
+/static/045d87410e055a5f1a070d4914c5b8a8/78612/colab_local_pw.png 1260w,
+/static/045d87410e055a5f1a070d4914c5b8a8/f3d76/colab_local_pw.png 3248w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/05f7c0360bd6448336c29950290e22ef/f3d76/colab_local.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC10lEQVQ4y52SXUiTURjHd6VlClZON1FJSe0qMLQMP5riRRbuLYpCChdRQUmQ0V0WBEEKzo+yLvrQSPtA6iLUkG76oJsK8qtpas7a5tK96qab2/tx3ucfezdFK2868OPhOed5fjycczTbMzO3p6Umm7ekZdSkpWXUxGn1teujYmojIqNqI9dtqI2IXAP1LEqtjd0YdyM6JrY+OiY2W7N1a/rpCxcv4f6DVjQ330FDYxPM9Y2oMzegzly/Iq7GHNyvq0dj0y20tD7ErebbqK6+WqVJ0Okq3rx9CwACAOk/CfbCbref1ej1elNnZ2cwV/x+PzmdTjgcDgiCAMYYZFlWYQoLlgBgqyBixBhjkiRhcHCwUhV2d3erQlEUybsYAJECIlpGHd8vw2n1gZ8U4ZoU8cshwmETMe9hwYKgExaLpVKj1WpNXV1dIaEkE+8VEJAULC1FCQltFj9qjlhx7ehPXD5mQ9UxG8qNP9D2aE4VStI/hLIsUXB0phCUpQnDbtvXAK7ss+B88QBOlfTjZNkg9hn60drCry0URJFc/Ax8Pi98ARGqXA4ZrX2LyEk/g+SUAiTqC5GUVIAN0XlouvkxLJT/FvpFmexTM5jhXeB5HrNzbng885AVAc4xP46XX0fZoRPYX1YB7qAJhYZyPOvoDwulsDBOu/TKTJYkmp1x0dTUNLmmp2nYPkuehUUSBYEURSHGQlDoYlciBwVDQ0PnNNoEranndQ/C/4DcPi+55+dIEAMkE1P5o5kYQLx3kdwLHvJ4F8gX8MvuhXn0DfRVajKSt5ke330K5+g0Rr6MY6zXitFw/N5nxVjvOIY/j2Lo04gaJ/on8OH9N9xre4eO1pd49rATL9pf4Xl7N560dFRqshJyE/NTSg7k6oqMu+INXK6uiNutK+JyEwzLZG/O53ZsyuNy4gq4nfEGbk9iEcel7+VKMzmuNMPIlWYajQeyDh/MTy1O/g1sd/1wWSm5+gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="colab_local.png"
+        title="colab_local.png"
+        src="/static/05f7c0360bd6448336c29950290e22ef/f058b/colab_local.png"
+        srcset="/static/05f7c0360bd6448336c29950290e22ef/c26ae/colab_local.png 158w,
+/static/05f7c0360bd6448336c29950290e22ef/6bdcf/colab_local.png 315w,
+/static/05f7c0360bd6448336c29950290e22ef/f058b/colab_local.png 630w,
+/static/05f7c0360bd6448336c29950290e22ef/40601/colab_local.png 945w,
+/static/05f7c0360bd6448336c29950290e22ef/78612/colab_local.png 1260w,
+/static/05f7c0360bd6448336c29950290e22ef/f3d76/colab_local.png 3248w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<h3>Ngrok Setup</h3>
+<p>You might meet the following error:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a14ae9d610289c9a4358f8a1a64e58ef/f3d76/ngrok_server_error.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACGklEQVQ4y52TwW7TQBRF/R1I/AIrvoPCD9AVC6gUlW2E5CX1Ar6FXSUkFqgpIomdxC6osUCsSho7sceJG8/MmxlfNE7SFjVlgUZHT+Pre9/Ms+ycHn94FJ99fRfH46NfP38cxeex1z3peONR3xv1el6vc+JF/S/e96DnjUe+F4dBwzgMvPORv61v43DwvvPp42Nn4PdfXJULZFmO2XyOeZYjyxgKxsDyHHmWNbVgefPsBqvNwRhr3lkWBcLh8LUTDAbPORcwxghVVaSrkowsyRAnTUSaFJFU1CwpSUlFRll0U+3SxggpJcIoeukEQbBfVRVIayOStO4GFzjuXCCKM5RXAlcrDSlrCEHgVQXOFYzWqI1BrTUk57Uk0pxzhGF4cB2otDJiWdaDs0t89hN8i2dgWY55mmKeTCFWK2giKClA4gYpRG0vIoS4FcgrKKVMxXmdTC+QJhNMpjP8nlyuZ8QY7FiI6C/kmruBvOJNIOe8TtMZpkmKy6QAK0rY2VizNdhrCc6bKsW6gZRyRyC/HZgiSWeYTHMwtkBZllgul9ds983c/xVIRIaIaq011ijbpDHZumW734TtDtx001b8H4hIbb7yK2c4HO7bdK21VkrVd9H21A27dWU1ZU8bRdGB0+1294uiuDOr29i/KMuLe3XrXSwW8H3/wGm1Wg9c133quu4T13X3dtFut/fa7Td79+kb77PDw8OHfwCONpkLPTMIHAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ngrok_server_error.png"
+        title="ngrok_server_error.png"
+        src="/static/a14ae9d610289c9a4358f8a1a64e58ef/f058b/ngrok_server_error.png"
+        srcset="/static/a14ae9d610289c9a4358f8a1a64e58ef/c26ae/ngrok_server_error.png 158w,
+/static/a14ae9d610289c9a4358f8a1a64e58ef/6bdcf/ngrok_server_error.png 315w,
+/static/a14ae9d610289c9a4358f8a1a64e58ef/f058b/ngrok_server_error.png 630w,
+/static/a14ae9d610289c9a4358f8a1a64e58ef/40601/ngrok_server_error.png 945w,
+/static/a14ae9d610289c9a4358f8a1a64e58ef/78612/ngrok_server_error.png 1260w,
+/static/a14ae9d610289c9a4358f8a1a64e58ef/f3d76/ngrok_server_error.png 3248w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>To fix this, you need to setup auth token:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/cdaeac05f3fa46581f0795877cbac3e0/f3d76/ngrok_auth_setup.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADM0lEQVQ4y22RX2hTVxzH75MgiLWbjiVNG3UPzlFriBYHbv5jg8LA6tPYy+LLHmKwY+xhYFkqMpiXTdn25OMKivgiMlAmtktW0jZt0mo6NE2b3sYujWnX5P7Jzb33nHPv+Y57m1mEHfjw/Z4fhy/fw08ozY73aNWF66ulhWvl4vNrc9mMmH9eEP9eKYnlkiTmn0yLhdyMWMhlxcLTFrlN5p9mxHlXc9nvF+dmb6RGHx0Vvo6LX4g3buLyN1fx3dUfUS5XUJdVKKqGhq5DVRSoqgpN017h3t25XJehqCpqtZrn53K5r4Tt7T2f+7o+xO49vVbn/o9oMm/SbBk0XdpkegV06gXo+BKjqSKjqUVK0y/wiqlNtSYkhvsj01Eh0H0hcvTjOLpPXHa6Tw/xBzkTiUVgpOBgpMDx+zOG32Z13E6UMfx4GcOPJdzLKPijwJAscvcNH12APTpPcffhREwIdoUj7x44Cb8v7Bzq6eMPck0kim4gMFbkmCrqSC82kJFMjOdlTC8Z+Kvi4NdkE3fSFH8uoRXIcPfhZEzYGzwSee/gKQT8R5yew308+UxDZgWYXGKYkiiyyxYyLf7zT1YYEnmC5DxBepnxScm2J4sm7j2aiAldXsNT6PD3OqFQH69UqlBVDYZhgBAKq4VpbXnDtEApAaMUlkU4ZcxWNQ2JRCImdPi6I/uDYQR8h5xw6AxfW1v3tqso7mYbXrjr3c266tJsNkEpg+Nw2I7DOWC7My/wLf/xyO69n2JX52fOgdAFL1DXDSiKhkZDh6bpULUGtMaWWoTAtAhM03LhFqFbDXf4zkXeDP2CrhO37OD713ml8pIrssJ1XeeUEk4J4e63LMvihFjcMEyu603uODYHuHcAMLfh2NjYRaEtcD6yp/cm3jh2237ng594tbrGN2oy36gpvFZXuaI0PHUxTMINi3hKKOOE2h6UOcw0TczMzMSEXR2fRNrDP6P92DD2Hf8BkiShuraO1dWX2NiovUa9LqMuK5u4voUsK1hf/wepVComtLUF/Dt27ju3bXvw7Nu+g/0DA1/2X4zG+i9dGui/cmXoNeLxb/+XoXj87ODg4PloNNr5L9t4JECq8ZwEAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ngrok_auth_setup.png"
+        title="ngrok_auth_setup.png"
+        src="/static/cdaeac05f3fa46581f0795877cbac3e0/f058b/ngrok_auth_setup.png"
+        srcset="/static/cdaeac05f3fa46581f0795877cbac3e0/c26ae/ngrok_auth_setup.png 158w,
+/static/cdaeac05f3fa46581f0795877cbac3e0/6bdcf/ngrok_auth_setup.png 315w,
+/static/cdaeac05f3fa46581f0795877cbac3e0/f058b/ngrok_auth_setup.png 630w,
+/static/cdaeac05f3fa46581f0795877cbac3e0/40601/ngrok_auth_setup.png 945w,
+/static/cdaeac05f3fa46581f0795877cbac3e0/78612/ngrok_auth_setup.png 1260w,
+/static/cdaeac05f3fa46581f0795877cbac3e0/f3d76/ngrok_auth_setup.png 3248w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ ngrok config add-authtoken <span class="token operator">&lt;</span>your_auth_token<span class="token operator">></span>
+Authtoken saved to configuration file: /Users/xxx/.ngrok2/ngrok.yml
+
+<span class="token comment"># Check the config file</span>
+$ <span class="token function">cat</span> /Users/xxx/.ngrok2/ngrok.yml
+region: us
+version: <span class="token string">'2'</span>
+authtoken: <span class="token operator">&lt;</span>your_auth_token<span class="token operator">></span></code></pre></div>
+<p>Restart the colab server:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9230ff77e0a564277eedbf37f6c2ce8e/f3d76/ngrok_server.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB2ElEQVQ4y52SzW7TQBDH/RxIvAInnqOUFyAnDm0QEremas/UB3gVbj0gcSlNITiOYzcVIUKFigqa+Cu21/vltf9ot00JINSSw08zszP71+zMWt39V/c+n3x48eXr2d75t/O909Mz+93Bof0p8Oyx79kffc+ejHx7crzEyLfHwdDkxsHAHg+d5xPffdl98/q+1Xf6j7OsQJgyzOIS05jg+zRDkvFr0j9tzhGlFLOYIEoKRFGCNMnhDfxnVs/xH+WkAhMNp7yRGiYgF/5tYAK8oAquN9qwes6wlROBktU1oaohVOE/aUqmVE4kXO+4bfUcr5UTjpKpmtCqKVkFQitQXuuuDVTU0OeLnGbJ13dUUQq4XqAFB1eCVU2obAiVpjhK5vhxEeJiFhufcj0WBakaiKrGZZ3U9naCOaFI5jnSrEBWEBNTLsEEQEVjBC87vFHQFJlumKjBZW2sjrkQ2D8Q6HoSlZIoyn8KsmvBq2dAF/wFFUgzgXkuFs9dEuS/BLPCLEXpAd8EZWYJv52VrKr0T3EHwabl9P2WXj+XUEygWZGqZDW84UnbenvYa03DufnxYbwaUVxgFmY4eu+2rY3NJ3c627vrW52dta3OzoMVWets7z5st5/e/QnBMZlI296A2AAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ngrok_server.png"
+        title="ngrok_server.png"
+        src="/static/9230ff77e0a564277eedbf37f6c2ce8e/f058b/ngrok_server.png"
+        srcset="/static/9230ff77e0a564277eedbf37f6c2ce8e/c26ae/ngrok_server.png 158w,
+/static/9230ff77e0a564277eedbf37f6c2ce8e/6bdcf/ngrok_server.png 315w,
+/static/9230ff77e0a564277eedbf37f6c2ce8e/f058b/ngrok_server.png 630w,
+/static/9230ff77e0a564277eedbf37f6c2ce8e/40601/ngrok_server.png 945w,
+/static/9230ff77e0a564277eedbf37f6c2ce8e/78612/ngrok_server.png 1260w,
+/static/9230ff77e0a564277eedbf37f6c2ce8e/f3d76/ngrok_server.png 3248w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<hr>
+<h2>Installation Colab with Conda</h2>
+<h3><a href="https://repo.anaconda.com/miniconda/">Conda install shells</a></h3>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ <span class="token function">wget</span> https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh
+$ <span class="token function">chmod</span> +x Miniconda3-latest-MacOSX-arm64.sh
+$ ./Miniconda3-latest-MacOSX-arm64.sh
+
+Welcome to Miniconda3 py310_23.3.1-0
+
+In order to <span class="token builtin class-name">continue</span> the installation process, please review the license
+agreement.
+Please, press ENTER to <span class="token builtin class-name">continue</span>
+<span class="token operator">>></span><span class="token operator">></span> 
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+End User License Agreement - Miniconda
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+<span class="token punctuation">..</span>.
+Please answer <span class="token string">'yes'</span> or <span class="token string">'no'</span><span class="token builtin class-name">:</span><span class="token string">'
+>>> yes
+
+Miniconda3 will now be installed into this location:
+/Users/xxx/miniconda3
+
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+
+[/Users/xxx/miniconda3] >>>
+PREFIX=/Users/xxx/miniconda3
+Unpacking payload ...
+...
+by running conda init? [yes|no]
+[yes] >>> yes
+no change     /Users/xxx/miniconda3/condabin/conda
+no change     /Users/xxx/miniconda3/bin/conda
+no change     /Users/xxx/miniconda3/bin/conda-env
+no change     /Users/xxx/miniconda3/bin/activate
+no change     /Users/xxx/miniconda3/bin/deactivate
+no change     /Users/xxx/miniconda3/etc/profile.d/conda.sh
+no change     /Users/xxx/miniconda3/etc/fish/conf.d/conda.fish
+no change     /Users/xxx/miniconda3/shell/condabin/Conda.psm1
+modified      /Users/xxx/miniconda3/shell/condabin/conda-hook.ps1
+no change     /Users/xxx/miniconda3/lib/python3.10/site-packages/xontrib/conda.xsh
+no change     /Users/xxx/miniconda3/etc/profile.d/conda.csh
+modified      /Users/xxx/.zshrc
+
+==> For changes to take effect, close and re-open your current shell. &lt;==
+
+If you'</span>d prefer that conda's base environment not be activated on startup, 
+   <span class="token builtin class-name">set</span> the auto_activate_base parameter to false: 
+
+conda config <span class="token parameter variable">--set</span> auto_activate_base <span class="token boolean">false</span>
+
+Thank you <span class="token keyword">for</span> installing Miniconda3<span class="token operator">!</span></code></pre></div>
+<h3>Create and avtivate a new environment</h3>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ conda create <span class="token parameter variable">-y</span> <span class="token parameter variable">-n</span> <span class="token operator">&lt;</span>env_name<span class="token operator">></span> <span class="token assign-left variable">python</span><span class="token operator">=</span><span class="token number">3.11</span>
+$ conda activate <span class="token operator">&lt;</span>env_name<span class="token operator">></span></code></pre></div>
+<h3>Install google colab</h3>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ conda <span class="token function">install</span> <span class="token parameter variable">-c</span> conda-forge google-colab</code></pre></div>
+<h3>Activate your conda environment.</h3>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ python <span class="token parameter variable">-m</span> ipykernel <span class="token function">install</span> <span class="token parameter variable">--user</span> <span class="token parameter variable">--name</span><span class="token operator">=</span><span class="token operator">&lt;</span>env_name<span class="token operator">></span></code></pre></div>
+<h2>Warnings</h2>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">Installing collected packages: pip
+  WARNING: The scripts pip, pip3, pip3.10 and pip3.9 are installed <span class="token keyword">in</span> <span class="token string">'/Users/xxx/Library/Python/3.9/bin'</span> <span class="token function">which</span> is not on <span class="token environment constant">PATH</span><span class="token builtin class-name">.</span>
+  Consider adding this directory to <span class="token environment constant">PATH</span> or, <span class="token keyword">if</span> you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed pip-23.1.2
+WARNING: You are using pip version <span class="token number">21.2</span>.4<span class="token punctuation">;</span> however, version <span class="token number">23.1</span>.2 is available.
+You should consider upgrading via the <span class="token string">'/Applications/Xcode.app/Contents/Developer/usr/bin/python3 -m pip install --upgrade pip'</span> command.</code></pre></div>
+<p>I’ve seen this warning when installing <code class="language-text">pip</code> with <code class="language-text">pip3</code>. And it’s because the <code class="language-text">pip</code> executable is installed in a directory that is not on your <code class="language-text">PATH</code>.
+There are three duplicate <code class="language-text">pip</code> executables installed on my system:</p>
+<ul>
+<li>/opt/homebrew/bin/python3</li>
+<li>/Users/xxx/Library/Python/3.9/bin</li>
+<li>/Applications/Xcode.app/Contents/Developer/usr/bin/python3</li>
+</ul>
+<p>If you see this warning, you can add the following to your <code class="language-text">~/.zshrc</code> file:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">"/opt/homebrew/bin/python3:<span class="token environment constant">$PATH</span>"</span></code></pre></div>
+<h2>References</h2>
+<ol>
+<li><a href="https://towardsdatascience.com/colabcode-deploying-machine-learning-models-from-google-colab-54e0d37a7b09">https://towardsdatascience.com/colabcode-deploying-machine-learning-models-from-google-colab-54e0d37a7b09</a></li>
+<li><a href="https://medium.com/analytics-vidhya/colab-vs-code-github-jupyter-perfect-for-deep-learning-2b257ae94d01">https://medium.com/analytics-vidhya/colab-vs-code-github-jupyter-perfect-for-deep-learning-2b257ae94d01</a></li>
+</ol></section><hr/><div><div class="comment-box"></div></div><hr/><footer><div class="bio"><div data-gatsby-image-wrapper="" style="width:50px;height:50px" class="gatsby-image-wrapper bio-avatar"><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#d8c8b8;width:50px;height:50px;position:relative"></div><picture><source type="image/avif" data-srcset="/static/6ed659e6e7164adc6c2d3fb9c884992e/d4bf4/profile-pic.avif 50w,/static/6ed659e6e7164adc6c2d3fb9c884992e/ee81f/profile-pic.avif 100w" sizes="50px"/><source type="image/webp" data-srcset="/static/6ed659e6e7164adc6c2d3fb9c884992e/3faea/profile-pic.webp 50w,/static/6ed659e6e7164adc6c2d3fb9c884992e/6a679/profile-pic.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" data-src="/static/6ed659e6e7164adc6c2d3fb9c884992e/e5610/profile-pic.png" data-srcset="/static/6ed659e6e7164adc6c2d3fb9c884992e/e5610/profile-pic.png 50w,/static/6ed659e6e7164adc6c2d3fb9c884992e/e9b55/profile-pic.png 100w" alt="Profile picture"/></picture><noscript><picture><source type="image/avif" srcSet="/static/6ed659e6e7164adc6c2d3fb9c884992e/d4bf4/profile-pic.avif 50w,/static/6ed659e6e7164adc6c2d3fb9c884992e/ee81f/profile-pic.avif 100w" sizes="50px"/><source type="image/webp" srcSet="/static/6ed659e6e7164adc6c2d3fb9c884992e/3faea/profile-pic.webp 50w,/static/6ed659e6e7164adc6c2d3fb9c884992e/6a679/profile-pic.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" src="/static/6ed659e6e7164adc6c2d3fb9c884992e/e5610/profile-pic.png" srcSet="/static/6ed659e6e7164adc6c2d3fb9c884992e/e5610/profile-pic.png 50w,/static/6ed659e6e7164adc6c2d3fb9c884992e/e9b55/profile-pic.png 100w" alt="Profile picture"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><p>Written by <strong>Yerin Hong</strong> <!-- -->who lives in London and works in the UK.<!-- --> </p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/debug-laravel-app/">← <!-- -->Debug laravel app</a></li><li><a rel="next" href="/colab-vs-jupyter/">What&#x27;s the difference between Colab and Jupyter?<!-- --> →</a></li></ul></nav></main><footer>© <!-- -->2023<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/colab-getting-started-vscode/";window.___webpackCompilationHash="4a001c706b2734f91f0b";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-e9b41473d06c76aa9300.js"],"app":["/app-6511fda56908048923cb.js"],"component---src-pages-404-js":["/component---src-pages-404-js-0b3d360db395183dc2f1.js"],"component---src-pages-index-js":["/component---src-pages-index-js-cf4309143c7aededa0b4.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-163c076e7b4f22be8830.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-deaa5d4167891d79944e.js"]};/*]]>*/</script><script src="/polyfill-e9b41473d06c76aa9300.js" nomodule=""></script><script src="/app-6511fda56908048923cb.js" async=""></script><script src="/framework-32c20b69d2dd84787db5.js" async=""></script><script src="/webpack-runtime-933f43896114101651ab.js" async=""></script></body></html>

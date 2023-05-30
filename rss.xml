@@ -1,11 +1,145 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 26 May 2023 12:30:50 GMT</lastBuildDate><item><title><![CDATA[Copy your Git Repository with commit log (git mirroring)]]></title><description><![CDATA[Copy your Git Repository to another (git mirroring) Clone your repository Set the push location to your mirror Push to your mirror]]></description><link>https://engelin.github.io/copy-git-repo-mirroring/</link><guid isPermaLink="false">https://engelin.github.io/copy-git-repo-mirroring/</guid><pubDate>Fri, 26 May 2023 13:26:37 GMT</pubDate><content:encoded>&lt;h2&gt;Copy your Git Repository to another (git mirroring)&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 30 May 2023 16:07:32 GMT</lastBuildDate><item><title><![CDATA[Upgrade Laravel from version 7 to 10]]></title><description><![CDATA[Upgrade Laravel from version 7 to 10 PHP version Upgrade your PHP version from 7.3 to 8.1 since Laravel 10 uses 8.1 or higher according to…]]></description><link>https://engelin.github.io/laravel-upgrade-version-7-to-10/</link><guid isPermaLink="false">https://engelin.github.io/laravel-upgrade-version-7-to-10/</guid><pubDate>Fri, 26 May 2023 13:57:37 GMT</pubDate><content:encoded>&lt;h2&gt;Upgrade Laravel from version 7 to 10&lt;/h2&gt;
+&lt;h3&gt;PHP version&lt;/h3&gt;
+&lt;p&gt;Upgrade your PHP version from 7.3 to 8.1 since Laravel 10 uses 8.1 or higher according to the official document.&lt;/p&gt;
+&lt;h3&gt;Dependencies version&lt;/h3&gt;
+&lt;p&gt;Upgrade your dependencies version to the latest version. You can use the following command to upgrade your dependencies version.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;composer&lt;/span&gt; update &lt;span class=&quot;token parameter variable&quot;&gt;-vvv&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Update laravel packages&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;diff&quot;&gt;&lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;diff --git a/composer.json b/composer.json
+index a952ffdf..4a1ef24a 100644
+&lt;span class=&quot;token coord&quot;&gt;--- a/composer.json&lt;/span&gt;
+&lt;span class=&quot;token coord&quot;&gt;+++ b/composer.json&lt;/span&gt;
+&lt;span class=&quot;token coord&quot;&gt;@@ -5,35 +5,33 @@&lt;/span&gt;
+&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    &quot;license&quot;: &quot;MIT&quot;,
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    &quot;type&quot;: &quot;project&quot;,
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    &quot;require&quot;: {
+&lt;/span&gt;&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;php&quot;: &quot;^7.3&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;fideloper/proxy&quot;: &quot;^4.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;guzzlehttp/guzzle&quot;: &quot;~6.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;laravel/framework&quot;: &quot;^7.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;laravel/tinker&quot;: &quot;^2.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;laravel/ui&quot;: &quot;^2.0&quot;,
+&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;php&quot;: &quot;^8.1&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;guzzlehttp/guzzle&quot;: &quot;^7.7&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel/framework&quot;: &quot;^10.10&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel/sanctum&quot;: &quot;^3.2&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel/tinker&quot;: &quot;^2.8&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel/ui&quot;: &quot;^4.2&quot;
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    },
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    &quot;require-dev&quot;: {
+&lt;/span&gt;&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;facade/ignition&quot;: &quot;^2.4&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;fzaninotto/faker&quot;: &quot;~1.4&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;mockery/mockery&quot;: &quot;^1.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;nunomaduro/collision&quot;: &quot;^4.1&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;phpunit/phpunit&quot;: &quot;^8.5&quot;
+&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;fakerphp/faker&quot;: &quot;^1.9.1&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel/breeze&quot;: &quot;^1.21&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel/pint&quot;: &quot;^1.0&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel/sail&quot;: &quot;^1.18&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;mockery/mockery&quot;: &quot;^1.4.4&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;nunomaduro/collision&quot;: &quot;^7.0&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;phpunit/phpunit&quot;: &quot;^10.1&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;spatie/laravel-ignition&quot;: &quot;^2.0&quot;
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    },
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    &quot;autoload&quot;: {
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;        &quot;classmap&quot;: [&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Removed since has been included into laravel by default&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;fideloper/proxy
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://packagist.org/packages/fideloper/proxy&quot;&gt;https://packagist.org/packages/fideloper/proxy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/fideloper/TrustedProxy/issues/152&quot;&gt;https://github.com/fideloper/TrustedProxy/issues/152&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Removed since haven’t been used or no longer supported.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;anhskohbo/no-captcha&lt;/li&gt;
+&lt;li&gt;superbalist/laravel-google-cloud-storage&lt;/li&gt;
+&lt;li&gt;nao-pon/elfinder-flysystem-driver-ext&lt;/li&gt;
+&lt;li&gt;nao-pon/flysystem-google-drive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Result composer.json&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;diff&quot;&gt;&lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;diff --git a/composer.json b/composer.json
+index a952ffdf..4a1ef24a 100644
+&lt;span class=&quot;token coord&quot;&gt;--- a/composer.json&lt;/span&gt;
+&lt;span class=&quot;token coord&quot;&gt;+++ b/composer.json&lt;/span&gt;
+&lt;span class=&quot;token coord&quot;&gt;@@ -5,35 +5,33 @@&lt;/span&gt;
+&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    &quot;license&quot;: &quot;MIT&quot;,
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    &quot;type&quot;: &quot;project&quot;,
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    &quot;require&quot;: {
+&lt;/span&gt;&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;php&quot;: &quot;^7.3&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;anhskohbo/no-captcha&quot;: &quot;^3.3.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;barryvdh/laravel-dompdf&quot;: &quot;^0.9.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;doctrine/dbal&quot;: &quot;^2.9&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;fideloper/proxy&quot;: &quot;^4.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;google/apiclient&quot;: &quot;^2.9&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;guzzlehttp/guzzle&quot;: &quot;~6.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;intervention/image&quot;: &quot;^2.4&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;ixudra/curl&quot;: &quot;^6.21&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;laravel/framework&quot;: &quot;^7.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;laravel/tinker&quot;: &quot;^2.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;laravel/ui&quot;: &quot;^2.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;laravelcollective/html&quot;: &quot;^6.0&quot;,
+&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;php&quot;: &quot;^8.1&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;barryvdh/laravel-dompdf&quot;: &quot;^2.0&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;doctrine/dbal&quot;: &quot;^3.6&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;google/apiclient&quot;: &quot;^2.15&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;guzzlehttp/guzzle&quot;: &quot;^7.7&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;intervention/image&quot;: &quot;^2.7&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;ixudra/curl&quot;: &quot;^6.22&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel/framework&quot;: &quot;^10.10&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel/sanctum&quot;: &quot;^3.2&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel/tinker&quot;: &quot;^2.8&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel/ui&quot;: &quot;^4.2&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravelcollective/html&quot;: &quot;^6.4&quot;,
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;        &quot;maatwebsite/excel&quot;: &quot;^3.1&quot;,
+&lt;/span&gt;&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;nao-pon/elfinder-flysystem-driver-ext&quot;: &quot;^1.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;nao-pon/flysystem-google-drive&quot;: &quot;~1.1&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;orangehill/iseed&quot;: &quot;^2.6&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;pusher/pusher-php-server&quot;: &quot;4.1&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;spatie/laravel-permission&quot;: &quot;^3.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;superbalist/laravel-google-cloud-storage&quot;: &quot;^2.2&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;yajra/laravel-datatables-oracle&quot;: &quot;~9.0&quot;
+&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;orangehill/iseed&quot;: &quot;^3.0&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;pusher/pusher-php-server&quot;: &quot;7.2&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;spatie/laravel-permission&quot;: &quot;^5.10&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;yajra/laravel-datatables-oracle&quot;: &quot;10.4&quot;
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    },
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    &quot;require-dev&quot;: {
+&lt;/span&gt;&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;facade/ignition&quot;: &quot;^2.4&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;fzaninotto/faker&quot;: &quot;~1.4&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;mockery/mockery&quot;: &quot;^1.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;nunomaduro/collision&quot;: &quot;^4.1&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;phpunit/phpunit&quot;: &quot;^8.5&quot;
+&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;fakerphp/faker&quot;: &quot;^1.9.1&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel/breeze&quot;: &quot;^1.21&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel/pint&quot;: &quot;^1.0&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel/sail&quot;: &quot;^1.18&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;mockery/mockery&quot;: &quot;^1.4.4&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;nunomaduro/collision&quot;: &quot;^7.0&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;phpunit/phpunit&quot;: &quot;^10.1&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;spatie/laravel-ignition&quot;: &quot;^2.0&quot;
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    },
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    &quot;autoload&quot;: {
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;        &quot;classmap&quot;: [&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Clean up&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;composer&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;clear&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;composer&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Copy your Git Repository with commit log (git mirroring)]]></title><description><![CDATA[Copy your Git Repository to another (git mirroring) Clone your repository Set the push location to your mirror Push to your mirror c.f. git…]]></description><link>https://engelin.github.io/copy-git-repo-mirroring/</link><guid isPermaLink="false">https://engelin.github.io/copy-git-repo-mirroring/</guid><pubDate>Fri, 26 May 2023 13:26:37 GMT</pubDate><content:encoded>&lt;h2&gt;Copy your Git Repository to another (git mirroring)&lt;/h2&gt;
 &lt;h3&gt;Clone your repository&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone &lt;span class=&quot;token parameter variable&quot;&gt;--mirror&lt;/span&gt; https://github.com/exampleuser/repository-to-mirror.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Set the push location to your mirror&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; repository-to-mirror.git
 &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; remote set-url origin https://github.com/exampleuser/mirrored.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Push to your mirror&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push &lt;span class=&quot;token parameter variable&quot;&gt;--mirror&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[What's the difference between Colab and Jupyter?]]></title><description><![CDATA[What’s the difference between Colab and Jupyter? Summary Jupyter Concept Jupyter Notebook Jupyter Lab Colab Concept  References]]></description><link>https://engelin.github.io/colab-vs-jupyter/</link><guid isPermaLink="false">https://engelin.github.io/colab-vs-jupyter/</guid><pubDate>Fri, 12 May 2023 13:53:56 GMT</pubDate><content:encoded>&lt;h1&gt;What’s the difference between Colab and Jupyter?&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push &lt;span class=&quot;token parameter variable&quot;&gt;--mirror&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;c.f. git merge with commit log&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; merge --no-ff &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;branch&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.atlassian.com/git/tutorials/using-branches/git-merge#:~:text=In%20the%20event%20that%20you,the%20%2D%2Dno%2Dff%20option.&amp;#x26;text=This%20command%20merges%20the%20specified,a%20fast%2Dforward%20merge&quot;&gt;Git - git-merge Documentation&lt;/a&gt;.)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[What's the difference between Colab and Jupyter?]]></title><description><![CDATA[What’s the difference between Colab and Jupyter? Summary Jupyter Concept Jupyter Notebook Jupyter Lab Colab Concept  References]]></description><link>https://engelin.github.io/colab-vs-jupyter/</link><guid isPermaLink="false">https://engelin.github.io/colab-vs-jupyter/</guid><pubDate>Fri, 12 May 2023 13:53:56 GMT</pubDate><content:encoded>&lt;h1&gt;What’s the difference between Colab and Jupyter?&lt;/h1&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;h2&gt;Jupyter&lt;/h2&gt;
 &lt;h3&gt;Concept&lt;/h3&gt;

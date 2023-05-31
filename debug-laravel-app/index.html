@@ -190,6 +190,54 @@ xdebug.so path: <code class="language-text">/Applications/MAMP/bin/php/php7.3.33
       />
   </a>
     </span></p>
+<h3>2.5 Troubleshooting</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/530bddc8bedf42554a5eea624133413b/daf05/already_used_port.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.9620253164557%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABpklEQVQoz5WRPW4UQRCF5wQIma7f7p7etY34sRPkczglhYQMEXIEb2JxBG7gMyA2IEMyuwlCQuIYgHf0UPfMrrC1QiL4VFXTXa9eTXeq/Mbdfrj7FzNbq8paVdfu3ogptboiImtmbvFvmHmlql9V9apjlksRBTM3zBS5T0h9QkwRKUd4NJgbzAyq2uJd6ncR+daJ+QWzgIh+EdGgqkMu/VDKbIjurTazHbXew80ket0x86I6I6IbIoJWhzmh7wtSdLgZxoGj+33upmEQ1VWnqotqdys4rpxRygw5ems4efoIZ89O4e53Vp7yuoUwRHjVEdFCROr/Gx22htpojeru/PlLvHj9Fjn3UJXb7lShHgc9fAKJZdWFEG4J1jy6ICdFilWccfT4FMcnZ3UlqEhzun2Iisc06Owh2NIoWIXGlRkqhHkJKDkgOsGNwOE+wsE9TPf2MVA4AIUHTfCiTmHmn0S0EaGNKW2IeAezTNSa9sC/p4e97ljk3Xw+xySK8YB3+f9ARN+7kI5exVw+R/cParYklmUI4Z8Q0VJElsy8jR+Z+RMRvf8DiP8Lb86LwoUAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="already_used_port"
+        title="already_used_port"
+        src="/static/530bddc8bedf42554a5eea624133413b/f058b/already_used_port.png"
+        srcset="/static/530bddc8bedf42554a5eea624133413b/c26ae/already_used_port.png 158w,
+/static/530bddc8bedf42554a5eea624133413b/6bdcf/already_used_port.png 315w,
+/static/530bddc8bedf42554a5eea624133413b/f058b/already_used_port.png 630w,
+/static/530bddc8bedf42554a5eea624133413b/40601/already_used_port.png 945w,
+/static/530bddc8bedf42554a5eea624133413b/78612/already_used_port.png 1260w,
+/static/530bddc8bedf42554a5eea624133413b/daf05/already_used_port.png 2672w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<ol>
+<li>Find the process which uses the port 9003</li>
+</ol>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ <span class="token function">netstat</span> <span class="token parameter variable">-anv</span> <span class="token operator">|</span> <span class="token function">grep</span> <span class="token number">9003</span>
+tcp4       <span class="token number">0</span>      <span class="token number">0</span>  <span class="token number">127.0</span>.0.1.9003         <span class="token number">127.0</span>.0.1.49477        ESTABLISHED  <span class="token number">408157</span>  <span class="token number">146988</span>   <span class="token number">1291</span>      <span class="token number">0</span> 00102 00000004 0000000000002cb7 00000081 01000900      <span class="token number">1</span>      <span class="token number">0</span> 000001
+tcp4       <span class="token number">0</span>      <span class="token number">0</span>  <span class="token number">127.0</span>.0.1.49477        <span class="token number">127.0</span>.0.1.9003         ESTABLISHED  <span class="token number">408193</span>  <span class="token number">146988</span>    <span class="token number">864</span>      <span class="token number">0</span> 00102 00000000 0000000000002cb6 00000081 00000900      <span class="token number">1</span>      <span class="token number">0</span> 000001
+tcp4       <span class="token number">0</span>      <span class="token number">0</span>  <span class="token number">127.0</span>.0.1.9003         *.*                    LISTEN       <span class="token number">131072</span>  <span class="token number">131072</span>   <span class="token number">1291</span>      <span class="token number">0</span> 00000 00000006 0000000000002c7a 000000           <span class="token number">0</span> c53d8</code></pre></div>
+<ol start="2">
+<li>Kill the process</li>
+</ol>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ <span class="token function">kill</span> <span class="token number">864</span>
+$ <span class="token function">kill</span> <span class="token number">1291</span></code></pre></div>
+<p>$ kill -9 408157
+$ kill -9 408193</p>
 <h2>References</h2>
 <ul>
 <li><a href="https://medium.com/@alirazalilani/debugging-php-laravel-with-visual-studio-code-37b756fb6c19/">https://medium.com/@alirazalilani/debugging-php-laravel-with-visual-studio-code-37b756fb6c19/</a></li>

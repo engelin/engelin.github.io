@@ -62,6 +62,12 @@ $ brew install opensearch
 $ brew services start opensearch
 ```
 
+#### 4-3. Set search engine config
+```sh
+$ /Applications/MAMP/bin/php/php8.2.0/bin/php bin/magento setup:install --base-url=http://localhost/ --use-rewrites=1 --elasticsearch-host="localhost" --elasticsearch-port=9200
+```
+
+
 ### 5. Setup Magento 2
 Clone the existing project.  
 
@@ -87,6 +93,8 @@ $ /Applications/MAMP/bin/php/php8.2.0/bin/php -dmemory_limit=5G bin/magento setu
 $ /Applications/MAMP/bin/php/php8.2.0/bin/php bin/magento cache:clean
 $ /Applications/MAMP/bin/php/php8.2.0/bin/php bin/magento s:s:d en_GB de_DE en_US fr_FR -f -j 4
 ```
+
+`/Applications/MAMP/bin/php/php8.2.0/bin/php bin/magento setup:install --base-url=http://localhost/arumdentalshop --db-host=localhost --db-name=arum_shop --db-user=root --db-password=root --admin-firstname=Admin --admin-lastname=User --admin-email=dev@arum3d.com --admin-user=admin --admin-password=admin123 --language=en_GB --currency=GBP --timezone=Europe/London --use-rewrites=1 --backend-frontname="admin"`
 
 #### 5-4. Errors
 1. Couldn't find design_config_grid_flat table
@@ -116,7 +124,7 @@ Solution: https://github.com/mageplaza/magento-2-blog/issues/337#issuecomment-11
 
 3. Memory limit errors
 ```
-Fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 1187840 bytes) in /Applications/MAMP/htdocs/xxx/vendor/magento/framework/Encryption/Adapter/SodiumChachaIetf.php on line 41
+Fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 1187840 bytes) in /Applications/MAMP/htdocs/arumdentalshop/vendor/magento/framework/Encryption/Adapter/SodiumChachaIetf.php on line 41
 
 Check https://getcomposer.org/doc/articles/troubleshooting.md#memory-limit-errors for more info on how to handle out of memory errors.{"messages":{"error":[{"code":500,"message":"Server internal error. See details in report api\/1134478120890"}]}}%
 ```

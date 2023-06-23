@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 21 Jun 2023 08:29:17 GMT</lastBuildDate><item><title><![CDATA[Upgrade Laravel from version 7 to 10]]></title><description><![CDATA[Upgrade Laravel from version 7 to 10 PHP version Upgrade your PHP version from 7.3 to 8.1 since Laravel 10 uses 8.1 or higher according to…]]></description><link>https://engelin.github.io/laravel-upgrade-version-7-to-10/</link><guid isPermaLink="false">https://engelin.github.io/laravel-upgrade-version-7-to-10/</guid><pubDate>Fri, 26 May 2023 13:57:37 GMT</pubDate><content:encoded>&lt;h2&gt;Upgrade Laravel from version 7 to 10&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 23 Jun 2023 14:32:56 GMT</lastBuildDate><item><title><![CDATA[Rust Getting Started]]></title><description><![CDATA[0. Install Rust 0.1 Install Rustup Rustup is a toolchain manager for Rust. 0.2 Install Rust 0.3 Create a new project 1. Hello World with…]]></description><link>https://engelin.github.io/rust-getting-started/</link><guid isPermaLink="false">https://engelin.github.io/rust-getting-started/</guid><pubDate>Fri, 23 Jun 2023 13:47:06 GMT</pubDate><content:encoded>&lt;h1&gt;0. Install Rust&lt;/h1&gt;
+&lt;h3&gt;0.1 &lt;a href=&quot;https://rustup.rs/&quot;&gt;Install Rustup&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Rustup is a toolchain manager for Rust.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--proto&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;=https&apos;&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--tlsv1.2&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-sSf&lt;/span&gt; https://sh.rustup.rs &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sh&lt;/span&gt;
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token environment constant&quot;&gt;$HOME&lt;/span&gt;/.cargo/env&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;0.2 &lt;a href=&quot;https://www.rust-lang.org/tools/install&quot;&gt;Install Rust&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ rustup default stable&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;0.3 Create a new project&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;cargo&lt;/span&gt; new hello_world
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; hello_world
+$ &lt;span class=&quot;token function&quot;&gt;cargo&lt;/span&gt; run&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;1. Hello World with Rocket&lt;/h1&gt;
+&lt;h3&gt;1.1 Rocket Hello World&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone https://github.com/SergioBenitez/Rocket.git
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; Rocket/examples/hello
+$ &lt;span class=&quot;token function&quot;&gt;cargo&lt;/span&gt; run&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;2. OpenAPI generator in Rust&lt;/h1&gt;
+&lt;h3&gt;2.1 &lt;a href=&quot;https://openapi-generator.tech/docs/installation/&quot;&gt;Install OpenAPI Generator&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ brew &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; openapi-generator&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;2.2 &lt;a href=&quot;https://openapi-generator.tech/docs/generators/rust/&quot;&gt;Generate Rust Server&lt;/a&gt;&lt;/h3&gt;
+&lt;h4&gt;2.2.1. Create a &lt;code class=&quot;language-text&quot;&gt;openapi.yaml&lt;/code&gt; file in the root of your project.&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;If there is no &lt;code class=&quot;language-text&quot;&gt;openapi.yaml&lt;/code&gt; file, you can create it from scratch.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Or you can generate it from a swagger url.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ openapi-generator generate &lt;span class=&quot;token parameter variable&quot;&gt;-i&lt;/span&gt; https://petstore.swagger.io/v2/swagger.json &lt;span class=&quot;token parameter variable&quot;&gt;-g&lt;/span&gt; openapi-yaml &lt;span class=&quot;token parameter variable&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;Or you can find a sample file in the &lt;a href=&quot;https://github.com/OpenAPITools/openapi-generator/blob/master/modules/openapi-generator/src/test/resources/3_0/rust-server/openapi-v3.yaml&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;openapi-generator&lt;/code&gt; repo&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;2.2.2. Generate Rust Server&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ openapi-generator generate &lt;span class=&quot;token parameter variable&quot;&gt;-i&lt;/span&gt; openapi.yaml &lt;span class=&quot;token parameter variable&quot;&gt;-g&lt;/span&gt; rust-server&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you want to create a project into a specific folder, you can use the &lt;code class=&quot;language-text&quot;&gt;-o&lt;/code&gt; option.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ openapi-generator generate &lt;span class=&quot;token parameter variable&quot;&gt;-i&lt;/span&gt; openapi.yaml &lt;span class=&quot;token parameter variable&quot;&gt;-g&lt;/span&gt; rust-server &lt;span class=&quot;token parameter variable&quot;&gt;-o&lt;/span&gt; ./my_project&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;2.2.3. Build and Run&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;cargo&lt;/span&gt; build
+$ &lt;span class=&quot;token function&quot;&gt;cargo&lt;/span&gt; run&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Upgrade Laravel from version 7 to 10]]></title><description><![CDATA[Upgrade Laravel from version 7 to 10 PHP version Upgrade your PHP version from 7.3 to 8.1 since Laravel 10 uses 8.1 or higher according to…]]></description><link>https://engelin.github.io/laravel-upgrade-version-7-to-10/</link><guid isPermaLink="false">https://engelin.github.io/laravel-upgrade-version-7-to-10/</guid><pubDate>Fri, 26 May 2023 13:57:37 GMT</pubDate><content:encoded>&lt;h2&gt;Upgrade Laravel from version 7 to 10&lt;/h2&gt;
 &lt;h3&gt;PHP version&lt;/h3&gt;
 &lt;p&gt;Upgrade your PHP version from 7.3 to 8.1 since Laravel 10 uses 8.1 or higher according to the official document.&lt;/p&gt;
 &lt;h3&gt;Dependencies version&lt;/h3&gt;

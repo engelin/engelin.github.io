@@ -1,4 +1,180 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 23 Jun 2023 14:32:56 GMT</lastBuildDate><item><title><![CDATA[Rust Getting Started]]></title><description><![CDATA[0. Install Rust 0.1 Install Rustup Rustup is a toolchain manager for Rust. 0.2 Install Rust 0.3 Create a new project 1. Hello World with…]]></description><link>https://engelin.github.io/rust-getting-started/</link><guid isPermaLink="false">https://engelin.github.io/rust-getting-started/</guid><pubDate>Fri, 23 Jun 2023 13:47:06 GMT</pubDate><content:encoded>&lt;h1&gt;0. Install Rust&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 05 Jul 2023 09:51:51 GMT</lastBuildDate><item><title><![CDATA[React ESLint Setup]]></title><description><![CDATA[Install ESLint Install ESLint 1. Install ESLint CLI 2. [Setup ESLint] 3. Downloaded Packages 4. ESLint & prettier Config .eslintrc.cjs…]]></description><link>https://engelin.github.io/react-eslint-setup/</link><guid isPermaLink="false">https://engelin.github.io/react-eslint-setup/</guid><pubDate>Fri, 30 Jun 2023 10:27:06 GMT</pubDate><content:encoded>&lt;h1&gt;Install ESLint&lt;/h1&gt;
+&lt;h3&gt;&lt;a href=&quot;https://eslint.org/docs/user-guide/getting-started&quot;&gt;Install ESLint&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--dev&lt;/span&gt; eslint prettier&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;1. &lt;a href=&quot;https://eslint.org/docs/user-guide/command-line-interface&quot;&gt;Install ESLint CLI&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--dev&lt;/span&gt; eslint-cli&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;2. [Setup ESLint]&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; run eslint &lt;span class=&quot;token parameter variable&quot;&gt;--init&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; run v1.22.19
+$ /Users/xxx/workspace/yyy/zzz/node_modules/.bin/eslint &lt;span class=&quot;token parameter variable&quot;&gt;--init&lt;/span&gt;
+You can also run this &lt;span class=&quot;token builtin class-name&quot;&gt;command&lt;/span&gt; directly using &lt;span class=&quot;token string&quot;&gt;&apos;npm init @eslint/config&apos;&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;
+Need to &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; the following packages:
+  @eslint/create-config@0.4.5
+Ok to proceed? &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; y
+✔ How would you like to use ESLint? · style
+✔ What &lt;span class=&quot;token builtin class-name&quot;&gt;type&lt;/span&gt; of modules does your project use? · esm
+✔ Which framework does your project use? · react
+✔ Does your project use TypeScript? · No / Yes
+✔ Where does your code run? · browser
+✔ How would you like to define a style &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; your project? · guide
+✔ Which style guide &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; you want to follow? · airbnb
+✔ What &lt;span class=&quot;token function&quot;&gt;format&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; you want your config &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; to be in? · JavaScript
+Checking peerDependencies of eslint-config-airbnb@latest
+The config that you&apos;ve selected requires the following dependencies:
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;3. Downloaded Packages&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;diff&quot;&gt;&lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;diff --git a/package.json b/package.json
+index 5abcf3a8..31ad26aa 100644
+&lt;span class=&quot;token coord&quot;&gt;--- a/package.json&lt;/span&gt;
+&lt;span class=&quot;token coord&quot;&gt;+++ b/package.json&lt;/span&gt;
+&lt;span class=&quot;token coord&quot;&gt;@@ -3,26 +3,43 @@&lt;/span&gt;
+&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    &quot;type&quot;: &quot;module&quot;,
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    &quot;scripts&quot;: {
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;        &quot;dev&quot;: &quot;vite&quot;,
+&lt;/span&gt;&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;build&quot;: &quot;vite build &amp;amp;&amp;amp; vite build --ssr&quot;
+&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;serve&quot;: &quot;vite preview&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;build&quot;: &quot;vite build &amp;amp;&amp;amp; vite build --ssr&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;lint&quot;: &quot;eslint resources/js --ext .js,.jsx,.ts,.tsx&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;lint:fix&quot;: &quot;eslint resources/js --ext .js,.jsx,.ts,.tsx --fix&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;format&quot;: &quot;prettier --write resources/js&quot;
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    },
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    &quot;devDependencies&quot;: {
+&lt;/span&gt;&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;@headlessui/react&quot;: &quot;^1.4.2&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;@inertiajs/react&quot;: &quot;^1.0.0&quot;,
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;        &quot;@tailwindcss/forms&quot;: &quot;^0.5.3&quot;,
+&lt;/span&gt;&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;@vitejs/plugin-react&quot;: &quot;^3.0.0&quot;,
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;        &quot;autoprefixer&quot;: &quot;^10.4.12&quot;,
+&lt;/span&gt;&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;axios&quot;: &quot;^1.1.2&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;laravel-vite-plugin&quot;: &quot;^0.7.5&quot;,
+&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;eslint&quot;: &quot;^7.32.0 || ^8.2.0&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;eslint-config-airbnb&quot;: &quot;^19.0.4&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;eslint-config-prettier&quot;: &quot;^8.8.0&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;eslint-config-react-app&quot;: &quot;^7.0.1&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;eslint-plugin-import&quot;: &quot;^2.27.5&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;eslint-plugin-jsx-a11y&quot;: &quot;^6.7.1&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;eslint-plugin-prettier&quot;: &quot;^4.2.1&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;eslint-plugin-react&quot;: &quot;^7.28.0&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;eslint-plugin-react-hooks&quot;: &quot;^4.3.0&quot;,
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;        &quot;postcss&quot;: &quot;^8.4.18&quot;,
+&lt;/span&gt;&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;react&quot;: &quot;^18.2.0&quot;,
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;react-dom&quot;: &quot;^18.2.0&quot;,
+&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;prettier&quot;: &quot;^2.8.8&quot;,
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;        &quot;tailwindcss&quot;: &quot;^3.2.1&quot;,
+&lt;/span&gt;&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;vite&quot;: &quot;^4.0.0&quot;
+&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;vite-plugin-eslint&quot;: &quot;^1.8.1&quot;
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    },
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    &quot;dependencies&quot;: {
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;        &quot;@emotion/react&quot;: &quot;^11.11.1&quot;,
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;        &quot;@emotion/styled&quot;: &quot;^11.11.0&quot;,
+&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;@headlessui/react&quot;: &quot;^1.7.15&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;@inertiajs/react&quot;: &quot;^1.0.9&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;@mui/icons-material&quot;: &quot;^5.11.16&quot;,
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;        &quot;@mui/material&quot;: &quot;^5.13.6&quot;,
+&lt;/span&gt;&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;        &quot;mui-image&quot;: &quot;^1.0.7&quot;
+&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;@vitejs/plugin-react&quot;: &quot;^4.0.1&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;axios&quot;: &quot;^1.4.0&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;laravel-vite-plugin&quot;: &quot;^0.7.8&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;mui-image&quot;: &quot;^1.0.7&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;prop-types&quot;: &quot;^15.8.1&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;react&quot;: &quot;^18.2.0&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;react-dom&quot;: &quot;^18.2.0&quot;,
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;        &quot;vite&quot;: &quot;^4.3.9&quot;
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;    }
+&lt;/span&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;4. ESLint &amp;#x26; prettier Config&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;.eslintrc.cjs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;cjs&quot;&gt;&lt;pre class=&quot;language-cjs&quot;&gt;&lt;code class=&quot;language-cjs&quot;&gt;module.exports = {
+    root: true,
+    env: {
+        browser: true,
+        node: true
+    },
+    extends: [
+        &amp;#39;airbnb&amp;#39;,
+        &amp;#39;eslint:recommended&amp;#39;,
+        &amp;#39;plugin:prettier/recommended&amp;#39;,
+        &amp;#39;plugin:react/recommended&amp;#39;
+    ],
+    settings: {
+        react: {
+            version: &amp;#39;detect&amp;#39;
+        },
+        &amp;#39;import/resolver&amp;#39;: {
+            node: {
+                path: [&amp;#39;node_modules&amp;#39;, &amp;#39;resources/js&amp;#39;],
+                extensions: [&amp;#39;.js&amp;#39;, &amp;#39;.jsx&amp;#39;, &amp;#39;.ts&amp;#39;, &amp;#39;.tsx&amp;#39;]
+            }
+        }
+    },
+    overrides: [
+        {
+            env: {
+                node: true
+            },
+            files: [&amp;#39;.eslintrc.{js,cjs}&amp;#39;],
+            parserOptions: {
+                sourceType: &amp;#39;script&amp;#39;
+            }
+        }
+    ],
+    parserOptions: {
+        ecmaVersion: &amp;#39;latest&amp;#39;,
+        sourceType: &amp;#39;module&amp;#39;,
+        ecmaFeatures: {
+            jsx: true
+        }
+    },
+    plugins: [&amp;#39;react&amp;#39;, &amp;#39;import&amp;#39;, &amp;#39;prettier&amp;#39;],
+    rules: {
+        &amp;#39;no-unused-vars&amp;#39;: &amp;#39;warn&amp;#39;,
+        &amp;#39;import/extensions&amp;#39;: &amp;#39;off&amp;#39;,
+        &amp;#39;import/no-unresolved&amp;#39;: &amp;#39;warn&amp;#39;,
+        &amp;#39;import/no-extraneous-dependencies&amp;#39;: &amp;#39;warn&amp;#39;,
+        &amp;#39;react/jsx-props-no-spreading&amp;#39;: &amp;#39;warn&amp;#39;,
+        &amp;#39;react/prop-types&amp;#39;: &amp;#39;warn&amp;#39;,
+        &amp;#39;react/require-default-props&amp;#39;: &amp;#39;warn&amp;#39;
+    }
+};&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;.prettierrc&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;semi&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;tabWidth&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;printWidth&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;singleQuote&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;trailingComma&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;none&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;5. Vite Config&lt;/h3&gt;
+&lt;p&gt;This is for SSR build.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;diff&quot;&gt;&lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;import { defineConfig } from &apos;vite&apos;;
+import laravel from &apos;laravel-vite-plugin&apos;;
+import react from &apos;@vitejs/plugin-react&apos;;
+import eslint from &apos;vite-plugin-eslint&apos;;
+
+export default defineConfig({
+&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;   plugins: [
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;       laravel({
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;           input: &apos;resources/js/app.jsx&apos;,
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;           ssr: &apos;resources/js/ssr.jsx&apos;,
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;           refresh: true
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;       }),
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;       react(),
+&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;       eslint({
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;           include: [&apos;/resources/js/**/*.jsx&apos;, &apos;/public/assets/*&apos;],
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;           exclude: [&apos;node_modules/**&apos;]
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;       })
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;   ],
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;   resolve: {
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;       alias: {
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;           &apos;@&apos;: &apos;/resources/js&apos;,
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;           &apos;@assets&apos;: &apos;/public/assets&apos;
+&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;       },
+&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;       extensions: [&apos;.js&apos;, &apos;.jsx&apos;, &apos;.ts&apos;, &apos;.tsx&apos;]
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;   }
+&lt;/span&gt;});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Rust Getting Started]]></title><description><![CDATA[0. Install Rust 0.1 Install Rustup Rustup is a toolchain manager for Rust. 0.2 Install Rust 0.3 Create a new project 1. Hello World with…]]></description><link>https://engelin.github.io/rust-getting-started/</link><guid isPermaLink="false">https://engelin.github.io/rust-getting-started/</guid><pubDate>Fri, 23 Jun 2023 13:47:06 GMT</pubDate><content:encoded>&lt;h1&gt;0. Install Rust&lt;/h1&gt;
 &lt;h3&gt;0.1 &lt;a href=&quot;https://rustup.rs/&quot;&gt;Install Rustup&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Rustup is a toolchain manager for Rust.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--proto&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;=https&apos;&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--tlsv1.2&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-sSf&lt;/span&gt; https://sh.rustup.rs &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sh&lt;/span&gt;

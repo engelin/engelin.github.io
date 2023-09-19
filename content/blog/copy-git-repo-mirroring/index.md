@@ -30,3 +30,10 @@ git push --mirror
 git merge --no-ff <branch>
 ```
 [Git - git-merge Documentation](https://www.atlassian.com/git/tutorials/using-branches/git-merge#:~:text=In%20the%20event%20that%20you,the%20%2D%2Dno%2Dff%20option.&text=This%20command%20merges%20the%20specified,a%20fast%2Dforward%20merge).)
+
+#### c.f. update feature branch with develop branch
+
+```bash
+git:(develop) ✗ git checkout feature-branch
+git:(feature-branch) ✗ git rebase develop
+```

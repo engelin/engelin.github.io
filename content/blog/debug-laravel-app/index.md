@@ -1,5 +1,5 @@
 ---
-title: Debug laravel app (updated 2023-06-21)
+title: Debug laravel app (xdebug php 8.2 updated 2023-09-19)
 date: "2023-05-09T16:14:01.121Z"
 ---
 
@@ -65,6 +65,21 @@ But if you use MAMP, you don't need to install xdebug via pecl since MAMP alread
 xdebug.so path: `/Applications/MAMP/bin/php/php7.3.33/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so`   
 
 ### 2.2 Add the below code on php.ini
+1. PHP 8.2  
+php.ini path: `/opt/homebrew/etc/php/8.2/php.ini`   
+```ini
+[xdebug]
+zend_extension="/opt/homebrew/Cellar/php/8.2.10/pecl/20220829/xdebug.so"
+xdebug.mode=debug
+xdebug.log=/tmp/xdebug.log
+xdebug.client_host=127.0.0.1
+xdebug.client_port=9003
+xdebug.discover_client_host=true
+xdebug.start_with_request=yes
+xdebug.remote_handler=dbgp
+```
+
+2. PHP 7.3  
 php.ini path: `/Applications/MAMP/bin/php/php7.3.33/conf/php.ini`   
 ```ini
 [xdebug]
@@ -161,6 +176,23 @@ test/Applications/MAMP/bin/php/php7.3.33/bin/php test.php  0.31s user 0.11s syst
 ```
 
 #### 2.6.1 Solution 1: Disable xdebug
+1. PHP 8.2
+```bash
+$ vi /opt/homebrew/etc/php/8.2/php.ini
+```
+```ini
+[xdebug]
+;zend_extension="/opt/homebrew/Cellar/php/8.2.10/pecl/20220829/xdebug.so"
+;xdebug.mode=debug
+;xdebug.log=/tmp/xdebug.log
+;xdebug.client_host=127.0.0.1
+;xdebug.client_port=9003
+;xdebug.discover_client_host=true
+;xdebug.start_with_request=yes
+;xdebug.remote_handler=dbgp
+```
+
+2. PHP 7.3
 ```bash
 $ vi /Applications/MAMP/bin/php/php7.3.33/conf/php.ini
 ```

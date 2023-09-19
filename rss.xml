@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 06 Sep 2023 13:29:47 GMT</lastBuildDate><item><title><![CDATA[Laravel database migration rollback]]></title><link>https://engelin.github.io/laravel-database/</link><guid isPermaLink="false">https://engelin.github.io/laravel-database/</guid><pubDate>Wed, 06 Sep 2023 10:27:06 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;php artisan migrate:rollback &lt;span class=&quot;token parameter variable&quot;&gt;--path&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;database/migrations/2023_07_27_153712_add_category_id_to_products.php&quot;&lt;/span&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 19 Sep 2023 16:05:37 GMT</lastBuildDate><item><title><![CDATA[Laravel database migration rollback]]></title><link>https://engelin.github.io/laravel-database/</link><guid isPermaLink="false">https://engelin.github.io/laravel-database/</guid><pubDate>Wed, 06 Sep 2023 10:27:06 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;php artisan migrate:rollback &lt;span class=&quot;token parameter variable&quot;&gt;--path&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;database/migrations/2023_07_27_153712_add_category_id_to_products.php&quot;&lt;/span&gt;
 
    INFO  Rolling back migrations.  
 
@@ -865,7 +865,7 @@ There are three duplicate &lt;code class=&quot;language-text&quot;&gt;pip&lt;/co
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/colabcode-deploying-machine-learning-models-from-google-colab-54e0d37a7b09&quot;&gt;https://towardsdatascience.com/colabcode-deploying-machine-learning-models-from-google-colab-54e0d37a7b09&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://medium.com/analytics-vidhya/colab-vs-code-github-jupyter-perfect-for-deep-learning-2b257ae94d01&quot;&gt;https://medium.com/analytics-vidhya/colab-vs-code-github-jupyter-perfect-for-deep-learning-2b257ae94d01&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Debug laravel app (updated 2023-06-21)]]></title><description><![CDATA[1. Laravel Debugbar 1.1 Add requirement 1.2 Change config 1.3 Publish ### 1.4 Check  1.5 Clear cache & config ## 2. Xdebug + VS code + macOS…]]></description><link>https://engelin.github.io/debug-laravel-app/</link><guid isPermaLink="false">https://engelin.github.io/debug-laravel-app/</guid><pubDate>Tue, 09 May 2023 16:14:01 GMT</pubDate><content:encoded>&lt;h2&gt;1. Laravel Debugbar&lt;/h2&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Debug laravel app (xdebug php 8.2 updated 2023-09-19)]]></title><description><![CDATA[1. Laravel Debugbar 1.1 Add requirement 1.2 Change config 1.3 Publish ### 1.4 Check  1.5 Clear cache & config ## 2. Xdebug + VS code + macOS…]]></description><link>https://engelin.github.io/debug-laravel-app/</link><guid isPermaLink="false">https://engelin.github.io/debug-laravel-app/</guid><pubDate>Tue, 09 May 2023 16:14:01 GMT</pubDate><content:encoded>&lt;h2&gt;1. Laravel Debugbar&lt;/h2&gt;
 &lt;h3&gt;1.1 Add requirement&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ php composer.phar require barryvdh/laravel-debugbar &lt;span class=&quot;token parameter variable&quot;&gt;--dev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;1.2 Change config&lt;/h3&gt;
@@ -908,6 +908,22 @@ $ php artisan config:cache&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;But if you use MAMP, you don’t need to install xdebug via pecl since MAMP already has xdebug.so file.
 xdebug.so path: &lt;code class=&quot;language-text&quot;&gt;/Applications/MAMP/bin/php/php7.3.33/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so&lt;/code&gt;&lt;/p&gt;
 &lt;h3&gt;2.2 Add the below code on php.ini&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;PHP 8.2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;php.ini path: &lt;code class=&quot;language-text&quot;&gt;/opt/homebrew/etc/php/8.2/php.ini&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token section&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token section-name selector&quot;&gt;xdebug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;zend_extension&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;&quot;&lt;span class=&quot;token inner-value&quot;&gt;/opt/homebrew/Cellar/php/8.2.10/pecl/20220829/xdebug.so&lt;/span&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.mode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;debug&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;/tmp/xdebug.log&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.client_host&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;127.0.0.1&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.client_port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;9003&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.discover_client_host&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.start_with_request&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;yes&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_handler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;dbgp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;PHP 7.3&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;php.ini path: &lt;code class=&quot;language-text&quot;&gt;/Applications/MAMP/bin/php/php7.3.33/conf/php.ini&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token section&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token section-name selector&quot;&gt;xdebug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token key attr-name&quot;&gt;zend_extension&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;&quot;&lt;span class=&quot;token inner-value&quot;&gt;/Applications/MAMP/bin/php/php7.3.33/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so&lt;/span&gt;&quot;&lt;/span&gt;
@@ -1112,6 +1128,22 @@ $ &lt;span class=&quot;token function&quot;&gt;cat&lt;/span&gt; test.php
 $ &lt;span class=&quot;token function&quot;&gt;time&lt;/span&gt; /Applications/MAMP/bin/php/php7.3.33/bin/php test.php
 test/Applications/MAMP/bin/php/php7.3.33/bin/php test.php  &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;.31s user &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;.11s system &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt;% cpu &lt;span class=&quot;token number&quot;&gt;0.428&lt;/span&gt; total&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h4&gt;2.6.1 Solution 1: Disable xdebug&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;PHP 8.2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;vi&lt;/span&gt; /opt/homebrew/etc/php/8.2/php.ini&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token section&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token section-name selector&quot;&gt;xdebug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;zend_extension=&quot;/opt/homebrew/Cellar/php/8.2.10/pecl/20220829/xdebug.so&quot;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.mode=debug&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.log=/tmp/xdebug.log&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.client_host=127.0.0.1&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.client_port=9003&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.discover_client_host=true&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.start_with_request=yes&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_handler=dbgp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;PHP 7.3&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;vi&lt;/span&gt; /Applications/MAMP/bin/php/php7.3.33/conf/php.ini&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token section&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token section-name selector&quot;&gt;xdebug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;;zend_extension=&quot;/Applications/MAMP/bin/php/php7.3.33/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so&quot;&lt;/span&gt;

@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 19 Sep 2023 16:05:37 GMT</lastBuildDate><item><title><![CDATA[Laravel database migration rollback]]></title><link>https://engelin.github.io/laravel-database/</link><guid isPermaLink="false">https://engelin.github.io/laravel-database/</guid><pubDate>Wed, 06 Sep 2023 10:27:06 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;php artisan migrate:rollback &lt;span class=&quot;token parameter variable&quot;&gt;--path&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;database/migrations/2023_07_27_153712_add_category_id_to_products.php&quot;&lt;/span&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 20 Sep 2023 10:08:43 GMT</lastBuildDate><item><title><![CDATA[Vite build error]]></title><description><![CDATA[Vite build error Error Node verion Solution Upgrade node version Run again Reference [Issue] Cannot redefine property: crypto]]></description><link>https://engelin.github.io/node-run-error/</link><guid isPermaLink="false">https://engelin.github.io/node-run-error/</guid><pubDate>Wed, 20 Sep 2023 11:02:01 GMT</pubDate><content:encoded>&lt;h2&gt;Vite build error&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Error&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; dev
+&lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; run v1.22.19
+$ vite
+failed to load config from /Users/xxx/workspace/code/ooo/vite.config.js
+error when starting dev server:
+TypeError: Cannot redefine property: File
+    at Function.defineProperty &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;anonymous&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    at Object.&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;anonymous&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;/Users/xxx/workspace/code/ooo/node_modules/@babel/core/lib/index.js:7:8&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    at Module._compile &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;node:internal/modules/cjs/loader:1241:14&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    at Module._extensions&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;js &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;node:internal/modules/cjs/loader:1295:10&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    at Module.load &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;node:internal/modules/cjs/loader:1091:32&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    at Module._load &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;node:internal/modules/cjs/loader:938:12&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    at Module.require &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;node:internal/modules/cjs/loader:1115:19&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    at require &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;node:internal/modules/helpers:130:18&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    at Object.&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;anonymous&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;/Users/xxx/workspace/code/ooo/node_modules/@babel/core/lib/config/helpers/config-api.js:16:9&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    at Module._compile &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;node:internal/modules/cjs/loader:1241:14&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+error Command failed with &lt;span class=&quot;token builtin class-name&quot;&gt;exit&lt;/span&gt; code &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;.
+info Visit https://yarnpkg.com/en/docs/cli/run &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; documentation about this command.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Node verion&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;
+v20.6.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Solution&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Upgrade node version&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ brew upgrade &lt;span class=&quot;token function&quot;&gt;node&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Run again&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;          
+v20.7.0
+$ &lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; dev
+&lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; run v1.22.19
+$ vite
+
+  VITE v4.4.7  ready &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;380&lt;/span&gt; ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use &lt;span class=&quot;token parameter variable&quot;&gt;--host&lt;/span&gt; to expose
+  ➜  press h to show &lt;span class=&quot;token builtin class-name&quot;&gt;help&lt;/span&gt;
+
+  LARAVEL v10.15.0  plugin v0.7.8
+
+  ➜  APP_URL: http://localhost&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/sveltejs/kit/issues/10252&quot;&gt;[Issue] Cannot redefine property: crypto&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Laravel database migration rollback]]></title><link>https://engelin.github.io/laravel-database/</link><guid isPermaLink="false">https://engelin.github.io/laravel-database/</guid><pubDate>Wed, 06 Sep 2023 10:27:06 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;php artisan migrate:rollback &lt;span class=&quot;token parameter variable&quot;&gt;--path&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;database/migrations/2023_07_27_153712_add_category_id_to_products.php&quot;&lt;/span&gt;
 
    INFO  Rolling back migrations.  
 

@@ -1,72 +1,82 @@
 ---
 title: Debug laravel app (xdebug php 8.2 updated 2023-09-19)
-date: "2023-05-09T16:14:01.121Z"
+date: '2023-09-19T16:14:01.121Z'
 ---
 
 ## 1. Laravel Debugbar
 
 ### 1.1 Add requirement
+
 ```sh
 $ php composer.phar require barryvdh/laravel-debugbar --dev
 ```
 
 ### 1.2 Change config
+
 ```php
 diff --git a/config/app.php b/config/app.php
 index 3c5820c4..8ddaee54 100644
 --- a/config/app.php
 +++ b/config/app.php
 @@ -200,6 +200,10 @@ return [
- 
+
          App\Providers\GoogleDriveServiceProvider::class,
- 
+
 +        /*
 +         * Laravel Debugbar
 +         */
 +        Barryvdh\Debugbar\ServiceProvider::class,
      ],
- 
+
      /*
 @@ -258,6 +262,10 @@ return [
          'Excel'        => Maatwebsite\Excel\Facades\Excel::class,
          'PDF'          => Barryvdh\DomPDF\Facade::class,
- 
+
 +        /*
 +         * Debugbar Aliases
 +         */
 +        'Debugbar'     => Barryvdh\Debugbar\Facade::class,
      ],
- 
+
  ];
 ```
 
 ### 1.3 Publish
-```sh 
+
+```sh
 $ php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
 ```
 
 ### 1.4 Check `.env`
+
 ```ini
 APP_DEBUG=true
 ```
 
 ### 1.5 Clear cache & config
+
 ```sh
 $ php artisan cache:clear
 $ php artisan config:cache
 ```
 
 ## 2. Xdebug + VS code + macOS + MAMP
+
 ### 2.1 Install Xdebug extension on VSCode
+
 ```sh
 pecl install xdebug
 ```
+
 But if you use MAMP, you don't need to install xdebug via pecl since MAMP already has xdebug.so file.
-xdebug.so path: `/Applications/MAMP/bin/php/php7.3.33/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so`   
+xdebug.so path: `/Applications/MAMP/bin/php/php7.3.33/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so`
 
 ### 2.2 Add the below code on php.ini
+
 1. PHP 8.2  
-php.ini path: `/opt/homebrew/etc/php/8.2/php.ini`   
+   php.ini path: `/opt/homebrew/etc/php/8.2/php.ini`
+
 ```ini
 [xdebug]
 zend_extension="/opt/homebrew/Cellar/php/8.2.10/pecl/20220829/xdebug.so"
@@ -80,7 +90,8 @@ xdebug.remote_handler=dbgp
 ```
 
 2. PHP 7.3  
-php.ini path: `/Applications/MAMP/bin/php/php7.3.33/conf/php.ini`   
+   php.ini path: `/Applications/MAMP/bin/php/php7.3.33/conf/php.ini`
+
 ```ini
 [xdebug]
 zend_extension="/Applications/MAMP/bin/php/php7.3.33/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so"
@@ -95,51 +106,56 @@ xdebug.remote_handler=dbgp
 xdebug.remote_mode=req
 ```
 
-### 2.3 VS settings   
-PHP settings.json   
+### 2.3 VS settings
+
+PHP settings.json  
 ![vs_php_settings](./vs_php_settings.png)
-- Add php executable path: `/Applications/MAMP/bin/php/php7.3.33/bin/php`   
-![settings](./settings.png)
+
+- Add php executable path: `/Applications/MAMP/bin/php/php7.3.33/bin/php`  
+  ![settings](./settings.png)
+
 ```json
 "php.validate.executablePath": "/Applications/MAMP/bin/php/php7.3.33/bin/php",
 "php.debug.executablePath": "/Applications/MAMP/bin/php/php7.3.33/bin/php"
 ```
 
 VS launch.json
+
 ```json
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Listen for Xdebug",
-            "type": "php",
-            "request": "launch",
-            "hostname": "127.0.0.1",
-            "port": 9003
-        },
-        {
-            "name": "Launch currently open script",
-            "type": "php",
-            "request": "launch",
-            "program": "${file}",
-            "cwd": "${fileDirname}",
-            "port": 9003,
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Listen for Xdebug",
+      "type": "php",
+      "request": "launch",
+      "hostname": "127.0.0.1",
+      "port": 9003
+    },
+    {
+      "name": "Launch currently open script",
+      "type": "php",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "port": 9003
+    }
+  ]
 }
 ```
 
 ### 2.4 Run Xdebug on VSCode
+
 1. Run server on MAMP
 2. Run Xdebug on VSCode
 3. Set breakpoint on VSCode
 4. Access to the page on browser
 5. VSCode will stop on breakpoint
 6. You can check the variable on VSCode
-![debug_screen](./debug_screen.png)
+   ![debug_screen](./debug_screen.png)
 
 ### 2.5 Troubleshooting 1: Already used port
 
@@ -160,10 +176,12 @@ tcp4       0      0  127.0.0.1.9003         *.*                    LISTEN       
 $ kill 864
 $ kill 1291
 ```
+
 $ kill -9 408157
 $ kill -9 408193
 
 ### 2.6 Troubleshooting 2: php command is so slow
+
 ```bash
 $ php -v
 PHP 7.3.33 (cli) (built: May  6 2021 11:30:56) ( NTS )
@@ -176,10 +194,13 @@ test/Applications/MAMP/bin/php/php7.3.33/bin/php test.php  0.31s user 0.11s syst
 ```
 
 #### 2.6.1 Solution 1: Disable xdebug
+
 1. PHP 8.2
+
 ```bash
 $ vi /opt/homebrew/etc/php/8.2/php.ini
 ```
+
 ```ini
 [xdebug]
 ;zend_extension="/opt/homebrew/Cellar/php/8.2.10/pecl/20220829/xdebug.so"
@@ -193,9 +214,11 @@ $ vi /opt/homebrew/etc/php/8.2/php.ini
 ```
 
 2. PHP 7.3
+
 ```bash
 $ vi /Applications/MAMP/bin/php/php7.3.33/conf/php.ini
 ```
+
 ```ini
 [xdebug]
 ;zend_extension="/Applications/MAMP/bin/php/php7.3.33/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so"
@@ -215,7 +238,23 @@ $ time /Applications/MAMP/bin/php/php7.3.33/bin/php test.php
 test/Applications/MAMP/bin/php/php7.3.33/bin/php test.php  0.03s user 0.01s system 80% cpu 0.049 total
 ```
 
+## 3. Xdebug wizard
+
+1. Run
+
+```sh
+echo "<?php \n\nphpinfo();" > test.php && php test.php > phpinfo-output.txt
+```
+
+2. Open `phpinfo-output.txt` and copy all text.
+
+3. Paste the clipboard into the wizard.
+   [Open the Wizard.](https://xdebug.org/wizard)
+
+4. Follow the Instruction.
+   ![php_wizard.php](./php_wizard.png)
+
 ## References
+
 - https://medium.com/@alirazalilani/debugging-php-laravel-with-visual-studio-code-37b756fb6c19/
 - https://5balloons.info/setting-up-xdebug-using-laravel-valet-and-vscode/
-

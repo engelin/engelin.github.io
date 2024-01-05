@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 24 Nov 2023 15:59:08 GMT</lastBuildDate><item><title><![CDATA[Remove Control-M symbols from files on Mac]]></title><description><![CDATA[Before Remove Control-M symbols from files on Mac Using  command Using  command After]]></description><link>https://engelin.github.io/remove-M-symbols/</link><guid isPermaLink="false">https://engelin.github.io/remove-M-symbols/</guid><pubDate>Fri, 24 Nov 2023 15:57:06 GMT</pubDate><content:encoded>&lt;h2&gt;Before&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yerin-pyon Blog RSS Feed]]></title><description><![CDATA[A personal blog with Gatsby.]]></description><link>https://engelin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 05 Jan 2024 16:57:36 GMT</lastBuildDate><item><title><![CDATA[Remove Control-M symbols from files on Mac]]></title><description><![CDATA[Before Remove Control-M symbols from files on Mac Using  command Using  command After]]></description><link>https://engelin.github.io/remove-M-symbols/</link><guid isPermaLink="false">https://engelin.github.io/remove-M-symbols/</guid><pubDate>Fri, 24 Nov 2023 15:57:06 GMT</pubDate><content:encoded>&lt;h2&gt;Before&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;vi&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt;
 This is a test^M&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Remove Control-M symbols from files on Mac&lt;/h2&gt;
@@ -134,6 +134,353 @@ $ vite
 &lt;h2&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/sveltejs/kit/issues/10252&quot;&gt;[Issue] Cannot redefine property: crypto&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Debug laravel app (xdebug php 8.2 updated 2023-09-19)]]></title><description><![CDATA[1. Laravel Debugbar 1.1 Add requirement 1.2 Change config 1.3 Publish ### 1.4 Check  1.5 Clear cache & config ## 2. Xdebug + VS code + macOS…]]></description><link>https://engelin.github.io/debug-laravel-app/</link><guid isPermaLink="false">https://engelin.github.io/debug-laravel-app/</guid><pubDate>Tue, 19 Sep 2023 16:14:01 GMT</pubDate><content:encoded>&lt;h2&gt;1. Laravel Debugbar&lt;/h2&gt;
+&lt;h3&gt;1.1 Add requirement&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ php composer.phar require barryvdh/laravel-debugbar &lt;span class=&quot;token parameter variable&quot;&gt;--dev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;1.2 Change config&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;diff &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;git a&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;config&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;app&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;php b&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;config&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;app&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;php
+index &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;c5820c4&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.8&lt;/span&gt;ddaee54 &lt;span class=&quot;token number&quot;&gt;100644&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; a&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;config&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;app&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;php
+&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; b&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;config&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;app&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;php
+@@ &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt; @@ &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+
+         &lt;span class=&quot;token class-name class-name-fully-qualified static-context&quot;&gt;App&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Providers&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;GoogleDriveServiceProvider&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;        &lt;span class=&quot;token comment&quot;&gt;/*
++         * Laravel Debugbar
++         */&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;        &lt;span class=&quot;token class-name class-name-fully-qualified static-context&quot;&gt;Barryvdh&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Debugbar&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;ServiceProvider&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+     &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+     &lt;span class=&quot;token comment&quot;&gt;/*
+@@ -258,6 +262,10 @@ return [
+         &apos;Excel&apos;        =&gt; Maatwebsite\Excel\Facades\Excel::class,
+         &apos;PDF&apos;          =&gt; Barryvdh\DomPDF\Facade::class,
+
++        /*
++         * Debugbar Aliases
++         */&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;        &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;Debugbar&apos;&lt;/span&gt;     &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token class-name class-name-fully-qualified static-context&quot;&gt;Barryvdh&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Debugbar&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Facade&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+     &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+ &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;1.3 Publish&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ php artisan vendor:publish &lt;span class=&quot;token parameter variable&quot;&gt;--provider&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Barryvdh\Debugbar\ServiceProvider&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;### 1.4 Check &lt;code class=&quot;language-text&quot;&gt;.env&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token key attr-name&quot;&gt;APP_DEBUG&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;1.5 Clear cache &amp;#x26; config&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ php artisan cache:clear
+$ php artisan config:cache&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;## 2. Xdebug + VS code + macOS + MAMP&lt;/p&gt;
+&lt;h3&gt;2.1 Install Xdebug extension on VSCode&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;pecl &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; xdebug&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;But if you use MAMP, you don’t need to install xdebug via pecl since MAMP already has xdebug.so file.
+xdebug.so path: &lt;code class=&quot;language-text&quot;&gt;/Applications/MAMP/bin/php/php7.3.33/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;2.2 Add the below code on php.ini&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;PHP 8.2&lt;br&gt;
+php.ini path: &lt;code class=&quot;language-text&quot;&gt;/opt/homebrew/etc/php/8.2/php.ini&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token section&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token section-name selector&quot;&gt;xdebug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;zend_extension&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;&quot;&lt;span class=&quot;token inner-value&quot;&gt;/opt/homebrew/Cellar/php/8.2.10/pecl/20220829/xdebug.so&lt;/span&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.mode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;debug&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;/tmp/xdebug.log&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.client_host&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;127.0.0.1&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.client_port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;9003&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.discover_client_host&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.start_with_request&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;yes&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_handler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;dbgp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;PHP 7.3&lt;br&gt;
+php.ini path: &lt;code class=&quot;language-text&quot;&gt;/Applications/MAMP/bin/php/php7.3.33/conf/php.ini&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token section&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token section-name selector&quot;&gt;xdebug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;zend_extension&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;&quot;&lt;span class=&quot;token inner-value&quot;&gt;/Applications/MAMP/bin/php/php7.3.33/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so&lt;/span&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.mode&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token value attr-value&quot;&gt;debug$&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.log&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token value attr-value&quot;&gt;/tmp/xdebug.log$&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.client_port&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token value attr-value&quot;&gt;9003&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_enable&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_host&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;127.0.0.1&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_connect_back&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;9003&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_handler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;dbgp&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_mode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;req&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;2.3 VS settings&lt;/h3&gt;
+&lt;p&gt;PHP settings.json&lt;br&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c44b4dad2db8aa8ca3124a6ce610b273/76a18/vs_php_settings.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 38.60759493670886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVQoz42R207DMAyG+yJN0jiHps2StN1WQHDJJU/A+z/Hj2ymMSHBdvHJVmz/PqQLIcB7D+ecQERX/z4ejizi6wfS+yfmQ0HXWgOLKqVgrZVEtsYYQWst/OUzLBociY4IDsMggZwztm1DKUWEY4wYx1EswwW3b2y5ea8UlNIyVMfFvHLf95hSwrIsyHmG55WIJElrBa0u8FRXX0n8lo6FGCKH0hYs64bjeUddVqQ5w7oAQw7DAxjy6Lij3I8I5fSCur9h258xl4Y4ZYQ0w48JfpzukODG/COojUGcDsh1BYUIPVjpytZYepiL4PdvPe1nnI5HtFpRa5HP4eP/vtN/fAHImORAEIyaSQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;vs_php_settings&quot;
+        title=&quot;vs_php_settings&quot;
+        src=&quot;/static/c44b4dad2db8aa8ca3124a6ce610b273/f058b/vs_php_settings.png&quot;
+        srcset=&quot;/static/c44b4dad2db8aa8ca3124a6ce610b273/c26ae/vs_php_settings.png 158w,
+/static/c44b4dad2db8aa8ca3124a6ce610b273/6bdcf/vs_php_settings.png 315w,
+/static/c44b4dad2db8aa8ca3124a6ce610b273/f058b/vs_php_settings.png 630w,
+/static/c44b4dad2db8aa8ca3124a6ce610b273/40601/vs_php_settings.png 945w,
+/static/c44b4dad2db8aa8ca3124a6ce610b273/78612/vs_php_settings.png 1260w,
+/static/c44b4dad2db8aa8ca3124a6ce610b273/76a18/vs_php_settings.png 1691w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add php executable path: &lt;code class=&quot;language-text&quot;&gt;/Applications/MAMP/bin/php/php7.3.33/bin/php&lt;/code&gt;&lt;br&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/71d4b3df43d1fc4ca790fe693165bef6/90712/settings.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.26582278481012%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABi0lEQVQoz41S2W7bMBD0h0TUQS4PkZRkypIVWbbjo0Wb/P/3TCtKjtEWKPIwmOWBxczObkpLUKWBshVk6SILksjzDIwxMJYgTRnSNP0v5r8zb2yZYXc4oL++o3v7jv39A+3phvZwhnQNyAUkjCFJVsQ6wUuSfN49ms28cbaA7wL6+wf62zvC8Yqq7VH1I0y1BSkDRRySF1CCg1bWgkeekWfZU6H3AsZyFCRBugQZCyF1rGXpIQSHIRFhJcUGpSRYRdAkUErxZ0Nb5gjDHvVwggs9mtcT2uMNflbZ9uDKICcDxtLFJmORn5aTfy271mI7ndGevsF3I3QVYjhZ+pzPl0NxTsDUHNUwor/+hN/tIWxAQWpNOP0yosJlhgWE1rDNDnxeGTJI02xNk33ae1h9+SvlxygWhTbHbhwQjve4LtvxjDBd0F9+oN5PCK7EYevRVxZTqHDpGoyNwxQ8XhuHzi/vQ22hSMwKNaTW0K6Gsn5dbh/PgmhJWApo4nBKxnRNTHdJWa+1FBzst8JfI2EjDNFoEbsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;settings&quot;
+        title=&quot;settings&quot;
+        src=&quot;/static/71d4b3df43d1fc4ca790fe693165bef6/f058b/settings.png&quot;
+        srcset=&quot;/static/71d4b3df43d1fc4ca790fe693165bef6/c26ae/settings.png 158w,
+/static/71d4b3df43d1fc4ca790fe693165bef6/6bdcf/settings.png 315w,
+/static/71d4b3df43d1fc4ca790fe693165bef6/f058b/settings.png 630w,
+/static/71d4b3df43d1fc4ca790fe693165bef6/90712/settings.png 882w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token property&quot;&gt;&quot;php.validate.executablePath&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/Applications/MAMP/bin/php/php7.3.33/bin/php&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token property&quot;&gt;&quot;php.debug.executablePath&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/Applications/MAMP/bin/php/php7.3.33/bin/php&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;VS launch.json&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// Use IntelliSense to learn about possible attributes.&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// Hover to view descriptions of existing attributes.&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0.2.0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;configurations&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Listen for Xdebug&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;php&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;request&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;launch&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;hostname&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;127.0.0.1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;port&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;9003&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Launch currently open script&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;php&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;request&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;launch&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;program&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;${file}&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;cwd&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;${fileDirname}&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;port&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;9003&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;2.4 Run Xdebug on VSCode&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Run server on MAMP&lt;/li&gt;
+&lt;li&gt;Run Xdebug on VSCode&lt;/li&gt;
+&lt;li&gt;Set breakpoint on VSCode&lt;/li&gt;
+&lt;li&gt;Access to the page on browser&lt;/li&gt;
+&lt;li&gt;VSCode will stop on breakpoint&lt;/li&gt;
+&lt;li&gt;You can check the variable on VSCode
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 513px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fccbc06ff710a70a40ed455fcf2cd547/267f6/debug_screen.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 262.0253164556962%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;debug_screen&quot;
+        title=&quot;debug_screen&quot;
+        src=&quot;/static/fccbc06ff710a70a40ed455fcf2cd547/267f6/debug_screen.png&quot;
+        srcset=&quot;/static/fccbc06ff710a70a40ed455fcf2cd547/c26ae/debug_screen.png 158w,
+/static/fccbc06ff710a70a40ed455fcf2cd547/6bdcf/debug_screen.png 315w,
+/static/fccbc06ff710a70a40ed455fcf2cd547/267f6/debug_screen.png 513w&quot;
+        sizes=&quot;(max-width: 513px) 100vw, 513px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;2.5 Troubleshooting 1: Already used port&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/530bddc8bedf42554a5eea624133413b/daf05/already_used_port.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.9620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABpklEQVQoz5WRPW4UQRCF5wQIma7f7p7etY34sRPkczglhYQMEXIEb2JxBG7gMyA2IEMyuwlCQuIYgHf0UPfMrrC1QiL4VFXTXa9eTXeq/Mbdfrj7FzNbq8paVdfu3ogptboiImtmbvFvmHmlql9V9apjlksRBTM3zBS5T0h9QkwRKUd4NJgbzAyq2uJd6ncR+daJ+QWzgIh+EdGgqkMu/VDKbIjurTazHbXew80ket0x86I6I6IbIoJWhzmh7wtSdLgZxoGj+33upmEQ1VWnqotqdys4rpxRygw5ems4efoIZ89O4e53Vp7yuoUwRHjVEdFCROr/Gx22htpojeru/PlLvHj9Fjn3UJXb7lShHgc9fAKJZdWFEG4J1jy6ICdFilWccfT4FMcnZ3UlqEhzun2Iisc06Owh2NIoWIXGlRkqhHkJKDkgOsGNwOE+wsE9TPf2MVA4AIUHTfCiTmHmn0S0EaGNKW2IeAezTNSa9sC/p4e97ljk3Xw+xySK8YB3+f9ARN+7kI5exVw+R/cParYklmUI4Z8Q0VJElsy8jR+Z+RMRvf8DiP8Lb86LwoUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;already_used_port&quot;
+        title=&quot;already_used_port&quot;
+        src=&quot;/static/530bddc8bedf42554a5eea624133413b/f058b/already_used_port.png&quot;
+        srcset=&quot;/static/530bddc8bedf42554a5eea624133413b/c26ae/already_used_port.png 158w,
+/static/530bddc8bedf42554a5eea624133413b/6bdcf/already_used_port.png 315w,
+/static/530bddc8bedf42554a5eea624133413b/f058b/already_used_port.png 630w,
+/static/530bddc8bedf42554a5eea624133413b/40601/already_used_port.png 945w,
+/static/530bddc8bedf42554a5eea624133413b/78612/already_used_port.png 1260w,
+/static/530bddc8bedf42554a5eea624133413b/daf05/already_used_port.png 2672w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Find the process which uses the port 9003&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;netstat&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-anv&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;9003&lt;/span&gt;
+tcp4       &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;token number&quot;&gt;127.0&lt;/span&gt;.0.1.9003         &lt;span class=&quot;token number&quot;&gt;127.0&lt;/span&gt;.0.1.49477        ESTABLISHED  &lt;span class=&quot;token number&quot;&gt;408157&lt;/span&gt;  &lt;span class=&quot;token number&quot;&gt;146988&lt;/span&gt;   &lt;span class=&quot;token number&quot;&gt;1291&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; 00102 00000004 0000000000002cb7 00000081 01000900      &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; 000001
+tcp4       &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;token number&quot;&gt;127.0&lt;/span&gt;.0.1.49477        &lt;span class=&quot;token number&quot;&gt;127.0&lt;/span&gt;.0.1.9003         ESTABLISHED  &lt;span class=&quot;token number&quot;&gt;408193&lt;/span&gt;  &lt;span class=&quot;token number&quot;&gt;146988&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;864&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; 00102 00000000 0000000000002cb6 00000081 00000900      &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; 000001
+tcp4       &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;token number&quot;&gt;127.0&lt;/span&gt;.0.1.9003         *.*                    LISTEN       &lt;span class=&quot;token number&quot;&gt;131072&lt;/span&gt;  &lt;span class=&quot;token number&quot;&gt;131072&lt;/span&gt;   &lt;span class=&quot;token number&quot;&gt;1291&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; 00000 00000006 0000000000002c7a 000000           &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; c53d8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Kill the process&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;kill&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;864&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;kill&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1291&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;$ kill -9 408157
+$ kill -9 408193&lt;/p&gt;
+&lt;h3&gt;2.6 Troubleshooting 2: php command is so slow&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ php &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;
+PHP &lt;span class=&quot;token number&quot;&gt;7.3&lt;/span&gt;.33 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cli&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;built: May  &lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2021&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;11&lt;/span&gt;:30:56&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; NTS &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;cat&lt;/span&gt; test.php
+ &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;?php
+ &lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+ ?&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;time&lt;/span&gt; /Applications/MAMP/bin/php/php7.3.33/bin/php test.php
+test/Applications/MAMP/bin/php/php7.3.33/bin/php test.php  &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;.31s user &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;.11s system &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt;% cpu &lt;span class=&quot;token number&quot;&gt;0.428&lt;/span&gt; total&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;2.6.1 Solution 1: Disable xdebug&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;PHP 8.2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;vi&lt;/span&gt; /opt/homebrew/etc/php/8.2/php.ini&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token section&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token section-name selector&quot;&gt;xdebug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;zend_extension=&quot;/opt/homebrew/Cellar/php/8.2.10/pecl/20220829/xdebug.so&quot;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.mode=debug&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.log=/tmp/xdebug.log&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.client_host=127.0.0.1&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.client_port=9003&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.discover_client_host=true&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.start_with_request=yes&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_handler=dbgp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;PHP 7.3&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;vi&lt;/span&gt; /Applications/MAMP/bin/php/php7.3.33/conf/php.ini&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token section&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token section-name selector&quot;&gt;xdebug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;zend_extension=&quot;/Applications/MAMP/bin/php/php7.3.33/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so&quot;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.mode = debug$&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.log = /tmp/xdebug.log$&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.client_port = 9003&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_enable=1&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_host=&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_connect_back=1&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_port=9003&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_handler=dbgp&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_mode=req&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;time&lt;/span&gt; /Applications/MAMP/bin/php/php7.3.33/bin/php test.php
+test/Applications/MAMP/bin/php/php7.3.33/bin/php test.php  &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;.03s user &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;.01s system &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt;% cpu &lt;span class=&quot;token number&quot;&gt;0.049&lt;/span&gt; total&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;3. Xdebug wizard&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Run&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&amp;lt;?php &lt;span class=&quot;token entity&quot; title=&quot;\n&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;token entity&quot; title=&quot;\n&quot;&gt;\n&lt;/span&gt;phpinfo();&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; test.php &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; php test.php &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; phpinfo-output.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;code class=&quot;language-text&quot;&gt;phpinfo-output.txt&lt;/code&gt; and copy all text.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Paste the clipboard into the wizard.
+&lt;a href=&quot;https://xdebug.org/wizard&quot;&gt;Open the Wizard.&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Follow the Instruction.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/37ef94480839525dfc9fc78bbd1b266d/307e7/php_wizard.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 101.26582278481011%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAACb0lEQVQ4y52UCW/iQAyF+///WFUJFtoC4SoUSEIICVcO7r7V52qy9NKudiTHk2jybL9nz91wONTDw4MeHx9Vr9WVZ4Vu19vb25c93tnnM3c8dtlOcRwrXaVKs6W25UabYq3Daf8F4DvQ2293PCaTiVqtlryup+Gkr/6op8G4rzAK5PuBZrOZwjA0C4JA5/NZn5cDtQzTNFWv11On01G71ZbX8dT41VSj0TAqoISAT09P9t5sNu0sgfh3u93+yZBNkiR2cDwea7VamXEwTZObfarlcmnvm83GPEDr9Vp5nn8seTQaVVFfXl7U7/c1HAwVL2ItFgsLCMfz+VzT6dQ83/n2pWQ2/ECkKIosyzAIla4Sna9nXS4XnU4n4w1/PB51vV5/VNsAiURExAE08AP5i6km0dhEISPM9307U5blt0pXHHIAQLIEPF7GSpaJonlkvN322d+WAR4OBysbAwAP4ZCPz7LMbLfbmbn3zwYtBrjf702MbrerwWBgZQHqFGbvlP7JOAO/Vckoi8oYe4A5xP7+/l6vr69GyU/gHwAp2RFOC9GwtAflMx3MO6Lclm22xTLzUEMXVBkiBiVysBInjituAXQBzBaBwo2vWTpRuPZNyOvl+g4I+ZRIWXh+LIrCJoBgBCED9nwv8kLFvlB5KlQccxWHXOW+fG8bmpSBd42NOAD+77LGZjrIjOF3swpfZOX4cu2DAG52q7HTn2mxDMkKETzPM1UxwFGcVmLPrHPjcPO0223jl38Q011nVjJSA2j3oeepVqvZtVWv1827AABjgD0/P1tF7AlGd1BFNSmQTSTUw1M2fNI+/7JuL4jfDtTqsMIcq3oAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;php_wizard.php&quot;
+        title=&quot;php_wizard.php&quot;
+        src=&quot;/static/37ef94480839525dfc9fc78bbd1b266d/f058b/php_wizard.png&quot;
+        srcset=&quot;/static/37ef94480839525dfc9fc78bbd1b266d/c26ae/php_wizard.png 158w,
+/static/37ef94480839525dfc9fc78bbd1b266d/6bdcf/php_wizard.png 315w,
+/static/37ef94480839525dfc9fc78bbd1b266d/f058b/php_wizard.png 630w,
+/static/37ef94480839525dfc9fc78bbd1b266d/40601/php_wizard.png 945w,
+/static/37ef94480839525dfc9fc78bbd1b266d/78612/php_wizard.png 1260w,
+/static/37ef94480839525dfc9fc78bbd1b266d/307e7/php_wizard.png 1354w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@alirazalilani/debugging-php-laravel-with-visual-studio-code-37b756fb6c19/&quot;&gt;https://medium.com/@alirazalilani/debugging-php-laravel-with-visual-studio-code-37b756fb6c19/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://5balloons.info/setting-up-xdebug-using-laravel-valet-and-vscode/&quot;&gt;https://5balloons.info/setting-up-xdebug-using-laravel-valet-and-vscode/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Laravel database migration rollback]]></title><link>https://engelin.github.io/laravel-database/</link><guid isPermaLink="false">https://engelin.github.io/laravel-database/</guid><pubDate>Wed, 06 Sep 2023 10:27:06 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;php artisan migrate:rollback &lt;span class=&quot;token parameter variable&quot;&gt;--path&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;database/migrations/2023_07_27_153712_add_category_id_to_products.php&quot;&lt;/span&gt;
 
    INFO  Rolling back migrations.  
@@ -988,304 +1335,7 @@ There are three duplicate &lt;code class=&quot;language-text&quot;&gt;pip&lt;/co
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/colabcode-deploying-machine-learning-models-from-google-colab-54e0d37a7b09&quot;&gt;https://towardsdatascience.com/colabcode-deploying-machine-learning-models-from-google-colab-54e0d37a7b09&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://medium.com/analytics-vidhya/colab-vs-code-github-jupyter-perfect-for-deep-learning-2b257ae94d01&quot;&gt;https://medium.com/analytics-vidhya/colab-vs-code-github-jupyter-perfect-for-deep-learning-2b257ae94d01&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Debug laravel app (xdebug php 8.2 updated 2023-09-19)]]></title><description><![CDATA[1. Laravel Debugbar 1.1 Add requirement 1.2 Change config 1.3 Publish ### 1.4 Check  1.5 Clear cache & config ## 2. Xdebug + VS code + macOS…]]></description><link>https://engelin.github.io/debug-laravel-app/</link><guid isPermaLink="false">https://engelin.github.io/debug-laravel-app/</guid><pubDate>Tue, 09 May 2023 16:14:01 GMT</pubDate><content:encoded>&lt;h2&gt;1. Laravel Debugbar&lt;/h2&gt;
-&lt;h3&gt;1.1 Add requirement&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ php composer.phar require barryvdh/laravel-debugbar &lt;span class=&quot;token parameter variable&quot;&gt;--dev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;1.2 Change config&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;diff &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;git a&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;config&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;app&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;php b&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;config&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;app&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;php
-index &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;c5820c4&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.8&lt;/span&gt;ddaee54 &lt;span class=&quot;token number&quot;&gt;100644&lt;/span&gt;
-&lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; a&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;config&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;app&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;php
-&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; b&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;config&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;app&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;php
-@@ &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt; @@ &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
- 
-         &lt;span class=&quot;token class-name class-name-fully-qualified static-context&quot;&gt;App&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Providers&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;GoogleDriveServiceProvider&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
- 
-&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;        &lt;span class=&quot;token comment&quot;&gt;/*
-+         * Laravel Debugbar
-+         */&lt;/span&gt;
-&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;        &lt;span class=&quot;token class-name class-name-fully-qualified static-context&quot;&gt;Barryvdh&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Debugbar&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;ServiceProvider&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-     &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
- 
-     &lt;span class=&quot;token comment&quot;&gt;/*
-@@ -258,6 +262,10 @@ return [
-         &apos;Excel&apos;        =&gt; Maatwebsite\Excel\Facades\Excel::class,
-         &apos;PDF&apos;          =&gt; Barryvdh\DomPDF\Facade::class,
- 
-+        /*
-+         * Debugbar Aliases
-+         */&lt;/span&gt;
-&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;        &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;Debugbar&apos;&lt;/span&gt;     &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token class-name class-name-fully-qualified static-context&quot;&gt;Barryvdh&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Debugbar&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Facade&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-     &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
- 
- &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;1.3 Publish&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ php artisan vendor:publish &lt;span class=&quot;token parameter variable&quot;&gt;--provider&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Barryvdh\Debugbar\ServiceProvider&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;### 1.4 Check &lt;code class=&quot;language-text&quot;&gt;.env&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token key attr-name&quot;&gt;APP_DEBUG&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;1.5 Clear cache &amp;#x26; config&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;$ php artisan cache:clear
-$ php artisan config:cache&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;## 2. Xdebug + VS code + macOS + MAMP&lt;/p&gt;
-&lt;h3&gt;2.1 Install Xdebug extension on VSCode&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;pecl &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; xdebug&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;But if you use MAMP, you don’t need to install xdebug via pecl since MAMP already has xdebug.so file.
-xdebug.so path: &lt;code class=&quot;language-text&quot;&gt;/Applications/MAMP/bin/php/php7.3.33/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so&lt;/code&gt;&lt;/p&gt;
-&lt;h3&gt;2.2 Add the below code on php.ini&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;PHP 8.2&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;php.ini path: &lt;code class=&quot;language-text&quot;&gt;/opt/homebrew/etc/php/8.2/php.ini&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token section&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token section-name selector&quot;&gt;xdebug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;zend_extension&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;&quot;&lt;span class=&quot;token inner-value&quot;&gt;/opt/homebrew/Cellar/php/8.2.10/pecl/20220829/xdebug.so&lt;/span&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.mode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;debug&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;/tmp/xdebug.log&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.client_host&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;127.0.0.1&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.client_port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;9003&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.discover_client_host&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.start_with_request&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;yes&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_handler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;dbgp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;PHP 7.3&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;php.ini path: &lt;code class=&quot;language-text&quot;&gt;/Applications/MAMP/bin/php/php7.3.33/conf/php.ini&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token section&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token section-name selector&quot;&gt;xdebug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;zend_extension&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;&quot;&lt;span class=&quot;token inner-value&quot;&gt;/Applications/MAMP/bin/php/php7.3.33/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so&lt;/span&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.mode&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token value attr-value&quot;&gt;debug$&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.log&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token value attr-value&quot;&gt;/tmp/xdebug.log$&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.client_port&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token value attr-value&quot;&gt;9003&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_enable&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_host&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;127.0.0.1&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_connect_back&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;9003&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_handler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;dbgp&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;xdebug.remote_mode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;req&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;2.3 VS settings&lt;/h3&gt;
-&lt;p&gt;PHP settings.json&lt;br&gt;
-&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c44b4dad2db8aa8ca3124a6ce610b273/76a18/vs_php_settings.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 38.60759493670886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVQoz42R207DMAyG+yJN0jiHps2StN1WQHDJJU/A+z/Hj2ymMSHBdvHJVmz/PqQLIcB7D+ecQERX/z4ejizi6wfS+yfmQ0HXWgOLKqVgrZVEtsYYQWst/OUzLBociY4IDsMggZwztm1DKUWEY4wYx1EswwW3b2y5ea8UlNIyVMfFvHLf95hSwrIsyHmG55WIJElrBa0u8FRXX0n8lo6FGCKH0hYs64bjeUddVqQ5w7oAQw7DAxjy6Lij3I8I5fSCur9h258xl4Y4ZYQ0w48JfpzukODG/COojUGcDsh1BYUIPVjpytZYepiL4PdvPe1nnI5HtFpRa5HP4eP/vtN/fAHImORAEIyaSQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;vs_php_settings&quot;
-        title=&quot;vs_php_settings&quot;
-        src=&quot;/static/c44b4dad2db8aa8ca3124a6ce610b273/f058b/vs_php_settings.png&quot;
-        srcset=&quot;/static/c44b4dad2db8aa8ca3124a6ce610b273/c26ae/vs_php_settings.png 158w,
-/static/c44b4dad2db8aa8ca3124a6ce610b273/6bdcf/vs_php_settings.png 315w,
-/static/c44b4dad2db8aa8ca3124a6ce610b273/f058b/vs_php_settings.png 630w,
-/static/c44b4dad2db8aa8ca3124a6ce610b273/40601/vs_php_settings.png 945w,
-/static/c44b4dad2db8aa8ca3124a6ce610b273/78612/vs_php_settings.png 1260w,
-/static/c44b4dad2db8aa8ca3124a6ce610b273/76a18/vs_php_settings.png 1691w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Add php executable path: &lt;code class=&quot;language-text&quot;&gt;/Applications/MAMP/bin/php/php7.3.33/bin/php&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/71d4b3df43d1fc4ca790fe693165bef6/90712/settings.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 51.26582278481012%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABi0lEQVQoz41S2W7bMBD0h0TUQS4PkZRkypIVWbbjo0Wb/P/3TCtKjtEWKPIwmOWBxczObkpLUKWBshVk6SILksjzDIwxMJYgTRnSNP0v5r8zb2yZYXc4oL++o3v7jv39A+3phvZwhnQNyAUkjCFJVsQ6wUuSfN49ms28cbaA7wL6+wf62zvC8Yqq7VH1I0y1BSkDRRySF1CCg1bWgkeekWfZU6H3AsZyFCRBugQZCyF1rGXpIQSHIRFhJcUGpSRYRdAkUErxZ0Nb5gjDHvVwggs9mtcT2uMNflbZ9uDKICcDxtLFJmORn5aTfy271mI7ndGevsF3I3QVYjhZ+pzPl0NxTsDUHNUwor/+hN/tIWxAQWpNOP0yosJlhgWE1rDNDnxeGTJI02xNk33ae1h9+SvlxygWhTbHbhwQjve4LtvxjDBd0F9+oN5PCK7EYevRVxZTqHDpGoyNwxQ8XhuHzi/vQ22hSMwKNaTW0K6Gsn5dbh/PgmhJWApo4nBKxnRNTHdJWa+1FBzst8JfI2EjDNFoEbsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;settings&quot;
-        title=&quot;settings&quot;
-        src=&quot;/static/71d4b3df43d1fc4ca790fe693165bef6/f058b/settings.png&quot;
-        srcset=&quot;/static/71d4b3df43d1fc4ca790fe693165bef6/c26ae/settings.png 158w,
-/static/71d4b3df43d1fc4ca790fe693165bef6/6bdcf/settings.png 315w,
-/static/71d4b3df43d1fc4ca790fe693165bef6/f058b/settings.png 630w,
-/static/71d4b3df43d1fc4ca790fe693165bef6/90712/settings.png 882w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token property&quot;&gt;&quot;php.validate.executablePath&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/Applications/MAMP/bin/php/php7.3.33/bin/php&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token property&quot;&gt;&quot;php.debug.executablePath&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/Applications/MAMP/bin/php/php7.3.33/bin/php&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;VS launch.json&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token comment&quot;&gt;// Use IntelliSense to learn about possible attributes.&lt;/span&gt;
-    &lt;span class=&quot;token comment&quot;&gt;// Hover to view descriptions of existing attributes.&lt;/span&gt;
-    &lt;span class=&quot;token comment&quot;&gt;// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0.2.0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;&quot;configurations&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
-        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Listen for Xdebug&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;php&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;token property&quot;&gt;&quot;request&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;launch&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;token property&quot;&gt;&quot;hostname&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;127.0.0.1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;token property&quot;&gt;&quot;port&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;9003&lt;/span&gt;
-        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Launch currently open script&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;php&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;token property&quot;&gt;&quot;request&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;launch&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;token property&quot;&gt;&quot;program&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;${file}&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;token property&quot;&gt;&quot;cwd&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;${fileDirname}&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;token property&quot;&gt;&quot;port&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;9003&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;2.4 Run Xdebug on VSCode&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Run server on MAMP&lt;/li&gt;
-&lt;li&gt;Run Xdebug on VSCode&lt;/li&gt;
-&lt;li&gt;Set breakpoint on VSCode&lt;/li&gt;
-&lt;li&gt;Access to the page on browser&lt;/li&gt;
-&lt;li&gt;VSCode will stop on breakpoint&lt;/li&gt;
-&lt;li&gt;You can check the variable on VSCode&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 513px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/fccbc06ff710a70a40ed455fcf2cd547/267f6/debug_screen.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 262.0253164556962%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;debug_screen&quot;
-        title=&quot;debug_screen&quot;
-        src=&quot;/static/fccbc06ff710a70a40ed455fcf2cd547/267f6/debug_screen.png&quot;
-        srcset=&quot;/static/fccbc06ff710a70a40ed455fcf2cd547/c26ae/debug_screen.png 158w,
-/static/fccbc06ff710a70a40ed455fcf2cd547/6bdcf/debug_screen.png 315w,
-/static/fccbc06ff710a70a40ed455fcf2cd547/267f6/debug_screen.png 513w&quot;
-        sizes=&quot;(max-width: 513px) 100vw, 513px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h3&gt;2.5 Troubleshooting 1: Already used port&lt;/h3&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/530bddc8bedf42554a5eea624133413b/daf05/already_used_port.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.9620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABpklEQVQoz5WRPW4UQRCF5wQIma7f7p7etY34sRPkczglhYQMEXIEb2JxBG7gMyA2IEMyuwlCQuIYgHf0UPfMrrC1QiL4VFXTXa9eTXeq/Mbdfrj7FzNbq8paVdfu3ogptboiImtmbvFvmHmlql9V9apjlksRBTM3zBS5T0h9QkwRKUd4NJgbzAyq2uJd6ncR+daJ+QWzgIh+EdGgqkMu/VDKbIjurTazHbXew80ket0x86I6I6IbIoJWhzmh7wtSdLgZxoGj+33upmEQ1VWnqotqdys4rpxRygw5ems4efoIZ89O4e53Vp7yuoUwRHjVEdFCROr/Gx22htpojeru/PlLvHj9Fjn3UJXb7lShHgc9fAKJZdWFEG4J1jy6ICdFilWccfT4FMcnZ3UlqEhzun2Iisc06Owh2NIoWIXGlRkqhHkJKDkgOsGNwOE+wsE9TPf2MVA4AIUHTfCiTmHmn0S0EaGNKW2IeAezTNSa9sC/p4e97ljk3Xw+xySK8YB3+f9ARN+7kI5exVw+R/cParYklmUI4Z8Q0VJElsy8jR+Z+RMRvf8DiP8Lb86LwoUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;already_used_port&quot;
-        title=&quot;already_used_port&quot;
-        src=&quot;/static/530bddc8bedf42554a5eea624133413b/f058b/already_used_port.png&quot;
-        srcset=&quot;/static/530bddc8bedf42554a5eea624133413b/c26ae/already_used_port.png 158w,
-/static/530bddc8bedf42554a5eea624133413b/6bdcf/already_used_port.png 315w,
-/static/530bddc8bedf42554a5eea624133413b/f058b/already_used_port.png 630w,
-/static/530bddc8bedf42554a5eea624133413b/40601/already_used_port.png 945w,
-/static/530bddc8bedf42554a5eea624133413b/78612/already_used_port.png 1260w,
-/static/530bddc8bedf42554a5eea624133413b/daf05/already_used_port.png 2672w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Find the process which uses the port 9003&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;netstat&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-anv&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;9003&lt;/span&gt;
-tcp4       &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;token number&quot;&gt;127.0&lt;/span&gt;.0.1.9003         &lt;span class=&quot;token number&quot;&gt;127.0&lt;/span&gt;.0.1.49477        ESTABLISHED  &lt;span class=&quot;token number&quot;&gt;408157&lt;/span&gt;  &lt;span class=&quot;token number&quot;&gt;146988&lt;/span&gt;   &lt;span class=&quot;token number&quot;&gt;1291&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; 00102 00000004 0000000000002cb7 00000081 01000900      &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; 000001
-tcp4       &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;token number&quot;&gt;127.0&lt;/span&gt;.0.1.49477        &lt;span class=&quot;token number&quot;&gt;127.0&lt;/span&gt;.0.1.9003         ESTABLISHED  &lt;span class=&quot;token number&quot;&gt;408193&lt;/span&gt;  &lt;span class=&quot;token number&quot;&gt;146988&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;864&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; 00102 00000000 0000000000002cb6 00000081 00000900      &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; 000001
-tcp4       &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;token number&quot;&gt;127.0&lt;/span&gt;.0.1.9003         *.*                    LISTEN       &lt;span class=&quot;token number&quot;&gt;131072&lt;/span&gt;  &lt;span class=&quot;token number&quot;&gt;131072&lt;/span&gt;   &lt;span class=&quot;token number&quot;&gt;1291&lt;/span&gt;      &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; 00000 00000006 0000000000002c7a 000000           &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; c53d8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;Kill the process&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;kill&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;864&lt;/span&gt;
-$ &lt;span class=&quot;token function&quot;&gt;kill&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1291&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;$ kill -9 408157
-$ kill -9 408193&lt;/p&gt;
-&lt;h3&gt;2.6 Troubleshooting 2: php command is so slow&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ php &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;
-PHP &lt;span class=&quot;token number&quot;&gt;7.3&lt;/span&gt;.33 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cli&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;built: May  &lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2021&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;11&lt;/span&gt;:30:56&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; NTS &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-$ &lt;span class=&quot;token function&quot;&gt;cat&lt;/span&gt; test.php
- &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;?php
- &lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
- ?&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-$ &lt;span class=&quot;token function&quot;&gt;time&lt;/span&gt; /Applications/MAMP/bin/php/php7.3.33/bin/php test.php
-test/Applications/MAMP/bin/php/php7.3.33/bin/php test.php  &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;.31s user &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;.11s system &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt;% cpu &lt;span class=&quot;token number&quot;&gt;0.428&lt;/span&gt; total&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;2.6.1 Solution 1: Disable xdebug&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;PHP 8.2&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;vi&lt;/span&gt; /opt/homebrew/etc/php/8.2/php.ini&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token section&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token section-name selector&quot;&gt;xdebug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;zend_extension=&quot;/opt/homebrew/Cellar/php/8.2.10/pecl/20220829/xdebug.so&quot;&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.mode=debug&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.log=/tmp/xdebug.log&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.client_host=127.0.0.1&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.client_port=9003&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.discover_client_host=true&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.start_with_request=yes&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_handler=dbgp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;PHP 7.3&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;vi&lt;/span&gt; /Applications/MAMP/bin/php/php7.3.33/conf/php.ini&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ini&quot;&gt;&lt;pre class=&quot;language-ini&quot;&gt;&lt;code class=&quot;language-ini&quot;&gt;&lt;span class=&quot;token section&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token section-name selector&quot;&gt;xdebug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;zend_extension=&quot;/Applications/MAMP/bin/php/php7.3.33/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so&quot;&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.mode = debug$&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.log = /tmp/xdebug.log$&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.client_port = 9003&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_enable=1&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_host=&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_connect_back=1&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_port=9003&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_handler=dbgp&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;;xdebug.remote_mode=req&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;time&lt;/span&gt; /Applications/MAMP/bin/php/php7.3.33/bin/php test.php
-test/Applications/MAMP/bin/php/php7.3.33/bin/php test.php  &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;.03s user &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;.01s system &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt;% cpu &lt;span class=&quot;token number&quot;&gt;0.049&lt;/span&gt; total&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;References&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://medium.com/@alirazalilani/debugging-php-laravel-with-visual-studio-code-37b756fb6c19/&quot;&gt;https://medium.com/@alirazalilani/debugging-php-laravel-with-visual-studio-code-37b756fb6c19/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://5balloons.info/setting-up-xdebug-using-laravel-valet-and-vscode/&quot;&gt;https://5balloons.info/setting-up-xdebug-using-laravel-valet-and-vscode/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Setup Magento 2 with Apache on MacOS]]></title><description><![CDATA[Local Environment Operating System Setup Magento with MAMP 1. Composer 2. MAMP Install MAMP Download Setup 
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Setup Magento 2 with Apache on MacOS]]></title><description><![CDATA[Local Environment Operating System Setup Magento with MAMP 1. Composer 2. MAMP Install MAMP Download Setup 
  DB path 3. Create Database…]]></description><link>https://engelin.github.io/magento-mac-setup-apache/</link><guid isPermaLink="false">https://engelin.github.io/magento-mac-setup-apache/</guid><pubDate>Wed, 03 May 2023 13:36:01 GMT</pubDate><content:encoded>&lt;h2&gt;Local Environment&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Operating System&lt;/li&gt;
@@ -4200,7 +4250,7 @@ In Kernel.php line 226:
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAACA0lEQVQoz52STWsUQRCG908LHvwFnryKxIOHkPUUJEgiQRJBDSJJSCQLibuTZTK7M93z0d/d1d3VLZtMIl596UNVd7/UU0VNcs4ppZyzlHK6M53NZvle0Yfheg1MP6S3Aj8uIwTc/M+jJjlnxM3Vwf7BdGe6tbVluTY10+uBnhW8IJoKX9Lj0r87M3uvftQL9lRv8hS1bXv68/zy4lfOmS/IMKtU2YmC8jlxDWuVL0q5+/Lb8or+Y95Ahih7S9eCUQM2IERbc9QuSguDjpiasu0Ib2s2UIFxBJ8gpoDJezQQ2+tathJiiil3JhDlqfKYsxKO9YZVDDwa48FHzBlTmliPzARhAxfu7qIciBQKhIKut52ETnoJUWhfLygpqDS+b2RPVddIa8PkcXKZz+v2cmmpkL8bOSfypva9engyq745uRmuSqDC1Vwt26jc2LP3QUrlLCgmtdLgIGPCiCkmB2ClaU4Ly1Rf1NX5XDc8ChdjHM1vXr99/uzFqlrlnAGcc25kYfz715Pbxa1WWhvjvMecGkK2t98fHX0ZzR929z7tH1LStrRbVTU4P9Jqs5gXnHNtDCJKIfqubxry+fC4LO+esL1SqieSrhmpBlINcTPOfL92CgC0tB0VPeXNqgfwYaNH7IQYfAAbjHTeRe8iPppDCCkhYoohxoj3JzoHf3v+b/0B1ZDfaj39auEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAACA0lEQVQoz52STWsUQRCG90d78OAf8OhRJIIHJclBEVFcgkQCISjIRmM0RDO7yWRnp6fnqz+nq7uqW9ZMNp59T9Vd/VDv29QkpRRjTCkppXZ3ds9+nqW/Ih+68xX09ua4kPHdFfpA6R9N1u9ofTWdTre3t7e2tpy0thRm1fHZXMwrW8uQ84M8PJuZt48+l1m/mTfZVHVdz74cn3z7nlISWdX9WOq8kXMuLipgfWP8PNevHh5envI1QrdwSgkD6c7xQvTceBcIcCgFGYdy8J0lSixvmkrwVd9xGTGOtilGpOgDWUB+XiguPUaMsTGhUp4rTylp6fp26IreOTQmgF/PpZgmg6feBuVCL13+9aplSiqQGprWNgoa5ZVDaXyZVSyrlPUtUy3XDVN2CJPN14mLsj65HLhUv5j6zdR56Vt907JFx45+tac5cOmY0IsatRszex+U0m4A3SujDThIFAkpUgTvB2Wr2XwQul2UxXFmKoHCIeIIP3n89P69B8WySCkBgHNu9NKLo8NPi2xhtLHWQljnZ6x68Xzn4/7BCL9++Wb6fo9Xdc2bYlmC86Nba7OLuRDSWEtEUsi2bllZfdjbv86vN7a91rrliq/6quiqZYc4bpJSGgCMGlouWy5Z0XnwPvgQwt2ShIAwBKvAA3qHdAuHgDFGoogBEQmRCAkA7jL/t/4A+pXfen7MaVoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;

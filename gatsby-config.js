@@ -10,7 +10,6 @@ module.exports = {
     siteUrl: `https://engelin.github.io/`,
     intro: `Full-stack engineer and generalist. I design, build, and debug products with a bias for clean UX and practical engineering.`,
     portfolioUrl: `https://www.notion.so/Yerin-Hong-1a0487b16300418ea49de6c145ed288b#ecc059154ffe43b6999a8188c7747945`,
-    resumeUrl: `/Yerin_Hong_FullStack.pdf`,
     social: {
       github: `engelin`,
       linkedin: `yerin-hong`,
@@ -110,7 +109,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: 'Yerin-pyon Blog RSS Feed',
+            title: 'Yerin Hong RSS Feed',
           },
         ],
       },
@@ -118,13 +117,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Yerin Blog`,
+        short_name: `Yerin`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#080a0e`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        theme_color: `#00e5ff`,
         display: `minimal-ui`,
         icon: `src/images/main-icon.png`, // This path is relative to the root of the site.
       },

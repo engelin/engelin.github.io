@@ -20,7 +20,6 @@ const Bio = () => {
           }
           intro
           portfolioUrl
-          resumeUrl
           role
           social {
             github
@@ -35,7 +34,6 @@ const Bio = () => {
   const author = data.site.siteMetadata?.author
   const intro = data.site.siteMetadata?.intro
   const portfolioUrl = data.site.siteMetadata?.portfolioUrl
-  const resumeUrl = data.site.siteMetadata?.resumeUrl
   const role = data.site.siteMetadata?.role
   const social = data.site.siteMetadata?.social
 
@@ -57,17 +55,14 @@ const Bio = () => {
         <p>{author?.summary || null}</p>
         {intro && <p>{intro}</p>}
         <div className="bio-links">
-          <GatsbyLink to="/">All posts</GatsbyLink>
+          <GatsbyLink to="/">Home</GatsbyLink>
+          <a href="/#blog">Blog</a>
           {portfolioUrl && (
             <a href={portfolioUrl} target="_blank" rel="noreferrer">
               Portfolio
             </a>
           )}
-          {resumeUrl && (
-            <a href={resumeUrl} target="_blank" rel="noreferrer">
-              CV
-            </a>
-          )}
+          <a href="/#cv">CV</a>
           {social?.github && (
             <a href={`https://github.com/${social.github}`}>GitHub</a>
           )}

@@ -1,6 +1,6 @@
 ---
 title: Routing example using MUI Dashboard based on React
-date: "2022-02-12T23:49:37.121Z"
+date: '2022-02-12T23:49:37.121Z'
 ---
 
 ## Material UI
@@ -15,8 +15,7 @@ MUI, the material UI, to unify React and Material Design, is based on the materi
 yarn add @mui/material @mui/icons-material @emotion/react @emotion/styled
 ```
 
-And, there we're!  
-
+And, there we're!
 
 ## Practice with the mui dashboard example
 
@@ -26,51 +25,51 @@ I think you've noticed that the dashboard routhing doesn't work if you visit tha
 
 ### Checkout the template code
 
-Here is the [Dashboard souce](https://github.com/mui/material-ui/tree/master/docs/data/material/getting-started/templates/dashboard). 
+Here is the [Dashboard souce](https://github.com/mui/material-ui/tree/master/docs/data/material/getting-started/templates/dashboard).
 
 ![dashboard_capture](Dashboard_capture.png)  
 Let's implement these 5 tab pages inside the red box.
 
-
 1. Refactoring listItems.js
-
 
 First at all, let's have a look the listItems.js file. It looks quite good to use for listing pages together. Then, I created 4 pages under the `pages` directories which I created as well; OrdersPage, CustomersPage, ReportsPage, IntegrationsPage.
 
 ```javascript
-import * as React from 'react';
-import { Box, Container, CssBaseline, Typography } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import * as React from 'react'
+import { Box, Container, CssBaseline, Typography } from '@mui/material'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 
-const mdTheme = createTheme();
+const mdTheme = createTheme()
 
 const OrdersPage = () => {
-    return (
-        <ThemeProvider theme={mdTheme}>
-        <Box sx={{ display: 'flex' }}>
-            <CssBaseline />
-            <Box
-                sx={{
-                    backgroundColor: (theme) =>
-                    theme.palette.mode === 'light'
-                        ? theme.palette.grey[100]
-                        : theme.palette.grey[900],
-                    flexGrow: 1,
-                    height: '100vh',
-                    width: '180vh',
-                    overflow: 'auto',
-                }}
-            >
-                <Container maxWidth="lg" sx={{ mt: 20, mb: 4 }}>
-                    <Typography component="h1" variant="h3">Orders</Typography>
-                </Container>
-            </Box>
+  return (
+    <ThemeProvider theme={mdTheme}>
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
+        <Box
+          sx={{
+            backgroundColor: theme =>
+              theme.palette.mode === 'light'
+                ? theme.palette.grey[100]
+                : theme.palette.grey[900],
+            flexGrow: 1,
+            height: '100vh',
+            width: '180vh',
+            overflow: 'auto',
+          }}
+        >
+          <Container maxWidth="lg" sx={{ mt: 20, mb: 4 }}>
+            <Typography component="h1" variant="h3">
+              Orders
+            </Typography>
+          </Container>
         </Box>
-        </ThemeProvider>
-    );
+      </Box>
+    </ThemeProvider>
+  )
 }
 
-export default OrdersPage;
+export default OrdersPage
 ```
 
 ```javascript
@@ -146,68 +145,62 @@ export const MainListItems = () => {
 }
 ```
 
-To reduce some duplications, I defined a `mainPages` list, created a builder function, and exported MainListItems for a drawer.  
+To reduce some duplications, I defined a `mainPages` list, created a builder function, and exported MainListItems for a drawer.
 
 Yet refresh the web, the routing didn't work properly.
-
 
 2. Create Router
 
 ```javascript
-import * as React from 'react';
+import * as React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { mainPages } from '../pages/PageList'
 
-const MyRouterBuilder = (items) => {
+const MyRouterBuilder = items => {
   return (
     <BrowserRouter>
       <Routes>
-        {items.map(
-          (item) => (
-            <Route path={item.link} element={item.page} key={item.text} />
-          )
-        )}
+        {items.map(item => (
+          <Route path={item.link} element={item.page} key={item.text} />
+        ))}
       </Routes>
     </BrowserRouter>
-  );
-};
-
-const MyRouter = () => {
-  const router = MyRouterBuilder(mainPages);
-  return (
-    <>{router}</>
-  );
+  )
 }
 
-export default MyRouter;
+const MyRouter = () => {
+  const router = MyRouterBuilder(mainPages)
+  return <>{router}</>
+}
 
+export default MyRouter
 ```
 
-From react router v6, [`Switch` is upgraded to `Routes`](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-all-switch-elements-to-routes). So if you use the version 5, you might use `Switch` instead of `Routes`.  
+From react router v6, [`Switch` is upgraded to `Routes`](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-all-switch-elements-to-routes). So if you use the version 5, you might use `Switch` instead of `Routes`.
 
-I want to keep the appbar and the drawer, to change only the body, I'm going to define the navigation.  
+I want to keep the appbar and the drawer, to change only the body, I'm going to define the navigation.
 
 ```javascript
-import * as React from 'react';
+import * as React from 'react'
 
-import { styled } from '@mui/material/styles';
-import MuiAppBar from '@mui/material/AppBar';
-import Divider from '@mui/material/Divider';
-import MuiDrawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import { styled } from '@mui/material/styles'
+import MuiAppBar from '@mui/material/AppBar'
+import Divider from '@mui/material/Divider'
+import MuiDrawer from '@mui/material/Drawer'
+import IconButton from '@mui/material/IconButton'
+import List from '@mui/material/List'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
+import MenuIcon from '@mui/icons-material/Menu'
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 
-import { MainListItems, secondaryListItems } from '../pages/PageList';
+import { MainListItems, secondaryListItems } from '../pages/PageList'
 
-const drawerWidth = 240;
+const drawerWidth = 240
 
 const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
+  shouldForwardProp: prop => prop !== 'open',
 })(({ theme, open }) => ({
   zIndex: theme.zIndex.drawer + 1,
   transition: theme.transitions.create(['width', 'margin'], {
@@ -222,39 +215,39 @@ const AppBar = styled(MuiAppBar, {
       duration: theme.transitions.duration.enteringScreen,
     }),
   }),
-}));
+}))
 
-const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    '& .MuiDrawer-paper': {
-      position: 'relative',
-      whiteSpace: 'nowrap',
-      width: drawerWidth,
+const Drawer = styled(MuiDrawer, {
+  shouldForwardProp: prop => prop !== 'open',
+})(({ theme, open }) => ({
+  '& .MuiDrawer-paper': {
+    position: 'relative',
+    whiteSpace: 'nowrap',
+    width: drawerWidth,
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    boxSizing: 'border-box',
+    ...(!open && {
+      overflowX: 'hidden',
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.enteringScreen,
+        duration: theme.transitions.duration.leavingScreen,
       }),
-      boxSizing: 'border-box',
-      ...(!open && {
-        overflowX: 'hidden',
-        transition: theme.transitions.create('width', {
-          easing: theme.transitions.easing.sharp,
-          duration: theme.transitions.duration.leavingScreen,
-        }),
-        width: theme.spacing(7),
-        [theme.breakpoints.up('sm')]: {
-          width: theme.spacing(9),
-        },
-      }),
-    },
-  }),
-);
+      width: theme.spacing(7),
+      [theme.breakpoints.up('sm')]: {
+        width: theme.spacing(9),
+      },
+    }),
+  },
+}))
 
 function NavigatorContent() {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(true)
   const toggleDrawer = () => {
-    setOpen(!open);
-  };
+    setOpen(!open)
+  }
 
   return (
     <ThemeProvider theme={mdTheme}>
@@ -316,11 +309,11 @@ function NavigatorContent() {
         </Drawer>
       </Box>
     </ThemeProvider>
-  );
+  )
 }
 
 export default function Navigation() {
-  return <NavigatorContent />;
+  return <NavigatorContent />
 }
 ```
 
@@ -344,4 +337,3 @@ Add the `Navigation` component in your router. Keep in mind that any navigation 
 ## Result!
 
 ![routing_result](routing_result.png)
-

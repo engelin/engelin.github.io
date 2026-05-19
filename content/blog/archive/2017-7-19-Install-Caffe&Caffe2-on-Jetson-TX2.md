@@ -8,7 +8,9 @@ draft: false
 ## Install Caffe/Caffe2 on Jetson TX2
 
 ### Install Caffe on Jetson TX2
+
 Install packages
+
 ```markdown
 $ sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler -y
 $ sudo apt-get install --no-install-recommends libboost-all-dev -y
@@ -18,16 +20,19 @@ $ sudo apt-get install python-dev python-numpy -y
 ```
 
 Download Caffe Source
+
 ```markdown
-$ git clone https://github.com/BVLC/caffe.git 
+$ git clone https://github.com/BVLC/caffe.git
 ```
 
 Edit Makefile
+
 ```markdown
 $ cd caffe
 $ cp Makefile.config.example Makefile.config
 $ vi Makefile.config
 ```
+
 ```
 USE_CUDNN := 1
 CUDA_DIR := /usr/local/cuda-8.0
@@ -36,6 +41,7 @@ LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/aarch64-linux-gnu
 ```
 
 Build
+
 ```
 $ cd caffe
 $ make -j6 all
@@ -44,10 +50,11 @@ $ make -j6 runtest
 ```
 
 Test
+
 ```
 nvidia@tegra-ubuntu:~/workspace/caffe$ build/tools/caffe time --model=models/bvlc_alexnet/deploy.prototxt --gpu=0
 I0803 16:17:03.198223  4515 caffe.cpp:348] Use GPU with device ID 0
-I0803 16:17:04.214577  4515 net.cpp:51] Initializing net from parameters: 
+I0803 16:17:04.214577  4515 net.cpp:51] Initializing net from parameters:
 name: "AlexNet"
 state {
   phase: TRAIN
@@ -585,7 +592,7 @@ I0803 16:17:16.587821  4515 caffe.cpp:403] Iteration: 47 forward-backward time: 
 I0803 16:17:16.804493  4515 caffe.cpp:403] Iteration: 48 forward-backward time: 216.533 ms.
 I0803 16:17:16.998848  4515 caffe.cpp:403] Iteration: 49 forward-backward time: 194.213 ms.
 I0803 16:17:17.206017  4515 caffe.cpp:403] Iteration: 50 forward-backward time: 207.006 ms.
-I0803 16:17:17.206199  4515 caffe.cpp:406] Average time per layer: 
+I0803 16:17:17.206199  4515 caffe.cpp:406] Average time per layer:
 I0803 16:17:17.206244  4515 caffe.cpp:409]       data	forward: 0.0120006 ms.
 I0803 16:17:17.206333  4515 caffe.cpp:412]       data	backward: 0.0121914 ms.
 I0803 16:17:17.206375  4515 caffe.cpp:409]      conv1	forward: 7.43227 ms.
@@ -641,12 +648,14 @@ I0803 16:17:17.208688  4515 caffe.cpp:423] Total Time: 10385.5 ms.
 I0803 16:17:17.208740  4515 caffe.cpp:424] *** Benchmark ends ***
 ```
 
-
 #### warning
+
 ```
 nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
 ```
+
 Change Makefile.config
+
 ```
 CUDA_ARCH := -gencode arch=compute_30,code=sm_30 \
                 -gencode arch=compute_35,code=sm_35 \
@@ -657,21 +666,24 @@ CUDA_ARCH := -gencode arch=compute_30,code=sm_30 \
                 -gencode arch=compute_61,code=compute_61
 ```
 
-
-
 ### Install Caffe2 on Jetson TX2
+
 Download Caffe2 Source
+
 ```markdown
 $ git clone --recursive https://github.com/caffe2/caffe2.git
 ```
 
 Run the build Script
+
 ```markdown
 $ cd caffe2
 $ ./scripts/build_tegra_x1.sh
 ```
+
 Don't care 'build_tegra_x1'.
 
 This post refers to:
+
 1. [JetsonHacks - Install Caffe](https://github.com/jetsonhacks/installCaffeJTX2)
 2. [Install Caffe2](https://caffe2.ai/docs/getting-started.html?platform=tegra&configuration=compile)

@@ -1,10 +1,10 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from 'react'
+import { Link, graphql } from 'gatsby'
 
-import Bio from "../components/bio"
-import Comments from "../components/comments"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Bio from '../components/bio'
+import Comments from '../components/comments'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -40,8 +40,8 @@ const BlogPostTemplate = ({ data, location }) => {
                   className="tag-chip"
                   to={`/tags/${tag
                     .toLowerCase()
-                    .replace(/[^a-z0-9]+/g, "-")
-                    .replace(/^-+|-+$/g, "")}/`}
+                    .replace(/[^a-z0-9]+/g, '-')
+                    .replace(/^-+|-+$/g, '')}/`}
                 >
                   #{tag}
                 </Link>
@@ -54,7 +54,7 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <Comments/>
+        <Comments />
         <footer className="blog-post-footer">
           <Bio />
         </footer>
@@ -63,7 +63,11 @@ const BlogPostTemplate = ({ data, location }) => {
         <ul>
           <li>
             {previous && (
-              <Link className="post-nav-card" to={previous.fields.slug} rel="prev">
+              <Link
+                className="post-nav-card"
+                to={previous.fields.slug}
+                rel="prev"
+              >
                 <span>Previous</span>
                 <strong>← {previous.frontmatter.title}</strong>
               </Link>

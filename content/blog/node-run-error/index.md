@@ -1,11 +1,12 @@
 ---
 title: Vite build error
-date: "2023-09-20T11:02:01.121Z"
+date: '2023-09-20T11:02:01.121Z'
 ---
 
 ## Vite build error
 
-1) Error  
+1. Error
+
 ```bash
 $ yarn dev
 yarn run v1.22.19
@@ -27,21 +28,25 @@ error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
 
-2) Node verion  
+2. Node verion
+
 ```bash
 $ node -v
 v20.6.0
 ```
 
 ## Solution
-1) Upgrade node version  
+
+1. Upgrade node version
+
 ```bash
 $ brew upgrade node
 ```
 
-2) Run again  
+2. Run again
+
 ```bash
-$ node -v          
+$ node -v
 v20.7.0
 $ yarn dev
 yarn run v1.22.19
@@ -59,4 +64,5 @@ $ vite
 ```
 
 ## Reference
+
 - [[Issue] Cannot redefine property: crypto](https://github.com/sveltejs/kit/issues/10252)

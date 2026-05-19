@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
-import { Link as GatsbyLink, useStaticQuery, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import * as React from 'react'
+import { Link as GatsbyLink, useStaticQuery, graphql } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -44,7 +44,7 @@ const Bio = () => {
       <StaticImage
         className="bio-avatar"
         layout="fixed"
-        formats={["auto", "webp", "avif"]}
+        formats={['auto', 'webp', 'avif']}
         src="../images/profile-pic.png"
         width={80}
         height={80}

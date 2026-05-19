@@ -1,6 +1,6 @@
 ---
 title: Airbnb linter and tester for React & Symfony webapp
-date: "2022-02-14T14:49:37.121Z"
+date: '2022-02-14T14:49:37.121Z'
 ---
 
 ```bash
@@ -13,14 +13,14 @@ Webpack Encore fills in webpack.config.js file with initial instructions to conf
 Webpack Encore amendment inside webpack.config.js
 
 ```javascript
-    // enables @babel/preset-env polyfills
-    // .configureBabelPresetEnv((config) => {
-    //     config.useBuiltIns = 'usage';
-    //     config.corejs = 3;
-    // })
+// enables @babel/preset-env polyfills
+// .configureBabelPresetEnv((config) => {
+//     config.useBuiltIns = 'usage';
+//     config.corejs = 3;
+// })
 ```
 
 https://airbnb.io/projects/enzyme/
 https://github.com/KamilKubicki/symfony-react-jest-enzyme/
 
- . https://www.zerocho.com/category/React/post/583231469a87ec001834a0ec
+. https://www.zerocho.com/category/React/post/583231469a87ec001834a0ec

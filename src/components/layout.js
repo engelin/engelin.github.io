@@ -1,5 +1,5 @@
-import * as React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import * as React from 'react'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 const Layout = ({ location, title, children }) => {
   const data = useStaticQuery(graphql`
@@ -21,12 +21,12 @@ const Layout = ({ location, title, children }) => {
   const resumeUrl = data.site.siteMetadata?.resumeUrl
   const siteDescription = data.site.siteMetadata?.description
   const getActiveSection = React.useCallback(() => {
-    if (typeof window === "undefined") {
-      return "home"
+    if (typeof window === 'undefined') {
+      return 'home'
     }
 
-    const section = window.location.hash.replace("#", "")
-    return section || "home"
+    const section = window.location.hash.replace('#', '')
+    return section || 'home'
   }, [])
   const [activeSection, setActiveSection] = React.useState(getActiveSection)
 
@@ -40,9 +40,9 @@ const Layout = ({ location, title, children }) => {
     }
 
     syncActiveSection()
-    window.addEventListener("hashchange", syncActiveSection)
+    window.addEventListener('hashchange', syncActiveSection)
 
-    return () => window.removeEventListener("hashchange", syncActiveSection)
+    return () => window.removeEventListener('hashchange', syncActiveSection)
   }, [getActiveSection, isRootPath])
 
   return (
@@ -56,21 +56,21 @@ const Layout = ({ location, title, children }) => {
             {isRootPath ? (
               <>
                 <a
-                  className={activeSection === "blog" ? "active" : undefined}
+                  className={activeSection === 'blog' ? 'active' : undefined}
                   href="#blog"
                 >
                   Blog
                 </a>
                 <a
                   className={
-                    activeSection === "portfolio" ? "active" : undefined
+                    activeSection === 'portfolio' ? 'active' : undefined
                   }
                   href="#portfolio"
                 >
                   Portfolio
                 </a>
                 <a
-                  className={activeSection === "cv" ? "active" : undefined}
+                  className={activeSection === 'cv' ? 'active' : undefined}
                   href="#cv"
                 >
                   CV
@@ -79,11 +79,7 @@ const Layout = ({ location, title, children }) => {
             ) : (
               <>
                 <a href="/#blog">Blog</a>
-                {portfolioUrl && (
-                  <a href="/#portfolio">
-                    Portfolio
-                  </a>
-                )}
+                {portfolioUrl && <a href="/#portfolio">Portfolio</a>}
                 {resumeUrl && <a href="/#cv">CV</a>}
               </>
             )}

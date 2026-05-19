@@ -1,6 +1,6 @@
 ---
 title: Flutter CI/CD Setup (Github actions + GCP)
-date: "2022-01-30T10:53:37.121Z"
+date: '2022-01-30T10:53:37.121Z'
 tags:
   - Flutter
   - CI/CD
@@ -13,20 +13,21 @@ tags:
 https://docs.flutter.dev/deployment/android#signing-the-app
 
 1. Create keystore
+
 ```shell
 keytool -genkey -v -keystore ~/keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias ${KEY_ALIAS}
-Enter keystore password: ${KEY_STORE} 
-Re-enter new password: ${KEY_STORE} 
+Enter keystore password: ${KEY_STORE}
+Re-enter new password: ${KEY_STORE}
 What is your first and last name?
   []:  *
 What is the name of your organizational unit?
-  []:  dev 
+  []:  dev
 What is the name of your organization?
   []:  *
 What is the name of your City or Locality?
   []:  London
 What is the name of your State or Province?
-  []:  Greater London  
+  []:  Greater London
 What is the two-letter country code for this unit?
   []:  UK
 Is CN=*, OU=dev, O=*, L=London, ST=Greater London, C=UK correct?
@@ -35,8 +36,8 @@ Is CN=*, OU=dev, O=*, L=London, ST=Greater London, C=UK correct?
 Generating 2,048 bit RSA key pair and self-signed certificate (SHA256withRSA) with a validity of 10,000 days
         for: CN=*, OU=dev, O=*, L=London, ST=Greater London, C=UK
 Enter key password for <*>
-        (RETURN if same as keystore password): ${KEY_PASSWORD} 
-Re-enter new password: ${KEY_PASSWORD} 
+        (RETURN if same as keystore password): ${KEY_PASSWORD}
+Re-enter new password: ${KEY_PASSWORD}
 [Storing keystore.jks]
 
 Warning:
@@ -44,13 +45,13 @@ The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS
 ```
 
 2. Base64 encoding
+
 ```shell
 base64 ~/keystore.jks > keybase64.txt
 ```
 
 3. Create github secrets
-![Github Secrets](./github_secrets_for_signing)
-
+   ![Github Secrets](./github_secrets_for_signing)
 
 ## Upload outputs to CGP
 
@@ -143,8 +144,8 @@ For more information on how to get started, please visit:
 
 https://cloud.google.com/sdk/docs/install
 
-
 2. Login and set via shell
+
 ```bash
 ~ gcloud auth login
 Your browser has been opened to visit:
@@ -160,6 +161,7 @@ Your current project is [None].  You can change this setting by running:
 ```bash
 gcloud config set project PROJECT_ID
 ```
+
 ![GCP Project id](./proj_id.png)
 
 ```bash

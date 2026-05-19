@@ -1,6 +1,6 @@
 ---
 title: Getting started symfony webapp with react
-date: "2022-02-03T14:49:37.121Z"
+date: '2022-02-03T14:49:37.121Z'
 ---
 
 # Symfony
@@ -22,6 +22,7 @@ symfony new --webapp PROJECT_NAME
 ```
 
 #### 3. Install Composer
+
 ```bash
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
@@ -32,6 +33,7 @@ php -r "unlink('composer-setup.php');"
 ```
 
 If you want to set as global, please run the below command. ([composer intro](https://getcomposer.org/doc/00-intro.md#globally))
+
 ```shell
 mv composer.phar /usr/local/bin/composer
 ```
@@ -41,6 +43,7 @@ mv composer.phar /usr/local/bin/composer
 Webpack Encore is a simpler way to integrate Webpack into your application. It wraps Webpack, giving you a clean & powerful API for bundling JavaScript modules, pre-processing CSS & JS and compiling and minifying assets. Encore gives you professional asset system that's a delight to use.
 
 #### 1. Install Encore in Symfony webapp
+
 ```bash
 composer require symfony/webpack-encore-bundle
 yarn install
@@ -50,6 +53,7 @@ yarn install
 # Create the first page using React
 
 #### 1. Install React
+
 ```bash
 yarn add react react-dom prop-types
 yarn add @babel/preset-react@^7.0.0 --dev
@@ -60,42 +64,47 @@ yarn add @babel/preset-react@^7.0.0 --dev
 After installing encore webpack, assets directory is created into the project root. We are going to use react framework, so some are deleted.
 
 ##### Before
+
 ```markdown
 assets
 ├── app.js
 ├── bootstrap.js
 ├── controllers
-│   └── hello_controller.js
+│ └── hello_controller.js
 ├── controllers.json
 └── styles
-    └── app.css
+└── app.css
 ```
+
 ##### After
+
 ```markdown
 assets
 ├── css
-│   └── app.css
+│ └── app.css
 └── js
-    └── app.js
+└── app.js
 ```
 
 #### 3. Rendering javascript to base.html.twig
 
 ##### assets/app.js
+
 ```javascript
 import '../css/app.css'
 
-import * as React from 'react';
+import * as React from 'react'
 import ReactDOM from 'react-dom'
 
 function Hello() {
-    return <h1>Hello World!</h1>;
+  return <h1>Hello World!</h1>
 }
 
 ReactDOM.render(<Hello />, document.getElementById('root'))
 ```
 
 ##### templates/base.html.twig
+
 ```twig
 <!DOCTYPE html>
 <html>
@@ -121,6 +130,7 @@ ReactDOM.render(<Hello />, document.getElementById('root'))
 ```
 
 ##### src/Controller/IndexController.php
+
 ```php
 <?php
 
@@ -144,54 +154,56 @@ class IndexController extends AbstractController
 ```
 
 ##### config/routes.yaml
+
 ```yaml
 index:
-    path: /
-    controller: App\Controller\IndexController::index
+  path: /
+  controller: App\Controller\IndexController::index
 ```
 
 #### 4. Set the configuration file.
+
 ##### webpack.config.js
+
 ```javascript
-const Encore = require('@symfony/webpack-encore');
+const Encore = require('@symfony/webpack-encore')
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
 if (!Encore.isRuntimeEnvironmentConfigured()) {
-    Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev');
+  Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev')
 }
 
-Encore
-    .setOutputPath('public/build/')
-    .setPublicPath('/build')
+Encore.setOutputPath('public/build/')
+  .setPublicPath('/build')
 
-    .addEntry('app', './assets/js/app.js')
+  .addEntry('app', './assets/js/app.js')
 
-    .splitEntryChunks()
+  .splitEntryChunks()
 
-    .enableSingleRuntimeChunk()
+  .enableSingleRuntimeChunk()
 
-    .cleanupOutputBeforeBuild()
-    .enableBuildNotifications()
-    .enableSourceMaps(!Encore.isProduction())
-    .enableVersioning(Encore.isProduction())
+  .cleanupOutputBeforeBuild()
+  .enableBuildNotifications()
+  .enableSourceMaps(!Encore.isProduction())
+  .enableVersioning(Encore.isProduction())
 
-    .configureBabel((config) => {
-        config.plugins.push('@babel/plugin-proposal-class-properties');
-    })
+  .configureBabel(config => {
+    config.plugins.push('@babel/plugin-proposal-class-properties')
+  })
 
-    .configureBabelPresetEnv((config) => {
-        config.useBuiltIns = 'usage';
-        config.corejs = 3;
-    })
+  .configureBabelPresetEnv(config => {
+    config.useBuiltIns = 'usage'
+    config.corejs = 3
+  })
 
-    .enableReactPreset()
-;
+  .enableReactPreset()
 
-module.exports = Encore.getWebpackConfig();
+module.exports = Encore.getWebpackConfig()
 ```
 
 #### 5. Build!
+
 ```bash
 yarn dev
 symfony server:start
@@ -201,15 +213,15 @@ symfony server:start
 
 ```
 In FileLoader.php line 173:
-                                                                                                                                                                                         
-  Bundle "WebProfilerBundle" does not exist or it is not enabled. Maybe you forgot to add it in the "registerBundles()" method of your "App\Kernel.php" file? in @WebProfilerBundle/Res  
-  ources/config/routing/wdt.xml (which is being imported from "C:\Users\user\Desktop\SylviaTest\config/routes/dev/web_profiler.yaml"). Make sure the "WebProfilerBundle/Resources/confi  
-  g/routing/wdt.xml" bundle is correctly registered and loaded in the application kernel class. If the bundle is registered, make sure the bundle path "@WebProfilerBundle/Resources/co  
-  nfig/routing/wdt.xml" is not empty.   
+
+  Bundle "WebProfilerBundle" does not exist or it is not enabled. Maybe you forgot to add it in the "registerBundles()" method of your "App\Kernel.php" file? in @WebProfilerBundle/Res
+  ources/config/routing/wdt.xml (which is being imported from "C:\Users\user\Desktop\SylviaTest\config/routes/dev/web_profiler.yaml"). Make sure the "WebProfilerBundle/Resources/confi
+  g/routing/wdt.xml" bundle is correctly registered and loaded in the application kernel class. If the bundle is registered, make sure the bundle path "@WebProfilerBundle/Resources/co
+  nfig/routing/wdt.xml" is not empty.
 
 
 In Kernel.php line 226:
-                                                                                                                                                               
+
   Bundle "WebProfilerBundle" does not exist or it is not enabled. Maybe you forgot to add it in the "registerBundles()" method of your "App\Kernel.php" file?
 ```
 
@@ -218,8 +230,10 @@ In Kernel.php line 226:
 I've simply removed `config/routes/dev`.
 
 ## Done!
+
 ![first_page_with_react](first_page_with_react.png)
 
 ## Refs.
+
 - [Symfony installation](https://symfony.com/doc/current/setup.html)
 - [Symfony CLI](https://symfony.com/download)

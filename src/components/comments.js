@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react'
 
 export default class Comments extends React.Component {
   constructor(props) {
@@ -7,13 +7,13 @@ export default class Comments extends React.Component {
   }
 
   componentDidMount() {
-    const scriptEl = document.createElement("script")
-    scriptEl.setAttribute("src", "https://utteranc.es/client.js")
-    scriptEl.setAttribute("crossorigin", "anonymous")
-    scriptEl.setAttribute("async", "true")
-    scriptEl.setAttribute("repo", "engelin/engelin.github.io")
-    scriptEl.setAttribute("issue-term", "title")
-    scriptEl.setAttribute("theme", "github-light")
+    const scriptEl = document.createElement('script')
+    scriptEl.setAttribute('src', 'https://utteranc.es/client.js')
+    scriptEl.setAttribute('crossorigin', 'anonymous')
+    scriptEl.setAttribute('async', 'true')
+    scriptEl.setAttribute('repo', 'engelin/engelin.github.io')
+    scriptEl.setAttribute('issue-term', 'title')
+    scriptEl.setAttribute('theme', 'github-light')
     this.commentBox.current.appendChild(scriptEl)
   }
 

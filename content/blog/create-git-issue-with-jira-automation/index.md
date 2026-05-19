@@ -1,6 +1,6 @@
 ---
 title: JIRA webhook & Github API
-date: "2022-10-13T10:00:01.121Z"
+date: '2022-10-13T10:00:01.121Z'
 tags:
   - Jira
   - GitHub API
@@ -21,7 +21,6 @@ curl -H "Accept: application/vnd.github+json" -H "Authorization: token <TOKEN>" 
 
 You can use online base64 encoder.
 
-
 ==> user_name:personal_token ==Base64 Encoding==> Authorization: Basic Encoding_data
 
 ========================================
@@ -29,11 +28,10 @@ You can use online base64 encoder.
 custom json data:
 
 {
-  "title": "{{ issue.key }} {{ issue.fields.summary }}",
-  "body": "{{ issue.fields.issuetype.name }}\n---\n {{ issue.fields.description.jsonEncode }} \n---\n ...created by {{ issue.fields.reporter.displayName }}",
-  "labels": ["from jira"]
+"title": "{{ issue.key }} {{ issue.fields.summary }}",
+"body": "{{ issue.fields.issuetype.name }}\n---\n {{ issue.fields.description.jsonEncode }} \n---\n ...created by {{ issue.fields.reporter.displayName }}",
+"labels": ["from jira"]
 }
-
 
 ** JIRA 디스크립션은 유니코드라 jsonEncoding 해야됨**
 
@@ -45,5 +43,4 @@ https://support.atlassian.com/cloud-automation/docs/find-the-smart-value-for-a-f
 https://support.atlassian.com/cloud-automation/docs/jira-smart-values-text-fields/
 
 - JIRA data API
-https://${SPACE_NAME}.atlassian.net/rest/api/2/issue/${JIRA-TICKET-NUM}
-
+  https://${SPACE_NAME}.atlassian.net/rest/api/2/issue/${JIRA-TICKET-NUM}

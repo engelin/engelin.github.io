@@ -21,9 +21,6 @@ Flash with JetPack 3.0
 ![Flash with JetPack 3.0 (4)](https://github.com/engelin/engelin.github.io/blob/master/images/Getting_started_JTX2_5.png?raw=true)
 ![Flash with JetPack 3.0 (5)](https://github.com/engelin/engelin.github.io/blob/master/images/Getting_started_JTX2_6.png?raw=true)
 
-
-
 Please refer:
 
 [1] [NVIDIA Embedded Download Center](https://developer.nvidia.com/embedded/downloads).
-

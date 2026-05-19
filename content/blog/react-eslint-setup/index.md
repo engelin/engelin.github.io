@@ -1,6 +1,6 @@
 ---
 title: React ESLint Setup
-date: "2023-06-30T10:27:06.121Z"
+date: '2023-06-30T10:27:06.121Z'
 ---
 
 # Install ESLint
@@ -41,6 +41,7 @@ The config that you've selected requires the following dependencies:
 ```
 
 ### 3. Downloaded Packages
+
 ```diff
 diff --git a/package.json b/package.json
 index 5abcf3a8..31ad26aa 100644
@@ -103,74 +104,78 @@ index 5abcf3a8..31ad26aa 100644
 ```
 
 ### 4. ESLint & prettier Config
-1) .eslintrc.cjs
+
+1. .eslintrc.cjs
+
 ```cjs
 module.exports = {
-    root: true,
-    env: {
-        browser: true,
-        node: true
+  root: true,
+  env: {
+    browser: true,
+    node: true,
+  },
+  extends: [
+    'airbnb',
+    'eslint:recommended',
+    'plugin:prettier/recommended',
+    'plugin:react/recommended',
+  ],
+  settings: {
+    react: {
+      version: 'detect',
     },
-    extends: [
-        'airbnb',
-        'eslint:recommended',
-        'plugin:prettier/recommended',
-        'plugin:react/recommended'
-    ],
-    settings: {
-        react: {
-            version: 'detect'
-        },
-        'import/resolver': {
-            node: {
-                path: ['node_modules', 'resources/js'],
-                extensions: ['.js', '.jsx', '.ts', '.tsx']
-            }
-        }
+    'import/resolver': {
+      node: {
+        path: ['node_modules', 'resources/js'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
     },
-    overrides: [
-        {
-            env: {
-                node: true
-            },
-            files: ['.eslintrc.{js,cjs}'],
-            parserOptions: {
-                sourceType: 'script'
-            }
-        }
-    ],
-    parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-            jsx: true
-        }
+  },
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: ['.eslintrc.{js,cjs}'],
+      parserOptions: {
+        sourceType: 'script',
+      },
     },
-    plugins: ['react', 'import', 'prettier'],
-    rules: {
-        'no-unused-vars': 'warn',
-        'import/extensions': 'off',
-        'import/no-unresolved': 'warn',
-        'import/no-extraneous-dependencies': 'warn',
-        'react/jsx-props-no-spreading': 'warn',
-        'react/prop-types': 'warn',
-        'react/require-default-props': 'warn'
-    }
-};
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: ['react', 'import', 'prettier'],
+  rules: {
+    'no-unused-vars': 'warn',
+    'import/extensions': 'off',
+    'import/no-unresolved': 'warn',
+    'import/no-extraneous-dependencies': 'warn',
+    'react/jsx-props-no-spreading': 'warn',
+    'react/prop-types': 'warn',
+    'react/require-default-props': 'warn',
+  },
+}
 ```
 
-2) .prettierrc
+2. .prettierrc
+
 ```json
 {
-    "semi": true,
-    "tabWidth": 4,
-    "printWidth": 100,
-    "singleQuote": true,
-    "trailingComma": "none"
+  "semi": true,
+  "tabWidth": 4,
+  "printWidth": 100,
+  "singleQuote": true,
+  "trailingComma": "none"
 }
 ```
 
 ### 5. Vite Config
+
 This is for SSR build.
 
 ```diff

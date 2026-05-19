@@ -1,13 +1,13 @@
 ---
 title: (Updated) Git cheatsheet (Mirroring, Merge, Rebase, Patch)
-date: "2023-11-02T13:26:37.121Z"
+date: '2023-11-02T13:26:37.121Z'
 ---
 
 ## 1. Copy your Git Repository to another (git mirroring)
 
 ### Clone your repository
 
-```bash 
+```bash
 git clone --mirror https://github.com/exampleuser/repository-to-mirror.git
 ```
 
@@ -16,7 +16,7 @@ git clone --mirror https://github.com/exampleuser/repository-to-mirror.git
 ```bash
 cd repository-to-mirror.git
 git remote set-url origin https://github.com/exampleuser/mirrored.git
-``` 
+```
 
 ### Push to your mirror
 
@@ -29,6 +29,7 @@ git push --mirror
 ```bash
 git merge --no-ff <branch>
 ```
+
 [Git - git-merge Documentation](https://www.atlassian.com/git/tutorials/using-branches/git-merge#:~:text=In%20the%20event%20that%20you,the%20%2D%2Dno%2Dff%20option.&text=This%20command%20merges%20the%20specified,a%20fast%2Dforward%20merge).)
 
 ## 3. Update feature branch with develop branch
@@ -52,4 +53,4 @@ git apply --check file.patch # check for error before applying
 git am < file.patch          # apply the patch finally
 ```
 
-- Ref: https://stackoverflow.com/questions/6658313/generate-a-git-patch-for-a-specific-commit 
+- Ref: https://stackoverflow.com/questions/6658313/generate-a-git-patch-for-a-specific-commit

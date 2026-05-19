@@ -1,6 +1,6 @@
 ---
 title: Build a Personal blog using gatsby + github pages
-date: "2022-01-31T11:53:37.121Z"
+date: '2022-01-31T11:53:37.121Z'
 ---
 
 # Gatsby + github pages
@@ -14,6 +14,7 @@ Gatsby is a React-based open-source framework for creating websites and apps. It
 This diagram below shows a high-level view of how all the pieces of this process fit together.
 
 ## Installation
+
 ### Install node js
 
 ```bash
@@ -34,6 +35,7 @@ This diagram below shows a high-level view of how all the pieces of this process
 ```
 
 The OS X changed the shell system from _bash_ to _zsh_ since High Sierra. If you met the linked error during installation, you can use the below command.
+
 ```bash
 % sudo chown -R $(whoami) $(brew --prefix)/*
 % brew link node
@@ -50,12 +52,14 @@ The OS X changed the shell system from _bash_ to _zsh_ since High Sierra. If you
 ```
 
 ### Dev Run
+
 ```bash
 % npm install # or yarn install
 % gatsby develop
 ```
 
 It normaly uses _8000 port_, but if another application already uses this port, it can be uploaded with others.
+
 ```
 You can now view gatsby-starter-blog in the browser.
 ⠀
@@ -66,7 +70,6 @@ View GraphiQL, an in-browser IDE, to explore your site's data and schema
   http://localhost:8001/___graphql
 ```
 
-
 ## Deploy with Github pages
 
 ### Install github pages cli
@@ -76,6 +79,7 @@ View GraphiQL, an in-browser IDE, to explore your site's data and schema
 ```
 
 Modify package.json
+
 ```json
 {
   "scripts": {
@@ -85,6 +89,7 @@ Modify package.json
 ```
 
 To post or update anything, you can use this command.
+
 ```markdown
 % npm run deploy
 ```
@@ -165,9 +170,10 @@ yarn-error.log
 ```
 
 ### Publish
+
 ```bash
 % git init
-% git add . 
+% git add .
 % git commit -m "first commit"
 % git branch -M main
 % git remote add origin https://github.com/{userid}/{userid}.github.io.git
@@ -182,8 +188,8 @@ Finally, after changing the source branch to _gh-pages_, the personal blog is re
 
 At the beginning, it might take a minute for publishing the website.
 
-
 ## Refs.
+
 - Starter templates: [Gatsby Starters](https://www.gatsbyjs.com/starters/)
 - [Tutorial](https://www.gatsbyjs.com/docs/tutorial/)
 - [How Gatsby Works with Github pages](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-with-github-pages/)

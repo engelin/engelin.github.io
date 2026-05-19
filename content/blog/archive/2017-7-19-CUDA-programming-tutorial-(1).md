@@ -6,6 +6,7 @@ draft: false
 ---
 
 ## CUDA Programming Tutorial
+
 CUDA Programming Tutorial - 1
 
 ![CUDA Programming Tutorial](https://github.com/engelin/engelin.github.io/blob/master/images/CUDA_Tutorial_1.png?raw=true)
@@ -38,4 +39,5 @@ Thead/Block/Grid
 ![CUDA Programming Tutorial](https://github.com/engelin/engelin.github.io/blob/master/images/CUDA_Tutorial_10.png?raw=true)
 
 This post refers to:
+
 1. [Even easier introduction cuda](https://devblogs.nvidia.com/parallelforall/even-easier-introduction-cuda/)

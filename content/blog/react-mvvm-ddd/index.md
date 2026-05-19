@@ -1,6 +1,6 @@
 ---
 title: React MVVM pattern with DDD
-date: "2023-07-27T13:11:36.121Z"
+date: '2023-07-27T13:11:36.121Z'
 tags:
   - React
   - Architecture
@@ -50,19 +50,19 @@ Application is a layer that contains the application logic. It is a layer that c
 
 ```javascript
 // src/model/counter.js
-import { observable, action } from "mobx";
+import { observable, action } from 'mobx'
 
 export class Counter {
-  @observable count = 0;
+  @observable count = 0
 
   @action
   increment() {
-    this.count++;
+    this.count++
   }
 
   @action
   decrement() {
-    this.count--;
+    this.count--
   }
 }
 ```
@@ -71,20 +71,20 @@ export class Counter {
 
 ```javascript
 // src/viewModel/counter.js
-import { observable, action } from "mobx";
-import { Counter } from "../model/counter";
+import { observable, action } from 'mobx'
+import { Counter } from '../model/counter'
 
 export class CounterViewModel {
-  @observable counter = new Counter();
+  @observable counter = new Counter()
 
   @action
   increment() {
-    this.counter.increment();
+    this.counter.increment()
   }
 
   @action
   decrement() {
-    this.counter.decrement();
+    this.counter.decrement()
   }
 }
 ```
@@ -93,9 +93,9 @@ export class CounterViewModel {
 
 ```javascript
 // src/view/counter.js
-import React from "react";
-import { observer } from "mobx-react";
-import { CounterViewModel } from "../viewModel/counter";
+import React from 'react'
+import { observer } from 'mobx-react'
+import { CounterViewModel } from '../viewModel/counter'
 
 const CounterView = observer(({ viewModel }) => {
   return (
@@ -104,21 +104,21 @@ const CounterView = observer(({ viewModel }) => {
       <span>{viewModel.counter.count}</span>
       <button onClick={() => viewModel.decrement()}>-</button>
     </div>
-  );
-});
+  )
+})
 
-export default CounterView;
+export default CounterView
 ```
 
 ### Application
 
 ```javascript
 // src/application/counter.js
-import { CounterViewModel } from "../viewModel/counter";
+import { CounterViewModel } from '../viewModel/counter'
 
 export class CounterApplication {
   constructor() {
-    this.viewModel = new CounterViewModel();
+    this.viewModel = new CounterViewModel()
   }
 }
 ```
@@ -127,11 +127,11 @@ export class CounterApplication {
 
 ```javascript
 // src/domain/counter.js
-import { CounterApplication } from "../application/counter";
+import { CounterApplication } from '../application/counter'
 
 export class CounterDomain {
   constructor() {
-    this.application = new CounterApplication();
+    this.application = new CounterApplication()
   }
 }
 ```
@@ -140,17 +140,17 @@ export class CounterDomain {
 
 ```javascript
 // src/main.js
-import React from "react";
-import ReactDOM from "react-dom";
-import { CounterDomain } from "./domain/counter";
-import CounterView from "./view/counter";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { CounterDomain } from './domain/counter'
+import CounterView from './view/counter'
 
-const counterDomain = new CounterDomain();
+const counterDomain = new CounterDomain()
 
 ReactDOM.render(
   <CounterView viewModel={counterDomain.application.viewModel} />,
-  document.getElementById("root")
-);
+  document.getElementById('root')
+)
 ```
 
 ## Conclusion

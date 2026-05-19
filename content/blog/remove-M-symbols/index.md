@@ -1,6 +1,6 @@
 ---
 title: Remove Control-M symbols from files on Mac
-date: "2023-11-24T15:57:06.121Z"
+date: '2023-11-24T15:57:06.121Z'
 ---
 
 ## Before

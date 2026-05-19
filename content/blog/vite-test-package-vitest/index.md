@@ -1,6 +1,6 @@
 ---
 title: How to Test Vite + React application (Vitest)
-date: "2023-11-15T13:26:37.121Z"
+date: '2023-11-15T13:26:37.121Z'
 tags:
   - Vite
   - React
@@ -9,6 +9,7 @@ tags:
 ---
 
 ## Vitest
+
 Jest can be used in vite project, [but it is not fully supported](https://jestjs.io/docs/getting-started#using-vite). Vitest is a test runner for vite project.
 
 ## Install
@@ -64,5 +65,6 @@ yarn vitest
 ```
 
 ## Reference
+
 - [Vitest](https://vitest.dev/guide/)
 - [Testing a react application with vitest](https://www.eternaldev.com/blog/testing-a-react-application-with-vitest/)

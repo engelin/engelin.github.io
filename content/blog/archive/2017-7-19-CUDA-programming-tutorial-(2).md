@@ -6,6 +6,7 @@ draft: false
 ---
 
 ## CUDA Programming Tutorial
+
 CUDA Programming Tutorial - 2
 
 for Beginners
@@ -38,7 +39,6 @@ Run it many times
 
 Prefetching?
 ![Unified memory](https://github.com/engelin/engelin.github.io/blob/master/images/Unified_Memory_10.png?raw=true)
-
 
 This post refers to:
 [Unified memory cuda beginners](https://devblogs.nvidia.com/parallelforall/unified-memory-cuda-beginners/)

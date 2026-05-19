@@ -1,6 +1,6 @@
 ---
 title: Flutter update to 3.7.0 (flutter_intl generate failure)
-date: "2023-01-26T08:37:37.121Z"
+date: '2023-01-26T08:37:37.121Z'
 ---
 
 # Flutter 3.7.0 Update
@@ -21,7 +21,9 @@ date: "2023-01-26T08:37:37.121Z"
 [Release notes](https://docs.flutter.dev/development/tools/sdk/release-notes/release-notes-3.7.0)
 
 ## Errors
+
 Flutter doctor
+
 ```sh
 /Users/xxx/fvm/default/bin/flutter doctor --verbose
 [!] Flutter (Channel stable, 3.7.0, on macOS 13.1 22C65 darwin-arm64, locale en-GB)
@@ -37,6 +39,7 @@ Flutter doctor
 ```
 
 Flutter intl error
+
 ```
 ...
 Could not find a file named "pubspec.yaml" in "/Users/arum/.pub-cache/hosted/pub.dev/intl_utils-2.6.1".
@@ -46,8 +49,9 @@ Error: The method 'File.create' has fewer named arguments than those of overridd
 ```
 
 ### Workarounds
+
 ```sh
-$ flutter pub cache repair 
+$ flutter pub cache repair
 Reinstalled 1227 packages.
 Reactivating intl_utils 2.6.1...
 Building package executables...

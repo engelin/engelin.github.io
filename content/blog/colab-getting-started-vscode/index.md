@@ -1,6 +1,6 @@
 ---
 title: Getting started with colab + vscode
-date: "2023-05-10T15:35:06.121Z"
+date: '2023-05-10T15:35:06.121Z'
 ---
 
 # colab + vscode
@@ -48,7 +48,7 @@ HTTP request sent, awaiting response... 200 OK
 Length: 15858 (15K) [text/plain]
 Saving to: ‘install.sh’
 
-install.sh                                           100%[=====================================================================================================================>]  15.49K  --.-KB/s    in 0.001s  
+install.sh                                           100%[=====================================================================================================================>]  15.49K  --.-KB/s    in 0.001s
 
 2023-05-10 17:58:33 (11.7 MB/s) - ‘install.sh’ saved [15858/15858]
 
@@ -111,7 +111,7 @@ Restart the colab server:
 
 ![ngrok_server.png](ngrok_server.png)
 
------
+---
 
 ## Installation Colab with Conda
 
@@ -127,7 +127,7 @@ Welcome to Miniconda3 py310_23.3.1-0
 In order to continue the installation process, please review the license
 agreement.
 Please, press ENTER to continue
->>> 
+>>>
 ======================================
 End User License Agreement - Miniconda
 ======================================
@@ -163,8 +163,8 @@ modified      /Users/xxx/.zshrc
 
 ==> For changes to take effect, close and re-open your current shell. <==
 
-If you'd prefer that conda's base environment not be activated on startup, 
-   set the auto_activate_base parameter to false: 
+If you'd prefer that conda's base environment not be activated on startup,
+   set the auto_activate_base parameter to false:
 
 conda config --set auto_activate_base false
 
@@ -185,10 +185,10 @@ $ conda install -c conda-forge google-colab
 ```
 
 ### Activate your conda environment.
+
 ```sh
 $ python -m ipykernel install --user --name=<env_name>
 ```
-
 
 ## Warnings
 
@@ -215,5 +215,6 @@ export PATH="/opt/homebrew/bin/python3:$PATH"
 ```
 
 ## References
+
 1. https://towardsdatascience.com/colabcode-deploying-machine-learning-models-from-google-colab-54e0d37a7b09
 2. https://medium.com/analytics-vidhya/colab-vs-code-github-jupyter-perfect-for-deep-learning-2b257ae94d01

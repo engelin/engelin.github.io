@@ -1,6 +1,6 @@
 ---
 title: React Google Login Using Identity Platform (Firebase/GCP)
-date: "2022-03-04T14:45:37.121Z"
+date: '2022-03-04T14:45:37.121Z'
 ---
 
 # Implement Google SSO
@@ -28,10 +28,11 @@ yarn add firebase
 ```
 
 1. Firebase service
-firebase.jsx
+   firebase.jsx
+
 ```javascript
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/auth'
 
 const firebaseConfig = {
   apiKey: '',
@@ -39,22 +40,23 @@ const firebaseConfig = {
   databaseURL: 'https://PROJECT_ID.firebaseapp.com',
   storageBucket: 'PROJECT_ID.appspot.com',
   projectId: 'PROJECT_ID',
-};
+}
 
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig)
 
-export const auth = firebase.auth();
+export const auth = firebase.auth()
 
-const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({ prompt: 'select_account' });
+const provider = new firebase.auth.GoogleAuthProvider()
+provider.setCustomParameters({ prompt: 'select_account' })
 
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
-export const signOutWithGoogle = () => auth.signOut();
+export const signInWithGoogle = () => auth.signInWithPopup(provider)
+export const signOutWithGoogle = () => auth.signOut()
 
-export default firebase;
+export default firebase
 ```
 
 If you could meet the below error, you probably use firebase version 9 but import version 8.
+
 ```shell
 warn  in ./assets/js/services/firebase.jsx                                       14:37:34
 
@@ -67,11 +69,10 @@ webpack compiled with 4 warnings
 
 So you can simply fix this error using `import firebase form 'firebase/compat/app'` instead of `import firebase from 'firebase/app'`, and `import 'firebase/app'` instead of `import 'firebase/auth'`.
 
-
 2. UserAvatar.jsx
 
 ```javascript
-import * as React from 'react';
+import * as React from 'react'
 import {
   Avatar,
   Box,
@@ -80,42 +81,42 @@ import {
   MenuItem,
   Tooltip,
   Typography,
-} from '@mui/material';
+} from '@mui/material'
 import firebase, {
   signInWithGoogle,
   signOutWithGoogle,
-} from '@PROJECT/services/firebase';
+} from '@PROJECT/services/firebase'
 
 function UserAvatar() {
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const [user, setUser] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null)
+  const [user, setUser] = React.useState(null)
 
   React.useEffect(() => {
-    firebase.auth().onAuthStateChanged((firebaseUser) => {
-      setUser(firebaseUser);
-    });
-  }, []);
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+      setUser(firebaseUser)
+    })
+  }, [])
 
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  const handleOpenUserMenu = event => {
+    setAnchorElUser(event.currentTarget)
+  }
 
   const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+    setAnchorElUser(null)
+  }
 
   const handleProfile = () => {
-    setAnchorElUser(null);
-  };
+    setAnchorElUser(null)
+  }
 
   const handleLogIn = () => {
-    signInWithGoogle();
-  };
+    signInWithGoogle()
+  }
 
   const handleLogOut = () => {
-    signOutWithGoogle();
-    setAnchorElUser(null);
-  };
+    signOutWithGoogle()
+    setAnchorElUser(null)
+  }
 
   const settings = [
     {
@@ -126,15 +127,20 @@ function UserAvatar() {
       name: 'LogOut',
       action: handleLogOut,
     },
-  ];
+  ]
 
   return (
     <Box sx={{ flexGrow: 0 }}>
       <Tooltip title="Open settings">
-        <IconButton onClick={user ? handleOpenUserMenu : handleLogIn} sx={{ p: 0 }}>
-          {user
-            ? <Avatar alt={user.photoURL} src={user.photoURL} />
-            : <Avatar />}
+        <IconButton
+          onClick={user ? handleOpenUserMenu : handleLogIn}
+          sx={{ p: 0 }}
+        >
+          {user ? (
+            <Avatar alt={user.photoURL} src={user.photoURL} />
+          ) : (
+            <Avatar />
+          )}
         </IconButton>
       </Tooltip>
       <Menu
@@ -153,15 +159,15 @@ function UserAvatar() {
         open={Boolean(anchorElUser)}
         onClose={handleCloseUserMenu}
       >
-        {settings.map((setting) => (
+        {settings.map(setting => (
           <MenuItem key={setting.name} onClick={setting.action}>
             <Typography textAlign="center">{setting.name}</Typography>
           </MenuItem>
         ))}
       </Menu>
     </Box>
-  );
+  )
 }
 
-export default UserAvatar;
+export default UserAvatar
 ```

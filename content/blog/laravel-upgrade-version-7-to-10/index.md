@@ -1,6 +1,6 @@
 ---
 title: Upgrade Laravel from version 7 to 10
-date: "2023-05-26T13:57:37.121Z"
+date: '2023-05-26T13:57:37.121Z'
 ---
 
 ## Upgrade Laravel from version 7 to 10
@@ -18,6 +18,7 @@ composer update -vvv
 ```
 
 ### Update laravel packages
+
 ```diff
 diff --git a/composer.json b/composer.json
 index a952ffdf..4a1ef24a 100644
@@ -59,18 +60,21 @@ index a952ffdf..4a1ef24a 100644
          "classmap": [
 ```
 
-1) Removed since has been included into laravel by default
-- fideloper/proxy   
-  - https://packagist.org/packages/fideloper/proxy   
-  - https://github.com/fideloper/TrustedProxy/issues/152   
+1. Removed since has been included into laravel by default
 
-2) Removed since haven't been used or no longer supported.
+- fideloper/proxy
+  - https://packagist.org/packages/fideloper/proxy
+  - https://github.com/fideloper/TrustedProxy/issues/152
+
+2. Removed since haven't been used or no longer supported.
+
 - anhskohbo/no-captcha
 - superbalist/laravel-google-cloud-storage
-- nao-pon/elfinder-flysystem-driver-ext 
+- nao-pon/elfinder-flysystem-driver-ext
 - nao-pon/flysystem-google-drive
 
 ### Result composer.json
+
 ```diff
 diff --git a/composer.json b/composer.json
 index a952ffdf..4a1ef24a 100644
@@ -138,6 +142,7 @@ index a952ffdf..4a1ef24a 100644
 ```
 
 ## Clean up
+
 ```bash
 composer clear
 composer install

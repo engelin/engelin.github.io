@@ -1,11 +1,11 @@
 ---
 title: Metasfresh (React + Spring) getting started
-date: "2023-03-15T13:20:41.121Z"
+date: '2023-03-15T13:20:41.121Z'
 ---
 
-# 1. Install Docker on Mac Sillicon 
+# 1. Install Docker on Mac Sillicon
 
-## 1.1 Install rosetta 
+## 1.1 Install rosetta
 
 ```sh
 ➜  metasfresh-docker git:(master) ✗ softwareupdate --install-rosetta
@@ -19,7 +19,6 @@ Install of Rosetta 2 finished successfully
 
 Once you install Docker Desktop, you could skip installing docker engine, compose, etc.
 
-
 # 2. Install metasfresh
 
 ## 2.1 Clone repository
@@ -30,6 +29,7 @@ cd metasfresh-docker/
 ```
 
 ## 2.2 Change Webapi url to localhost
+
 ![change_to_localhost](change_to_localhost.png)
 
 ## 2.3 Create the Docker containers.
@@ -67,10 +67,10 @@ Building webui
 ```
 
 1. Or change docker-compose.yml like the below
-![docker-compose-v2](docker-compose-v2-yml.png)
+   ![docker-compose-v2](docker-compose-v2-yml.png)
 
 ```sh
-➜  metasfresh-docker git:(master) ✗ docker-compose build    
+➜  metasfresh-docker git:(master) ✗ docker-compose build
 [+] Building 0.0s (0/0)
 [+] Building 0.0s (0/0)
 [+] Building 0.1s (1/1)
@@ -78,10 +78,10 @@ Building webui
 [+] Building 1.2s (14/14) FINISHED
 ```
 
-## 2.4 
-
+## 2.4
 
 TBC...
 
 Refs:
+
 - [How to set up the metasfresh stack using Docker](https://docs.metasfresh.org/installation_collection/EN/How_do_I_setup_the_metasfresh_stack_using_Docker)

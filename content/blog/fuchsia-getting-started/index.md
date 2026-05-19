@@ -1,6 +1,6 @@
 ---
 title: A new OS, Fuchsia, getting started
-date: "2022-08-19T10:30:37.121Z"
+date: '2022-08-19T10:30:37.121Z'
 ---
 
 # Getting started Fuchsia
@@ -10,7 +10,9 @@ Fuchsia is a modern open source operating system that’s simple, secure, updata
 But currently(19th of Aug, 2022), it doesn't support Apple silicon officially.
 
 ## 1. Setup build environment
+
 ### Jiri
+
 Jiri is a tool for multi-repo development. It supports:
 
 - syncing multiple local GIT repos with upstream,
@@ -19,12 +21,15 @@ Jiri is a tool for multi-repo development. It supports:
 - facilitating sending change lists to Gerrit.
 
 #### Install dependencies
+
 ```shell
 brew install wget pkg-config glib autoconf automake libtool golang
 ```
 
 #### Install Jiri
+
 [Jiri: manage git repositories](https://fuchsia.googlesource.com/jiri)
+
 ```shell
 git clone https://fuchsia.googlesource.com/jiri
 cd jiri
@@ -32,6 +37,7 @@ go install ./cmd/jiri
 ```
 
 #### [Bootstrapping](https://fuchsia.googlesource.com/jiri#bootstrapping)
+
 ```shell
 export MY_ROOT="$JIRI_REPO"
 curl -s https://fuchsia.googlesource.com/jiri/+/HEAD/scripts/bootstrap_jiri\?format\=TEXT | base64 --decode | bash -s "$MY_ROOT"
@@ -41,7 +47,9 @@ export PATH="$JIRI_REPO/.jiri_root/bin"
 ```
 
 ## 2. Download Fuchsia repository
+
 ### Login
+
 ```shell
 $JIRI_REPO/.jiri_root/bin/cipd auto-login
 # Getting a refresh token with following OAuth scopes:
@@ -52,6 +60,7 @@ $JIRI_REPO/.jiri_root/bin/cipd auto-login
 ```
 
 ### Download
+
 ```shell
 curl -s "https://fuchsia.googlesource.com/fuchsia/+/HEAD/scripts/bootstrap?format=TEXT" | base64 --decode | bash
 ```
@@ -65,5 +74,6 @@ curl -s "https://fuchsia.googlesource.com/scripts/+/master/bootstrap?format=TEXT
 ---
 
 ## Refs.
-1) [Learn about Fuchsia](https://fuchsia.dev/fuchsia-src/get-started/sdk/learn/intro)
-2) [Fuchsia Readme](https://fuchsia.googlesource.com/docs/+/ea2fce2874556205204d3ef70c60e25074dc7ffd/README.md)
+
+1. [Learn about Fuchsia](https://fuchsia.dev/fuchsia-src/get-started/sdk/learn/intro)
+2. [Fuchsia Readme](https://fuchsia.googlesource.com/docs/+/ea2fce2874556205204d3ef70c60e25074dc7ffd/README.md)

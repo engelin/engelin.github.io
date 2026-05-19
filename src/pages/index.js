@@ -36,61 +36,75 @@ const tagTones = {
 const staticProjects = [
   {
     icon: "⬡",
-    name: "Enhanced Order System",
+    name: "MathTutor Exam & Admin Platform",
     desc:
-      "Improved ordering workflows, product pages, and full-arch components for Arum 3D Solutions. Covered React SSR, Laravel APIs, GitHub to Plesk deployment, staging strategy, and relational schema redesign for product attributes.",
-    stack: ["React", "Laravel", "MySQL", "SSR", "CI/CD"],
-    company: "Arum 3D Solutions",
-    period: "May 2023 – May 2024",
-    link: "https://www.notion.so/5d9f3cfe46774bef962d7f846899a6dd?pvs=25",
+      "Owned core delivery flows for an AI-enabled exam platform across admin and backend systems, covering question-bank operations, output generation, validation, and operational tooling for internal teams.",
+    stack: ["Next.js", "NestJS", "TypeScript", "SQL", "AWS"],
+    company: "HappyEduTech",
+    period: "2025 – Present",
   },
   {
     icon: "◈",
-    name: "Implant Management System",
+    name: "AI Question Processing Pipeline",
     desc:
-      "Designed implant-related database architecture and management flows to handle dental implant data consistently across internal systems.",
-    stack: ["MySQL", "Schema Design", "ERP"],
-    company: "Arum 3D Solutions",
-    period: "Jan 2024 –",
-    link: "https://www.notion.so/Design-Implant-system-DB-142b14f871f94a13beb7f7b64adb9a4b?pvs=21",
+      "Refactored image, PDF, and grading workflows into maintainable AI services, improving how mathematical content is extracted, classified, generated, and quality-checked before reaching users.",
+    stack: ["FastAPI", "Python", "MariaDB", "Gemini", "Docker"],
+    company: "HappyEduTech",
+    period: "2025 – Present",
   },
   {
     icon: "▦",
-    name: "Arum Dental Shop Mobile",
+    name: "AI Tutor Mobile App",
     desc:
-      "Built Flutter-based customer-facing dental shop apps, integrated Magento REST APIs, automated Android and iOS builds, and connected Jira automation with GitHub workflows.",
-    stack: ["Flutter", "Dart", "REST", "Magento", "CI/CD"],
-    company: "Arum 3D Solutions",
-    period: "Sep 2022 – 2023",
+      "Improved the student-facing Flutter app by addressing upload, media, and stability issues, supporting a smoother learning experience across content creation, playback, and tutoring flows.",
+    stack: ["Flutter", "Dart", "Firebase", "Media", "Mobile UX"],
+    company: "HappyEduTech",
+    period: "2025",
   },
   {
     icon: "◉",
-    name: "Arum ERP for EU",
+    name: "Booking & Marketplace Frontend",
     desc:
-      "Set up IP/domain, hosting, and localisation support for the European ERP deployment, with environment setup through Plesk and region-specific delivery handling.",
-    stack: ["PHP", "Laravel", "Hosting", "Localization"],
-    company: "Arum 3D Solutions",
-    period: "Jan 2023 – Mar 2023",
-    link: "https://www.notion.so/Branching-strategy-for-Arum-ERP-5d9f3cfe46774bef962d7f846899a6dd?pvs=21",
+      "Contributed to a travel booking product by improving shared React modules, operator tooling, and marketplace UX, with a focus on maintainability, payments, and smoother feature delivery.",
+    stack: ["React", "Shared UI", "Testing", "Payments", "System Design"],
+    company: "uTriper",
+    period: "2024 – 2025",
   },
   {
     icon: "◆",
-    name: "Android Secure OS Support",
+    name: "ERP, Internal Tools & Mobile Delivery",
     desc:
-      "Supported Samsung, LG, and tablet platform projects at MediaTek by porting secure OS components, debugging TEE and secure boot issues, handling RPMB vulnerabilities, and migrating build systems to Android.bp.",
-    stack: ["C/C++", "Android", "TEE", "ARM TF", "Python"],
-    company: "MediaTek",
-    period: "2020 – 2021",
-    link: "https://www.westerndigital.com/support/product-security/wdc-20008-replay-attack-vulnerabilities-rpmb-protocol-applications",
+      "Delivered ERP features across Laravel and React, supported Flutter mobile releases, and improved deployment workflows, schema design, and internal product operations in a business-critical environment.",
+    stack: ["Laravel", "React", "Flutter", "CI/CD", "SQL"],
+    company: "Arum 3D Solutions",
+    period: "2022 – 2024",
   },
   {
     icon: "⬢",
-    name: "macOS Security & Automation",
+    name: "Android Platform Security",
     desc:
-      "Developed macOS security product features in Objective-C and C++, including remote control, remote update, endpoint logging, JSON configuration UI, and internal Docker-based automation infrastructure for signing and notarization.",
-    stack: ["Objective-C", "C++", "Python", "Docker", "UML"],
+      "Supported Samsung, LG, and tablet platform programmes by working on TEE, secure boot, RPMB, ARM Trusted Firmware, and Android build-system migration for platform consistency and issue resolution.",
+    stack: ["C/C++", "Python", "Android", "TEE", "ARM TF"],
+    company: "MediaTek",
+    period: "2018 – 2021",
+  },
+  {
+    icon: "◌",
+    name: "macOS Security Product & Automation",
+    desc:
+      "Built macOS security product features in Objective-C and C++, and developed internal automation tooling with Python, Flask, Redis, and Docker to support testing, signing, and release operations.",
+    stack: ["Objective-C", "C++", "Python", "Docker", "macOS"],
     company: "AhnLab",
     period: "2018 – 2020",
+  },
+  {
+    icon: "△",
+    name: "Relative Positioning Research Prototype",
+    desc:
+      "Built a relative positioning and tracking prototype using UWB hardware, MFC, and Kalman filtering to validate feasibility and improve localisation stability.",
+    stack: ["C/C++", "MFC", "UWB", "Kalman Filter"],
+    company: "Naver Labs",
+    period: "2016",
   },
 ]
 
@@ -128,36 +142,43 @@ const workExperience = [
     company: "HappyEduTech · Remote",
     role: "Senior Full-Stack & AI Engineer",
     desc:
-      "Built production exam workflows, asynchronous AI question generation, admin tooling, multimodal tutoring improvements, and operational features spanning Next.js, NestJS, Python, FastAPI, and AWS.",
+      "Own product-facing delivery across admin, backend, and AI services for an education platform. Built exam workflows, asynchronous AI generation features, operational tooling, and tutoring improvements spanning Next.js, NestJS, Python, FastAPI, and AWS.",
     period: "Jul 2025 – Present",
   },
   {
     company: "uTriper · Remote",
     role: "Solution Architect & Frontend Engineer",
     desc:
-      "Advised on booking-platform system design, improved schema and feature logic, and refactored the React frontend into a more modular and maintainable structure.",
+      "Supported a booking platform with frontend architecture and product design decisions, improving schema logic, React maintainability, and the speed at which new user-facing features could be delivered.",
     period: "Jul 2024 – Jan 2025",
   },
   {
     company: "Arum 3D Solutions LTD · UK",
     role: "Software Engineer, IT & Development Team",
     desc:
-      "Delivered ERP features across Laravel and React, migrated Blade screens, upgraded Laravel from v7 to v10, improved internal tooling, and supported Flutter mobile workflows with CI/CD.",
+      "Delivered full-stack ERP features across Laravel and React, led parts of a Blade-to-React migration, supported a Laravel 7 to 10 upgrade, improved internal tooling, and shipped Flutter-based mobile workflows with CI/CD support.",
     period: "Jun 2022 – Jun 2024",
   },
   {
     company: "MediaTek · South Korea",
     role: "System Software Engineer",
     desc:
-      "Worked on Android TEE, secure boot, RPMB, and ARM Trusted Firmware debugging, plus build migration from Android.mk to Android.bp for platform consistency.",
+      "Worked on Android platform security across TEE, secure boot, RPMB, and ARM Trusted Firmware, while also supporting build-system migration and customer-facing issue resolution for major device programmes.",
     period: "Mar 2020 – Sep 2021",
   },
   {
     company: "AhnLab · South Korea",
     role: "Software Engineer, V3 Team",
     desc:
-      "Built macOS antivirus components in C++ and Objective-C and developed internal automation infrastructure with Python, Flask, Redis, and Docker.",
+      "Built macOS security product features in C++ and Objective-C and developed internal automation services with Python, Flask, Redis, and Docker to support testing and release operations.",
     period: "Jan 2018 – Mar 2020",
+  },
+  {
+    company: "Naver Labs · South Korea",
+    role: "Intern, Robotics Group",
+    desc:
+      "Built a relative positioning system using UWB hardware, MFC, serial communication, and Kalman filtering to improve the accuracy and stability of localisation experiments.",
+    period: "Jul 2016 – Aug 2016",
   },
 ]
 
@@ -166,21 +187,21 @@ const educationItems = [
     company: "AIFFEL, MODULABS",
     role: "AI Research Programme",
     desc:
-      "Studied deep learning fundamentals, paper implementation, and real-world AI applications, including a Korean threatening-conversation classification project.",
+      "Completed advanced applied AI training covering deep learning fundamentals, paper implementation, and production-oriented experimentation, including NLP classification work on Korean-language data.",
     period: "Dec 2024 – Jul 2025",
   },
   {
     company: "Kwangwoon University",
     role: "M.S., Electronics and Communications Engineering",
     desc:
-      "Digital Signal Processing Lab under Prof. Hyukjun Oh, with coursework in machine learning, image processing, surveillance systems, and biosignal processing.",
+      "Digital Signal Processing Lab under Prof. Hyukjun Oh, with academic work spanning machine learning, image processing, surveillance systems, and biosignal processing.",
     period: "Mar 2016 – Feb 2018",
   },
   {
     company: "Kwangwoon University",
     role: "B.S., Electronics and Communications Engineering",
     desc:
-      "Embedded System Lab under Prof. Hyunseok Lee, with coursework in embedded systems, operating systems, DSP, computer architecture, and wireless communication.",
+      "Embedded Systems Lab under Prof. Hyunseok Lee, with coursework in embedded systems, operating systems, DSP, computer architecture, and wireless communication.",
     period: "Mar 2012 – Feb 2016",
   },
 ]
@@ -190,14 +211,14 @@ const researchItems = [
     company: "AlphaChess · AIFFEL / MODULABS",
     role: "Explainable LLM-based Chess Agent",
     desc:
-      "Researched CoT-based SFT and GRPO for improving both explainability and performance in LLM chess agents using prompt engineering, multi-agent prompting, and RAG.",
+      "Researched how CoT-based SFT and GRPO could improve both reasoning quality and explainability in LLM-based chess agents, using prompt engineering, multi-agent prompting, and RAG.",
     period: "Apr 2025 – Jun 2025",
   },
   {
     company: "Independent Research",
     role: "Interpretable Melanoma Diagnosis with Pseudo-Depth Estimation",
     desc:
-      "Investigated Mamba2D-based pseudo-depth estimation to explain melanoma predictions through relative depth cues and visualisation-based interpretation.",
+      "Explored Mamba2D-based pseudo-depth estimation to make melanoma prediction behaviour more interpretable through relative depth cues and visual explanation methods.",
     period: "Jun 2025",
   },
 ]
@@ -206,19 +227,19 @@ const publicationItems = [
   {
     company: "ICEIC 2018",
     role: "Compare of channel coding for 5G system: LDPC and polar code",
-    desc: "Co-authored publication on 5G channel coding comparison.",
+    desc: "Co-authored conference publication comparing LDPC and polar code approaches for 5G systems.",
     period: "2018",
   },
   {
     company: "JKIICE",
     role: "Improving the frequency domain resolution of wireless signal for observing the Doppler frequency",
-    desc: "Journal publication on wireless signal frequency-domain resolution improvements.",
+    desc: "Journal publication on improving frequency-domain resolution for observing Doppler frequency in wireless signals.",
     period: "2017",
   },
   {
     company: "U.S. Patent 9,888,385",
     role: "Method for subscriber authentication in cellular IoT device",
-    desc: "Patent related to subscriber authentication in cellular IoT devices.",
+    desc: "Granted patent related to subscriber authentication in cellular IoT devices.",
     period: "2018",
   },
 ]

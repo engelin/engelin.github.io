@@ -1,14 +1,13 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ activeSection = 'home', location, title, children }) => {
   const data = useStaticQuery(graphql`
     query LayoutQuery {
       site {
         siteMetadata {
           description
           portfolioUrl
-          resumeUrl
           title
         }
       }
@@ -18,32 +17,7 @@ const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   const portfolioUrl = data.site.siteMetadata?.portfolioUrl
-  const resumeUrl = data.site.siteMetadata?.resumeUrl
   const siteDescription = data.site.siteMetadata?.description
-  const getActiveSection = React.useCallback(() => {
-    if (typeof window === 'undefined') {
-      return 'home'
-    }
-
-    const section = window.location.hash.replace('#', '')
-    return section || 'home'
-  }, [])
-  const [activeSection, setActiveSection] = React.useState(getActiveSection)
-
-  React.useEffect(() => {
-    if (!isRootPath) {
-      return undefined
-    }
-
-    const syncActiveSection = () => {
-      setActiveSection(getActiveSection())
-    }
-
-    syncActiveSection()
-    window.addEventListener('hashchange', syncActiveSection)
-
-    return () => window.removeEventListener('hashchange', syncActiveSection)
-  }, [getActiveSection, isRootPath])
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
@@ -80,7 +54,7 @@ const Layout = ({ location, title, children }) => {
               <>
                 <a href="/#blog">Blog</a>
                 {portfolioUrl && <a href="/#portfolio">Portfolio</a>}
-                {resumeUrl && <a href="/#cv">CV</a>}
+                <a href="/#cv">CV</a>
               </>
             )}
           </nav>

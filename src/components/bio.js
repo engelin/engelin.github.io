@@ -6,7 +6,7 @@
  */
 
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link as GatsbyLink, useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Bio = () => {
@@ -18,8 +18,13 @@ const Bio = () => {
             name
             summary
           }
+          intro
+          portfolioUrl
+          resumeUrl
+          role
           social {
-            twitter
+            github
+            linkedin
           }
         }
       }
@@ -28,7 +33,11 @@ const Bio = () => {
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
   const author = data.site.siteMetadata?.author
-  // const social = data.site.siteMetadata?.social
+  const intro = data.site.siteMetadata?.intro
+  const portfolioUrl = data.site.siteMetadata?.portfolioUrl
+  const resumeUrl = data.site.siteMetadata?.resumeUrl
+  const role = data.site.siteMetadata?.role
+  const social = data.site.siteMetadata?.social
 
   return (
     <div className="bio">
@@ -37,20 +46,38 @@ const Bio = () => {
         layout="fixed"
         formats={["auto", "webp", "avif"]}
         src="../images/profile-pic.png"
-        width={50}
-        height={50}
+        width={80}
+        height={80}
         quality={95}
         alt="Profile picture"
       />
-      {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          {/* <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
-          </a> */}
-        </p>
-      )}
+      <div className="bio-copy">
+        {role && <p className="bio-eyebrow">{role}</p>}
+        {author?.name && <h2 className="bio-name">{author.name}</h2>}
+        <p>{author?.summary || null}</p>
+        {intro && <p>{intro}</p>}
+        <div className="bio-links">
+          <GatsbyLink to="/">All posts</GatsbyLink>
+          {portfolioUrl && (
+            <a href={portfolioUrl} target="_blank" rel="noreferrer">
+              Portfolio
+            </a>
+          )}
+          {resumeUrl && (
+            <a href={resumeUrl} target="_blank" rel="noreferrer">
+              CV
+            </a>
+          )}
+          {social?.github && (
+            <a href={`https://github.com/${social.github}`}>GitHub</a>
+          )}
+          {social?.linkedin && (
+            <a href={`https://www.linkedin.com/in/${social.linkedin}/`}>
+              LinkedIn
+            </a>
+          )}
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,64 +1,673 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+const tagTones = {
+  AWS: "tag-amber",
+  Architecture: "tag-purple",
+  Automation: "tag-green",
+  Backend: "tag-green",
+  CI: "tag-cyan",
+  "CI/CD": "tag-cyan",
+  Career: "tag-gray",
+  CSS: "tag-purple",
+  DDD: "tag-purple",
+  Design: "tag-purple",
+  Docker: "tag-amber",
+  Flutter: "tag-cyan",
+  Frontend: "tag-cyan",
+  "GitHub API": "tag-green",
+  "GitHub Actions": "tag-green",
+  "GraphQL": "tag-green",
+  iOS: "tag-purple",
+  Jira: "tag-green",
+  Laravel: "tag-amber",
+  React: "tag-cyan",
+  Release: "tag-amber",
+  Testing: "tag-purple",
+  TypeScript: "tag-cyan",
+  Versioning: "tag-gray",
+  Vite: "tag-cyan",
+  Vitest: "tag-purple",
+}
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
+const staticProjects = [
+  {
+    icon: "⬡",
+    name: "Enhanced Order System",
+    desc:
+      "Improved ordering workflows, product pages, and full-arch components for Arum 3D Solutions. Covered React SSR, Laravel APIs, GitHub to Plesk deployment, staging strategy, and relational schema redesign for product attributes.",
+    stack: ["React", "Laravel", "MySQL", "SSR", "CI/CD"],
+    company: "Arum 3D Solutions",
+    period: "May 2023 – May 2024",
+    link: "https://www.notion.so/5d9f3cfe46774bef962d7f846899a6dd?pvs=25",
+  },
+  {
+    icon: "◈",
+    name: "Implant Management System",
+    desc:
+      "Designed implant-related database architecture and management flows to handle dental implant data consistently across internal systems.",
+    stack: ["MySQL", "Schema Design", "ERP"],
+    company: "Arum 3D Solutions",
+    period: "Jan 2024 –",
+    link: "https://www.notion.so/Design-Implant-system-DB-142b14f871f94a13beb7f7b64adb9a4b?pvs=21",
+  },
+  {
+    icon: "▦",
+    name: "Arum Dental Shop Mobile",
+    desc:
+      "Built Flutter-based customer-facing dental shop apps, integrated Magento REST APIs, automated Android and iOS builds, and connected Jira automation with GitHub workflows.",
+    stack: ["Flutter", "Dart", "REST", "Magento", "CI/CD"],
+    company: "Arum 3D Solutions",
+    period: "Sep 2022 – 2023",
+  },
+  {
+    icon: "◉",
+    name: "Arum ERP for EU",
+    desc:
+      "Set up IP/domain, hosting, and localisation support for the European ERP deployment, with environment setup through Plesk and region-specific delivery handling.",
+    stack: ["PHP", "Laravel", "Hosting", "Localization"],
+    company: "Arum 3D Solutions",
+    period: "Jan 2023 – Mar 2023",
+    link: "https://www.notion.so/Branching-strategy-for-Arum-ERP-5d9f3cfe46774bef962d7f846899a6dd?pvs=21",
+  },
+  {
+    icon: "◆",
+    name: "Android Secure OS Support",
+    desc:
+      "Supported Samsung, LG, and tablet platform projects at MediaTek by porting secure OS components, debugging TEE and secure boot issues, handling RPMB vulnerabilities, and migrating build systems to Android.bp.",
+    stack: ["C/C++", "Android", "TEE", "ARM TF", "Python"],
+    company: "MediaTek",
+    period: "2020 – 2021",
+    link: "https://www.westerndigital.com/support/product-security/wdc-20008-replay-attack-vulnerabilities-rpmb-protocol-applications",
+  },
+  {
+    icon: "⬢",
+    name: "macOS Security & Automation",
+    desc:
+      "Developed macOS security product features in Objective-C and C++, including remote control, remote update, endpoint logging, JSON configuration UI, and internal Docker-based automation infrastructure for signing and notarization.",
+    stack: ["Objective-C", "C++", "Python", "Docker", "UML"],
+    company: "AhnLab",
+    period: "2018 – 2020",
+  },
+]
+
+const cvSections = [
+  {
+    title: "Core Languages",
+    items: [
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "SQL",
+      "C/C++",
+      "Objective-C",
+      "Dart",
+      "Shell",
+      "Rust",
+    ],
+  },
+  {
+    title: "Frontend",
+    items: ["React", "Next.js", "Figma", "Flutter", "Storybook", "MUI"],
+  },
+  {
+    title: "Backend",
+    items: ["NestJS", "FastAPI", "Laravel", "REST API", "AWS", "Terraform"],
+  },
+  {
+    title: "Systems",
+    items: ["Linux Kernel", "Android TEE", "ARM TF", "Docker", "Git", "SVN"],
+  },
+]
+
+const workExperience = [
+  {
+    company: "HappyEduTech · Remote",
+    role: "Senior Full-Stack & AI Engineer",
+    desc:
+      "Built production exam workflows, asynchronous AI question generation, admin tooling, multimodal tutoring improvements, and operational features spanning Next.js, NestJS, Python, FastAPI, and AWS.",
+    period: "Jul 2025 – Present",
+  },
+  {
+    company: "uTriper · Remote",
+    role: "Solution Architect & Frontend Engineer",
+    desc:
+      "Advised on booking-platform system design, improved schema and feature logic, and refactored the React frontend into a more modular and maintainable structure.",
+    period: "Jul 2024 – Jan 2025",
+  },
+  {
+    company: "Arum 3D Solutions LTD · UK",
+    role: "Software Engineer, IT & Development Team",
+    desc:
+      "Delivered ERP features across Laravel and React, migrated Blade screens, upgraded Laravel from v7 to v10, improved internal tooling, and supported Flutter mobile workflows with CI/CD.",
+    period: "Jun 2022 – Jun 2024",
+  },
+  {
+    company: "MediaTek · South Korea",
+    role: "System Software Engineer",
+    desc:
+      "Worked on Android TEE, secure boot, RPMB, and ARM Trusted Firmware debugging, plus build migration from Android.mk to Android.bp for platform consistency.",
+    period: "Mar 2020 – Sep 2021",
+  },
+  {
+    company: "AhnLab · South Korea",
+    role: "Software Engineer, V3 Team",
+    desc:
+      "Built macOS antivirus components in C++ and Objective-C and developed internal automation infrastructure with Python, Flask, Redis, and Docker.",
+    period: "Jan 2018 – Mar 2020",
+  },
+]
+
+const educationItems = [
+  {
+    company: "AIFFEL, MODULABS",
+    role: "AI Research Programme",
+    desc:
+      "Studied deep learning fundamentals, paper implementation, and real-world AI applications, including a Korean threatening-conversation classification project.",
+    period: "Dec 2024 – Jul 2025",
+  },
+  {
+    company: "Kwangwoon University",
+    role: "M.S., Electronics and Communications Engineering",
+    desc:
+      "Digital Signal Processing Lab under Prof. Hyukjun Oh, with coursework in machine learning, image processing, surveillance systems, and biosignal processing.",
+    period: "Mar 2016 – Feb 2018",
+  },
+  {
+    company: "Kwangwoon University",
+    role: "B.S., Electronics and Communications Engineering",
+    desc:
+      "Embedded System Lab under Prof. Hyunseok Lee, with coursework in embedded systems, operating systems, DSP, computer architecture, and wireless communication.",
+    period: "Mar 2012 – Feb 2016",
+  },
+]
+
+const researchItems = [
+  {
+    company: "AlphaChess · AIFFEL / MODULABS",
+    role: "Explainable LLM-based Chess Agent",
+    desc:
+      "Researched CoT-based SFT and GRPO for improving both explainability and performance in LLM chess agents using prompt engineering, multi-agent prompting, and RAG.",
+    period: "Apr 2025 – Jun 2025",
+  },
+  {
+    company: "Independent Research",
+    role: "Interpretable Melanoma Diagnosis with Pseudo-Depth Estimation",
+    desc:
+      "Investigated Mamba2D-based pseudo-depth estimation to explain melanoma predictions through relative depth cues and visualisation-based interpretation.",
+    period: "Jun 2025",
+  },
+]
+
+const publicationItems = [
+  {
+    company: "ICEIC 2018",
+    role: "Compare of channel coding for 5G system: LDPC and polar code",
+    desc: "Co-authored publication on 5G channel coding comparison.",
+    period: "2018",
+  },
+  {
+    company: "JKIICE",
+    role: "Improving the frequency domain resolution of wireless signal for observing the Doppler frequency",
+    desc: "Journal publication on wireless signal frequency-domain resolution improvements.",
+    period: "2017",
+  },
+  {
+    company: "U.S. Patent 9,888,385",
+    role: "Method for subscriber authentication in cellular IoT device",
+    desc: "Patent related to subscriber authentication in cellular IoT devices.",
+    period: "2018",
+  },
+]
+
+const getTagClass = tag => tagTones[tag] || "tag-gray"
+
+const getPageFromHash = () => {
+  if (typeof window === "undefined") {
+    return "home"
   }
+
+  const value = window.location.hash.replace("#", "")
+  return value || "home"
+}
+
+const slugifyTag = value =>
+  value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+
+const BlogIndex = ({ data, location }) => {
+  const siteMetadata = data.site.siteMetadata
+  const siteTitle = siteMetadata?.title || "Title"
+  const posts = data.allMarkdownRemark.nodes
+  const authorName = siteMetadata?.author?.name || siteTitle
+  const role = siteMetadata?.role
+  const intro = siteMetadata?.intro
+  const portfolioUrl = siteMetadata?.portfolioUrl
+  const social = siteMetadata?.social
+  const [activePage, setActivePage] = React.useState(getPageFromHash)
+  const [activeTag, setActiveTag] = React.useState("all")
+
+  React.useEffect(() => {
+    const syncPage = () => {
+      setActivePage(getPageFromHash())
+    }
+
+    syncPage()
+    window.addEventListener("hashchange", syncPage)
+
+    return () => window.removeEventListener("hashchange", syncPage)
+  }, [])
+
+  const allTags = React.useMemo(() => {
+    const tagSet = new Set()
+    posts.forEach(post => {
+      post.frontmatter.tags?.forEach(tag => tagSet.add(tag))
+    })
+    return Array.from(tagSet).sort()
+  }, [posts])
+
+  const filteredPosts = React.useMemo(() => {
+    if (activeTag === "all") {
+      return posts
+    }
+
+    return posts.filter(post => post.frontmatter.tags?.includes(activeTag))
+  }, [activeTag, posts])
+
+  const homeRecentPosts = posts.slice(0, 4)
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
-      <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
 
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
+      <div className={`page ${activePage === "home" ? "active" : ""}`}>
+        <section className="hero">
+          <div className="hero-tag">{role}</div>
+          <h1>
+            {authorName.split(" ")[0]}
+            <br />
+            <span className="name-accent">
+              {authorName.split(" ").slice(1).join(" ")}
+            </span>
+          </h1>
+          <p className="hero-desc">{intro}</p>
+          <div className="hero-links">
+            <a className="btn-primary" href="#blog">
+              Read the Blog
+            </a>
+            <a className="btn-ghost" href="#portfolio">
+              View Projects
+            </a>
+          </div>
+        </section>
+
+          <div className="hero-stats">
+          <div className="stat-item">
+            <span className="stat-num">{posts.length}+</span>
+            <span className="stat-label">Posts written</span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-num">8yr</span>
+            <span className="stat-label">Experience</span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-num">{staticProjects.length}+</span>
+            <span className="stat-label">Projects shaped</span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-num">∞</span>
+            <span className="stat-label">Curiosity</span>
+          </div>
+        </div>
+
+        <section>
+          <div className="section-header">
+            <span className="section-label">Tech Stack</span>
+            <div className="section-line" />
+          </div>
+          <div className="stack-row">
+            {[
+              "TypeScript",
+              "React",
+              "Flutter",
+              "Node.js",
+              "PostgreSQL",
+              "Figma",
+              "Python",
+              "AWS",
+              "Docker",
+              "GraphQL",
+              "Laravel",
+              "Rust",
+            ].map(item => (
+              <span key={item} className="chip">
+                {item}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <div className="section-header">
+            <span className="section-label">Recent Posts</span>
+            <div className="section-line" />
+            <a className="section-count" href="#blog">
+              All posts →
+            </a>
+          </div>
+          <div className="blog-grid">
+            {homeRecentPosts.map(post => {
+              const title = post.frontmatter.title || post.fields.slug
+
+              return (
+                <Link
+                  key={post.fields.slug}
+                  className="post-card"
+                  itemProp="url"
+                  to={post.fields.slug}
+                >
+                  <article itemScope itemType="http://schema.org/Article">
+                    <div className="post-meta">
+                      <span className="post-date">{post.frontmatter.date}</span>
+                      <div className="post-tags">
+                        {post.frontmatter.tags?.slice(0, 2).map(tag => (
+                          <span key={tag} className={`tag ${getTagClass(tag)}`}>
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <h3 className="post-title">
                       <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
+                    </h3>
+                    <p
+                      className="post-excerpt"
+                      dangerouslySetInnerHTML={{
+                        __html: post.frontmatter.description || post.excerpt,
+                      }}
+                      itemProp="description"
+                    />
+                    <div className="post-footer">
+                      <span className="read-time">{post.timeToRead} min read</span>
+                      <span className="arrow-link">Read →</span>
+                    </div>
+                  </article>
+                </Link>
+              )
+            })}
+          </div>
+        </section>
+      </div>
+
+      <div className={`page ${activePage === "blog" ? "active" : ""}`}>
+        <section className="page-panel">
+          <div className="section-header section-header-top">
+            <span className="section-label">Writing</span>
+            <div className="section-line" />
+            <span className="section-count">{filteredPosts.length} posts</span>
+          </div>
+
+          <div className="blog-filters">
+            <button
+              className={`filter-btn ${activeTag === "all" ? "active" : ""}`}
+              onClick={() => setActiveTag("all")}
+              type="button"
+            >
+              All
+            </button>
+            {allTags.map(tag => (
+              <button
+                key={tag}
+                className={`filter-btn ${activeTag === tag ? "active" : ""}`}
+                onClick={() => setActiveTag(tag)}
+                type="button"
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+
+          <div className="blog-grid">
+            {filteredPosts.map(post => {
+              const title = post.frontmatter.title || post.fields.slug
+
+              return (
+                <Link
+                  key={post.fields.slug}
+                  className="post-card"
+                  itemProp="url"
+                  to={post.fields.slug}
+                >
+                  <article itemScope itemType="http://schema.org/Article">
+                    <div className="post-meta">
+                      <span className="post-date">{post.frontmatter.date}</span>
+                      <div className="post-tags">
+                        {post.frontmatter.tags?.map(tag => (
+                          <span key={tag} className={`tag ${getTagClass(tag)}`}>
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <h3 className="post-title">
+                      <span itemProp="headline">{title}</span>
+                    </h3>
+                    <p
+                      className="post-excerpt"
+                      dangerouslySetInnerHTML={{
+                        __html: post.frontmatter.description || post.excerpt,
+                      }}
+                      itemProp="description"
+                    />
+                    <div className="post-footer">
+                      <span className="read-time">{post.timeToRead} min read</span>
+                      <span className="arrow-link">Read →</span>
+                    </div>
+                  </article>
+                </Link>
+              )
+            })}
+          </div>
+        </section>
+      </div>
+
+      <div className={`page ${activePage === "portfolio" ? "active" : ""}`}>
+        <section className="page-panel">
+          <div className="section-header section-header-top">
+            <span className="section-label">Projects</span>
+            <div className="section-line" />
+            {portfolioUrl && (
+              <a
+                className="section-count"
+                href={portfolioUrl}
+                rel="noreferrer"
+                target="_blank"
+              >
+                View on Notion ↗
+              </a>
+            )}
+          </div>
+
+              <div className="portfolio-grid">
+            {staticProjects.map(project => (
+              <article key={project.name} className="project-card">
+                <div className="project-header">
+                  <div className="project-icon">{project.icon}</div>
+                </div>
+                <div className="exp-company portfolio-company">
+                  {project.company}
+                  {project.period ? ` · ${project.period}` : ""}
+                </div>
+                <h3 className="project-name">{project.name}</h3>
+                <p className="project-desc">{project.desc}</p>
+                <div className="project-stack">
+                  {project.stack.map(stack => (
+                    <span key={stack} className="chip chip-small">
+                      {stack}
+                    </span>
+                  ))}
+                </div>
+                {project.link && (
+                  <a
+                    className="project-link"
+                    href={project.link}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Open reference ↗
+                  </a>
+                )}
               </article>
-            </li>
-          )
-        })}
-      </ol>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <div className={`page ${activePage === "cv" ? "active" : ""}`}>
+        <section className="page-panel">
+          <div className="cv-layout">
+            <aside className="cv-sidebar">
+              <div className="cv-avatar">YH</div>
+              <div className="cv-name">{authorName}</div>
+              <div className="cv-role">{role}</div>
+              <div className="cv-contact">
+                <a href="mailto:yhong.dev@gmail.com">
+                  yhong.dev@gmail.com
+                </a>
+                {social?.github && (
+                  <a
+                    href={`https://github.com/${social.github}`}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    github.com/{social.github}
+                  </a>
+                )}
+                {portfolioUrl && (
+                  <a href={portfolioUrl} rel="noreferrer" target="_blank">
+                    Portfolio (Notion)
+                  </a>
+                )}
+                <a
+                  href="https://www.linkedin.com/in/yerin-hong/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  linkedin.com/in/yerin-hong
+                </a>
+              </div>
+
+              {cvSections.map(section => (
+                <div key={section.title} className="cv-skills-section">
+                  <div className="cv-section-title">{section.title}</div>
+                  <div className="skill-list">
+                    {section.items.map(item => (
+                      <span key={item} className="skill-item">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </aside>
+
+            <main className="cv-main">
+              <div className="cv-block">
+                <div className="cv-block-title">Work Experience</div>
+                {workExperience.map(item => (
+                  <div key={item.role} className="experience-item">
+                    <div>
+                      <div className="exp-company">{item.company}</div>
+                      <div className="exp-role">{item.role}</div>
+                      <div className="exp-desc">{item.desc}</div>
+                    </div>
+                    <div className="exp-period">{item.period}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="cv-block">
+                <div className="cv-block-title">Education</div>
+                {educationItems.map(item => (
+                  <div key={item.role} className="experience-item">
+                    <div>
+                      <div className="exp-company">{item.company}</div>
+                      <div className="exp-role">{item.role}</div>
+                      <div className="exp-desc">{item.desc}</div>
+                    </div>
+                    <div className="exp-period">{item.period}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="cv-block">
+                <div className="cv-block-title">Research Experience</div>
+                {researchItems.map(item => (
+                  <div key={item.role} className="experience-item">
+                    <div>
+                      <div className="exp-company">{item.company}</div>
+                      <div className="exp-role">{item.role}</div>
+                      <div className="exp-desc">{item.desc}</div>
+                    </div>
+                    <div className="exp-period">{item.period}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="cv-block">
+                <div className="cv-block-title">Publications & Patent</div>
+                {publicationItems.map(item => (
+                  <div key={item.role} className="experience-item">
+                    <div>
+                      <div className="exp-company">{item.company}</div>
+                      <div className="exp-role">{item.role}</div>
+                      <div className="exp-desc">{item.desc}</div>
+                    </div>
+                    <div className="exp-period">{item.period}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="cv-block">
+                <div className="cv-block-title">Writing & Side Projects</div>
+                <div className="experience-item">
+                  <div>
+                    <div className="exp-company">Personal Blog</div>
+                    <div className="exp-role">Technical Writing</div>
+                    <div className="exp-desc">
+                      More than {posts.length} technical posts on deployment,
+                      architecture, debugging, testing, release workflows, and
+                      practical product engineering.
+                    </div>
+                  </div>
+                  <div className="exp-period">2018 –</div>
+                </div>
+              </div>
+
+              <div className="cv-block">
+                <div className="cv-block-title">Topic Areas</div>
+                <div className="skill-list">
+                  {allTags.map(tag => (
+                    <Link
+                      key={tag}
+                      className="skill-item skill-item-link"
+                      to={`/tags/${slugifyTag(tag)}/`}
+                    >
+                      {tag}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </main>
+          </div>
+        </section>
+      </div>
     </Layout>
   )
 }
@@ -69,19 +678,30 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
+        author {
+          name
+        }
+        intro
+        portfolioUrl
+        role
+        social {
+          github
+        }
         title
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         excerpt
+        timeToRead
         fields {
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
+          date(formatString: "YYYY-MM-DD")
           description
+          tags
+          title
         }
       }
     }

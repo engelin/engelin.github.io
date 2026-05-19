@@ -1,33 +1,111 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 const Layout = ({ location, title, children }) => {
+  const data = useStaticQuery(graphql`
+    query LayoutQuery {
+      site {
+        siteMetadata {
+          description
+          portfolioUrl
+          resumeUrl
+          title
+        }
+      }
+    }
+  `)
+
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  let header
+  const portfolioUrl = data.site.siteMetadata?.portfolioUrl
+  const resumeUrl = data.site.siteMetadata?.resumeUrl
+  const siteDescription = data.site.siteMetadata?.description
+  const getActiveSection = React.useCallback(() => {
+    if (typeof window === "undefined") {
+      return "home"
+    }
 
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    )
-  }
+    const section = window.location.hash.replace("#", "")
+    return section || "home"
+  }, [])
+  const [activeSection, setActiveSection] = React.useState(getActiveSection)
+
+  React.useEffect(() => {
+    if (!isRootPath) {
+      return undefined
+    }
+
+    const syncActiveSection = () => {
+      setActiveSection(getActiveSection())
+    }
+
+    syncActiveSection()
+    window.addEventListener("hashchange", syncActiveSection)
+
+    return () => window.removeEventListener("hashchange", syncActiveSection)
+  }, [getActiveSection, isRootPath])
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+      <header className="global-header">
+        <div className="topbar">
+          <a className="nav-logo" href="/">
+            yerin.dev<span>/</span>
+          </a>
+          <nav className="nav-links" aria-label="Main">
+            {isRootPath ? (
+              <>
+                <a
+                  className={activeSection === "blog" ? "active" : undefined}
+                  href="#blog"
+                >
+                  Blog
+                </a>
+                <a
+                  className={
+                    activeSection === "portfolio" ? "active" : undefined
+                  }
+                  href="#portfolio"
+                >
+                  Portfolio
+                </a>
+                <a
+                  className={activeSection === "cv" ? "active" : undefined}
+                  href="#cv"
+                >
+                  CV
+                </a>
+              </>
+            ) : (
+              <>
+                <a href="/#blog">Blog</a>
+                {portfolioUrl && (
+                  <a href="/#portfolio">
+                    Portfolio
+                  </a>
+                )}
+                {resumeUrl && <a href="/#cv">CV</a>}
+              </>
+            )}
+          </nav>
+        </div>
+        {!isRootPath && (
+          <div className="site-header-row">
+            <Link className="header-link-home" to="/">
+              {title}
+            </Link>
+            <p className="site-description site-description-compact">
+              {siteDescription}
+            </p>
+          </div>
+        )}
+      </header>
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+      <footer className="global-footer">
+        <p>© {new Date().getFullYear()} Yerin Hong</p>
+        <p>
+          Built with <a href="https://www.gatsbyjs.com">Gatsby</a>
+        </p>
       </footer>
     </div>
   )

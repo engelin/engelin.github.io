@@ -1,6 +1,11 @@
 ---
 title: Deploy Android & iOS applications
 date: "2023-02-20T15:37:37.121Z"
+tags:
+  - Flutter
+  - Android
+  - iOS
+  - Release
 ---
 
 # Ready to deploy

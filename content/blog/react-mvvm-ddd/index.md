@@ -1,6 +1,10 @@
 ---
 title: React MVVM pattern with DDD
 date: "2023-07-27T13:11:36.121Z"
+tags:
+  - React
+  - Architecture
+  - DDD
 ---
 
 # React MVVM pattern with DDD

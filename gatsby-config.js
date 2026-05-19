@@ -1,15 +1,20 @@
 module.exports = {
   siteMetadata: {
     title: `Yerin Blog`,
+    role: `Full-Stack Engineer`,
     author: {
       name: `Yerin Hong`,
-      summary: `who lives in London and works in the UK.`,
+      summary: `Building products end-to-end across frontend, mobile, backend, and product UX.`,
     },
-    description: `A personal blog with Gatsby.`,
+    description: `A portfolio-driven engineering blog about building products, shipping mobile and web experiences, and documenting practical development workflows.`,
     siteUrl: `https://engelin.github.io/`,
-    // social: {
-    //   twitter: `yerin`,
-    // },
+    intro: `Full-stack engineer and generalist. I design, build, and debug products with a bias for clean UX and practical engineering.`,
+    portfolioUrl: `https://www.notion.so/Yerin-Hong-1a0487b16300418ea49de6c145ed288b#ecc059154ffe43b6999a8188c7747945`,
+    resumeUrl: `/Yerin_Hong_FullStack.pdf`,
+    social: {
+      github: `engelin`,
+      linkedin: `yerin-hong`,
+    },
   },
   plugins: [
     `gatsby-plugin-image`,

@@ -1,11 +1,19 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+const slugifyTag = value =>
+  value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, `-`)
+    .replace(/^-+|-+$/g, ``)
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const tagTemplate = path.resolve(`./src/templates/tag-page.js`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -19,6 +27,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             fields {
               slug
+            }
+            frontmatter {
+              tags
             }
           }
         }
@@ -35,6 +46,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allMarkdownRemark.nodes
+  const tagSet = new Set()
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
@@ -42,6 +54,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
+      post.frontmatter?.tags?.forEach(tag => tagSet.add(tag))
+
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
@@ -52,6 +66,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id: post.id,
           previousPostId,
           nextPostId,
+        },
+      })
+    })
+
+    Array.from(tagSet).forEach(tag => {
+      createPage({
+        path: `/tags/${slugifyTag(tag)}/`,
+        component: tagTemplate,
+        context: {
+          tag,
         },
       })
     })
@@ -84,8 +108,14 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(`
     type SiteSiteMetadata {
       author: Author
+      description: String
+      intro: String
+      portfolioUrl: String
+      resumeUrl: String
+      role: String
       siteUrl: String
       social: Social
+      title: String
     }
 
     type Author {
@@ -94,7 +124,8 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type Social {
-      twitter: String
+      github: String
+      linkedin: String
     }
 
     type MarkdownRemark implements Node {
@@ -106,6 +137,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      tags: [String]
     }
 
     type Fields {

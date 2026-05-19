@@ -1,6 +1,11 @@
 ---
 title: Flutter CI/CD Setup (Github actions + GCP)
 date: "2022-01-30T10:53:37.121Z"
+tags:
+  - Flutter
+  - CI/CD
+  - GitHub Actions
+  - GCP
 ---
 
 ## Android codesign with github

@@ -1,6 +1,11 @@
 ---
 title: How to Test Vite + React application (Vitest)
 date: "2023-11-15T13:26:37.121Z"
+tags:
+  - Vite
+  - React
+  - Testing
+  - Vitest
 ---
 
 ## Vitest

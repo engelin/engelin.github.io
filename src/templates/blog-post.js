@@ -17,47 +17,63 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <Link className="back-link" to="/">
+        ← Back to all posts
+      </Link>
       <article
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
+        <header className="blog-post-header">
+          <p className="section-kicker">Article</p>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <div className="post-meta-row">
+            <p>{post.frontmatter.date}</p>
+            <p>{post.timeToRead} min read</p>
+          </div>
+          {post.frontmatter.tags?.length > 0 && (
+            <div className="post-tag-row">
+              {post.frontmatter.tags.map(tag => (
+                <Link
+                  key={tag}
+                  className="tag-chip"
+                  to={`/tags/${tag
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, "-")
+                    .replace(/^-+|-+$/g, "")}/`}
+                >
+                  #{tag}
+                </Link>
+              ))}
+            </div>
+          )}
         </header>
         <section
+          className="blog-post-body"
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <hr />
         <Comments/>
-        <hr />
-        <footer>
+        <footer className="blog-post-footer">
           <Bio />
         </footer>
       </article>
       <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <ul>
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+              <Link className="post-nav-card" to={previous.fields.slug} rel="prev">
+                <span>Previous</span>
+                <strong>← {previous.frontmatter.title}</strong>
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+              <Link className="post-nav-card" to={next.fields.slug} rel="next">
+                <span>Next</span>
+                <strong>{next.frontmatter.title} →</strong>
               </Link>
             )}
           </li>
@@ -84,10 +100,12 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      timeToRead
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

@@ -1,6 +1,10 @@
 ---
 title: JIRA webhook & Github API
 date: "2022-10-13T10:00:01.121Z"
+tags:
+  - Jira
+  - GitHub API
+  - Automation
 ---
 
 =========================================
@@ -42,5 +46,4 @@ https://support.atlassian.com/cloud-automation/docs/jira-smart-values-text-field
 
 - JIRA data API
 https://${SPACE_NAME}.atlassian.net/rest/api/2/issue/${JIRA-TICKET-NUM}
-
 

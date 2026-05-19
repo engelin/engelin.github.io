@@ -10,8 +10,19 @@ const NotFoundPage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="404: Not Found" />
-      <h1>404: Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <section className="tag-page-header">
+        <p className="section-kicker">404</p>
+        <h2>Page not found</h2>
+        <p>The page you tried to open does not exist or has moved.</p>
+      </section>
+      <div className="hero-links">
+        <a className="btn-primary" href="/">
+          Go Home
+        </a>
+        <a className="btn-ghost" href="/#blog">
+          Browse Posts
+        </a>
+      </div>
     </Layout>
   )
 }

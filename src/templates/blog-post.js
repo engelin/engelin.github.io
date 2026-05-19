@@ -5,6 +5,7 @@ import Bio from '../components/bio'
 import Comments from '../components/comments'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import { slugifyTag } from '../utils/site-content'
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -17,8 +18,8 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Link className="back-link" to="/">
-        ← Back to all posts
+      <Link className="back-link" to="/#blog">
+        ← Back to blog
       </Link>
       <article
         className="blog-post"
@@ -38,10 +39,7 @@ const BlogPostTemplate = ({ data, location }) => {
                 <Link
                   key={tag}
                   className="tag-chip"
-                  to={`/tags/${tag
-                    .toLowerCase()
-                    .replace(/[^a-z0-9]+/g, '-')
-                    .replace(/^-+|-+$/g, '')}/`}
+                  to={`/tags/${slugifyTag(tag)}/`}
                 >
                   #{tag}
                 </Link>

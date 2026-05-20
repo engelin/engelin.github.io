@@ -1,20 +1,14 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "yerin-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Yerin Hong's portfolio-driven engineering blog built with Gatsby and Markdown",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "Yerin Hong <yhong.dev@gmail.com>",
   "dependencies": {
     "gatsby": "^4.6.0",
     "gatsby-plugin-feed": "^4.6.0",
-    "gatsby-plugin-gatsby-cloud": "^4.6.0",
-    "gatsby-plugin-google-analytics": "^5.7.0",
     "gatsby-plugin-image": "^2.6.0",
     "gatsby-plugin-manifest": "^4.6.0",
-    "gatsby-plugin-offline": "^5.6.0",
     "gatsby-plugin-react-helmet": "^5.6.0",
     "gatsby-plugin-sharp": "^4.6.0",
     "gatsby-remark-copy-linked-files": "^5.6.0",
@@ -30,22 +24,23 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75",
-    "yarn": "^1.22.19"
+    "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
     "prettier": "^2.5.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://engelin.github.io/",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "blog",
+    "portfolio"
   ],
-  "license": "0BSD",
+  "license": "UNLICENSED",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/engelin/engelin.github.io.git"
   },
   "scripts": {
     "build": "gatsby build",
@@ -54,7 +49,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "test": "echo \"No automated tests configured\"",
     "deploy": "gatsby build && gh-pages -d public"
   }
 }

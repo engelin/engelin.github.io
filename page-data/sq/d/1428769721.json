@@ -1,0 +1,10 @@
+{
+  "data": {
+    "site": {
+      "siteMetadata": {
+        "title": "Yerin Blog",
+        "description": "A personal tech blog about building products, debugging real systems, and growing as an engineer."
+      }
+    }
+  }
+}

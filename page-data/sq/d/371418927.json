@@ -1,0 +1,14 @@
+{
+  "data": {
+    "site": {
+      "siteMetadata": {
+        "author": {
+          "name": "Yerin Hong",
+          "summary": "writing about product engineering, frontend architecture, and practical dev workflows."
+        },
+        "intro": "Notes on frontend, mobile, backend, and the small engineering decisions that make products better.",
+        "social": { "github": "engelin", "linkedin": "yerin-hong" }
+      }
+    }
+  }
+}
